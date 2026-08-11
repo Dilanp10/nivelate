@@ -10,15 +10,16 @@ Cada tarea → un commit. Formato: `<tipo>(002): T### — <descripción>`.
 - [ ] T004 — Configurar Supabase Auth vía dashboard: Site URL `http://localhost:8081`, Additional Redirect URLs `http://localhost:8081/**` y `nivelate://**`, "Confirm email" ON. **Manual — MCP no expone auth config.**
 - [x] T004b — Home transitorio ajustado (ya no consulta `_bootstrap_ping` que fue dropeada).
 
-## Fase 2 — NativeWind setup
+## Fase 2 — NativeWind setup ✅
 
-- [ ] T010 — Agregar deps: `nativewind`, `tailwindcss`, `react-native-css-interop`.
-- [ ] T011 — Crear `tailwind.config.js` con tokens semánticos (bg, surface, border, text, muted).
-- [ ] T012 — Crear `global.css` con directivas `@tailwind base/components/utilities`.
-- [ ] T013 — Actualizar `babel.config.js` con `nativewind/babel`.
-- [ ] T014 — Actualizar `metro.config.js` con `withNativeWind`.
-- [ ] T015 — Crear `nativewind-env.d.ts`.
-- [ ] T016 — Migrar la home actual (`app/index.tsx`) a usar `className=""` como smoke test.
+- [x] T010 — Deps agregadas: `nativewind@4`, `tailwindcss@3`, `react-native-worklets` (peer de reanimated 3.16+, faltaba y rompía el bundle Babel).
+- [x] T011 — `tailwind.config.js` con tokens semánticos (bg, surface, border, text, muted, brand, danger).
+- [x] T012 — `global.css` con directivas `@tailwind`.
+- [x] T013 — `babel.config.js` con `jsxImportSource: 'nativewind'` + preset `nativewind/babel`.
+- [x] T014 — `metro.config.js` envuelto en `withNativeWind(config, { input: './global.css' })`.
+- [x] T015 — `nativewind-env.d.ts` + agregado a `tsconfig.json` include.
+- [x] T016 — Home migrada a `className=""`. **Verificado en browser:** `bg-bg`→rgb(15,23,42), `bg-surface`→rgb(30,41,59), `border-border`→rgb(51,65,85), `text-text`→rgb(248,250,252), `text-5xl font-bold`→48px/700.
+- [x] T017 — `import '../global.css'` en `app/_layout.tsx` (requisito de NativeWind v4 para que las clases se apliquen en web).
 
 ## Fase 3 — Estado y lógica pura (con tests)
 
