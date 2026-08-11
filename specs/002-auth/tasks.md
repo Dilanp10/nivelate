@@ -21,13 +21,15 @@ Cada tarea → un commit. Formato: `<tipo>(002): T### — <descripción>`.
 - [x] T016 — Home migrada a `className=""`. **Verificado en browser:** `bg-bg`→rgb(15,23,42), `bg-surface`→rgb(30,41,59), `border-border`→rgb(51,65,85), `text-text`→rgb(248,250,252), `text-5xl font-bold`→48px/700.
 - [x] T017 — `import '../global.css'` en `app/_layout.tsx` (requisito de NativeWind v4 para que las clases se apliquen en web).
 
-## Fase 3 — Estado y lógica pura (con tests)
+## Fase 3 — Estado y lógica pura (con tests) ✅
 
-- [ ] T020 — `packages/shared/src/auth/types.ts` (Profile, DailyGoal).
-- [ ] T021 — `packages/shared/src/auth/validators.ts` (Zod: signup, login, forgot, reset, onboarding) + tests.
-- [ ] T022 — `packages/shared/src/auth/error-messages.ts` (mapeo EN→ES) + tests.
-- [ ] T023 — `packages/shared/src/auth/redirect-rules.ts` (`computeRedirect`) + tests.
-- [ ] T024 — `packages/shared/src/index.ts` re-exporta `./auth/*`.
+- [x] T020 — `auth/types.ts`: `Profile`, `DailyGoal`, `DAILY_GOAL_LABELS`, `AuthState` discriminada.
+- [x] T021 — `auth/validators.ts`: schemas Zod (signup, login, magicLink, forgot, reset, onboarding) + `toFieldErrors`. **17 tests.**
+- [x] T022 — `auth/error-messages.ts`: `toSpanishAuthError` con mapeo exacto + detección de rate limit por regex. **7 tests.**
+- [x] T023 — `auth/redirect-rules.ts`: `computeDestination`, `canAccessProtected`, `shouldSeeAuthScreens`. **9 tests.**
+- [x] T024 — `packages/shared/src/index.ts` re-exporta `./auth`. `zod` agregada como dependency de shared.
+
+**Total: 36 tests verdes** (33 de auth + 3 de CEFR). Typecheck y lint limpios.
 
 ## Fase 4 — Cliente y hooks
 
