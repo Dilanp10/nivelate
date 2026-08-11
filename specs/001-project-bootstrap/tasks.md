@@ -30,8 +30,8 @@ Cada tarea → un commit. Formato: `<tipo>(001): T### — <descripción>`.
 - [x] T024 — `apps/mobile/src/env.ts` con validación zod safeParse (no crashea si falta env).
 - [x] T025 — `apps/mobile/src/lib/supabase.ts` con storage adapter web/native + fallback a `null` si no hay env.
 - [x] T026 — `apps/mobile/app/index.tsx` (smoke screen con 4 estados: loading / not-configured / connected / error).
-- [ ] T027 — `pnpm install` en la raíz para instalar todas las deps.
-- [ ] T028 — `pnpm --filter mobile web` arranca y renderiza "⚠️ Supabase no configurado" (esperado antes de setear env).
+- [x] T027 — `pnpm install` en la raíz para instalar todas las deps. Requirió `.npmrc` con `node-linker=hoisted` porque Expo/Metro no funciona con el modo `isolated` default de pnpm.
+- [x] T028 — `pnpm --filter mobile web` arranca y renderiza "⚠️ Supabase no configurado". **Verificado en browser.**
 
 ## Supabase
 

@@ -13,6 +13,7 @@
     "test": "echo \"(no unit tests in mobile — testing en @nivelate/shared)\" && exit 0"
   },
   "dependencies": {
+    "@expo/metro-runtime": "~4.0.0",
     "@nivelate/shared": "workspace:*",
     "@react-native-async-storage/async-storage": "1.23.1",
     "@supabase/supabase-js": "^2.45.4",

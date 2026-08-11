@@ -15,7 +15,8 @@
       "playwright-report",
       "test-results",
       "**/*.generated.ts",
-      "**/database.types.ts"
+      "**/database.types.ts",
+      "**/expo-env.d.ts"
     ]
   },
   "formatter": {

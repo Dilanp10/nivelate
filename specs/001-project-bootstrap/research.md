@@ -121,3 +121,26 @@ El usuario está en Windows 11. Consideraciones:
 - Expo requiere que el celular esté en la misma red WiFi (o usar tunel).
 - Playwright en Windows requiere `pnpm exec playwright install` la primera vez.
 - Evitar comandos POSIX-only en scripts npm (usar `cross-env` si hace falta setear env vars).
+
+## R-010: pnpm + Expo — `node-linker=hoisted` es obligatorio
+
+**Decisión:** `.npmrc` con `node-linker=hoisted` en la raíz del repo.
+
+**Por qué:** El modo default de pnpm (`isolated`, con symlinks a `.pnpm/`) rompe Metro y Expo Router. Se manifiesta como:
+- `Unable to resolve "react-refresh/runtime"` (peer dep sin hoisting)
+- `Unable to resolve "@expo/metro-runtime/src/error-overlay/ErrorOverlay"`
+- Bundle web falla, aunque las deps estén instaladas.
+
+`node-linker=hoisted` hace que pnpm arme un `node_modules` plano tipo npm/yarn, que es lo que Metro espera. Perdemos la isolación estricta de pnpm pero es el trade-off documentado por Expo para monorepos.
+
+**Otras entradas relevantes en `.npmrc`:**
+- `strict-peer-dependencies=false` — Expo tiene peer deps laxas.
+- `auto-install-peers=true` — evita re-runs de install cuando aparecen nuevas peer deps.
+
+## R-011: Bootstrap web output `single` vs `static`
+
+**Decisión:** `expo.web.output = "single"` en `app.json`.
+
+**Por qué:** `"static"` intenta pre-renderizar todas las rutas y falla si falta el favicon o si hay side effects en imports (nuestro `@supabase/supabase-js` en el módulo del cliente rompe SSR). `"single"` genera una SPA clásica que rendera todo en el browser — sin sorpresas.
+
+Cuando el módulo 008-offline-pwa arme el service worker, se puede reevaluar si conviene volver a `"static"` para SEO / carga inicial más rápida.

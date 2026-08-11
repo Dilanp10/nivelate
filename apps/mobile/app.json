@@ -9,8 +9,7 @@
     "newArchEnabled": true,
     "web": {
       "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/favicon.png",
+      "output": "single",
       "name": "Nivelate — Inglés A2 a B1",
       "shortName": "Nivelate",
       "lang": "es",
