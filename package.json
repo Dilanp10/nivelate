@@ -16,12 +16,18 @@
     "test:e2e": "playwright test --config tests/e2e/playwright.config.ts",
     "supabase:types": "echo 'TODO: agregar cuando se configure Supabase (spec 001 T035)'",
     "supabase:migrate": "echo 'TODO: agregar cuando se configure Supabase (spec 001 T030+)'",
+    "content:validate": "tsx scripts/content-validate.ts",
+    "content:load": "tsx scripts/content-load.ts",
     "mobile:web": "pnpm --filter mobile web",
     "mobile:start": "pnpm --filter mobile start"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@nivelate/shared": "workspace:*",
     "@playwright/test": "^1.48.0",
+    "@supabase/supabase-js": "^2.45.4",
+    "dotenv": "^16.4.5",
+    "tsx": "^4.19.2",
     "typescript": "^5.6.3"
   }
 }
