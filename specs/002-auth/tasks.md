@@ -4,10 +4,11 @@ Cada tarea → un commit. Formato: `<tipo>(002): T### — <descripción>`.
 
 ## Fase 1 — Data + config Supabase
 
-- [ ] T001 — Crear `apps/mobile/supabase/migrations/20260812000000_profiles.sql` con profiles + trigger + RLS + drop `_bootstrap_ping`.
-- [ ] T002 — Aplicar migración vía MCP `apply_migration`.
-- [ ] T003 — Regenerar tipos TS y actualizar `packages/shared/src/database.types.ts`.
-- [ ] T004 — Configurar Supabase Auth (Site URL, redirect URLs, "Confirm email" ON) — vía dashboard.
+- [x] T001 — Migración `20260812000000_profiles.sql` (profiles + trigger `handle_new_user` + RLS + drop `_bootstrap_ping`).
+- [x] T002 — Migración aplicada vía MCP `apply_migration` (name: `profiles`).
+- [x] T003 — Tipos TS regenerados: `packages/shared/src/database.types.ts` con schema `profiles`.
+- [ ] T004 — Configurar Supabase Auth vía dashboard: Site URL `http://localhost:8081`, Additional Redirect URLs `http://localhost:8081/**` y `nivelate://**`, "Confirm email" ON. **Manual — MCP no expone auth config.**
+- [x] T004b — Home transitorio ajustado (ya no consulta `_bootstrap_ping` que fue dropeada).
 
 ## Fase 2 — NativeWind setup
 

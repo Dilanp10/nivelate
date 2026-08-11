@@ -1,37 +1,13 @@
 import { APP_CEFR_RANGE } from '@nivelate/shared';
-import { useEffect, useState } from 'react';
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
-import { isSupabaseConfigured, supabase } from '../src/lib/supabase';
+import { StyleSheet, Text, View } from 'react-native';
+import { isSupabaseConfigured } from '../src/lib/supabase';
 
-type Status =
-  | { kind: 'loading' }
-  | { kind: 'not-configured' }
-  | { kind: 'connected'; note: string }
-  | { kind: 'error'; message: string };
+// NOTE: Home transitorio del módulo 002. Se refactoriza en T054 moviéndolo
+// a app/(protected)/index.tsx con el flow real de auth.
+type Status = { kind: 'not-configured' } | { kind: 'ready' };
 
 export default function Home() {
-  const [status, setStatus] = useState<Status>({ kind: 'loading' });
-
-  useEffect(() => {
-    if (!isSupabaseConfigured || !supabase) {
-      setStatus({ kind: 'not-configured' });
-      return;
-    }
-
-    (async () => {
-      const { data, error } = await supabase
-        .from('_bootstrap_ping')
-        .select('note')
-        .limit(1)
-        .maybeSingle();
-
-      if (error) {
-        setStatus({ kind: 'error', message: error.message });
-      } else {
-        setStatus({ kind: 'connected', note: data?.note ?? '(sin nota)' });
-      }
-    })();
-  }, []);
+  const status: Status = isSupabaseConfigured ? { kind: 'ready' } : { kind: 'not-configured' };
 
   return (
     <View style={styles.container}>
@@ -45,42 +21,27 @@ export default function Home() {
 }
 
 function StatusView({ status }: { status: Status }) {
-  switch (status.kind) {
-    case 'loading':
-      return (
-        <>
-          <ActivityIndicator color="#f8fafc" />
-          <Text style={styles.statusText}>Verificando conexión...</Text>
-        </>
-      );
-    case 'not-configured':
-      return (
-        <>
-          <Text style={styles.statusEmoji}>⚠️</Text>
-          <Text style={styles.statusText}>Supabase no configurado</Text>
-          <Text style={styles.statusHint}>
-            Copiá <Text style={styles.code}>.env.example</Text> a{' '}
-            <Text style={styles.code}>.env</Text> con tus claves.
-          </Text>
-        </>
-      );
-    case 'connected':
-      return (
-        <>
-          <Text style={styles.statusEmoji}>✓</Text>
-          <Text style={styles.statusText}>Conectado a Supabase</Text>
-          <Text style={styles.statusHint}>ping: {status.note}</Text>
-        </>
-      );
-    case 'error':
-      return (
-        <>
-          <Text style={styles.statusEmoji}>❌</Text>
-          <Text style={styles.statusText}>Error de conexión</Text>
-          <Text style={styles.statusHint}>{status.message}</Text>
-        </>
-      );
+  if (status.kind === 'not-configured') {
+    return (
+      <>
+        <Text style={styles.statusEmoji}>⚠️</Text>
+        <Text style={styles.statusText}>Supabase no configurado</Text>
+        <Text style={styles.statusHint}>
+          Copiá <Text style={styles.code}>.env.example</Text> a{' '}
+          <Text style={styles.code}>apps/mobile/.env</Text> con tus claves.
+        </Text>
+      </>
+    );
   }
+  return (
+    <>
+      <Text style={styles.statusEmoji}>🛠</Text>
+      <Text style={styles.statusText}>Bootstrap OK — armando módulo 002 (auth)</Text>
+      <Text style={styles.statusHint}>
+        Próximo paso: pantallas de login/signup con NativeWind y route guards.
+      </Text>
+    </>
+  );
 }
 
 const styles = StyleSheet.create({

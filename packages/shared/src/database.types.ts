@@ -1,4 +1,4 @@
-// Autogenerado con `pnpm supabase:types` (spec 001 T035).
+// Autogenerado con `pnpm supabase:types` (spec 002 T003).
 // No editar a mano.
 
 export type Json =
@@ -17,21 +17,30 @@ export type Database = {
   }
   public: {
     Tables: {
-      _bootstrap_ping: {
+      profiles: {
         Row: {
           created_at: string
-          id: string
-          note: string | null
+          daily_goal_min: number
+          display_name: string | null
+          onboarded_at: string | null
+          updated_at: string
+          user_id: string
         }
         Insert: {
           created_at?: string
-          id?: string
-          note?: string | null
+          daily_goal_min?: number
+          display_name?: string | null
+          onboarded_at?: string | null
+          updated_at?: string
+          user_id: string
         }
         Update: {
           created_at?: string
-          id?: string
-          note?: string | null
+          daily_goal_min?: number
+          display_name?: string | null
+          onboarded_at?: string | null
+          updated_at?: string
+          user_id?: string
         }
         Relationships: []
       }
