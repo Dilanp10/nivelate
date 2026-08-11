@@ -1,4 +1,4 @@
-// Autogenerado con `pnpm supabase:types` (spec 002 T003).
+// Autogenerado con `pnpm supabase:types` (spec 004 T005).
 // No editar a mano.
 
 export type Json =
@@ -17,6 +17,145 @@ export type Database = {
   }
   public: {
     Tables: {
+      exercises: {
+        Row: {
+          created_at: string
+          exercise_key: string
+          id: string
+          lesson_id: string
+          payload: Json
+          sort_order: number
+          type: Database["public"]["Enums"]["exercise_type"]
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          exercise_key: string
+          id?: string
+          lesson_id: string
+          payload: Json
+          sort_order: number
+          type: Database["public"]["Enums"]["exercise_type"]
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          exercise_key?: string
+          id?: string
+          lesson_id?: string
+          payload?: Json
+          sort_order?: number
+          type?: Database["public"]["Enums"]["exercise_type"]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "exercises_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      grammar_topics: {
+        Row: {
+          cefr_level: string
+          created_at: string
+          explanation_es: string
+          id: string
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          cefr_level: string
+          created_at?: string
+          explanation_es: string
+          id?: string
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          cefr_level?: string
+          created_at?: string
+          explanation_es?: string
+          id?: string
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      lesson_grammar_topics: {
+        Row: {
+          grammar_topic_id: string
+          lesson_id: string
+        }
+        Insert: {
+          grammar_topic_id: string
+          lesson_id: string
+        }
+        Update: {
+          grammar_topic_id?: string
+          lesson_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lesson_grammar_topics_grammar_topic_id_fkey"
+            columns: ["grammar_topic_id"]
+            isOneToOne: false
+            referencedRelation: "grammar_topics"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "lesson_grammar_topics_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      lessons: {
+        Row: {
+          created_at: string
+          id: string
+          slug: string
+          sort_order: number
+          title: string
+          unit_id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          slug: string
+          sort_order: number
+          title: string
+          unit_id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          slug?: string
+          sort_order?: number
+          title?: string
+          unit_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lessons_unit_id_fkey"
+            columns: ["unit_id"]
+            isOneToOne: false
+            referencedRelation: "units"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       profiles: {
         Row: {
           created_at: string
@@ -44,6 +183,69 @@ export type Database = {
         }
         Relationships: []
       }
+      units: {
+        Row: {
+          cefr_level: string
+          created_at: string
+          description: string | null
+          id: string
+          is_published: boolean
+          slug: string
+          sort_order: number
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          cefr_level: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_published?: boolean
+          slug: string
+          sort_order: number
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          cefr_level?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_published?: boolean
+          slug?: string
+          sort_order?: number
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      vocab_items: {
+        Row: {
+          cefr_level: string
+          created_at: string
+          example_en: string | null
+          id: string
+          term_en: string
+          term_es: string
+        }
+        Insert: {
+          cefr_level: string
+          created_at?: string
+          example_en?: string | null
+          id?: string
+          term_en: string
+          term_es: string
+        }
+        Update: {
+          cefr_level?: string
+          created_at?: string
+          example_en?: string | null
+          id?: string
+          term_en?: string
+          term_es?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -52,7 +254,14 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      exercise_type:
+        | "multiple_choice"
+        | "fill_in_blank"
+        | "matching"
+        | "word_order"
+        | "listening"
+        | "translation"
+        | "dialogue"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -179,6 +388,16 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      exercise_type: [
+        "multiple_choice",
+        "fill_in_blank",
+        "matching",
+        "word_order",
+        "listening",
+        "translation",
+        "dialogue",
+      ],
+    },
   },
 } as const
