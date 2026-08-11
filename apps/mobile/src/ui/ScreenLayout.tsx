@@ -32,10 +32,7 @@ export function ScreenLayout({ title, subtitle, children, fixed = false }: Props
         {fixed ? (
           content
         ) : (
-          <ScrollView
-            contentContainerClassName="flex-grow"
-            keyboardShouldPersistTaps="handled"
-          >
+          <ScrollView contentContainerClassName="flex-grow" keyboardShouldPersistTaps="handled">
             {content}
           </ScrollView>
         )}

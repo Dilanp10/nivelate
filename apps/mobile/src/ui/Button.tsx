@@ -1,4 +1,4 @@
-import { ActivityIndicator, Pressable, Text, type PressableProps } from 'react-native';
+import { ActivityIndicator, Pressable, type PressableProps, Text } from 'react-native';
 
 type Variant = 'primary' | 'secondary' | 'ghost';
 
@@ -46,10 +46,7 @@ export function Button({
       className={`${containerBase} ${containerVariants[variant]}`}
     >
       {loading ? (
-        <ActivityIndicator
-          size="small"
-          color={variant === 'primary' ? '#0f172a' : '#f8fafc'}
-        />
+        <ActivityIndicator size="small" color={variant === 'primary' ? '#0f172a' : '#f8fafc'} />
       ) : null}
       <Text className={`${labelBase} ${labelVariants[variant]}`}>
         {loading && loadingLabel ? loadingLabel : label}
