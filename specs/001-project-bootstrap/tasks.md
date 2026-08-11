@@ -33,18 +33,18 @@ Cada tarea → un commit. Formato: `<tipo>(001): T### — <descripción>`.
 - [x] T027 — `pnpm install` en la raíz para instalar todas las deps. Requirió `.npmrc` con `node-linker=hoisted` porque Expo/Metro no funciona con el modo `isolated` default de pnpm.
 - [x] T028 — `pnpm --filter mobile web` arranca y renderiza "⚠️ Supabase no configurado". **Verificado en browser.**
 
-## Supabase — DIFERIDO (usuario pidió configurarlo después)
+## Supabase
 
-- [ ] T030 — Crear proyecto Supabase vía MCP (región `sa-east-1`, plan free).
-- [ ] T031 — Guardar URL y anon key en `.env` local.
-- [ ] T032 — Crear migración `20260811000000_bootstrap_ping.sql`.
-- [ ] T033 — Aplicar migración vía MCP `apply_migration`.
-- [ ] T034 — Habilitar auth anónima en dashboard Supabase (o vía SQL).
-- [ ] T035 — Correr `pnpm supabase:types` y commitear el archivo generado.
+- [x] T030 — Proyecto Supabase `nivelate` creado en `sa-east-1` (ref: `fhrrnqejjuvkewtyifjt`), plan free, status ACTIVE_HEALTHY.
+- [x] T031 — URL y publishable key en `apps/mobile/.env` local (nunca commiteado). Expo lee `.env` desde el dir de la app, no desde la raíz del monorepo.
+- [x] T032 — Migración `apps/mobile/supabase/migrations/20260811000000_bootstrap_ping.sql` creada.
+- [x] T033 — Migración aplicada vía MCP `apply_migration` (name: `bootstrap_ping`).
+- [ ] T034 — Habilitar auth anónima. *No hace falta para 001 (el smoke test usa RLS `to anon` sin session). Se hará en 002-auth si se usa magic link.*
+- [x] T035 — Tipos TS regenerados y guardados en `packages/shared/src/database.types.ts` con el schema `_bootstrap_ping`.
 
 ## Verificación local
 
-- [x] T040 — `pnpm --filter mobile web`, abrir localhost, verificar smoke screen. **Renderiza "⚠️ Supabase no configurado" como esperado.** Cambiará a "✓ Conectado a Supabase" cuando se hagan T030-T035.
+- [x] T040 — `pnpm --filter mobile web`, abrir localhost, verificar smoke screen. **Renderiza "✓ Conectado a Supabase — ping: bootstrap ok" ✓ verificado en browser.**
 - [ ] T041 — `pnpm --filter mobile start`, escanear QR con Expo Go, misma verificación. *Pendiente — requiere celular en misma WiFi.*
 
 ## Tooling — tests

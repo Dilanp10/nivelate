@@ -19,14 +19,14 @@ cd nivelate
 # 2. Instalar dependencias (~1-5 min)
 pnpm install
 
-# 3. Copiar template de env vars
+# 3. Copiar template de env vars a apps/mobile/.env
+#    (Expo lee .env desde el dir de la app, NO desde la raíz del monorepo)
 # En Windows PowerShell:
-copy .env.example .env
+copy .env.example apps\mobile\.env
 # En bash:
-cp .env.example .env
-# Por ahora podés dejar los valores vacíos — la app arranca y muestra
-# "⚠️ Supabase no configurado". Cuando tengas el proyecto Supabase,
-# reemplazá los valores.
+cp .env.example apps/mobile/.env
+# Editar apps/mobile/.env con las claves reales de tu proyecto Supabase.
+# Si dejás valores vacíos, la app arranca y muestra "⚠️ Supabase no configurado".
 
 # 4. Arrancar la app en web
 pnpm --filter mobile web
