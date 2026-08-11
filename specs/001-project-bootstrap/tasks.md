@@ -23,13 +23,15 @@ Cada tarea → un commit. Formato: `<tipo>(001): T### — <descripción>`.
 
 ## App Expo
 
-- [ ] T020 — `pnpm create expo-app apps/mobile --template blank-typescript --no-install`.
-- [ ] T021 — Ajustar `apps/mobile/package.json` para workspace (`@app/shared: workspace:*`).
-- [ ] T022 — Instalar deps: `expo-router`, `@supabase/supabase-js`, `@react-native-async-storage/async-storage`, `react-native-url-polyfill`, `zod`.
-- [ ] T023 — Configurar Expo Router en `app.json` y `app/_layout.tsx`.
-- [ ] T024 — Crear `apps/mobile/src/env.ts` con validación zod.
-- [ ] T025 — Crear `apps/mobile/src/lib/supabase.ts`.
-- [ ] T026 — Crear `apps/mobile/app/index.tsx` (smoke screen).
+- [x] T020 — Scaffolding manual de `apps/mobile` (package.json, tsconfig, app.json, babel, metro).
+- [x] T021 — `apps/mobile/package.json` con `@nivelate/shared: workspace:*`.
+- [x] T022 — Deps declaradas: `expo-router`, `@supabase/supabase-js`, `@react-native-async-storage/async-storage`, `react-native-url-polyfill`, `zod`. Instalación pendiente en T027.
+- [x] T023 — Expo Router configurado en `app.json` (plugin) + `app/_layout.tsx`.
+- [x] T024 — `apps/mobile/src/env.ts` con validación zod safeParse (no crashea si falta env).
+- [x] T025 — `apps/mobile/src/lib/supabase.ts` con storage adapter web/native + fallback a `null` si no hay env.
+- [x] T026 — `apps/mobile/app/index.tsx` (smoke screen con 4 estados: loading / not-configured / connected / error).
+- [ ] T027 — `pnpm install` en la raíz para instalar todas las deps.
+- [ ] T028 — `pnpm --filter mobile web` arranca y renderiza "⚠️ Supabase no configurado" (esperado antes de setear env).
 
 ## Supabase
 

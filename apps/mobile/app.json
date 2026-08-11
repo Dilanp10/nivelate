@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Nivelate",
+    "slug": "nivelate",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "scheme": "nivelate",
+    "newArchEnabled": true,
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png",
+      "name": "Nivelate — Inglés A2 a B1",
+      "shortName": "Nivelate",
+      "lang": "es",
+      "themeColor": "#0f172a",
+      "backgroundColor": "#0f172a",
+      "display": "standalone"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.nivelate.mobile"
+    },
+    "android": {
+      "package": "app.nivelate.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#0f172a"
+      }
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
