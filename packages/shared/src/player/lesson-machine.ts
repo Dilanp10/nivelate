@@ -75,6 +75,11 @@ export type LessonSummary = {
   estimatedXp: number;
 };
 
+/** Resultado emitido al terminar una lección. La costura con el módulo 003. */
+export type LessonResult = LessonSummary & {
+  lessonId: string;
+};
+
 export function summarize(state: PlayerState): LessonSummary {
   const ids = Object.keys(state.results);
   const total = ids.length;
