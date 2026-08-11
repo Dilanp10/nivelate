@@ -11,8 +11,8 @@ test.describe('Nivelate — smoke', () => {
     await page.goto('/');
     // Uno de los dos estados es válido: "no configurado" si el ambiente aún no tiene .env,
     // o "conectado" si el dev ya lo configuró. Cualquiera pasa el smoke.
-    await expect(
-      page.getByText(/Supabase no configurado|Conectado a Supabase/),
-    ).toBeVisible({ timeout: 15_000 });
+    await expect(page.getByText(/Supabase no configurado|Conectado a Supabase/)).toBeVisible({
+      timeout: 15_000,
+    });
   });
 });

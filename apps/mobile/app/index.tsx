@@ -1,6 +1,6 @@
+import { APP_CEFR_RANGE } from '@nivelate/shared';
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
-import { APP_CEFR_RANGE } from '@nivelate/shared';
 import { isSupabaseConfigured, supabase } from '../src/lib/supabase';
 
 type Status =
@@ -36,9 +36,7 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Nivelate</Text>
-      <Text style={styles.subtitle}>
-        Aprendé inglés {APP_CEFR_RANGE.join(' → ')} en serio.
-      </Text>
+      <Text style={styles.subtitle}>Aprendé inglés {APP_CEFR_RANGE.join(' → ')} en serio.</Text>
       <View style={styles.card}>
         <StatusView status={status} />
       </View>

@@ -13,7 +13,7 @@ const parsed = schema.safeParse({
 });
 
 export const envResult = parsed.success
-  ? ({ ok: true as const, env: parsed.data })
-  : ({ ok: false as const, error: parsed.error });
+  ? { ok: true as const, env: parsed.data }
+  : { ok: false as const, error: parsed.error };
 
 export const isSupabaseConfigured = parsed.success;
