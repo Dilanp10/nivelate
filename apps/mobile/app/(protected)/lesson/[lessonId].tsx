@@ -1,5 +1,4 @@
 import {
-  type LessonResult,
   type UserAnswer,
   checkAnswer,
   currentExerciseId,
@@ -8,9 +7,10 @@ import {
   summarize,
 } from '@nivelate/shared';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useMemo, useReducer, useState } from 'react';
+import { useEffect, useMemo, useReducer, useState } from 'react';
 import { ActivityIndicator, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useCompleteLesson } from '../../../src/hooks/useCompleteLesson';
 import { type PlayableExercise, useLesson } from '../../../src/hooks/useLesson';
 import { ExerciseRenderer, isAnswerComplete } from '../../../src/player/ExerciseRenderer';
 import { FeedbackBanner } from '../../../src/player/FeedbackBanner';
@@ -56,13 +56,21 @@ export default function LessonScreen() {
     );
   }
 
-  return <LessonRunner exercises={query.data.exercises} onExit={() => router.back()} />;
+  return (
+    <LessonRunner
+      lessonId={lessonId ?? ''}
+      exercises={query.data.exercises}
+      onExit={() => router.back()}
+    />
+  );
 }
 
 function LessonRunner({
+  lessonId,
   exercises,
   onExit,
 }: {
+  lessonId: string;
   exercises: PlayableExercise[];
   onExit: () => void;
 }) {
@@ -81,25 +89,49 @@ function LessonRunner({
   const [lastResult, setLastResult] = useState<{ correct: boolean; correctAnswer: string } | null>(
     null,
   );
+  const complete = useCompleteLesson();
+  const completeMutate = complete.mutate;
+  const [submitted, setSubmitted] = useState(false);
 
   const total = exercises.length;
   const doneCount = Object.values(state.results).filter((r) => r.done).length;
 
+  // Persistir el resultado una sola vez al entrar al resumen (RPC atómico).
+  useEffect(() => {
+    if (state.phase === 'summary' && !submitted) {
+      setSubmitted(true);
+      const summary = summarize(state);
+      completeMutate({
+        lessonId,
+        total: summary.total,
+        firstTryCorrect: summary.firstTryCorrect,
+      });
+    }
+  }, [state, submitted, completeMutate, lessonId]);
+
   if (state.phase === 'summary') {
     const summary = summarize(state);
+
+    // La XP oficial es la del server; mientras carga, mostramos la estimada.
+    const serverXp = complete.data?.xp_awarded;
+    const streak = complete.data?.current_streak;
+    const errored = complete.isError;
+
     return (
       <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
         <LessonSummary
-          summary={summary}
-          onDone={() => {
-            // Costura con el módulo 003: acá se persistirá XP/racha.
-            const result: LessonResult = {
-              lessonId: exercises[0]?.id ?? '',
-              ...summary,
-            };
-            void result; // TODO(003): onLessonComplete(result)
-            onExit();
-          }}
+          summary={{ ...summary, estimatedXp: serverXp ?? summary.estimatedXp }}
+          streak={streak}
+          saving={complete.isPending}
+          error={errored ? 'No se pudo guardar tu progreso.' : null}
+          onRetry={() =>
+            complete.mutate({
+              lessonId,
+              total: summary.total,
+              firstTryCorrect: summary.firstTryCorrect,
+            })
+          }
+          onDone={onExit}
         />
       </SafeAreaView>
     );
