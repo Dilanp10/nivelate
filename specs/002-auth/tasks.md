@@ -37,46 +37,51 @@ Cada tarea → un commit. Formato: `<tipo>(002): T### — <descripción>`.
 ## Fase 4 — Cliente y hooks
 
 - [ ] T030 — `apps/mobile/src/lib/query-client.ts` (`QueryClient` singleton).
-- [ ] T031 — `apps/mobile/src/lib/auth-redirect.ts` (helper redirect URLs web/native).
-- [ ] T032 — `apps/mobile/src/stores/auth.ts` (Zustand store con hidratación + listener).
-- [ ] T033 — Hooks `useSignUp`, `useSignIn`, `useMagicLink`, `useForgotPassword`, `useResetPassword`, `useLogout`, `useOnboarding` en `apps/mobile/src/hooks/`.
+- [x] T031 — `lib/auth-redirect.ts`: `getRedirectUrl` (web usa `window.location.origin`, native `Linking.createURL`).
+- [x] T032 — `stores/auth.ts`: Zustand con `hydrate()`, `subscribe()` (onAuthStateChange), `refreshProfile()`.
+- [x] T033 — 7 hooks en `src/hooks/`: signUp, signIn, magicLink, forgotPassword, resetPassword, logout, onboarding.
 
-## Fase 5 — UI reutilizable
+## Fase 5 — UI reutilizable ✅
 
-- [ ] T040 — `src/ui/Button.tsx` (primary/secondary/ghost, loading, disabled).
-- [ ] T041 — `src/ui/Input.tsx` (label, error, secureToggle).
-- [ ] T042 — `src/ui/ScreenLayout.tsx` (padding, SafeArea, título opcional).
-- [ ] T043 — `src/ui/FormError.tsx`.
-- [ ] T044 — `src/ui/Splash.tsx`.
+- [x] T040 — `ui/Button.tsx` (primary/secondary/ghost + loading + accessibilityState).
+- [x] T041 — `ui/Input.tsx` (label + error inline + hint + secureToggle).
+- [x] T042 — `ui/ScreenLayout.tsx` (SafeArea + KeyboardAvoidingView + scroll + ancho máx md).
+- [x] T043 — `ui/FormError.tsx` (banner de error de submit).
+- [x] T044 — `ui/Splash.tsx`.
 
-## Fase 6 — Route groups + guards
+## Fase 6 — Route groups + guards ✅
 
-- [ ] T050 — Refactor `app/_layout.tsx` para hidratar auth + montar QueryClientProvider + splash.
-- [ ] T051 — Crear `app/(auth)/_layout.tsx` con guard.
-- [ ] T052 — Crear `app/(onboarding)/_layout.tsx` con guard.
-- [ ] T053 — Crear `app/(protected)/_layout.tsx` con guard.
-- [ ] T054 — Mover home a `app/(protected)/index.tsx`.
+- [x] T050 — `app/_layout.tsx`: QueryClientProvider + SafeAreaProvider + hydrate/subscribe + Splash.
+- [x] T051 — `(auth)/_layout.tsx` con guard (redirige si ya hay sesión).
+- [x] T052 — `(onboarding)/_layout.tsx` con guard.
+- [x] T053 — `(protected)/_layout.tsx` con guard.
+- [x] T054 — Home movida a `(protected)/index.tsx`; `index.tsx` transitorio eliminado.
+- [x] **Verificado en browser:** sin sesión, `/` redirige a `/login` y el form renderiza con NativeWind.
 
-## Fase 7 — Pantallas de auth
+## Fase 7 — Pantallas de auth ✅
 
-- [ ] T060 — `app/(auth)/signup.tsx`.
-- [ ] T061 — `app/(auth)/login.tsx`.
-- [ ] T062 — `app/(auth)/verify-email.tsx` (con poll).
-- [ ] T063 — `app/(auth)/magic-link.tsx`.
-- [ ] T064 — `app/(auth)/forgot-password.tsx`.
-- [ ] T065 — `app/(auth)/reset-password.tsx`.
-- [ ] T066 — `app/(auth)/callback.tsx` (deep link handler).
+- [x] T060 — `signup.tsx`.
+- [x] T061 — `login.tsx`.
+- [x] T062 — `verify-email.tsx` (poll cada 5s a getUser + reenviar).
+- [x] T063 — `magic-link.tsx`.
+- [x] T064 — `forgot-password.tsx`.
+- [x] T065 — `reset-password.tsx`.
+- [x] T066 — `callback.tsx` (landing de deep links).
 
-## Fase 8 — Onboarding + settings
+## Fase 8 — Onboarding + settings ✅
 
-- [ ] T070 — `app/(onboarding)/welcome.tsx`.
-- [ ] T071 — `app/(protected)/settings.tsx` con logout.
+- [x] T070 — `(onboarding)/welcome.tsx` (nombre + meta diaria, Empezar/Saltar).
+- [x] T071 — `(protected)/settings.tsx` con logout.
 
 ## Fase 9 — Testing + cierre
 
-- [ ] T080 — `pnpm typecheck && pnpm lint && pnpm test` verde.
-- [ ] T081 — Test e2e Playwright: signup form renderiza y valida.
-- [ ] T082 — Test manual completo del flow: registro → verify (link real) → onboarding → home → logout → login → home. Documentar en `quickstart.md`.
-- [ ] T090 — Completar `quickstart.md` con el flow verificado.
-- [ ] T091 — Actualizar `AGENTS.md`/`CLAUDE.md` si aparecen convenciones nuevas.
-- [ ] T099 — PR `feat(002): auth` → merge a main.
+- [x] T080 — `pnpm typecheck && pnpm lint && pnpm test` verde (36 tests unitarios).
+- [ ] T081 — Test e2e Playwright: signup form renderiza y valida. *Pendiente.*
+- [ ] T082 — **BLOQUEADO por T004 (config de auth en el dashboard).** Test manual del flow completo: registro → verify (link real) → onboarding → home → logout → login → home.
+- [ ] T090 — Completar `quickstart.md` con el flow verificado (después de T082).
+- [x] T091 — Convenciones nuevas ya documentadas en `AGENTS.md` (seguridad de funciones + RLS) durante T005-T007.
+- [ ] T099 — PR `feat(002): auth` → merge a main. *Después de validar el flow con Supabase configurado.*
+
+## Nota sobre `typedRoutes`
+
+Se desactivó `experiments.typedRoutes` en `app.json`: regeneraba `.expo/types/router.d.ts` desde un árbol de rutas viejo y hacía fallar el typecheck. Reactivar cuando el árbol de rutas esté estable (probablemente al cerrar el módulo).
