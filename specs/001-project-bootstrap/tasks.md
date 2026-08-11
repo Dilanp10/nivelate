@@ -49,9 +49,9 @@ Cada tarea → un commit. Formato: `<tipo>(001): T### — <descripción>`.
 
 ## Tooling — tests
 
-- [ ] T050 — Configurar Vitest en `packages/shared`. Test dummy `expect(APP_CEFR_RANGE).toContain('A2')`.
-- [ ] T051 — Configurar Playwright en `tests/e2e/`. Test smoke: abre home, ve texto "Conectado".
-- [ ] T052 — Correr `pnpm test && pnpm test:e2e` y verificar verde.
+- [x] T050 — Configurar Vitest en `packages/shared`. Test dummy `expect(APP_CEFR_RANGE).toContain('A2')`.
+- [x] T051 — Configurar Playwright en `tests/e2e/`. Test smoke: home + estado Supabase.
+- [ ] T052 — Correr `pnpm test && pnpm test:e2e` y verificar verde. *Pendiente hasta `pnpm install`.*
 
 ## Tooling — lint
 
@@ -59,8 +59,8 @@ Cada tarea → un commit. Formato: `<tipo>(001): T### — <descripción>`.
 
 ## Deploy
 
-- [ ] T070 — Crear `vercel.ts` en la raíz.
-- [ ] T071 — Conectar repo en Vercel dashboard (requiere GitHub remote). *Bloqueante si aún no hay repo remoto — diferir a T098.*
+- [x] T070 — Crear `vercel.ts` en la raíz.
+- [ ] T071 — Conectar repo en Vercel dashboard. *Diferido: requiere GitHub remoto (T098) y cuenta Vercel.*
 - [ ] T072 — Verificar deploy preview funciona.
 
 ## Docs & cierre
