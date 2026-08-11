@@ -15,11 +15,11 @@ Cada tarea → un commit. Formato: `<tipo>(001): T### — <descripción>`.
 
 ## Package shared
 
-- [ ] T010 — `packages/shared/package.json` con `name: @app/shared`, `types: dist/index.d.ts`.
-- [ ] T011 — `packages/shared/tsconfig.json` extends base.
-- [ ] T012 — `packages/shared/src/cefr.ts` con `CEFRLevel` y `APP_CEFR_RANGE`.
-- [ ] T013 — `packages/shared/src/index.ts` re-exporta todo.
-- [ ] T014 — Placeholder `packages/shared/src/database.types.ts` (`export type Database = never;`).
+- [x] T010 — `packages/shared/package.json` con `name: @nivelate/shared`.
+- [x] T011 — `packages/shared/tsconfig.json` extends base.
+- [x] T012 — `packages/shared/src/cefr.ts` con `CEFRLevel`, `APP_CEFR_RANGE`, `CEFR_LABELS`.
+- [x] T013 — `packages/shared/src/index.ts` re-exporta todo.
+- [x] T014 — Placeholder `packages/shared/src/database.types.ts` (`export type Database = never;`).
 
 ## App Expo
 
