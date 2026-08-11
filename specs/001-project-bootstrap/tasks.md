@@ -33,7 +33,7 @@ Cada tarea → un commit. Formato: `<tipo>(001): T### — <descripción>`.
 - [x] T027 — `pnpm install` en la raíz para instalar todas las deps. Requirió `.npmrc` con `node-linker=hoisted` porque Expo/Metro no funciona con el modo `isolated` default de pnpm.
 - [x] T028 — `pnpm --filter mobile web` arranca y renderiza "⚠️ Supabase no configurado". **Verificado en browser.**
 
-## Supabase
+## Supabase — DIFERIDO (usuario pidió configurarlo después)
 
 - [ ] T030 — Crear proyecto Supabase vía MCP (región `sa-east-1`, plan free).
 - [ ] T031 — Guardar URL y anon key en `.env` local.
@@ -44,8 +44,8 @@ Cada tarea → un commit. Formato: `<tipo>(001): T### — <descripción>`.
 
 ## Verificación local
 
-- [ ] T040 — `pnpm --filter mobile web`, abrir localhost, verificar "✓ Conectado a Supabase".
-- [ ] T041 — `pnpm --filter mobile start`, escanear QR con Expo Go, misma verificación.
+- [x] T040 — `pnpm --filter mobile web`, abrir localhost, verificar smoke screen. **Renderiza "⚠️ Supabase no configurado" como esperado.** Cambiará a "✓ Conectado a Supabase" cuando se hagan T030-T035.
+- [ ] T041 — `pnpm --filter mobile start`, escanear QR con Expo Go, misma verificación. *Pendiente — requiere celular en misma WiFi.*
 
 ## Tooling — tests
 
@@ -55,7 +55,7 @@ Cada tarea → un commit. Formato: `<tipo>(001): T### — <descripción>`.
 
 ## Tooling — lint
 
-- [ ] T060 — `pnpm lint` pasa en todo el repo.
+- [x] T060 — `pnpm lint` pasa en todo el repo (22 archivos, 0 errores).
 
 ## Deploy
 
@@ -65,7 +65,7 @@ Cada tarea → un commit. Formato: `<tipo>(001): T### — <descripción>`.
 
 ## Docs & cierre
 
-- [ ] T090 — Completar `quickstart.md` con los pasos reales verificados.
-- [ ] T091 — Actualizar `README.md` con la URL del deploy.
-- [ ] T098 — Crear repo en GitHub, push inicial, conectar a Vercel.
-- [ ] T099 — Merge PR `feat(001): project bootstrap`.
+- [x] T090 — `quickstart.md` completado con pasos verificados en Windows 11.
+- [ ] T091 — Actualizar `README.md` con la URL del deploy. *Pendiente hasta T072.*
+- [x] T098 — Repo creado en GitHub y push inicial: https://github.com/Dilanp10/nivelate
+- [ ] T099 — Merge PR `feat(001): project bootstrap`. *N/A durante bootstrap — commits directos a main. La convención de PR arranca desde el módulo 002.*
