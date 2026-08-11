@@ -13,7 +13,7 @@
     "format": "biome format --write .",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
-    "test:e2e": "playwright test",
+    "test:e2e": "playwright test --config tests/e2e/playwright.config.ts",
     "supabase:types": "echo 'TODO: agregar cuando se configure Supabase (spec 001 T035)'",
     "supabase:migrate": "echo 'TODO: agregar cuando se configure Supabase (spec 001 T030+)'",
     "mobile:web": "pnpm --filter mobile web",

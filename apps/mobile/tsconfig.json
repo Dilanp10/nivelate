@@ -5,9 +5,7 @@
     "moduleResolution": "Bundler",
     "allowJs": true,
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     }
   },
   "include": [
@@ -15,6 +13,8 @@
     "app/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "nativewind-env.d.ts"
+    "globals.d.ts",
+    "nativewind-env.d.ts",
+    "expo-env.d.ts"
   ]
 }
