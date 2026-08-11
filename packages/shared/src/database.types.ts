@@ -1,4 +1,4 @@
-// Autogenerado con `pnpm supabase:types` (spec 004 T005).
+// Autogenerado con `pnpm supabase:types` (spec 003 T004).
 // No editar a mano.
 
 export type Json =
@@ -88,6 +88,44 @@ export type Database = {
         }
         Relationships: []
       }
+      lesson_completions: {
+        Row: {
+          best_first_try_correct: number
+          first_completed_at: string
+          last_completed_at: string
+          lesson_id: string
+          times_completed: number
+          total: number
+          user_id: string
+        }
+        Insert: {
+          best_first_try_correct: number
+          first_completed_at?: string
+          last_completed_at?: string
+          lesson_id: string
+          times_completed?: number
+          total: number
+          user_id: string
+        }
+        Update: {
+          best_first_try_correct?: number
+          first_completed_at?: string
+          last_completed_at?: string
+          lesson_id?: string
+          times_completed?: number
+          total?: number
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lesson_completions_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       lesson_grammar_topics: {
         Row: {
           grammar_topic_id: string
@@ -159,25 +197,37 @@ export type Database = {
       profiles: {
         Row: {
           created_at: string
+          current_streak: number
           daily_goal_min: number
           display_name: string | null
+          last_activity_date: string | null
+          longest_streak: number
           onboarded_at: string | null
+          total_xp: number
           updated_at: string
           user_id: string
         }
         Insert: {
           created_at?: string
+          current_streak?: number
           daily_goal_min?: number
           display_name?: string | null
+          last_activity_date?: string | null
+          longest_streak?: number
           onboarded_at?: string | null
+          total_xp?: number
           updated_at?: string
           user_id: string
         }
         Update: {
           created_at?: string
+          current_streak?: number
           daily_goal_min?: number
           display_name?: string | null
+          last_activity_date?: string | null
+          longest_streak?: number
           onboarded_at?: string | null
+          total_xp?: number
           updated_at?: string
           user_id?: string
         }
@@ -246,12 +296,58 @@ export type Database = {
         }
         Relationships: []
       }
+      xp_events: {
+        Row: {
+          created_at: string
+          id: string
+          lesson_id: string | null
+          source: Database["public"]["Enums"]["xp_source"]
+          user_id: string
+          xp_delta: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          lesson_id?: string | null
+          source: Database["public"]["Enums"]["xp_source"]
+          user_id: string
+          xp_delta: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          lesson_id?: string | null
+          source?: Database["public"]["Enums"]["xp_source"]
+          user_id?: string
+          xp_delta?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "xp_events_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      complete_lesson: {
+        Args: {
+          p_first_try_correct: number
+          p_lesson_id: string
+          p_total: number
+        }
+        Returns: {
+          current_streak: number
+          new_total_xp: number
+          xp_awarded: number
+        }[]
+      }
     }
     Enums: {
       exercise_type:
@@ -262,6 +358,7 @@ export type Database = {
         | "listening"
         | "translation"
         | "dialogue"
+      xp_source: "lesson_complete" | "streak_bonus" | "achievement"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -398,6 +495,7 @@ export const Constants = {
         "translation",
         "dialogue",
       ],
+      xp_source: ["lesson_complete", "streak_bonus", "achievement"],
     },
   },
 } as const
