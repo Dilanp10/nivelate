@@ -9,6 +9,9 @@ Cada tarea → un commit. Formato: `<tipo>(002): T### — <descripción>`.
 - [x] T003 — Tipos TS regenerados: `packages/shared/src/database.types.ts` con schema `profiles`.
 - [ ] T004 — Configurar Supabase Auth vía dashboard: Site URL `http://localhost:8081`, Additional Redirect URLs `http://localhost:8081/**` y `nivelate://**`, "Confirm email" ON. **Manual — MCP no expone auth config.**
 - [x] T004b — Home transitorio ajustado (ya no consulta `_bootstrap_ping` que fue dropeada).
+- [x] T005 — Migración `20260812010000_harden_profile_functions.sql`: fix de 3 advertencias del security advisor (`search_path` mutable en `set_updated_at`; `handle_new_user` expuesta como RPC a `anon` y `authenticated`). Trigger verificado post-fix con usuario de prueba.
+- [x] T006 — Migración `20260812020000_optimize_profiles_rls.sql`: fix de 2 advertencias de performance (`auth.uid()` re-evaluado por fila → `(select auth.uid())`).
+- [x] T007 — Convenciones de seguridad de funciones y RLS documentadas en `AGENTS.md` y `data-model.md`. **Security y performance advisors en cero.**
 
 ## Fase 2 — NativeWind setup ✅
 

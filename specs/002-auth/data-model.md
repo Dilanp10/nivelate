@@ -36,7 +36,7 @@ create or replace function public.handle_new_user()
 returns trigger
 language plpgsql
 security definer
-set search_path = public
+set search_path = ''
 as $$
 begin
   insert into public.profiles (user_id)
@@ -44,6 +44,12 @@ begin
   return new;
 end;
 $$;
+
+-- Obligatorio: sin esto, PostgREST expone la función como RPC en
+-- /rest/v1/rpc/handle_new_user, invocable por anon y authenticated.
+revoke execute on function public.handle_new_user() from public;
+revoke execute on function public.handle_new_user() from anon;
+revoke execute on function public.handle_new_user() from authenticated;
 
 create trigger on_auth_user_created
   after insert on auth.users
@@ -56,6 +62,8 @@ create trigger on_auth_user_created
 create or replace function public.set_updated_at()
 returns trigger
 language plpgsql
+security invoker
+set search_path = ''
 as $$
 begin
   new.updated_at = now();
@@ -68,6 +76,16 @@ create trigger profiles_updated_at
   for each row execute function public.set_updated_at();
 ```
 
+### Reglas de seguridad para funciones (aplica a todos los módulos)
+
+El security advisor de Supabase marca tres cosas que hay que respetar en cada función nueva:
+
+1. **Siempre `set search_path = ''`** y referenciar todo con schema explícito (`public.profiles`, no `profiles`). Sin esto, un rol puede anteponer un schema propio y secuestrar la resolución de nombres.
+2. **`security invoker` por default.** Usar `security definer` solo cuando de verdad hace falta (como acá, que hay que escribir en `public.profiles` desde un trigger sobre `auth.users`).
+3. **Si es `security definer`, revocar `EXECUTE`** de `public`, `anon` y `authenticated`. PostgREST expone automáticamente las funciones de `public` como endpoints RPC.
+
+Revocar `EXECUTE` no rompe los triggers: corren con los permisos del owner de la tabla, no del rol que dispara la operación.
+
 ### RLS
 
 ```sql
@@ -78,19 +96,21 @@ create policy "user reads own profile"
   on public.profiles
   for select
   to authenticated
-  using (auth.uid() = user_id);
+  using ((select auth.uid()) = user_id);
 
 -- Cada usuario puede actualizar solo su propio profile
 create policy "user updates own profile"
   on public.profiles
   for update
   to authenticated
-  using (auth.uid() = user_id)
-  with check (auth.uid() = user_id);
+  using ((select auth.uid()) = user_id)
+  with check ((select auth.uid()) = user_id);
 
 -- Insert lo hace el trigger con security definer. No permitimos insert desde cliente.
 -- Delete: solo cascade desde auth.users (si el user se borra).
 ```
+
+**Nota sobre `(select auth.uid())`:** el paréntesis con `select` no es cosmético. Escrito como `auth.uid() = user_id`, Postgres re-evalúa la función **por cada fila escaneada**. Envuelta en `(select ...)`, la trata como constante y la evalúa una vez por query. Acá da igual (una fila por usuario), pero es el patrón a seguir en las tablas de progreso y SRS de los módulos 003 y 006, que van a tener muchas filas por usuario.
 
 ## Migración
 

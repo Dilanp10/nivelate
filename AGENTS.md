@@ -25,6 +25,26 @@ Tipos: `feat`, `fix`, `chore`, `docs`, `test`, `refactor`.
 
 Cualquier cambio de schema pasa por `data-model.md` del spec correspondiente. Migraciones en `apps/mobile/supabase/migrations/` con timestamp. **Nunca** ejecutar `apply_migration` sin haber actualizado el `data-model.md`.
 
+**Después de cada migración, correr el security advisor** (`get_advisors` con `type: security`) y resolver lo que aparezca antes de commitear. En funciones Postgres:
+
+1. Siempre `set search_path = ''` + schema explícito en cada referencia (`public.profiles`, no `profiles`).
+2. `security invoker` por default; `security definer` solo cuando es imprescindible.
+3. Si es `security definer`, revocar `EXECUTE` de `public`, `anon` y `authenticated` — PostgREST expone las funciones de `public` como endpoints RPC automáticamente.
+
+Revocar `EXECUTE` no rompe triggers: corren con los permisos del owner de la tabla.
+
+En políticas RLS, envolver siempre las funciones de auth en un `select`:
+
+```sql
+-- Mal: re-evalúa auth.uid() por cada fila escaneada
+using (auth.uid() = user_id)
+
+-- Bien: se evalúa una vez por query
+using ((select auth.uid()) = user_id)
+```
+
+Correr también el performance advisor (`get_advisors` con `type: performance`) después de cada migración.
+
 ## Regla #5: No inventar contenido
 
 El currículum lo diseña un humano siguiendo CEFR. Un agente puede sugerir estructura pero no genera ejercicios que se van a producción sin revisión.
