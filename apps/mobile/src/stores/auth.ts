@@ -21,8 +21,10 @@ type Store = {
   subscribe: () => () => void;
 };
 
-async function fetchProfile(userId: string): Promise<Profile | null> {
-  if (!supabase) return null;
+type ProfileFetch = { ok: true; profile: Profile | null } | { ok: false };
+
+async function fetchProfile(userId: string): Promise<ProfileFetch> {
+  if (!supabase) return { ok: true, profile: null };
   const { data, error } = await supabase
     .from('profiles')
     .select('*')
@@ -30,14 +32,15 @@ async function fetchProfile(userId: string): Promise<Profile | null> {
     .maybeSingle();
 
   if (error) {
-    // No queremos que un error de perfil rompa la sesión — el usuario simplemente
-    // aparece como "sin onboarding" y el flow lo manda a /welcome.
+    // Distinguimos "falló la request" (ok:false, no tocar el estado previo) de
+    // "no hay fila todavía" (ok:true, profile:null — el flow lo manda a /welcome).
+    // Sin esto, un error transiente de red pisaba el profile ya cargado con null.
     if (process.env.NODE_ENV !== 'production') {
       console.warn('[auth] no se pudo cargar el profile:', error.message);
     }
-    return null;
+    return { ok: false };
   }
-  return data;
+  return { ok: true, profile: data };
 }
 
 function toAuthenticated(user: User, _session: Session, profile: Profile | null): AuthState {
@@ -56,8 +59,10 @@ export const useAuthStore = create<Store>((set, get) => ({
   refreshProfile: async () => {
     const current = get().state;
     if (current.status !== 'authenticated') return;
-    const profile = await fetchProfile(current.userId);
-    set({ state: { ...current, profile } });
+    const result = await fetchProfile(current.userId);
+    // Si la request falló (red, etc.), no pisamos el profile ya cargado.
+    if (!result.ok) return;
+    set({ state: { ...current, profile: result.profile } });
   },
 
   hydrate: async () => {
@@ -72,8 +77,10 @@ export const useAuthStore = create<Store>((set, get) => ({
       return;
     }
 
-    const profile = await fetchProfile(data.session.user.id);
-    set({ state: toAuthenticated(data.session.user, data.session, profile) });
+    const result = await fetchProfile(data.session.user.id);
+    set({
+      state: toAuthenticated(data.session.user, data.session, result.ok ? result.profile : null),
+    });
   },
 
   subscribe: () => {
@@ -88,8 +95,16 @@ export const useAuthStore = create<Store>((set, get) => ({
       // En SIGNED_IN y USER_UPDATED recargamos el profile por si el trigger recién lo creó
       // o si el usuario se acaba de verificar el email.
       if (event === 'SIGNED_IN' || event === 'USER_UPDATED' || event === 'TOKEN_REFRESHED') {
-        const profile = await fetchProfile(session.user.id);
-        set({ state: toAuthenticated(session.user, session, profile) });
+        const result = await fetchProfile(session.user.id);
+        const prev = get().state;
+        const fallbackProfile = prev.status === 'authenticated' ? prev.profile : null;
+        set({
+          state: toAuthenticated(
+            session.user,
+            session,
+            result.ok ? result.profile : fallbackProfile,
+          ),
+        });
         return;
       }
 

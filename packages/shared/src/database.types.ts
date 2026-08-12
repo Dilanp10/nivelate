@@ -86,6 +86,36 @@ export type Database = {
         }
         Relationships: []
       }
+      lesson_completion_attempts: {
+        Row: {
+          created_at: string
+          current_streak: number
+          idempotency_key: string
+          new_total_xp: number
+          newly_unlocked: string[]
+          user_id: string
+          xp_awarded: number
+        }
+        Insert: {
+          created_at?: string
+          current_streak: number
+          idempotency_key: string
+          new_total_xp: number
+          newly_unlocked: string[]
+          user_id: string
+          xp_awarded: number
+        }
+        Update: {
+          created_at?: string
+          current_streak?: number
+          idempotency_key?: string
+          new_total_xp?: number
+          newly_unlocked?: string[]
+          user_id?: string
+          xp_awarded?: number
+        }
+        Relationships: []
+      }
       lesson_completions: {
         Row: {
           best_first_try_correct: number
@@ -393,6 +423,7 @@ export type Database = {
       complete_lesson: {
         Args: {
           p_first_try_correct: number
+          p_idempotency_key?: string
           p_lesson_id: string
           p_total: number
         }

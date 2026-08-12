@@ -8,6 +8,7 @@ import { ExerciseRenderer, isAnswerComplete } from '../player/ExerciseRenderer';
 import { FeedbackBanner } from '../player/FeedbackBanner';
 import { LessonProgress } from '../player/LessonProgress';
 import { Button } from '../ui/Button';
+import { FormError } from '../ui/FormError';
 import { ReviewSummary } from './ReviewSummary';
 
 type PayloadWithExplanation = { explanation?: string };
@@ -49,9 +50,12 @@ export function ReviewRunner({ cards, onExit }: Props) {
     const result = checkAnswer(current.exercise, answer);
     setLastResult(result);
     if (result.correct) setCorrectCount((n) => n + 1);
-    // Persistir en el server; el UI ya avanza sin esperar (fire-and-forget con
-    // invalidación en onSuccess).
     review.mutate({ exerciseId: current.exercise.id, correct: result.correct });
+  }
+
+  function handleRetryPersist() {
+    if (!current || !lastResult) return;
+    review.mutate({ exerciseId: current.exercise.id, correct: lastResult.correct });
   }
 
   function handleContinue() {
@@ -88,6 +92,18 @@ export function ReviewRunner({ cards, onExit }: Props) {
             correctAnswer={lastResult.correctAnswer}
             explanation={explanation}
           />
+        ) : null}
+
+        {phase === 'feedback' && review.isError ? (
+          <View className="gap-2">
+            <FormError message="No se pudo guardar este repaso. Podés reintentar o seguir sin guardarlo." />
+            <Button
+              label="Reintentar guardado"
+              variant="secondary"
+              loading={review.isPending}
+              onPress={handleRetryPersist}
+            />
+          </View>
         ) : null}
 
         {phase === 'feedback' ? (

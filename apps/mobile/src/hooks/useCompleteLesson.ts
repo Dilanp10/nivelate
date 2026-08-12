@@ -8,10 +8,17 @@ type Input = {
   lessonId: string;
   total: number;
   firstTryCorrect: number;
+  /**
+   * Uuid estable para este intento de completar la lección. El caller debe
+   * generarlo una sola vez (ej. con crypto.randomUUID()) y reusarlo en los
+   * reintentos del mismo intento — así un retry tras una respuesta perdida
+   * no vuelve a otorgar XP. Ver spec 003 + fix de idempotencia en 20260817.
+   */
+  idempotencyKey: string;
 };
 
 // Llama al RPC atómico complete_lesson. La XP la calcula el server; acá solo
-// mandamos los conteos.
+// mandamos los conteos + la idempotency key.
 export function useCompleteLesson() {
   const qc = useQueryClient();
   const refreshProfile = useAuthStore((s) => s.refreshProfile);
@@ -21,6 +28,7 @@ export function useCompleteLesson() {
       lessonId,
       total,
       firstTryCorrect,
+      idempotencyKey,
     }: Input): Promise<CompleteLessonResult> => {
       if (!supabase) throw new Error('Supabase no configurado');
       try {
@@ -28,6 +36,7 @@ export function useCompleteLesson() {
           p_lesson_id: lessonId,
           p_total: total,
           p_first_try_correct: firstTryCorrect,
+          p_idempotency_key: idempotencyKey,
         });
         if (error) throw new Error(toFriendlyError(error));
         const row = Array.isArray(data) ? data[0] : data;

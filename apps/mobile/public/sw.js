@@ -17,9 +17,23 @@ if (self.workbox) {
   });
   core.clientsClaim();
 
-  // Precache del app shell. self.__WB_MANIFEST se inyecta al build por Workbox
-  // Build (o queda vacío si no se corre — el SW igual funciona con runtime cache).
+  // NOTA: self.__WB_MANIFEST solo se llena si el build corre por Workbox
+  // Build/injectManifest — este proyecto no lo tiene configurado, así que hoy
+  // esta lista SIEMPRE está vacía y precacheAndRoute no hace nada. Queda el
+  // call para cuando se agregue ese build step. Mientras tanto, el shell se
+  // cachea recién al navegar (ver NetworkFirst de abajo) o vía el warm-up de
+  // 'install' de más abajo, que cubre el caso de "nunca visité y ya me quiero
+  // ir offline".
   precaching.precacheAndRoute(self.__WB_MANIFEST || []);
+
+  // Pre-warm: cachear el shell en el install, no depender de que el usuario ya
+  // haya navegado. Sin esto, un usuario que instala la PWA y se va offline
+  // antes de la primera visita completa no tiene nada que servir.
+  self.addEventListener('install', (event) => {
+    event.waitUntil(
+      caches.open('app-shell').then((cache) => cache.add('/').catch(() => undefined)),
+    );
+  });
 
   // Navegación (HTML shell): network-first con fallback al index cacheado.
   routing.registerRoute(

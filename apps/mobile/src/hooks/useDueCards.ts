@@ -14,20 +14,15 @@ export type DueCard = {
 async function fetchDueCards(userId: string): Promise<DueCard[]> {
   if (!supabase) throw new Error('Supabase no configurado');
 
-  // Nota: no podemos joinar hasta units en un select simple; el filtro por
-  // is_published lo hacemos abajo con un segundo lookup barato. RLS ya bloquea
-  // ejercicios de unidades no publicadas para el rol authenticated, así que en
-  // la práctica el join no devuelve filas si la unidad se despublica.
+  // No filtramos por unidad publicada acá: la RLS de "exercises" ya exige que
+  // la unidad esté publicada (ver spec 004), y exercises!inner descarta la
+  // fila de srs_cards entera si el embed falla esa RLS. Un ejercicio de unidad
+  // despublicada nunca llega a este resultado.
   const { data, error } = await supabase
     .from('srs_cards')
     .select(
       `interval_days, repetitions,
-       exercise:exercises!inner (
-         id, exercise_key, type, payload, sort_order,
-         lesson:lessons!inner (
-           unit:units!inner ( is_published )
-         )
-       )`,
+       exercise:exercises!inner ( id, exercise_key, type, payload, sort_order )`,
     )
     .eq('user_id', userId)
     .lte('due_at', new Date().toISOString())
@@ -45,24 +40,21 @@ async function fetchDueCards(userId: string): Promise<DueCard[]> {
       type: PlayableExercise['type'];
       payload: unknown;
       sort_order: number;
-      lesson: { unit: { is_published: boolean } };
     };
   };
 
-  return (data as unknown as Row[])
-    .filter((r) => r.exercise?.lesson?.unit?.is_published)
-    .map((r) => ({
-      cardId: r.exercise.id,
-      exercise: {
-        id: r.exercise.id,
-        exerciseKey: r.exercise.exercise_key,
-        type: r.exercise.type,
-        payload: r.exercise.payload,
-        sortOrder: r.exercise.sort_order,
-      },
-      intervalDays: r.interval_days,
-      repetitions: r.repetitions,
-    }));
+  return (data as unknown as Row[]).map((r) => ({
+    cardId: r.exercise.id,
+    exercise: {
+      id: r.exercise.id,
+      exerciseKey: r.exercise.exercise_key,
+      type: r.exercise.type,
+      payload: r.exercise.payload,
+      sortOrder: r.exercise.sort_order,
+    },
+    intervalDays: r.interval_days,
+    repetitions: r.repetitions,
+  }));
 }
 
 export function useDueCards() {

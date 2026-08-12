@@ -7,11 +7,12 @@ import {
   summarize,
 } from '@nivelate/shared';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useEffect, useMemo, useReducer, useState } from 'react';
+import { useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { ActivityIndicator, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useCompleteLesson } from '../../../src/hooks/useCompleteLesson';
 import { type PlayableExercise, useLesson } from '../../../src/hooks/useLesson';
+import { randomUUID } from '../../../src/lib/uuid';
 import { ExerciseRenderer, isAnswerComplete } from '../../../src/player/ExerciseRenderer';
 import { FeedbackBanner } from '../../../src/player/FeedbackBanner';
 import { LessonProgress } from '../../../src/player/LessonProgress';
@@ -92,6 +93,10 @@ function LessonRunner({
   const complete = useCompleteLesson();
   const completeMutate = complete.mutate;
   const [submitted, setSubmitted] = useState(false);
+  // Una sola key por intento de completar esta lección: se genera al llegar al
+  // resumen y se reusa en reintentos, para que un retry tras respuesta perdida
+  // no vuelva a otorgar XP (idempotencia server-side).
+  const idempotencyKeyRef = useRef<string | null>(null);
 
   const total = exercises.length;
   const doneCount = Object.values(state.results).filter((r) => r.done).length;
@@ -100,11 +105,13 @@ function LessonRunner({
   useEffect(() => {
     if (state.phase === 'summary' && !submitted) {
       setSubmitted(true);
+      if (!idempotencyKeyRef.current) idempotencyKeyRef.current = randomUUID();
       const summary = summarize(state);
       completeMutate({
         lessonId,
         total: summary.total,
         firstTryCorrect: summary.firstTryCorrect,
+        idempotencyKey: idempotencyKeyRef.current,
       });
     }
   }, [state, submitted, completeMutate, lessonId]);
@@ -131,6 +138,9 @@ function LessonRunner({
               lessonId,
               total: summary.total,
               firstTryCorrect: summary.firstTryCorrect,
+              // Misma key que el intento original — el server detecta el
+              // duplicado y devuelve el resultado ya calculado sin re-otorgar XP.
+              idempotencyKey: idempotencyKeyRef.current ?? randomUUID(),
             })
           }
           onDone={onExit}
