@@ -1,0 +1,105 @@
+import { type UserAnswer, checkAnswer } from '@nivelate/shared';
+import { useState } from 'react';
+import { ScrollView, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import type { DueCard } from '../hooks/useDueCards';
+import { useReviewCard } from '../hooks/useReviewCard';
+import { ExerciseRenderer, isAnswerComplete } from '../player/ExerciseRenderer';
+import { FeedbackBanner } from '../player/FeedbackBanner';
+import { LessonProgress } from '../player/LessonProgress';
+import { Button } from '../ui/Button';
+import { ReviewSummary } from './ReviewSummary';
+
+type PayloadWithExplanation = { explanation?: string };
+
+type Props = {
+  cards: DueCard[];
+  onExit: () => void;
+};
+
+// Sesión de repaso: una respuesta por card (sin re-intento). Reusa los renderers
+// y checkAnswer de 005; sin el reducer de lección.
+export function ReviewRunner({ cards, onExit }: Props) {
+  const [index, setIndex] = useState(0);
+  const [answer, setAnswer] = useState<UserAnswer | null>(null);
+  const [lastResult, setLastResult] = useState<{ correct: boolean; correctAnswer: string } | null>(
+    null,
+  );
+  const [correctCount, setCorrectCount] = useState(0);
+  const review = useReviewCard();
+
+  const total = cards.length;
+  const done = index >= total;
+  const current = cards[index];
+  const phase: 'answering' | 'feedback' = lastResult ? 'feedback' : 'answering';
+
+  if (done) {
+    return (
+      <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
+        <ReviewSummary total={total} correct={correctCount} onDone={onExit} />
+      </SafeAreaView>
+    );
+  }
+  if (!current) return null;
+
+  const explanation = (current.exercise.payload as PayloadWithExplanation).explanation;
+
+  function handleVerify() {
+    if (!current || !answer) return;
+    const result = checkAnswer(current.exercise, answer);
+    setLastResult(result);
+    if (result.correct) setCorrectCount((n) => n + 1);
+    // Persistir en el server; el UI ya avanza sin esperar (fire-and-forget con
+    // invalidación en onSuccess).
+    review.mutate({ exerciseId: current.exercise.id, correct: result.correct });
+  }
+
+  function handleContinue() {
+    setIndex((i) => i + 1);
+    setAnswer(null);
+    setLastResult(null);
+    review.reset();
+  }
+
+  return (
+    <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
+      <View className="px-4">
+        <LessonProgress done={index} total={total} onClose={onExit} />
+      </View>
+
+      <ScrollView
+        className="flex-1"
+        contentContainerClassName="px-6 py-4 gap-3"
+        keyboardShouldPersistTaps="handled"
+      >
+        <Text className="text-muted text-xs uppercase tracking-wider">Repaso</Text>
+        <ExerciseRenderer
+          exercise={current.exercise}
+          answer={answer}
+          disabled={phase === 'feedback'}
+          onAnswer={setAnswer}
+        />
+      </ScrollView>
+
+      <View className="px-6 pb-4 gap-3">
+        {phase === 'feedback' && lastResult ? (
+          <FeedbackBanner
+            correct={lastResult.correct}
+            correctAnswer={lastResult.correctAnswer}
+            explanation={explanation}
+          />
+        ) : null}
+
+        {phase === 'feedback' ? (
+          <Button label="Continuar" onPress={handleContinue} />
+        ) : (
+          <Button
+            label="Verificar"
+            onPress={handleVerify}
+            disabled={!isAnswerComplete(current.exercise, answer)}
+          />
+        )}
+      </View>
+    </SafeAreaView>
+  );
+}

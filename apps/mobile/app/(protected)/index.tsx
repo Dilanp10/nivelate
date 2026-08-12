@@ -1,6 +1,7 @@
 import { APP_CEFR_RANGE, levelForXp } from '@nivelate/shared';
 import { Link, useRouter } from 'expo-router';
 import { Pressable, Text, View } from 'react-native';
+import { useDueCardCount } from '../../src/hooks/useDueCardCount';
 import { useFirstLesson } from '../../src/hooks/useFirstLesson';
 import { useAuthStore } from '../../src/stores/auth';
 import { ScreenLayout } from '../../src/ui/ScreenLayout';
@@ -11,8 +12,10 @@ export default function Home() {
     s.state.status === 'authenticated' ? s.state.profile : null,
   );
   const firstLesson = useFirstLesson();
+  const dueCount = useDueCardCount();
 
   const name = profile?.display_name ?? 'estudiante';
+  const dueCards = dueCount.data ?? 0;
   const totalXp = profile?.total_xp ?? 0;
   const streak = profile?.current_streak ?? 0;
   const level = levelForXp(totalXp);
@@ -44,6 +47,22 @@ export default function Home() {
           </View>
         </View>
       </Pressable>
+
+      {dueCards > 0 ? (
+        <Pressable
+          onPress={() => router.push('/review')}
+          accessibilityRole="button"
+          accessibilityLabel={`Repasar ${dueCards} cards`}
+          className="bg-surface border border-brand rounded-xl p-4 flex-row items-center gap-3 active:opacity-90"
+        >
+          <Text className="text-2xl">🔁</Text>
+          <View className="flex-1">
+            <Text className="text-text text-base font-semibold">Tenés {dueCards} para repasar</Text>
+            <Text className="text-muted text-xs">Mantener lo aprendido → tocá para empezar</Text>
+          </View>
+          <Text className="text-brand text-lg">›</Text>
+        </Pressable>
+      ) : null}
 
       {firstLesson.data ? (
         <Pressable

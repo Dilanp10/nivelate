@@ -1,4 +1,4 @@
-// Autogenerado con `pnpm supabase:types` (spec 003 T004).
+// Autogenerado con `pnpm supabase:types` (spec 006 T005).
 // No editar a mano.
 
 export type Json =
@@ -233,6 +233,44 @@ export type Database = {
         }
         Relationships: []
       }
+      srs_cards: {
+        Row: {
+          due_at: string
+          ease_factor: number
+          exercise_id: string
+          interval_days: number
+          last_reviewed_at: string | null
+          repetitions: number
+          user_id: string
+        }
+        Insert: {
+          due_at?: string
+          ease_factor?: number
+          exercise_id: string
+          interval_days?: number
+          last_reviewed_at?: string | null
+          repetitions?: number
+          user_id: string
+        }
+        Update: {
+          due_at?: string
+          ease_factor?: number
+          exercise_id?: string
+          interval_days?: number
+          last_reviewed_at?: string | null
+          repetitions?: number
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "srs_cards_exercise_id_fkey"
+            columns: ["exercise_id"]
+            isOneToOne: false
+            referencedRelation: "exercises"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       units: {
         Row: {
           cefr_level: string
@@ -346,6 +384,13 @@ export type Database = {
           current_streak: number
           new_total_xp: number
           xp_awarded: number
+        }[]
+      }
+      review_card: {
+        Args: { p_correct: boolean; p_exercise_id: string }
+        Returns: {
+          due_at: string
+          interval_days: number
         }[]
       }
     }
