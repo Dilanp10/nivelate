@@ -1,5 +1,6 @@
 import type { CompleteLessonResult } from '@nivelate/shared';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { toFriendlyError } from '../lib/net';
 import { supabase } from '../lib/supabase';
 import { useAuthStore } from '../stores/auth';
 
@@ -22,16 +23,19 @@ export function useCompleteLesson() {
       firstTryCorrect,
     }: Input): Promise<CompleteLessonResult> => {
       if (!supabase) throw new Error('Supabase no configurado');
-      const { data, error } = await supabase.rpc('complete_lesson', {
-        p_lesson_id: lessonId,
-        p_total: total,
-        p_first_try_correct: firstTryCorrect,
-      });
-      if (error) throw new Error(error.message);
-      // El RPC devuelve un array de una fila.
-      const row = Array.isArray(data) ? data[0] : data;
-      if (!row) throw new Error('El servidor no devolvió el resultado');
-      return row as CompleteLessonResult;
+      try {
+        const { data, error } = await supabase.rpc('complete_lesson', {
+          p_lesson_id: lessonId,
+          p_total: total,
+          p_first_try_correct: firstTryCorrect,
+        });
+        if (error) throw new Error(toFriendlyError(error));
+        const row = Array.isArray(data) ? data[0] : data;
+        if (!row) throw new Error('El servidor no devolvió el resultado');
+        return row as CompleteLessonResult;
+      } catch (err) {
+        throw new Error(toFriendlyError(err));
+      }
     },
     onSuccess: async () => {
       await refreshProfile();

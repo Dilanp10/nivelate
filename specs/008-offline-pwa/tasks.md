@@ -4,32 +4,42 @@ Cada tarea → un commit. `<tipo>(008): T### — <descripción>`.
 
 ## Fase 1 — SW estático + registro
 
-- [ ] T001 — `apps/mobile/assets/icon.png` (1024×1024).
-- [ ] T002 — `apps/mobile/public/sw.js` con Workbox CDN import y estrategias.
-- [ ] T003 — `apps/mobile/src/lib/sw-register.ts` — registro condicional (prod + web + feature-detect).
-- [ ] T004 — Llamada al register en `app/_layout.tsx` (useEffect una vez).
+- [ ] T001 — `apps/mobile/assets/icon.png` (1024×1024). **Requiere al usuario:** archivo binario a diseñar. `assets/README.md` documenta las specs y un placeholder mínimo.
+- [x] T002 — `apps/mobile/public/sw.js` con Workbox CDN import y estrategias por tipo de recurso.
+- [x] T003 — `sw-register.ts` con guards (prod + web + feature-detect).
+- [x] T004 — Llamada al register en `_layout.tsx` (useEffect + escucha updatefound).
 
-## Fase 2 — UI
+## Fase 2 — UI ✅
 
-- [ ] T010 — `useOnlineStatus` (useSyncExternalStore sobre online/offline).
-- [ ] T011 — `ConnectionBanner`.
-- [ ] T012 — `UpdateAvailableBanner`.
-- [ ] T013 — Montaje de ambos en `_layout.tsx`.
+- [x] T010 — `useOnlineStatus` con `useSyncExternalStore`.
+- [x] T011 — `ConnectionBanner`.
+- [x] T012 — `UpdateAvailableBanner` (postMessage `SKIP_WAITING` + reload en `controllerchange`).
+- [x] T013 — Ambos montados en el root layout, arriba del `<Slot />`.
 
-## Fase 3 — Errores de red claros
+## Fase 3 — Errores de red claros ✅
 
-- [ ] T020 — `lib/net.ts` con `isNetworkError` + `toFriendlyError`.
-- [ ] T021 — Aplicar en useCompleteLesson, useReviewCard, useSignIn, useSignUp.
+- [x] T020 — `lib/net.ts` con `isNetworkError` + `toFriendlyError`.
+- [x] T021 — Aplicado en useCompleteLesson, useReviewCard, useSignIn, useSignUp.
 
 ## Fase 4 — Build + doc
 
-- [ ] T030 — Verificar que `expo export --platform web` incluye `public/sw.js` en `dist/`.
-- [ ] T031 — `pnpm typecheck && pnpm lint && pnpm test` verde.
-- [ ] T090 — `quickstart.md` con los pasos de build + serve + Lighthouse + offline.
-- [ ] T091 — Actualizar `README.md` con badge "PWA installable".
-- [ ] T099 — PR `feat(008): offline pwa`.
+- [ ] T030 — Verificar que `expo export --platform web` incluye `public/sw.js` en `dist/`. **Requiere al usuario:** correr el build y confirmar (documentado en quickstart).
+- [x] T031 — `pnpm typecheck && pnpm lint && pnpm test` verde (98 unit tests).
+- [x] T090 — `quickstart.md` con los pasos de build + serve + Lighthouse + offline.
+- [ ] T091 — README con badge "PWA installable". Diferido hasta tener el deploy en Vercel.
+- [ ] T099 — PR `feat(008): offline pwa` tras cerrar 001 T004 + resto de la cadena.
 
-## Notas para la verificación
+## Verificaciones hechas en esta sesión
 
-- La validación real del SW **no funciona con `pnpm --filter mobile web`** (Metro dev). Requiere `expo export --platform web` + un servidor estático + Chrome.
-- El usuario debe correr Lighthouse a mano para AC-002.
+- **Guard de dev**: en `pnpm --filter mobile web` (Metro dev, NODE_ENV=development), el SW NO se registra. `navigator.serviceWorker.getRegistrations()` devuelve `[]`. ✓
+- **`ConnectionBanner`**: simulando `navigator.onLine = false` + `offline` event → aparece "Sin conexión — algunas acciones pueden fallar" arriba de la home. Al volver a `true` + `online` event → desaparece. ✓
+- **App no rompió**: home sigue rindiendo (Nivel 2 / 160 XP del usuario de prueba).
+
+## Verificaciones que requieren al usuario
+
+- La validación real del SW **NO funciona con `pnpm --filter mobile web`** (Metro dev). Requiere:
+  1. `pnpm --filter mobile export:web`
+  2. Servir `apps/mobile/dist/` con un HTTP server (ej. `pnpm dlx serve apps/mobile/dist -p 5000`).
+  3. Abrir en Chrome → DevTools → Application → Service Workers (activo).
+  4. Lighthouse → PWA audit debería dar "installable" en verde (siempre que hayas creado `assets/icon.png` de 1024×1024).
+  5. DevTools → Network → Offline → recargar → app carga.

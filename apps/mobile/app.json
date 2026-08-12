@@ -12,10 +12,13 @@
       "output": "single",
       "name": "Nivelate — Inglés A2 a B1",
       "shortName": "Nivelate",
+      "description": "Aprendé inglés A2 → B1 en serio. PWA gratis, sin mascotas.",
       "lang": "es",
       "themeColor": "#0f172a",
       "backgroundColor": "#0f172a",
-      "display": "standalone"
+      "display": "standalone",
+      "orientation": "portrait",
+      "startUrl": "/"
     },
     "ios": {
       "supportsTablet": true,
