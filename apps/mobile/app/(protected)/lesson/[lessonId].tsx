@@ -115,6 +115,7 @@ function LessonRunner({
     // La XP oficial es la del server; mientras carga, mostramos la estimada.
     const serverXp = complete.data?.xp_awarded;
     const streak = complete.data?.current_streak;
+    const newlyUnlocked = complete.data?.newly_unlocked;
     const errored = complete.isError;
 
     return (
@@ -122,6 +123,7 @@ function LessonRunner({
         <LessonSummary
           summary={{ ...summary, estimatedXp: serverXp ?? summary.estimatedXp }}
           streak={streak}
+          newlyUnlocked={newlyUnlocked}
           saving={complete.isPending}
           error={errored ? 'No se pudo guardar tu progreso.' : null}
           onRetry={() =>

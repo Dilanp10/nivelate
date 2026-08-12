@@ -1,6 +1,8 @@
 import { CEFR_LABELS, levelForXp } from '@nivelate/shared';
 import { useRouter } from 'expo-router';
 import { Text, View } from 'react-native';
+import { AchievementsGrid } from '../../src/components/AchievementsGrid';
+import { useAchievements } from '../../src/hooks/useAchievements';
 import { useProgress } from '../../src/hooks/useProgress';
 import { useAuthStore } from '../../src/stores/auth';
 import { Button } from '../../src/ui/Button';
@@ -12,6 +14,7 @@ export default function ProgressScreen() {
     s.state.status === 'authenticated' ? s.state.profile : null,
   );
   const progress = useProgress();
+  const achievements = useAchievements();
 
   const totalXp = profile?.total_xp ?? 0;
   const level = levelForXp(totalXp);
@@ -98,6 +101,8 @@ export default function ProgressScreen() {
           ) : null}
         </>
       )}
+
+      {achievements.data ? <AchievementsGrid achievements={achievements.data} /> : null}
 
       <Button label="Volver" variant="ghost" onPress={() => router.back()} />
     </ScreenLayout>

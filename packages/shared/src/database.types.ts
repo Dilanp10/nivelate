@@ -1,4 +1,4 @@
-// Autogenerado con `pnpm supabase:types` (spec 006 T005).
+// Autogenerado con `pnpm supabase:types` (spec 007 T003).
 // No editar a mano.
 
 export type Json =
@@ -10,8 +10,6 @@ export type Json =
   | Json[]
 
 export type Database = {
-  // Allows to automatically instantiate createClient with right options
-  // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "14.15"
   }
@@ -307,6 +305,24 @@ export type Database = {
         }
         Relationships: []
       }
+      user_achievements: {
+        Row: {
+          achievement_id: string
+          unlocked_at: string
+          user_id: string
+        }
+        Insert: {
+          achievement_id: string
+          unlocked_at?: string
+          user_id: string
+        }
+        Update: {
+          achievement_id?: string
+          unlocked_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       vocab_items: {
         Row: {
           cefr_level: string
@@ -383,9 +399,11 @@ export type Database = {
         Returns: {
           current_streak: number
           new_total_xp: number
+          newly_unlocked: string[]
           xp_awarded: number
         }[]
       }
+      evaluate_achievements: { Args: { p_user: string }; Returns: string[] }
       review_card: {
         Args: { p_correct: boolean; p_exercise_id: string }
         Returns: {

@@ -36,6 +36,8 @@ export function useCompleteLesson() {
     onSuccess: async () => {
       await refreshProfile();
       qc.invalidateQueries({ queryKey: ['progress'] });
+      // 007: si desbloqueó logros, invalidamos el grid.
+      qc.invalidateQueries({ queryKey: ['user-achievements'] });
     },
   });
 }

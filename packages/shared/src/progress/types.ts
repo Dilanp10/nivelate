@@ -8,4 +8,6 @@ export type CompleteLessonResult = {
   xp_awarded: number;
   new_total_xp: number;
   current_streak: number;
+  /** ids de logros recién desbloqueados en esta llamada. Añadido en 007. */
+  newly_unlocked: string[];
 };
