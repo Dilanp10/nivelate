@@ -49,19 +49,21 @@ export default function Home() {
       </Pressable>
 
       {dueCards > 0 ? (
-        <Pressable
-          onPress={() => router.push('/review')}
-          accessibilityRole="button"
-          accessibilityLabel={`Repasar ${dueCards} cards`}
-          className="bg-surface border border-brand rounded-xl p-4 flex-row items-center gap-3 active:opacity-90"
-        >
-          <Text className="text-2xl">🔁</Text>
-          <View className="flex-1">
-            <Text className="text-text text-base font-semibold">Tenés {dueCards} para repasar</Text>
-            <Text className="text-muted text-xs">Mantener lo aprendido → tocá para empezar</Text>
-          </View>
-          <Text className="text-brand text-lg">›</Text>
-        </Pressable>
+        // Link (no Pressable+router.push) porque en Expo Router web con
+        // output:'single' los Pressable con router.push a veces no navegan
+        // al primer tap. Un <Link> emite el anchor real y funciona siempre.
+        <Link href="/review" asChild accessibilityLabel={`Repasar ${dueCards} cards`}>
+          <Pressable className="bg-surface border border-brand rounded-xl p-4 flex-row items-center gap-3 active:opacity-90">
+            <Text className="text-2xl">🔁</Text>
+            <View className="flex-1">
+              <Text className="text-text text-base font-semibold">
+                Tenés {dueCards} para repasar
+              </Text>
+              <Text className="text-muted text-xs">Mantener lo aprendido → tocá para empezar</Text>
+            </View>
+            <Text className="text-brand text-lg">›</Text>
+          </Pressable>
+        </Link>
       ) : null}
 
       {firstLesson.data ? (
