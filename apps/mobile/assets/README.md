@@ -1,22 +1,20 @@
 # Assets
 
-## `icon.png` — pendiente
+## `icon.png` — placeholder
 
-Este proyecto necesita un `icon.png` de **1024×1024** en este directorio
-para que Expo genere los tamaños del manifest PWA (192, 512, maskable, favicon,
-apple-touch-icon).
+`icon.png` (1024×1024) es un **placeholder**: fondo `#0f172a` con una "N" blanca
+(`#f8fafc`). Reemplazarlo cuando haya un logo de marca real.
 
-Sin este archivo, `expo export --platform web` sigue funcionando pero el
-manifest queda sin iconos y Lighthouse marca "PWA installable" en amarillo.
+## Cómo se arma el manifest PWA
 
-## Cómo generarlo
+Ojo: Expo **no** genera el manifest a partir de los campos `web` de `app.json`.
+Con Metro web y `output: 'single'`, `expo export --platform web` emite un
+`index.html` desde un template interno e ignora `app/+html.tsx`. Por eso:
 
-Cualquier PNG cuadrado 1024×1024 sirve. Sugerencia rápida (placeholder):
+- El manifest se mantiene **a mano** en `public/manifest.json`.
+- Los iconos servidos viven en `public/icons/` (192, 512, maskable 512).
+- Los tags del `<head>` (`<link rel="manifest">`, apple-touch-icon, etc.) los
+  inyecta `scripts/inject-pwa-head.mjs` como paso post-build de `export:web`.
 
-- Fondo `#0f172a` (bg de la app).
-- La letra **N** blanca (`#f8fafc`) centrada, sans-serif bold, ~600px alto.
-
-Podés usar Figma, Canva, o cualquier tool. Guardar como `apps/mobile/assets/icon.png`
-y volver a correr `pnpm --filter mobile export:web`.
-
-Cuando haya un logo de marca real, reemplazar este placeholder.
+Si reemplazás `icon.png`, regenerá también los tres PNG de `public/icons/`
+en los mismos tamaños, o el manifest va a apuntar a los iconos viejos.

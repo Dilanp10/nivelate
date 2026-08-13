@@ -8,7 +8,7 @@
     "web": "expo start --web",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "export:web": "expo export --platform web",
+    "export:web": "expo export --platform web && node scripts/inject-pwa-head.mjs",
     "typecheck": "tsc --noEmit",
     "test": "echo \"(no unit tests in mobile — testing en @nivelate/shared)\" && exit 0"
   },
