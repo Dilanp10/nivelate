@@ -1,5 +1,6 @@
 import type { TranslationPayload, UserAnswer } from '@nivelate/shared';
-import { Text, TextInput, View } from 'react-native';
+import { TextInput, View } from 'react-native';
+import { ExercisePrompt } from '../../ui/OptionCard';
 
 type Props = {
   payload: TranslationPayload;
@@ -9,20 +10,20 @@ type Props = {
 };
 
 export function TranslationExercise({ payload, value, disabled, onChange }: Props) {
-  const label = payload.direction === 'es_to_en' ? 'Traducí al inglés:' : 'Traducí al español:';
+  const hint = payload.direction === 'es_to_en' ? 'Traducí al inglés' : 'Traducí al español';
   return (
-    <View className="gap-3">
-      <Text className="text-muted text-sm">{label}</Text>
-      <Text className="text-text text-xl font-semibold">{payload.prompt}</Text>
+    <View className="gap-6">
+      <ExercisePrompt hint={hint}>{payload.prompt}</ExercisePrompt>
       <TextInput
         value={value}
         editable={!disabled}
         onChangeText={(text) => onChange({ type: 'translation', text })}
         placeholder="Escribí tu traducción"
-        placeholderTextColor="#64748b"
+        placeholderTextColor="#8fa3ad"
         multiline
+        textAlignVertical="top"
         accessibilityLabel="Tu traducción"
-        className="bg-surface border border-border rounded-lg px-3 py-3 text-text text-base min-h-[80px]"
+        className="bg-surface border-2 border-b-4 border-border rounded-2xl px-4 py-4 text-text text-lg min-h-[112px]"
       />
     </View>
   );

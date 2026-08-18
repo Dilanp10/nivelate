@@ -14,8 +14,8 @@
       "shortName": "Nivelate",
       "description": "Aprendé inglés A2 → B1 en serio. PWA gratis, sin mascotas.",
       "lang": "es",
-      "themeColor": "#0f172a",
-      "backgroundColor": "#0f172a",
+      "themeColor": "#131f24",
+      "backgroundColor": "#131f24",
       "display": "standalone",
       "orientation": "portrait",
       "startUrl": "/"
@@ -27,7 +27,7 @@
     "android": {
       "package": "app.nivelate.mobile",
       "adaptiveIcon": {
-        "backgroundColor": "#0f172a"
+        "backgroundColor": "#131f24"
       }
     },
     "plugins": ["expo-router"],

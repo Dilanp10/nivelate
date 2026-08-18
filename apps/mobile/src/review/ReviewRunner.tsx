@@ -73,19 +73,30 @@ export function ReviewRunner({ cards, onExit }: Props) {
 
       <ScrollView
         className="flex-1"
-        contentContainerClassName="px-6 py-4 gap-3"
+        contentContainerClassName="px-6 py-6 gap-4"
         keyboardShouldPersistTaps="handled"
       >
-        <Text className="text-muted text-xs uppercase tracking-wider">Repaso</Text>
+        <View className="self-start rounded-full bg-info/15 px-3 py-1">
+          <Text className="text-info text-xs font-bold uppercase tracking-widest">Repaso</Text>
+        </View>
         <ExerciseRenderer
           exercise={current.exercise}
           answer={answer}
           disabled={phase === 'feedback'}
+          revealed={phase === 'feedback'}
           onAnswer={setAnswer}
         />
       </ScrollView>
 
-      <View className="px-6 pb-4 gap-3">
+      <View
+        className={`px-6 pt-4 pb-5 gap-4 border-t-2 ${
+          phase === 'feedback' && lastResult
+            ? lastResult.correct
+              ? 'bg-brand/10 border-brand/30'
+              : 'bg-danger/10 border-danger/30'
+            : 'border-transparent'
+        }`}
+      >
         {phase === 'feedback' && lastResult ? (
           <FeedbackBanner
             correct={lastResult.correct}
@@ -107,7 +118,11 @@ export function ReviewRunner({ cards, onExit }: Props) {
         ) : null}
 
         {phase === 'feedback' ? (
-          <Button label="Continuar" onPress={handleContinue} />
+          <Button
+            label="Continuar"
+            variant={lastResult?.correct === false ? 'danger' : 'primary'}
+            onPress={handleContinue}
+          />
         ) : (
           <Button
             label="Verificar"

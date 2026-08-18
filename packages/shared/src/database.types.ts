@@ -229,8 +229,10 @@ export type Database = {
           daily_goal_min: number
           display_name: string | null
           last_activity_date: string | null
+          learning_goal: string | null
           longest_streak: number
           onboarded_at: string | null
+          self_level: string | null
           total_xp: number
           updated_at: string
           user_id: string
@@ -241,8 +243,10 @@ export type Database = {
           daily_goal_min?: number
           display_name?: string | null
           last_activity_date?: string | null
+          learning_goal?: string | null
           longest_streak?: number
           onboarded_at?: string | null
+          self_level?: string | null
           total_xp?: number
           updated_at?: string
           user_id: string
@@ -253,8 +257,10 @@ export type Database = {
           daily_goal_min?: number
           display_name?: string | null
           last_activity_date?: string | null
+          learning_goal?: string | null
           longest_streak?: number
           onboarded_at?: string | null
+          self_level?: string | null
           total_xp?: number
           updated_at?: string
           user_id?: string

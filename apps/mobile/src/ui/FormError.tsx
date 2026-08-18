@@ -10,9 +10,9 @@ export function FormError({ message }: Props) {
   return (
     <View
       accessibilityRole="alert"
-      className="bg-danger/10 border border-danger/40 rounded-lg px-3 py-2"
+      className="bg-danger/10 border-2 border-danger/40 rounded-2xl px-4 py-3"
     >
-      <Text className="text-danger text-sm">{message}</Text>
+      <Text className="text-danger text-sm font-semibold">{message}</Text>
     </View>
   );
 }

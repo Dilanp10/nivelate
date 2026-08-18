@@ -12,7 +12,7 @@ export default function ReviewScreen() {
   if (query.isLoading) {
     return (
       <SafeAreaView className="flex-1 bg-bg items-center justify-center">
-        <ActivityIndicator color="#22d3ee" />
+        <ActivityIndicator color="#58cc02" />
       </SafeAreaView>
     );
   }

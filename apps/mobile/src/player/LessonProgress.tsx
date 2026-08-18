@@ -14,14 +14,14 @@ export function LessonProgress({ done, total, onClose }: Props) {
         onPress={onClose}
         accessibilityRole="button"
         accessibilityLabel="Salir de la lección"
-        className="px-2 py-1"
+        className="w-10 h-10 rounded-full bg-surface items-center justify-center active:bg-surface-light"
       >
-        <Text className="text-muted text-xl">✕</Text>
+        <Text className="text-muted text-lg">✕</Text>
       </Pressable>
-      <View className="flex-1 h-2 rounded-full bg-surface overflow-hidden">
+      <View className="flex-1 h-3 rounded-full bg-surface overflow-hidden">
         <View className="h-full rounded-full bg-brand" style={{ width: `${pct}%` }} />
       </View>
-      <Text className="text-muted text-xs w-12 text-right">
+      <Text className="text-muted text-xs font-semibold w-12 text-right">
         {done}/{total}
       </Text>
     </View>

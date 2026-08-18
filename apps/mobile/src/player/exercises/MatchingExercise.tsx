@@ -43,11 +43,16 @@ export function MatchingExercise({ payload, disabled, onChange }: Props) {
   const usedRights = new Set(Object.values(matches));
 
   return (
-    <View className="gap-4">
-      <Text className="text-muted text-sm">Tocá una palabra y luego su pareja.</Text>
+    <View className="gap-6">
+      <Text className="text-muted text-xs font-bold uppercase tracking-widest">
+        {selectedLeft
+          ? `Ahora elegí la pareja de "${selectedLeft}"`
+          : 'Tocá una palabra y luego su pareja'}
+      </Text>
+
       <View className="flex-row gap-3">
         {/* Columna izquierda */}
-        <View className="flex-1 gap-2">
+        <View className="flex-1 gap-3">
           {lefts.map((left) => {
             const matched = matches[left];
             const active = selectedLeft === left;
@@ -58,23 +63,27 @@ export function MatchingExercise({ payload, disabled, onChange }: Props) {
                 onPress={() => setSelectedLeft(left)}
                 accessibilityRole="button"
                 accessibilityState={{ selected: active }}
-                className={`rounded-lg border px-3 py-3 ${
+                className={`rounded-2xl border-2 border-b-4 px-4 py-3 ${
                   active
-                    ? 'border-brand bg-brand/10'
+                    ? 'border-info bg-info/15'
                     : matched
-                      ? 'border-border bg-bg'
-                      : 'border-border bg-surface'
+                      ? 'border-brand/50 bg-brand/10'
+                      : 'border-border bg-surface active:bg-surface-light'
                 }`}
               >
-                <Text className="text-text text-base">{left}</Text>
-                {matched ? <Text className="text-muted text-xs mt-0.5">→ {matched}</Text> : null}
+                <Text className={`text-base font-semibold ${active ? 'text-info' : 'text-text'}`}>
+                  {left}
+                </Text>
+                {matched ? (
+                  <Text className="text-brand text-xs font-semibold mt-1">→ {matched}</Text>
+                ) : null}
               </Pressable>
             );
           })}
         </View>
 
         {/* Columna derecha (barajada) */}
-        <View className="flex-1 gap-2">
+        <View className="flex-1 gap-3">
           {rights.map((right) => {
             const used = usedRights.has(right);
             return (
@@ -83,11 +92,13 @@ export function MatchingExercise({ payload, disabled, onChange }: Props) {
                 disabled={disabled || used}
                 onPress={() => pickRight(right)}
                 accessibilityRole="button"
-                className={`rounded-lg border px-3 py-3 ${
-                  used ? 'border-border bg-bg opacity-40' : 'border-border bg-surface'
+                className={`rounded-2xl border-2 border-b-4 px-4 py-3 ${
+                  used
+                    ? 'border-border/40 bg-bg opacity-30'
+                    : 'border-border bg-surface active:bg-surface-light'
                 }`}
               >
-                <Text className="text-text text-base">{right}</Text>
+                <Text className="text-text text-base font-semibold">{right}</Text>
               </Pressable>
             );
           })}

@@ -1,4 +1,4 @@
-import type { DailyGoal } from '@nivelate/shared';
+import type { DailyGoal, LearningGoal, SelfLevel } from '@nivelate/shared';
 import { toSpanishAuthError } from '@nivelate/shared';
 import { useMutation } from '@tanstack/react-query';
 import { supabase } from '../lib/supabase';
@@ -7,13 +7,15 @@ import { useAuthStore } from '../stores/auth';
 type OnboardingInput = {
   displayName: string | null;
   dailyGoalMin: DailyGoal;
+  learningGoal: LearningGoal | null;
+  selfLevel: SelfLevel | null;
 };
 
 export function useOnboarding() {
   const refreshProfile = useAuthStore((s) => s.refreshProfile);
 
   return useMutation({
-    mutationFn: async ({ displayName, dailyGoalMin }: OnboardingInput) => {
+    mutationFn: async ({ displayName, dailyGoalMin, learningGoal, selfLevel }: OnboardingInput) => {
       if (!supabase) throw new Error('Supabase no configurado');
 
       const { data: sessionData } = await supabase.auth.getUser();
@@ -25,6 +27,8 @@ export function useOnboarding() {
         .update({
           display_name: displayName && displayName.length > 0 ? displayName : null,
           daily_goal_min: dailyGoalMin,
+          learning_goal: learningGoal,
+          self_level: selfLevel,
           onboarded_at: new Date().toISOString(),
         })
         .eq('user_id', userId)
@@ -35,7 +39,6 @@ export function useOnboarding() {
       return data;
     },
     onSuccess: async () => {
-      // Refrescamos el store para que el guard de (protected) deje pasar.
       await refreshProfile();
     },
   });

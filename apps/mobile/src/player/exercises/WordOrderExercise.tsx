@@ -1,6 +1,7 @@
 import { type UserAnswer, type WordOrderPayload, shuffleTokenIndices } from '@nivelate/shared';
 import { useMemo } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import { TokenChip } from '../../ui/OptionCard';
 
 type Props = {
   payload: WordOrderPayload;
@@ -27,26 +28,28 @@ export function WordOrderExercise({ payload, order, disabled, onChange }: Props)
   }
 
   return (
-    <View className="gap-5">
-      <Text className="text-muted text-sm">Ordená las palabras para armar la oración:</Text>
+    <View className="gap-6">
+      <Text className="text-muted text-xs font-bold uppercase tracking-widest">
+        Ordená las palabras
+      </Text>
 
-      {/* Oración en construcción */}
-      <View className="min-h-[52px] flex-row flex-wrap items-center gap-2 border-b border-border pb-2">
+      {/* Renglones guía: dan la sensación de "escribir sobre la línea". */}
+      <View className="min-h-[104px] gap-2 rounded-2xl border-2 border-border bg-surface/40 p-4">
         {order.length === 0 ? (
-          <Text className="text-muted text-base">Tocá las palabras de abajo…</Text>
+          <Text className="text-muted text-base italic">Tocá las palabras de abajo…</Text>
         ) : (
-          order.map((tokenIdx, pos) => (
-            <Pressable
-              key={`chosen-${pos}-${tokenIdx}`}
-              disabled={disabled}
-              onPress={() => removeAt(pos)}
-              accessibilityRole="button"
-              accessibilityLabel={`Quitar ${payload.tokens[tokenIdx]}`}
-              className="rounded-lg bg-brand/15 border border-brand px-3 py-2"
-            >
-              <Text className="text-text text-base">{payload.tokens[tokenIdx]}</Text>
-            </Pressable>
-          ))
+          <View className="flex-row flex-wrap items-center gap-2">
+            {order.map((tokenIdx, pos) => (
+              <TokenChip
+                key={`chosen-${pos}-${tokenIdx}`}
+                label={payload.tokens[tokenIdx] ?? ''}
+                accessibilityLabel={`Quitar ${payload.tokens[tokenIdx]}`}
+                tone="chosen"
+                disabled={disabled}
+                onPress={() => removeAt(pos)}
+              />
+            ))}
+          </View>
         )}
       </View>
 
@@ -54,24 +57,16 @@ export function WordOrderExercise({ payload, order, disabled, onChange }: Props)
           Los índices sobre los que trabaja la lógica (used/add/order) siguen
           siendo los del payload original; sólo el orden visual cambia. */}
       <View className="flex-row flex-wrap gap-2">
-        {displayOrder.map((i) => {
-          const token = payload.tokens[i];
-          const isUsed = used.has(i);
-          return (
-            <Pressable
-              key={`token-${i}-${token}`}
-              disabled={disabled || isUsed}
-              onPress={() => add(i)}
-              accessibilityRole="button"
-              accessibilityLabel={`Agregar ${token}`}
-              className={`rounded-lg border px-3 py-2 ${
-                isUsed ? 'border-border bg-bg opacity-40' : 'border-border bg-surface'
-              }`}
-            >
-              <Text className="text-text text-base">{token}</Text>
-            </Pressable>
-          );
-        })}
+        {displayOrder.map((i) => (
+          <TokenChip
+            key={`token-${i}-${payload.tokens[i]}`}
+            label={payload.tokens[i] ?? ''}
+            accessibilityLabel={`Agregar ${payload.tokens[i]}`}
+            used={used.has(i)}
+            disabled={disabled}
+            onPress={() => add(i)}
+          />
+        ))}
       </View>
     </View>
   );

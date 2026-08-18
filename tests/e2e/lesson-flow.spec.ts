@@ -53,7 +53,7 @@ async function answerStep(page: Page, step: Step) {
   }
 
   await page.getByRole('button', { name: 'Verificar' }).click();
-  await expect(page.getByText('¡Correcto!')).toBeVisible();
+  await expect(page.getByText('¡Muy bien!')).toBeVisible();
   await page.getByRole('button', { name: 'Continuar' }).click();
 }
 
@@ -64,8 +64,10 @@ test.describe('Nivelate — flujo login → lección → XP → logros', () => {
     });
 
     const xpBefore = await test.step('leer XP inicial en home', async () => {
-      const xpText = await page.getByText(/^\d+ XP$/).textContent();
-      return Number(xpText?.replace(/\D/g, ''));
+      // El total vive en el accessibilityLabel de la card ("XP total: 1020"),
+      // porque en pantalla el número y la etiqueta son nodos separados.
+      const label = await page.getByLabel(/^XP total: \d+$/).getAttribute('aria-label');
+      return Number(label?.replace(/\D/g, ''));
     });
 
     await test.step('entrar a la primera lección', async () => {
@@ -80,14 +82,15 @@ test.describe('Nivelate — flujo login → lección → XP → logros', () => {
     });
 
     await test.step('ver el resumen con 100% y XP ganada', async () => {
-      await expect(page.getByText('¡Lección completa!')).toBeVisible();
-      await expect(page.getByText('8/8 (100%)')).toBeVisible();
+      // Con 100% el encabezado del resumen es el de mejor desempeño.
+      await expect(page.getByText('¡Excelente!')).toBeVisible();
+      await expect(page.getByText('8 de 8 al primer intento')).toBeVisible();
       await expect(page.getByText('+80')).toBeVisible();
     });
 
     await test.step('volver a home y ver el XP total actualizado', async () => {
       await page.getByRole('button', { name: 'Volver' }).click();
-      await expect(page.getByText(`${xpBefore + 80} XP`)).toBeVisible();
+      await expect(page.getByLabel(`XP total: ${xpBefore + 80}`)).toBeVisible();
     });
 
     await test.step('ver los logros desbloqueados en /progress', async () => {

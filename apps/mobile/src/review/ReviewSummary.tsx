@@ -9,14 +9,23 @@ type Props = {
 
 export function ReviewSummary({ total, correct, onDone }: Props) {
   const pct = total === 0 ? 0 : Math.round((correct / total) * 100);
+
   return (
-    <View className="flex-1 items-center justify-center gap-6 px-6">
-      <Text className="text-5xl">🔁</Text>
-      <Text className="text-text text-2xl font-bold">¡Repaso listo!</Text>
-      <View className="w-full max-w-xs gap-3">
-        <Row label="Cards revisados" value={`${total}`} />
-        <Row label="Aciertos" value={`${correct}/${total} (${pct}%)`} />
+    <View className="flex-1 items-center justify-center gap-7 px-6">
+      <View className="items-center gap-2">
+        <Text className="text-6xl">🔁</Text>
+        <Text className="text-info text-3xl font-bold">¡Repaso listo!</Text>
       </View>
+
+      <View className="w-full max-w-xs flex-row gap-3">
+        <Box label="Revisados" value={`${total}`} tone="text-text" />
+        <Box label="Aciertos" value={`${pct}%`} tone="text-brand" />
+      </View>
+
+      <Text className="text-muted text-sm">
+        {correct} de {total} correctos
+      </Text>
+
       <View className="w-full max-w-xs">
         <Button label="Volver" onPress={onDone} />
       </View>
@@ -24,11 +33,11 @@ export function ReviewSummary({ total, correct, onDone }: Props) {
   );
 }
 
-function Row({ label, value }: { label: string; value: string }) {
+function Box({ label, value, tone }: { label: string; value: string; tone: string }) {
   return (
-    <View className="flex-row items-center justify-between bg-surface border border-border rounded-lg px-4 py-3">
-      <Text className="text-muted text-sm">{label}</Text>
-      <Text className="text-text text-base font-semibold">{value}</Text>
+    <View className="flex-1 items-center gap-1 bg-surface border-2 border-b-4 border-border rounded-2xl py-3">
+      <Text className={`text-xl font-bold ${tone}`}>{value}</Text>
+      <Text className="text-muted text-xs">{label}</Text>
     </View>
   );
 }

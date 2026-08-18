@@ -6,18 +6,24 @@ type Props = {
 };
 
 export function AchievementsGrid({ achievements }: Props) {
-  const anyUnlocked = achievements.some((a) => a.unlocked);
-  return (
-    <View className="gap-2">
-      <Text className="text-text text-sm font-semibold">Logros</Text>
+  const unlockedCount = achievements.filter((a) => a.unlocked).length;
 
-      {!anyUnlocked ? (
-        <Text className="text-muted text-xs">
+  return (
+    <View className="gap-3">
+      <View className="flex-row items-baseline justify-between">
+        <Text className="text-text text-base font-bold">Logros</Text>
+        <Text className="text-muted text-xs font-semibold">
+          {unlockedCount}/{achievements.length}
+        </Text>
+      </View>
+
+      {unlockedCount === 0 ? (
+        <Text className="text-muted text-sm">
           Empezá a completar lecciones y aparecerán logros acá.
         </Text>
       ) : null}
 
-      <View className="flex-row flex-wrap gap-2">
+      <View className="flex-row flex-wrap gap-3">
         {achievements.map((a) => (
           <AchievementCard key={a.id} a={a} />
         ))}
@@ -29,16 +35,20 @@ export function AchievementsGrid({ achievements }: Props) {
 function AchievementCard({ a }: { a: AchievementWithStatus }) {
   return (
     <View
-      className={`w-[48%] rounded-lg border p-3 gap-1 ${
-        a.unlocked ? 'border-brand bg-brand/10' : 'border-border bg-surface opacity-50'
+      className={`w-[47%] rounded-2xl border-2 border-b-4 p-4 gap-1 ${
+        a.unlocked ? 'border-gold bg-gold/10' : 'border-border bg-surface opacity-40'
       }`}
       accessibilityLabel={
         a.unlocked ? `Logro desbloqueado: ${a.title}` : `Logro bloqueado: ${a.title}`
       }
     >
-      <Text className="text-2xl">{a.unlocked ? a.emoji : '❔'}</Text>
-      <Text className="text-text text-sm font-semibold">{a.unlocked ? a.title : '???'}</Text>
-      <Text className="text-muted text-xs">{a.unlocked ? a.description : 'Aún por descubrir'}</Text>
+      <Text className="text-3xl">{a.unlocked ? a.emoji : '🔒'}</Text>
+      <Text className={`text-sm font-bold ${a.unlocked ? 'text-gold' : 'text-text'}`}>
+        {a.unlocked ? a.title : '???'}
+      </Text>
+      <Text className="text-muted text-xs leading-4">
+        {a.unlocked ? a.description : 'Aún por descubrir'}
+      </Text>
     </View>
   );
 }

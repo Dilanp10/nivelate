@@ -21,10 +21,12 @@ type Props = {
   exercise: PlayableExercise;
   answer: UserAnswer | null;
   disabled?: boolean;
+  /** Tras verificar: los tipos de opción pintan la correcta y la errónea. */
+  revealed?: boolean;
   onAnswer: (answer: UserAnswer) => void;
 };
 
-export function ExerciseRenderer({ exercise, answer, disabled, onAnswer }: Props) {
+export function ExerciseRenderer({ exercise, answer, disabled, revealed, onAnswer }: Props) {
   switch (exercise.type) {
     case 'multiple_choice':
       return (
@@ -32,6 +34,7 @@ export function ExerciseRenderer({ exercise, answer, disabled, onAnswer }: Props
           payload={exercise.payload as MultipleChoicePayload}
           selectedIndex={answer?.type === 'multiple_choice' ? answer.selectedIndex : null}
           disabled={disabled}
+          revealed={revealed}
           onSelect={onAnswer}
         />
       );
@@ -41,6 +44,7 @@ export function ExerciseRenderer({ exercise, answer, disabled, onAnswer }: Props
           payload={exercise.payload as DialoguePayload}
           selectedIndex={answer?.type === 'dialogue' ? answer.selectedIndex : null}
           disabled={disabled}
+          revealed={revealed}
           onSelect={onAnswer}
         />
       );
@@ -85,6 +89,7 @@ export function ExerciseRenderer({ exercise, answer, disabled, onAnswer }: Props
           payload={exercise.payload as ListeningPayload}
           sub={answer?.type === 'listening' ? answer.sub : null}
           disabled={disabled}
+          revealed={revealed}
           onChange={onAnswer}
         />
       );

@@ -23,19 +23,19 @@ export function Input({
 
   return (
     <View className="gap-1.5">
-      <Text className="text-text text-sm font-medium">{label}</Text>
+      {label ? <Text className="text-text text-sm font-bold">{label}</Text> : null}
 
       <View
-        className={`flex-row items-center bg-surface border rounded-lg px-3 ${
+        className={`flex-row items-center bg-surface border-2 border-b-4 rounded-2xl px-4 ${
           hasError ? 'border-danger' : 'border-border'
         }`}
       >
         <TextInput
           {...inputProps}
           secureTextEntry={isSecure}
-          placeholderTextColor="#64748b"
-          className="flex-1 text-text text-base py-3"
-          accessibilityLabel={label}
+          placeholderTextColor="#8fa3ad"
+          className="flex-1 text-text text-base py-4"
+          accessibilityLabel={label || inputProps.placeholder}
           accessibilityHint={hint}
         />
 
@@ -46,7 +46,7 @@ export function Input({
             accessibilityLabel={visible ? 'Ocultar contraseña' : 'Mostrar contraseña'}
             className="px-2 py-2"
           >
-            <Text className="text-muted text-sm">{visible ? 'Ocultar' : 'Mostrar'}</Text>
+            <Text className="text-muted text-sm font-bold">{visible ? 'Ocultar' : 'Mostrar'}</Text>
           </Pressable>
         ) : null}
       </View>

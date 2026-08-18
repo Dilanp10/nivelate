@@ -2,11 +2,11 @@ import { type SignupForm, signupSchema, toFieldErrors } from '@nivelate/shared';
 import { Link, useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useSignUp } from '../../src/hooks/useSignUp';
 import { Button } from '../../src/ui/Button';
 import { FormError } from '../../src/ui/FormError';
 import { Input } from '../../src/ui/Input';
-import { ScreenLayout } from '../../src/ui/ScreenLayout';
 
 export default function Signup() {
   const router = useRouter();
@@ -26,53 +26,60 @@ export default function Signup() {
     }
     signUp.mutate(parsed.data, {
       onSuccess: () => {
-        // Supabase envía email de confirmación. La sesión queda null hasta que confirme.
         router.replace(`/verify-email?email=${encodeURIComponent(parsed.data.email)}`);
       },
     });
   }
 
   return (
-    <ScreenLayout title="Crear cuenta" subtitle="Aprender inglés A2 → B1, en serio.">
-      <FormError message={submitError} />
+    <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
+      <View className="flex-1 px-6 pt-8 pb-8 gap-6 w-full max-w-md mx-auto">
+        {/* Logo area */}
+        <View className="items-center gap-3 mb-4">
+          <Text className="text-brand text-4xl font-bold tracking-tight">Nivelate</Text>
+          <Text className="text-muted text-base">Aprender inglés A2 → B1, en serio.</Text>
+        </View>
 
-      <Input
-        label="Email"
-        value={form.email}
-        onChangeText={(email) => setForm((f) => ({ ...f, email }))}
-        autoCapitalize="none"
-        autoComplete="email"
-        keyboardType="email-address"
-        error={fieldErrors.email}
-        editable={!signUp.isPending}
-      />
+        <FormError message={submitError} />
 
-      <Input
-        label="Contraseña"
-        value={form.password}
-        onChangeText={(password) => setForm((f) => ({ ...f, password }))}
-        autoComplete="new-password"
-        secureToggle
-        hint="Mínimo 8 caracteres, con al menos una letra y un número."
-        error={fieldErrors.password}
-        editable={!signUp.isPending}
-      />
+        <Input
+          label="Email"
+          value={form.email}
+          onChangeText={(email) => setForm((f) => ({ ...f, email }))}
+          autoCapitalize="none"
+          autoComplete="email"
+          keyboardType="email-address"
+          error={fieldErrors.email}
+          editable={!signUp.isPending}
+        />
 
-      <Button
-        label="Crear cuenta"
-        loading={signUp.isPending}
-        loadingLabel="Creando…"
-        onPress={handleSubmit}
-      />
+        <Input
+          label="Contraseña"
+          value={form.password}
+          onChangeText={(password) => setForm((f) => ({ ...f, password }))}
+          autoComplete="new-password"
+          secureToggle
+          hint="Mínimo 8 caracteres, con al menos una letra y un número."
+          error={fieldErrors.password}
+          editable={!signUp.isPending}
+        />
 
-      <View className="items-center mt-2">
-        <Text className="text-muted text-sm">
-          ¿Ya tenés cuenta?{' '}
-          <Link href="/login" className="text-brand underline">
-            Entrar
-          </Link>
-        </Text>
+        <Button
+          label="Crear cuenta"
+          loading={signUp.isPending}
+          loadingLabel="Creando…"
+          onPress={handleSubmit}
+        />
+
+        <View className="items-center mt-2">
+          <Text className="text-muted text-sm">
+            ¿Ya tenés cuenta?{' '}
+            <Link href="/login" className="text-brand underline font-semibold">
+              Entrar
+            </Link>
+          </Text>
+        </View>
       </View>
-    </ScreenLayout>
+    </SafeAreaView>
   );
 }

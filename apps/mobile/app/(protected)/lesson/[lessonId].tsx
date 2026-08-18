@@ -29,7 +29,7 @@ export default function LessonScreen() {
   if (query.isLoading) {
     return (
       <SafeAreaView className="flex-1 bg-bg items-center justify-center">
-        <ActivityIndicator color="#22d3ee" />
+        <ActivityIndicator color="#58cc02" />
       </SafeAreaView>
     );
   }
@@ -178,18 +178,29 @@ function LessonRunner({
 
       <ScrollView
         className="flex-1"
-        contentContainerClassName="px-6 py-4"
+        contentContainerClassName="px-6 py-6"
         keyboardShouldPersistTaps="handled"
       >
         <ExerciseRenderer
           exercise={exercise}
           answer={answer}
           disabled={inFeedback}
+          revealed={inFeedback}
           onAnswer={setAnswer}
         />
       </ScrollView>
 
-      <View className="px-6 pb-4 gap-3">
+      {/* Bandeja inferior: en feedback se tiñe del color del resultado, así el
+          acierto/error se lee sin tener que buscar el texto. */}
+      <View
+        className={`px-6 pt-4 pb-5 gap-4 border-t-2 ${
+          inFeedback && lastResult
+            ? lastResult.correct
+              ? 'bg-brand/10 border-brand/30'
+              : 'bg-danger/10 border-danger/30'
+            : 'border-transparent'
+        }`}
+      >
         {inFeedback && lastResult ? (
           <FeedbackBanner
             correct={lastResult.correct}
@@ -199,7 +210,11 @@ function LessonRunner({
         ) : null}
 
         {inFeedback ? (
-          <Button label="Continuar" onPress={handleContinue} />
+          <Button
+            label="Continuar"
+            variant={lastResult?.correct === false ? 'danger' : 'primary'}
+            onPress={handleContinue}
+          />
         ) : (
           <Button
             label="Verificar"

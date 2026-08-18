@@ -1,5 +1,6 @@
 import type { FillInBlankPayload, UserAnswer } from '@nivelate/shared';
 import { Text, TextInput, View } from 'react-native';
+import { ExercisePrompt } from '../../ui/OptionCard';
 
 type Props = {
   payload: FillInBlankPayload;
@@ -20,22 +21,24 @@ export function FillInBlankExercise({ payload, values, disabled, onChange }: Pro
   }
 
   return (
-    <View className="gap-4">
-      <View className="flex-row flex-wrap items-center gap-1">
+    <View className="gap-6">
+      <ExercisePrompt hint="Completá la frase">{'Escribí lo que falta'}</ExercisePrompt>
+
+      <View className="flex-row flex-wrap items-center gap-x-1 gap-y-3 rounded-2xl border-2 border-border bg-surface/40 p-4">
         {payload.segments.map((segment, i) => (
           // biome-ignore lint/suspicious/noArrayIndexKey: los segmentos son estáticos y nunca se reordenan
           <View key={`seg-${i}`} className="flex-row items-center gap-1">
-            {segment ? <Text className="text-text text-lg">{segment}</Text> : null}
+            {segment ? <Text className="text-text text-lg leading-7">{segment}</Text> : null}
             {i < blanks ? (
               <TextInput
                 value={values[i] ?? ''}
                 editable={!disabled}
                 onChangeText={(text) => setBlank(i, text)}
                 placeholder="…"
-                placeholderTextColor="#64748b"
+                placeholderTextColor="#8fa3ad"
                 autoCapitalize="none"
                 accessibilityLabel={`Hueco ${i + 1}`}
-                className="bg-surface border border-border rounded-md px-2 py-1 text-text text-lg min-w-[90px]"
+                className="bg-surface border-2 border-b-4 border-info/60 rounded-xl px-3 py-1.5 text-info text-lg font-semibold min-w-[110px] text-center"
               />
             ) : null}
           </View>
@@ -43,8 +46,15 @@ export function FillInBlankExercise({ payload, values, disabled, onChange }: Pro
       </View>
 
       {payload.bank ? (
-        <View className="gap-1">
-          <Text className="text-muted text-xs">Opciones: {payload.bank.join(' · ')}</Text>
+        <View className="flex-row flex-wrap items-center gap-2">
+          <Text className="text-muted text-xs font-bold uppercase tracking-widest w-full">
+            Opciones
+          </Text>
+          {payload.bank.map((word) => (
+            <View key={word} className="rounded-lg border border-border bg-surface px-3 py-1.5">
+              <Text className="text-muted text-sm font-semibold">{word}</Text>
+            </View>
+          ))}
         </View>
       ) : null}
     </View>
