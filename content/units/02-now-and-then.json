@@ -65,10 +65,10 @@
           "key": "u2l1-e4",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["She ", " TV right now."],
+            "segments": ["She ", " TV right now. She's studying for an exam."],
             "answers": ["isn't watching"],
             "acceptable": [["isn't watching", "is not watching", "'s not watching"]],
-            "explanation": "Negativo: is + not + verbo-ing → 'isn't watching' o 'is not watching'."
+            "explanation": "El contexto ('she's studying') pide el negativo: is + not + verbo-ing → 'She isn't watching TV right now.'"
           }
         },
         {

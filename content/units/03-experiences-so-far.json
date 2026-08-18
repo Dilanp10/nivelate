@@ -65,10 +65,10 @@
           "key": "u3l1-e4",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["They ", " to London."],
+            "segments": ["They ", " to London. It will be their first visit."],
             "answers": ["have never been"],
             "acceptable": [["have never been", "'ve never been"]],
-            "explanation": "'never' va entre el auxiliar y el participio: 'They have never been to London.'"
+            "explanation": "El contexto ('first visit') pide el negativo con 'never', que va entre el auxiliar y el participio: 'They have never been to London.'"
           }
         },
         {
