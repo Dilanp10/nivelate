@@ -30,6 +30,32 @@
       "slug": "present-simple-review",
       "title": "Presente simple",
       "grammarTopicSlugs": ["present-simple"],
+      "teachingCards": [
+        {
+          "key": "u1l1-t1",
+          "titleEs": "Rutinas y hechos generales",
+          "bodyEs": "El presente simple se usa para rutinas, hábitos y hechos que siempre son ciertos. Con he/she/it, el verbo lleva -s al final.",
+          "examples": [
+            { "en": "I wake up early every day.", "es": "Me despierto temprano todos los días.", "goal": "general" },
+            { "en": "She manages a small team.", "es": "Ella dirige un equipo pequeño.", "goal": "work" },
+            { "en": "He travels twice a year.", "es": "Él viaja dos veces al año.", "goal": "travel" },
+            { "en": "We study English on Mondays.", "es": "Estudiamos inglés los lunes.", "goal": "study" },
+            { "en": "They watch movies on weekends.", "es": "Ellos miran películas los fines de semana.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u1l1-t2",
+          "titleEs": "Preguntas y negaciones con do/does",
+          "bodyEs": "Para preguntar o negar en presente simple usamos do/does (does con he/she/it) + el verbo en forma base, sin -s.",
+          "examples": [
+            { "en": "Does he like coffee?", "es": "¿A él le gusta el café?", "goal": "general" },
+            { "en": "Does she work on Saturdays?", "es": "¿Ella trabaja los sábados?", "goal": "work" },
+            { "en": "Do you travel a lot for fun?", "es": "¿Viajás mucho por diversión?", "goal": "travel" },
+            { "en": "I don't understand this word.", "es": "No entiendo esta palabra.", "goal": "study" },
+            { "en": "He doesn't like horror movies.", "es": "A él no le gustan las películas de terror.", "goal": "entertainment" }
+          ]
+        }
+      ],
       "exercises": [
         {
           "key": "u1l1-e1",
@@ -92,6 +118,7 @@
         {
           "key": "u1l1-e7",
           "type": "translation",
+          "goal": "work",
           "payload": {
             "prompt": "Yo trabajo todos los días.",
             "direction": "es_to_en",
@@ -113,12 +140,46 @@
             "explanation": "Respuesta en presente simple: 'I get up at seven.'"
           }
         }
+      ],
+      "pronunciationHighlights": [
+        { "en": "goes", "respellingEs": "góus" },
+        { "en": "doesn't", "respellingEs": "dásent" },
+        { "en": "does she speak English?", "respellingEs": "das shi spik ínglish" },
+        { "en": "watch TV", "respellingEs": "wach tiví" },
+        { "en": "get up", "respellingEs": "guet ap" },
+        { "en": "every morning", "respellingEs": "évri mórning" }
       ]
     },
     {
       "slug": "past-simple-review",
       "title": "Pasado simple",
       "grammarTopicSlugs": ["past-simple"],
+      "teachingCards": [
+        {
+          "key": "u1l2-t1",
+          "titleEs": "Verbos regulares e irregulares",
+          "bodyEs": "El pasado simple se usa para acciones terminadas. Los verbos regulares agregan -ed ('watched'), pero muchos verbos comunes son irregulares y hay que memorizarlos ('go → went').",
+          "examples": [
+            { "en": "I watched a movie last night.", "es": "Miré una película anoche.", "goal": "general" },
+            { "en": "She finished the report yesterday.", "es": "Ella terminó el informe ayer.", "goal": "work" },
+            { "en": "We visited three countries last year.", "es": "Visitamos tres países el año pasado.", "goal": "travel" },
+            { "en": "I studied for the exam all weekend.", "es": "Estudié para el examen todo el fin de semana.", "goal": "study" },
+            { "en": "They watched the whole series in a week.", "es": "Miraron toda la serie en una semana.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u1l2-t2",
+          "titleEs": "Preguntas y negaciones con did",
+          "bodyEs": "Para preguntar o negar en pasado usamos did/didn't + el verbo en forma base (nunca en pasado): 'Did you go?', no 'Did you went?'.",
+          "examples": [
+            { "en": "Did you sleep well?", "es": "¿Dormiste bien?", "goal": "general" },
+            { "en": "Did she call the client?", "es": "¿Ella llamó al cliente?", "goal": "work" },
+            { "en": "Did you visit the museum?", "es": "¿Visitaste el museo?", "goal": "travel" },
+            { "en": "I didn't understand the lesson.", "es": "No entendí la lección.", "goal": "study" },
+            { "en": "We didn't watch the ending.", "es": "No vimos el final.", "goal": "entertainment" }
+          ]
+        }
+      ],
       "exercises": [
         {
           "key": "u1l2-e1",
@@ -210,12 +271,46 @@
             "explanation": "El audio dice 'we visited my grandparents and had lunch together'."
           }
         }
+      ],
+      "pronunciationHighlights": [
+        { "en": "went", "respellingEs": "uént" },
+        { "en": "bought", "respellingEs": "bot" },
+        { "en": "didn't", "respellingEs": "dídent" },
+        { "en": "did you call her yesterday?", "respellingEs": "did yu col jer yésterdei" },
+        { "en": "watched", "respellingEs": "wacht" },
+        { "en": "visited", "respellingEs": "vísited" }
       ]
     },
     {
       "slug": "everyday-vocabulary",
       "title": "Vocabulario cotidiano",
       "grammarTopicSlugs": ["everyday-vocabulary"],
+      "teachingCards": [
+        {
+          "key": "u1l3-t1",
+          "titleEs": "Rutina diaria y casa",
+          "bodyEs": "Vocabulario para hablar de las comidas del día, las partes de la casa y los momentos de la rutina.",
+          "examples": [
+            { "en": "I have breakfast at eight.", "es": "Desayuno a las ocho.", "goal": "general" },
+            { "en": "I check my email before breakfast.", "es": "Reviso mi email antes de desayunar.", "goal": "work" },
+            { "en": "The hotel serves breakfast until ten.", "es": "El hotel sirve desayuno hasta las diez.", "goal": "travel" },
+            { "en": "I study in the kitchen sometimes.", "es": "A veces estudio en la cocina.", "goal": "study" },
+            { "en": "We watch a show after dinner.", "es": "Miramos un programa después de cenar.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u1l3-t2",
+          "titleEs": "De compras y en la calle",
+          "bodyEs": "Frases útiles para pedir ayuda en una tienda o hablar de compras cotidianas.",
+          "examples": [
+            { "en": "I'm looking for some shoes.", "es": "Estoy buscando zapatos.", "goal": "general" },
+            { "en": "I need to buy a new laptop for work.", "es": "Necesito comprar una laptop nueva para el trabajo.", "goal": "work" },
+            { "en": "Where can I buy a map of the city?", "es": "¿Dónde puedo comprar un mapa de la ciudad?", "goal": "travel" },
+            { "en": "I bought a notebook for class.", "es": "Compré un cuaderno para la clase.", "goal": "study" },
+            { "en": "Let's buy tickets for the concert.", "es": "Compremos entradas para el concierto.", "goal": "entertainment" }
+          ]
+        }
+      ],
       "exercises": [
         {
           "key": "u1l3-e1",
@@ -307,6 +402,14 @@
             "explanation": "Los adverbios de frecuencia ('usually') van antes del verbo principal: 'I usually have dinner at eight.'"
           }
         }
+      ],
+      "pronunciationHighlights": [
+        { "en": "breakfast", "respellingEs": "brékfest" },
+        { "en": "kitchen", "respellingEs": "kíchen" },
+        { "en": "weekend", "respellingEs": "uikénd" },
+        { "en": "shopping", "respellingEs": "shóping" },
+        { "en": "I'm looking for", "respellingEs": "áim lúking for" },
+        { "en": "the supermarket closes at eight", "respellingEs": "de súpermarket clóuses at éit" }
       ]
     }
   ]
