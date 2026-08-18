@@ -45,7 +45,7 @@ export default function Login() {
         label="Contraseña"
         value={form.password}
         onChangeText={(password) => setForm((f) => ({ ...f, password }))}
-        autoComplete="password"
+        autoComplete="current-password"
         secureToggle
         error={fieldErrors.password}
         editable={!signIn.isPending}
@@ -68,7 +68,7 @@ export default function Login() {
         </Link>
         <Text className="text-muted text-sm">
           ¿No tenés cuenta?{' '}
-          <Link href="/signup" className="text-brand">
+          <Link href="/signup" className="text-brand underline">
             Crear cuenta
           </Link>
         </Text>

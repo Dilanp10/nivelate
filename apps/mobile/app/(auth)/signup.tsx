@@ -68,7 +68,7 @@ export default function Signup() {
       <View className="items-center mt-2">
         <Text className="text-muted text-sm">
           ¿Ya tenés cuenta?{' '}
-          <Link href="/login" className="text-brand">
+          <Link href="/login" className="text-brand underline">
             Entrar
           </Link>
         </Text>
