@@ -1,0 +1,310 @@
+{
+  "slug": "now-and-then",
+  "title": "Acciones en curso",
+  "description": "Presente continuo, pasado continuo, y cuándo usarlos frente al presente/pasado simple.",
+  "cefrLevel": "A2",
+  "sortOrder": 2,
+  "isPublished": false,
+  "grammarTopics": [
+    {
+      "slug": "present-continuous",
+      "title": "Presente continuo",
+      "explanationEs": "Se usa para lo que está pasando ahora o alrededor de este momento. Forma: am/is/are + verbo-ing. 'I'm working now', 'They aren't listening'. Se diferencia del presente simple (rutinas) en que describe la acción en progreso.",
+      "cefrLevel": "A2"
+    },
+    {
+      "slug": "past-continuous",
+      "title": "Pasado continuo",
+      "explanationEs": "Se usa para acciones en progreso en un momento del pasado. Forma: was/were + verbo-ing. 'I was reading when you arrived'. Suele aparecer como marco de una acción en pasado simple que la interrumpe.",
+      "cefrLevel": "A2"
+    },
+    {
+      "slug": "stative-verbs",
+      "title": "Verbos de estado",
+      "explanationEs": "Verbos como know, want, like, believe, need o understand describen estados, no acciones. Normalmente NO se usan en continuo: se dice 'I know the answer', no 'I am knowing the answer'.",
+      "cefrLevel": "B1"
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "present-continuous",
+      "title": "Presente continuo",
+      "grammarTopicSlugs": ["present-continuous"],
+      "exercises": [
+        {
+          "key": "u2l1-e1",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "Look! It ___ raining.",
+            "options": ["is", "are", "does"],
+            "correctIndex": 0,
+            "explanation": "Presente continuo con 'it' (3ª persona singular): is + verbo-ing → 'it is raining'."
+          }
+        },
+        {
+          "key": "u2l1-e2",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "They ___ working at the moment.",
+            "options": ["is", "are", "do"],
+            "correctIndex": 1,
+            "explanation": "Con 'they' (plural) usamos 'are' + verbo-ing: 'they are working'."
+          }
+        },
+        {
+          "key": "u2l1-e3",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["I ", " a great book right now."],
+            "answers": ["am reading"],
+            "acceptable": [["am reading", "'m reading"]],
+            "explanation": "Presente continuo con 'I': 'I am reading' o su contracción 'I'm reading'."
+          }
+        },
+        {
+          "key": "u2l1-e4",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["She ", " TV right now."],
+            "answers": ["isn't watching"],
+            "acceptable": [["isn't watching", "is not watching", "'s not watching"]],
+            "explanation": "Negativo: is + not + verbo-ing → 'isn't watching' o 'is not watching'."
+          }
+        },
+        {
+          "key": "u2l1-e5",
+          "type": "word_order",
+          "payload": {
+            "tokens": ["Why", "are", "you", "smiling", "now"],
+            "correctOrder": [0, 1, 2, 3, 4],
+            "explanation": "Pregunta en presente continuo: palabra Wh + verbo auxiliar (are) + sujeto + verbo-ing: 'Why are you smiling now?'"
+          }
+        },
+        {
+          "key": "u2l1-e6",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "Listen! The baby ___.",
+            "options": ["cries", "is crying", "cry"],
+            "correctIndex": 1,
+            "explanation": "'Listen!' señala que la acción ocurre en este momento → presente continuo: 'is crying'."
+          }
+        },
+        {
+          "key": "u2l1-e7",
+          "type": "translation",
+          "payload": {
+            "prompt": "Estamos aprendiendo inglés.",
+            "direction": "es_to_en",
+            "acceptable": ["We are learning English.", "We're learning English."],
+            "explanation": "Presente continuo con 'we': 'We are learning' o contraído 'We're learning'."
+          }
+        },
+        {
+          "key": "u2l1-e8",
+          "type": "dialogue",
+          "payload": {
+            "turns": [
+              { "speaker": "Ana", "text": "What are you doing?" },
+              { "speaker": "Tom", "text": "" }
+            ],
+            "blankTurnIndex": 1,
+            "options": ["I'm cooking dinner.", "I cook dinner.", "I cooked dinner."],
+            "correctIndex": 0,
+            "explanation": "La pregunta 'What are you doing?' pide una respuesta en presente continuo: 'I'm cooking dinner.'"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "past-continuous",
+      "title": "Pasado continuo",
+      "grammarTopicSlugs": ["past-continuous"],
+      "exercises": [
+        {
+          "key": "u2l2-e1",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I ___ TV when the phone rang.",
+            "options": ["watched", "was watching", "am watching"],
+            "correctIndex": 1,
+            "explanation": "Pasado continuo para la acción en curso ('was watching') interrumpida por otra en pasado simple ('rang')."
+          }
+        },
+        {
+          "key": "u2l2-e2",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "They ___ dinner at 8 p.m. yesterday.",
+            "options": ["were having", "had", "have"],
+            "correctIndex": 0,
+            "explanation": "Acción en progreso en un momento pasado (a las 8) → pasado continuo: 'were having'."
+          }
+        },
+        {
+          "key": "u2l2-e3",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["While she ", " home, it started to rain."],
+            "answers": ["was walking"],
+            "acceptable": [["was walking"]],
+            "explanation": "'While + pasado continuo' presenta la acción larga: 'While she was walking home...'."
+          }
+        },
+        {
+          "key": "u2l2-e4",
+          "type": "word_order",
+          "payload": {
+            "tokens": ["What", "were", "you", "doing", "at", "ten"],
+            "correctOrder": [0, 1, 2, 3, 4, 5],
+            "explanation": "Pregunta en pasado continuo: Wh + were + sujeto + verbo-ing: 'What were you doing at ten?'"
+          }
+        },
+        {
+          "key": "u2l2-e5",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "We ___ football when it started to snow.",
+            "options": ["played", "were playing", "are playing"],
+            "correctIndex": 1,
+            "explanation": "La acción larga interrumpida va en pasado continuo: 'were playing'."
+          }
+        },
+        {
+          "key": "u2l2-e6",
+          "type": "matching",
+          "payload": {
+            "pairs": [
+              { "left": "I", "right": "was" },
+              { "left": "he", "right": "was" },
+              { "left": "they", "right": "were" },
+              { "left": "you", "right": "were" }
+            ],
+            "explanation": "En pasado continuo: I/he/she/it → was; you/we/they → were."
+          }
+        },
+        {
+          "key": "u2l2-e7",
+          "type": "translation",
+          "payload": {
+            "prompt": "Yo estaba leyendo cuando llegaste.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I was reading when you arrived.",
+              "I was reading when you came.",
+              "I was reading when you got here."
+            ],
+            "explanation": "Pasado continuo (was reading) + pasado simple (arrived/came) para la interrupción."
+          }
+        },
+        {
+          "key": "u2l2-e8",
+          "type": "listening",
+          "payload": {
+            "audioText": "At six o'clock we were having dinner and watching a movie.",
+            "sub": {
+              "kind": "multiple_choice",
+              "prompt": "What were they doing at six?",
+              "options": [
+                "They were having dinner and watching a movie.",
+                "They had dinner and went to the cinema.",
+                "They are having dinner and watching a movie."
+              ],
+              "correctIndex": 0
+            },
+            "explanation": "El audio dice 'we were having dinner and watching a movie' — dos acciones en progreso a las seis."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "simple-vs-continuous",
+      "title": "Simple vs continuo",
+      "grammarTopicSlugs": ["present-continuous", "stative-verbs"],
+      "exercises": [
+        {
+          "key": "u2l3-e1",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I usually ___ coffee, but today I'm drinking tea.",
+            "options": ["drink", "am drinking", "drinks"],
+            "correctIndex": 0,
+            "explanation": "'usually' señala rutina → presente simple ('drink'). El contraste con 'today I'm drinking' marca la excepción de hoy."
+          }
+        },
+        {
+          "key": "u2l3-e2",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "Look, it ___! Let's go inside.",
+            "options": ["rains", "is raining", "rained"],
+            "correctIndex": 1,
+            "explanation": "'Look!' + acción justo en este momento → presente continuo: 'is raining'."
+          }
+        },
+        {
+          "key": "u2l3-e3",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["I ", " the answer."],
+            "answers": ["know"],
+            "acceptable": [["know"]],
+            "explanation": "'know' es un verbo de estado: no se usa en continuo. Se dice 'I know', nunca 'I am knowing'."
+          }
+        },
+        {
+          "key": "u2l3-e4",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["She usually ", " to work, but today she ", " the bus."],
+            "answers": ["drives", "is taking"],
+            "acceptable": [["drives"], ["is taking", "'s taking"]],
+            "explanation": "'usually' → rutina en presente simple ('drives'). 'today' + acción hoy → presente continuo ('is taking')."
+          }
+        },
+        {
+          "key": "u2l3-e5",
+          "type": "word_order",
+          "payload": {
+            "tokens": ["She", "often", "works", "from", "home"],
+            "correctOrder": [0, 1, 2, 3, 4],
+            "explanation": "Adverbio de frecuencia ('often') antes del verbo principal en presente simple: 'She often works from home'."
+          }
+        },
+        {
+          "key": "u2l3-e6",
+          "type": "dialogue",
+          "payload": {
+            "turns": [
+              { "speaker": "Ana", "text": "Are you busy?" },
+              { "speaker": "Tom", "text": "" }
+            ],
+            "blankTurnIndex": 1,
+            "options": [
+              "Yes, I'm writing a report.",
+              "Yes, I write a report.",
+              "Yes, I written a report."
+            ],
+            "correctIndex": 0,
+            "explanation": "La pregunta '¿Estás ocupado?' se responde con lo que estás haciendo ahora → presente continuo: 'I'm writing a report'."
+          }
+        },
+        {
+          "key": "u2l3-e7",
+          "type": "translation",
+          "payload": {
+            "prompt": "Él trabaja en un banco pero hoy está trabajando desde casa.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "He works in a bank but today he is working from home.",
+              "He works in a bank but today he's working from home.",
+              "He works at a bank but today he is working from home.",
+              "He works at a bank but today he's working from home."
+            ],
+            "explanation": "Rutina ('works in/at a bank') → presente simple. Situación temporal de hoy → presente continuo ('is working from home')."
+          }
+        }
+      ]
+    }
+  ]
+}
