@@ -1,0 +1,312 @@
+{
+  "slug": "experiences-so-far",
+  "title": "Experiencias hasta ahora",
+  "description": "Presente perfecto: experiencias de vida, resultados con already/yet/just, y cuándo usarlo frente al pasado simple.",
+  "cefrLevel": "B1",
+  "sortOrder": 3,
+  "isPublished": false,
+  "grammarTopics": [
+    {
+      "slug": "present-perfect-experience",
+      "title": "Presente perfecto: experiencias",
+      "explanationEs": "Se usa para experiencias de vida sin decir cuándo pasaron. Forma: have/has + participio pasado. 'I have been to Japan', 'She has never tried sushi'. Con ever en preguntas ('Have you ever...?') y never en negativas.",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "present-perfect-result",
+      "title": "Presente perfecto: already/yet/just",
+      "explanationEs": "Para acciones recientes con efecto en el presente. 'already' (ya, afirmativo): 'I have already eaten'. 'yet' (todavía/ya, en negativas y preguntas): 'Have you finished yet?', 'He hasn't called yet'. 'just' (recién): 'She has just arrived'.",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "present-perfect-vs-past",
+      "title": "Presente perfecto vs pasado simple",
+      "explanationEs": "El pasado simple se usa con un momento definido ('yesterday', 'in 2010', 'last week'): 'I saw him yesterday'. El presente perfecto se usa sin momento definido o para experiencias: 'I have seen that film'. Si hay una fecha o palabra de tiempo pasado, va pasado simple.",
+      "cefrLevel": "B1"
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "life-experiences",
+      "title": "Experiencias de vida",
+      "grammarTopicSlugs": ["present-perfect-experience"],
+      "exercises": [
+        {
+          "key": "u3l1-e1",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "Have you ever ___ sushi?",
+            "options": ["eat", "eaten", "ate"],
+            "correctIndex": 1,
+            "explanation": "Presente perfecto: have + participio pasado. El participio de 'eat' es 'eaten': 'Have you ever eaten sushi?'"
+          }
+        },
+        {
+          "key": "u3l1-e2",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "She ___ never been to Japan.",
+            "options": ["has", "have", "is"],
+            "correctIndex": 0,
+            "explanation": "Con 'she' (3ª persona singular) el auxiliar es 'has': 'She has never been to Japan.'"
+          }
+        },
+        {
+          "key": "u3l1-e3",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["I ", " that movie three times."],
+            "answers": ["have seen"],
+            "acceptable": [["have seen", "'ve seen"]],
+            "explanation": "Experiencia repetida sin fecha concreta → presente perfecto: 'I have seen' o 'I've seen'. Participio de 'see' = 'seen'."
+          }
+        },
+        {
+          "key": "u3l1-e4",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["They ", " to London."],
+            "answers": ["have never been"],
+            "acceptable": [["have never been", "'ve never been"]],
+            "explanation": "'never' va entre el auxiliar y el participio: 'They have never been to London.'"
+          }
+        },
+        {
+          "key": "u3l1-e5",
+          "type": "word_order",
+          "payload": {
+            "tokens": ["Have", "you", "ever", "been", "to", "Paris"],
+            "correctOrder": [0, 1, 2, 3, 4, 5],
+            "explanation": "Pregunta de experiencia: Have + sujeto + ever + participio: 'Have you ever been to Paris?'"
+          }
+        },
+        {
+          "key": "u3l1-e6",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "He has ___ his homework, so he's free now.",
+            "options": ["do", "did", "done"],
+            "correctIndex": 2,
+            "explanation": "Participio pasado de 'do' = 'done': 'He has done his homework.'"
+          }
+        },
+        {
+          "key": "u3l1-e7",
+          "type": "translation",
+          "payload": {
+            "prompt": "Nunca he estado en Francia.",
+            "direction": "es_to_en",
+            "acceptable": ["I have never been to France.", "I've never been to France."],
+            "explanation": "Experiencia negativa de vida → presente perfecto con 'never': 'I have never been to France.'"
+          }
+        },
+        {
+          "key": "u3l1-e8",
+          "type": "dialogue",
+          "payload": {
+            "turns": [
+              { "speaker": "Ana", "text": "Have you ever tried Thai food?" },
+              { "speaker": "Tom", "text": "" }
+            ],
+            "blankTurnIndex": 1,
+            "options": [
+              "Yes, I've tried it once.",
+              "Yes, I try it once.",
+              "Yes, I am trying it once."
+            ],
+            "correctIndex": 0,
+            "explanation": "Respuesta sobre una experiencia → presente perfecto: 'I've tried it once.'"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "already-yet-just",
+      "title": "already, yet y just",
+      "grammarTopicSlugs": ["present-perfect-result"],
+      "exercises": [
+        {
+          "key": "u3l2-e1",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I've ___ finished my homework. I can relax now.",
+            "options": ["already", "yet", "ever"],
+            "correctIndex": 0,
+            "explanation": "'already' (ya) en afirmativas, entre el auxiliar y el participio: 'I've already finished.'"
+          }
+        },
+        {
+          "key": "u3l2-e2",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "Have you finished your work ___?",
+            "options": ["yet", "already", "just"],
+            "correctIndex": 0,
+            "explanation": "'yet' (ya/todavía) va al final de preguntas y negativas: 'Have you finished yet?'"
+          }
+        },
+        {
+          "key": "u3l2-e3",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["She ", " arrived. She's at the door."],
+            "answers": ["has just"],
+            "acceptable": [["has just", "'s just"]],
+            "explanation": "'just' (recién) entre auxiliar y participio: 'She has just arrived.'"
+          }
+        },
+        {
+          "key": "u3l2-e4",
+          "type": "word_order",
+          "payload": {
+            "tokens": ["I", "have", "already", "eaten", "lunch"],
+            "correctOrder": [0, 1, 2, 3, 4],
+            "explanation": "'already' va entre el auxiliar y el participio: 'I have already eaten lunch.'"
+          }
+        },
+        {
+          "key": "u3l2-e5",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "He hasn't called me ___.",
+            "options": ["yet", "already", "just"],
+            "correctIndex": 0,
+            "explanation": "En negativas se usa 'yet' al final: 'He hasn't called me yet.'"
+          }
+        },
+        {
+          "key": "u3l2-e6",
+          "type": "matching",
+          "payload": {
+            "pairs": [
+              { "left": "finish", "right": "finished" },
+              { "left": "arrive", "right": "arrived" },
+              { "left": "leave", "right": "left" },
+              { "left": "buy", "right": "bought" }
+            ],
+            "explanation": "Verbo base → participio pasado. 'finish/arrive' son regulares (-ed); 'leave→left' y 'buy→bought' son irregulares."
+          }
+        },
+        {
+          "key": "u3l2-e7",
+          "type": "translation",
+          "payload": {
+            "prompt": "Ya he terminado mi tarea.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I have already finished my homework.",
+              "I've already finished my homework."
+            ],
+            "explanation": "'ya' en afirmativa → 'already', entre auxiliar y participio: 'I have already finished my homework.'"
+          }
+        },
+        {
+          "key": "u3l2-e8",
+          "type": "listening",
+          "payload": {
+            "audioText": "I have just finished cooking dinner. It's ready.",
+            "sub": {
+              "kind": "multiple_choice",
+              "prompt": "What has she just done?",
+              "options": [
+                "She has just finished cooking dinner.",
+                "She is going to cook dinner.",
+                "She finished cooking dinner yesterday."
+              ],
+              "correctIndex": 0
+            },
+            "explanation": "El audio dice 'I have just finished cooking dinner' — acción recién terminada."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "perfect-vs-past",
+      "title": "Perfecto vs pasado simple",
+      "grammarTopicSlugs": ["present-perfect-vs-past"],
+      "exercises": [
+        {
+          "key": "u3l3-e1",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I ___ him yesterday.",
+            "options": ["have met", "met", "meet"],
+            "correctIndex": 1,
+            "explanation": "'yesterday' es un momento definido del pasado → pasado simple: 'I met him yesterday.'"
+          }
+        },
+        {
+          "key": "u3l3-e2",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "She ___ to Italy last summer.",
+            "options": ["has gone", "went", "goes"],
+            "correctIndex": 1,
+            "explanation": "'last summer' marca un momento pasado concreto → pasado simple: 'She went to Italy last summer.'"
+          }
+        },
+        {
+          "key": "u3l3-e3",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["", " you ever ", " abroad?"],
+            "answers": ["Have", "been"],
+            "acceptable": [["Have"], ["been"]],
+            "explanation": "Pregunta de experiencia sin fecha → presente perfecto: 'Have you ever been abroad?'"
+          }
+        },
+        {
+          "key": "u3l3-e4",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "We ___ to this city in 2010.",
+            "options": ["have moved", "moved", "move"],
+            "correctIndex": 1,
+            "explanation": "'in 2010' es una fecha concreta → pasado simple: 'We moved to this city in 2010.'"
+          }
+        },
+        {
+          "key": "u3l3-e5",
+          "type": "word_order",
+          "payload": {
+            "tokens": ["When", "did", "you", "see", "her"],
+            "correctOrder": [0, 1, 2, 3, 4],
+            "explanation": "'When' pide un momento definido → pregunta en pasado simple con 'did': 'When did you see her?'"
+          }
+        },
+        {
+          "key": "u3l3-e6",
+          "type": "dialogue",
+          "payload": {
+            "turns": [
+              { "speaker": "Ana", "text": "Have you ever been to New York?" },
+              { "speaker": "Tom", "text": "" }
+            ],
+            "blankTurnIndex": 1,
+            "options": [
+              "Yes, I went there in 2019.",
+              "Yes, I have gone there in 2019.",
+              "Yes, I go there in 2019."
+            ],
+            "correctIndex": 0,
+            "explanation": "La pregunta es de experiencia, pero la respuesta da una fecha concreta ('in 2019') → pasado simple: 'I went there in 2019.'"
+          }
+        },
+        {
+          "key": "u3l3-e7",
+          "type": "translation",
+          "payload": {
+            "prompt": "Fui al cine ayer.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I went to the cinema yesterday.",
+              "I went to the movies yesterday.",
+              "I went to the movie theater yesterday."
+            ],
+            "explanation": "'ayer' es un momento definido → pasado simple: 'I went to the cinema yesterday.' (no 'I have gone')."
+          }
+        }
+      ]
+    }
+  ]
+}
