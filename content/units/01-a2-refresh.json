@@ -4,7 +4,7 @@
   "description": "Repaso de presente simple, pasado simple y vocabulario cotidiano. Punto de partida antes de encarar B1.",
   "cefrLevel": "A2",
   "sortOrder": 1,
-  "isPublished": false,
+  "isPublished": true,
   "grammarTopics": [
     {
       "slug": "present-simple",
@@ -95,8 +95,8 @@
           "payload": {
             "prompt": "Yo trabajo todos los días.",
             "direction": "es_to_en",
-            "acceptable": ["I work every day.", "I work everyday."],
-            "explanation": "Presente simple para una rutina: 'I work every day.'"
+            "acceptable": ["I work every day."],
+            "explanation": "Presente simple para una rutina: 'I work every day.' Ojo: 'everyday' (junto) es adjetivo (an everyday routine), no adverbio."
           }
         },
         {
@@ -146,7 +146,8 @@
           "payload": {
             "segments": ["We ", " pizza and then we ", " home."],
             "answers": ["ate", "went"],
-            "explanation": "'eat → ate' y 'go → went', ambos irregulares."
+            "acceptable": [["ate", "had"], ["went"]],
+            "explanation": "'eat → ate' y 'go → went', ambos irregulares. 'had pizza' también es natural ('have pizza' = comer pizza)."
           }
         },
         {
@@ -234,9 +235,9 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "I'm hungry. Let's have ___.",
-            "options": ["lunch", "a chair", "a shower"],
+            "options": ["lunch", "a chair", "a book"],
             "correctIndex": 0,
-            "explanation": "'have lunch' = almorzar. Es una colocación común."
+            "explanation": "'have lunch' = almorzar. Es una colocación común (have + comida). 'a chair' o 'a book' no combinan con 'have' en este contexto."
           }
         },
         {
