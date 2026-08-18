@@ -1,4 +1,5 @@
-import type { UserAnswer, WordOrderPayload } from '@nivelate/shared';
+import { type UserAnswer, type WordOrderPayload, shuffleTokenIndices } from '@nivelate/shared';
+import { useMemo } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
 type Props = {
@@ -11,6 +12,11 @@ type Props = {
 // Tap para agregar un token a la oración; tap en la oración para sacarlo.
 export function WordOrderExercise({ payload, order, disabled, onChange }: Props) {
   const used = new Set(order);
+  // Los tokens del payload suelen venir en el orden correcto (así el content es
+  // legible al autorearlo). Los presentamos siempre barajados con permutación
+  // determinística por ejercicio, así el UI no depende de que el/la autor/a se
+  // acuerde de desordenarlos y el orden es estable entre renders y tests.
+  const displayOrder = useMemo(() => shuffleTokenIndices(payload.tokens), [payload.tokens]);
 
   function add(i: number) {
     if (used.has(i)) return;
@@ -44,9 +50,12 @@ export function WordOrderExercise({ payload, order, disabled, onChange }: Props)
         )}
       </View>
 
-      {/* Banco de tokens */}
+      {/* Banco de tokens — barajados con permutación estable por ejercicio.
+          Los índices sobre los que trabaja la lógica (used/add/order) siguen
+          siendo los del payload original; sólo el orden visual cambia. */}
       <View className="flex-row flex-wrap gap-2">
-        {payload.tokens.map((token, i) => {
+        {displayOrder.map((i) => {
+          const token = payload.tokens[i];
           const isUsed = used.has(i);
           return (
             <Pressable
