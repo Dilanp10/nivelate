@@ -5,6 +5,10 @@ export type Lesson = Database['public']['Tables']['lessons']['Row'];
 export type ExerciseRow = Database['public']['Tables']['exercises']['Row'];
 export type GrammarTopic = Database['public']['Tables']['grammar_topics']['Row'];
 export type VocabItem = Database['public']['Tables']['vocab_items']['Row'];
+export type TeachingCard = Database['public']['Tables']['teaching_cards']['Row'];
+export type TeachingExample = Database['public']['Tables']['teaching_examples']['Row'];
+export type PronunciationHighlight =
+  Database['public']['Tables']['pronunciation_highlights']['Row'];
 
 export const EXERCISE_TYPES = [
   'multiple_choice',

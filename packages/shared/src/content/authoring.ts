@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { LEARNING_GOAL_OPTIONS } from '../auth/types';
 import { exercisePayloadSchema } from './exercise-types';
 
 // Schema del archivo de autoría de una unidad: content/units/NN-slug.json.
@@ -12,15 +13,44 @@ const slug = z
 
 const cefrLevel = z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
 
+const goalEnum = z.enum(LEARNING_GOAL_OPTIONS);
+
 // Un ejercicio en el archivo: key + { type, payload } validado por su forma.
-const authoringExerciseSchema = z.intersection(z.object({ key: slug }), exercisePayloadSchema);
+// Opcionalmente lleva `goal` para adaptación por learning_goal del perfil.
+const authoringExerciseSchema = z.intersection(
+  z.object({ key: slug, goal: goalEnum.nullish() }),
+  exercisePayloadSchema,
+);
 export type AuthoringExercise = z.infer<typeof authoringExerciseSchema>;
+
+const authoringTeachingExampleSchema = z.object({
+  en: z.string().min(1),
+  es: z.string().min(1),
+  goal: goalEnum.nullish(),
+});
+export type AuthoringTeachingExample = z.infer<typeof authoringTeachingExampleSchema>;
+
+const authoringTeachingCardSchema = z.object({
+  key: slug,
+  titleEs: z.string().min(1),
+  bodyEs: z.string().min(1),
+  examples: z.array(authoringTeachingExampleSchema).min(1),
+});
+export type AuthoringTeachingCard = z.infer<typeof authoringTeachingCardSchema>;
+
+const authoringPronunciationHighlightSchema = z.object({
+  en: z.string().min(1),
+  respellingEs: z.string().min(1),
+});
+export type AuthoringPronunciationHighlight = z.infer<typeof authoringPronunciationHighlightSchema>;
 
 const authoringLessonSchema = z.object({
   slug,
   title: z.string().min(1),
   grammarTopicSlugs: z.array(slug).optional(),
+  teachingCards: z.array(authoringTeachingCardSchema).optional(),
   exercises: z.array(authoringExerciseSchema).min(1),
+  pronunciationHighlights: z.array(authoringPronunciationHighlightSchema).min(1).max(10).optional(),
 });
 export type AuthoringLesson = z.infer<typeof authoringLessonSchema>;
 
@@ -67,6 +97,19 @@ export const authoringUnitSchema = z
           });
         }
         keys.add(ex.key);
+      });
+
+      // keys de teaching card únicas dentro de la lección
+      const cardKeys = new Set<string>();
+      (lesson.teachingCards ?? []).forEach((card, j) => {
+        if (cardKeys.has(card.key)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `key de teaching card duplicada en la lección: ${card.key}`,
+            path: ['lessons', i, 'teachingCards', j, 'key'],
+          });
+        }
+        cardKeys.add(card.key);
       });
 
       // grammarTopicSlugs deben existir en grammarTopics de la unidad

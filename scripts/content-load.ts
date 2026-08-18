@@ -110,14 +110,15 @@ async function loadUnit(unit: AuthoringUnit): Promise<void> {
     // exercises: upsert por (lesson_id, exercise_key)
     const keptKeys: string[] = [];
     for (const [exIndex, ex] of lesson.exercises.entries()) {
-      // El authoring exercise es { key, type, payload }. Guardamos type y payload.
-      const { key, ...typed } = ex;
+      // El authoring exercise es { key, goal?, type, payload }. Guardamos type, payload y goal.
+      const { key, goal, ...typed } = ex;
       const { error: exErr } = await supabase.from('exercises').upsert(
         {
           lesson_id: lessonId,
           exercise_key: key,
           type: typed.type,
           payload: typed.payload,
+          goal: goal ?? null,
           sort_order: exIndex,
         },
         { onConflict: 'lesson_id,exercise_key' },
@@ -132,6 +133,47 @@ async function loadUnit(unit: AuthoringUnit): Promise<void> {
       .delete()
       .eq('lesson_id', lessonId)
       .not('exercise_key', 'in', `(${keptKeys.map((k) => `"${k}"`).join(',')})`);
+
+    // teaching_cards + teaching_examples: reset + reinsert (contenido curado)
+    await supabase.from('teaching_cards').delete().eq('lesson_id', lessonId);
+    for (const [cardIndex, card] of (lesson.teachingCards ?? []).entries()) {
+      const { data: cardRow, error: cardErr } = await supabase
+        .from('teaching_cards')
+        .insert({
+          lesson_id: lessonId,
+          key: card.key,
+          title_es: card.titleEs,
+          body_es: card.bodyEs,
+          sort_order: cardIndex,
+        })
+        .select('id')
+        .single();
+      if (cardErr || !cardRow) throw new Error(`teaching_card ${card.key}: ${cardErr?.message}`);
+      const cardId = cardRow.id;
+      for (const [exIndex, example] of card.examples.entries()) {
+        const { error: exErr } = await supabase.from('teaching_examples').insert({
+          teaching_card_id: cardId,
+          en: example.en,
+          es: example.es,
+          goal: example.goal ?? null,
+          sort_order: exIndex,
+        });
+        if (exErr) throw new Error(`teaching_example ${card.key}#${exIndex}: ${exErr.message}`);
+      }
+    }
+
+    // pronunciation_highlights: reset + reinsert (contenido curado)
+    await supabase.from('pronunciation_highlights').delete().eq('lesson_id', lessonId);
+    for (const [hIndex, h] of (lesson.pronunciationHighlights ?? []).entries()) {
+      const { error: hErr } = await supabase.from('pronunciation_highlights').insert({
+        lesson_id: lessonId,
+        en: h.en,
+        respelling_es: h.respellingEs,
+        sort_order: hIndex,
+      });
+      if (hErr)
+        throw new Error(`pronunciation_highlight ${lesson.slug}#${hIndex}: ${hErr.message}`);
+    }
   }
 
   // Borrar lessons que ya no están en el archivo (cascade limpia sus exercises)
@@ -142,10 +184,18 @@ async function loadUnit(unit: AuthoringUnit): Promise<void> {
     .not('id', 'in', `(${keptLessonIds.map((id) => `"${id}"`).join(',')})`);
 
   const totalEx = unit.lessons.reduce((n, l) => n + l.exercises.length, 0);
+  const totalCards = unit.lessons.reduce((n, l) => n + (l.teachingCards?.length ?? 0), 0);
+  const totalHi = unit.lessons.reduce((n, l) => n + (l.pronunciationHighlights?.length ?? 0), 0);
+  const extras = [
+    totalCards > 0 ? `${totalCards} teaching cards` : null,
+    totalHi > 0 ? `${totalHi} pronunciation` : null,
+  ]
+    .filter(Boolean)
+    .join(', ');
   console.log(
-    `✓ ${unit.slug}: ${unit.lessons.length} lecciones, ${totalEx} ejercicios ${
-      unit.isPublished ? '(publicada)' : '(borrador)'
-    }`,
+    `✓ ${unit.slug}: ${unit.lessons.length} lecciones, ${totalEx} ejercicios${
+      extras ? ` + ${extras}` : ''
+    } ${unit.isPublished ? '(publicada)' : '(borrador)'}`,
   );
 }
 

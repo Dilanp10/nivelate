@@ -1,4 +1,4 @@
-import { SRS_MAX_DAILY_CARDS } from '@nivelate/shared';
+import { type LearningGoal, SRS_MAX_DAILY_CARDS } from '@nivelate/shared';
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '../lib/supabase';
 import { useAuthStore } from '../stores/auth';
@@ -22,7 +22,7 @@ async function fetchDueCards(userId: string): Promise<DueCard[]> {
     .from('srs_cards')
     .select(
       `interval_days, repetitions,
-       exercise:exercises!inner ( id, exercise_key, type, payload, sort_order )`,
+       exercise:exercises!inner ( id, exercise_key, type, payload, sort_order, goal )`,
     )
     .eq('user_id', userId)
     .lte('due_at', new Date().toISOString())
@@ -40,6 +40,7 @@ async function fetchDueCards(userId: string): Promise<DueCard[]> {
       type: PlayableExercise['type'];
       payload: unknown;
       sort_order: number;
+      goal: string | null;
     };
   };
 
@@ -51,6 +52,7 @@ async function fetchDueCards(userId: string): Promise<DueCard[]> {
       type: r.exercise.type,
       payload: r.exercise.payload,
       sortOrder: r.exercise.sort_order,
+      goal: (r.exercise.goal as LearningGoal | null) ?? null,
     },
     intervalDays: r.interval_days,
     repetitions: r.repetitions,

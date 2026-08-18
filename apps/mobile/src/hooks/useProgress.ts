@@ -5,6 +5,7 @@ import { useAuthStore } from '../stores/auth';
 export type UnitProgress = {
   unitId: string;
   unitTitle: string;
+  unitSortOrder: number;
   totalLessons: number;
   completedLessons: number;
 };
@@ -45,6 +46,7 @@ async function fetchProgress(userId: string): Promise<ProgressData> {
     return {
       unitId: u.id,
       unitTitle: u.title,
+      unitSortOrder: u.sort_order,
       totalLessons: lessons.length,
       completedLessons,
     };

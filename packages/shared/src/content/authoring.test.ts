@@ -70,4 +70,93 @@ describe('authoringUnitSchema', () => {
     });
     expect(r.success).toBe(false);
   });
+
+  it('acepta una lección con teachingCards y pronunciationHighlights', () => {
+    const r = authoringUnitSchema.safeParse({
+      ...validUnit,
+      lessons: [
+        {
+          ...validUnit.lessons[0],
+          teachingCards: [
+            {
+              key: 'u1l1-t1',
+              titleEs: 'Cuándo usar presente simple',
+              bodyEs: 'Para rutinas y hechos.',
+              examples: [
+                { en: 'I work here.', es: 'Trabajo acá.', goal: 'work' },
+                { en: 'She travels a lot.', es: 'Viaja mucho.', goal: 'travel' },
+                { en: 'Water boils at 100°C.', es: 'El agua hierve a 100°C.' },
+              ],
+            },
+          ],
+          pronunciationHighlights: [
+            { en: 'she works', respellingEs: 'shi wérks' },
+            { en: 'water', respellingEs: 'wóter' },
+          ],
+        },
+      ],
+    });
+    expect(r.success).toBe(true);
+  });
+
+  it('acepta ejercicio con goal explícito', () => {
+    const r = authoringUnitSchema.safeParse({
+      ...validUnit,
+      lessons: [
+        {
+          ...validUnit.lessons[0],
+          exercises: [{ ...validUnit.lessons[0].exercises[0], goal: 'travel' }],
+        },
+      ],
+    });
+    expect(r.success).toBe(true);
+  });
+
+  it('rechaza goal fuera del enum en teaching example', () => {
+    const r = authoringUnitSchema.safeParse({
+      ...validUnit,
+      lessons: [
+        {
+          ...validUnit.lessons[0],
+          teachingCards: [
+            {
+              key: 'u1l1-t1',
+              titleEs: 'Título',
+              bodyEs: 'Cuerpo',
+              examples: [{ en: 'x', es: 'y', goal: 'invented' }],
+            },
+          ],
+        },
+      ],
+    });
+    expect(r.success).toBe(false);
+  });
+
+  it('rechaza teachingCards con keys duplicadas', () => {
+    const card = {
+      key: 'u1l1-t1',
+      titleEs: 'T',
+      bodyEs: 'B',
+      examples: [{ en: 'x', es: 'y' }],
+    };
+    const r = authoringUnitSchema.safeParse({
+      ...validUnit,
+      lessons: [{ ...validUnit.lessons[0], teachingCards: [card, card] }],
+    });
+    expect(r.success).toBe(false);
+  });
+
+  it('rechaza pronunciationHighlights con más de 10 items', () => {
+    const highlight = { en: 'x', respellingEs: 'x' };
+    const r = authoringUnitSchema.safeParse({
+      ...validUnit,
+      lessons: [
+        {
+          ...validUnit.lessons[0],
+          pronunciationHighlights: Array.from({ length: 11 }, () => highlight),
+        },
+      ],
+    });
+    expect(r.success).toBe(false);
+  });
 });

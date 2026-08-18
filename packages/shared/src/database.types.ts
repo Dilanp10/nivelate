@@ -1,6 +1,3 @@
-// Autogenerado con `pnpm supabase:types` (spec 007 T003).
-// No editar a mano.
-
 export type Json =
   | string
   | number
@@ -10,6 +7,8 @@ export type Json =
   | Json[]
 
 export type Database = {
+  // Allows to automatically instantiate createClient with right options
+  // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "14.15"
   }
@@ -19,6 +18,7 @@ export type Database = {
         Row: {
           created_at: string
           exercise_key: string
+          goal: string | null
           id: string
           lesson_id: string
           payload: Json
@@ -29,6 +29,7 @@ export type Database = {
         Insert: {
           created_at?: string
           exercise_key: string
+          goal?: string | null
           id?: string
           lesson_id: string
           payload: Json
@@ -39,6 +40,7 @@ export type Database = {
         Update: {
           created_at?: string
           exercise_key?: string
+          goal?: string | null
           id?: string
           lesson_id?: string
           payload?: Json
@@ -267,6 +269,41 @@ export type Database = {
         }
         Relationships: []
       }
+      pronunciation_highlights: {
+        Row: {
+          created_at: string
+          en: string
+          id: string
+          lesson_id: string
+          respelling_es: string
+          sort_order: number
+        }
+        Insert: {
+          created_at?: string
+          en: string
+          id?: string
+          lesson_id: string
+          respelling_es: string
+          sort_order: number
+        }
+        Update: {
+          created_at?: string
+          en?: string
+          id?: string
+          lesson_id?: string
+          respelling_es?: string
+          sort_order?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "pronunciation_highlights_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       srs_cards: {
         Row: {
           due_at: string
@@ -301,6 +338,85 @@ export type Database = {
             columns: ["exercise_id"]
             isOneToOne: false
             referencedRelation: "exercises"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      teaching_cards: {
+        Row: {
+          body_es: string
+          created_at: string
+          id: string
+          key: string
+          lesson_id: string
+          sort_order: number
+          title_es: string
+          updated_at: string
+        }
+        Insert: {
+          body_es: string
+          created_at?: string
+          id?: string
+          key: string
+          lesson_id: string
+          sort_order: number
+          title_es: string
+          updated_at?: string
+        }
+        Update: {
+          body_es?: string
+          created_at?: string
+          id?: string
+          key?: string
+          lesson_id?: string
+          sort_order?: number
+          title_es?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "teaching_cards_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      teaching_examples: {
+        Row: {
+          created_at: string
+          en: string
+          es: string
+          goal: string | null
+          id: string
+          sort_order: number
+          teaching_card_id: string
+        }
+        Insert: {
+          created_at?: string
+          en: string
+          es: string
+          goal?: string | null
+          id?: string
+          sort_order: number
+          teaching_card_id: string
+        }
+        Update: {
+          created_at?: string
+          en?: string
+          es?: string
+          goal?: string | null
+          id?: string
+          sort_order?: number
+          teaching_card_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "teaching_examples_teaching_card_id_fkey"
+            columns: ["teaching_card_id"]
+            isOneToOne: false
+            referencedRelation: "teaching_cards"
             referencedColumns: ["id"]
           },
         ]
