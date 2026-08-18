@@ -2,55 +2,55 @@
 
 Cada tarea → un commit. Formato: `<tipo>(009): T### — <descripción breve>`.
 
-## Fase 1 — Schema y contenido base
+## Fase 1 — Schema y contenido base ✅
 
-- [ ] T001 — Migración `20260819000000_adaptive_learning.sql`: crear `teaching_cards`, `teaching_examples`, `pronunciation_highlights`, agregar `exercises.goal`, RLS de las 3 tablas nuevas.
-- [ ] T002 — Aplicar migración con `apply_migration` (Supabase MCP). Verificar en `list_tables`. Advisors → sin regresiones nuevas.
-- [ ] T003 — Regenerar `packages/shared/src/database.types.ts` con las nuevas tablas y columna.
-- [ ] T004 — `docs/pronunciation-guide.md` — convención de respelling en español (base R-001).
-- [ ] T005 — Extender `packages/shared/src/content/types.ts` con `TeachingCard`, `TeachingExample`, `PronunciationHighlight`.
-- [ ] T006 — Extender `packages/shared/src/content/authoring.ts` (Zod) con los schemas nuevos (todo opcional). Actualizar `authoring.test.ts` con casos válidos e inválidos.
-- [ ] T007 — Actualizar el seed/tooling de contenido (el que hoy inserta el JSON en Supabase) para que además inserte las 3 tablas nuevas y setee `goal` en `exercises`.
+- [x] T001 — Migración `20260819000000_adaptive_learning.sql`: crear `teaching_cards`, `teaching_examples`, `pronunciation_highlights`, agregar `exercises.goal`, RLS de las 3 tablas nuevas.
+- [x] T002 — Aplicada con `apply_migration` (Supabase MCP). Verificado en `list_tables`. Advisors sin regresiones (3 warnings preexistentes, ninguno nuevo).
+- [x] T003 — `packages/shared/src/database.types.ts` regenerado con las nuevas tablas y columna.
+- [x] T004 — `docs/pronunciation-guide.md` — convención de respelling en español (base R-001).
+- [x] T005 — `packages/shared/src/content/types.ts` extendido con `TeachingCard`, `TeachingExample`, `PronunciationHighlight`.
+- [x] T006 — `authoring.ts` (Zod) extendido con los schemas nuevos (todo opcional). `authoring.test.ts` con 5 casos nuevos.
+- [x] T007 — `scripts/content-load.ts` actualizado: inserta las 3 tablas nuevas y setea `goal` en `exercises`.
 
-## Fase 2 — Lógica pura en shared (con tests)
+## Fase 2 — Lógica pura en shared (con tests) ✅
 
-- [ ] T010 — `packages/shared/src/player/starting-unit.ts` + `starting-unit.test.ts`: `getStartingUnitOrder(selfLevel)` + `getStartingUnit(selfLevel, units)`.
-- [ ] T011 — `packages/shared/src/player/goal-filter.ts` + `goal-filter.test.ts`: `filterByGoal(items, userGoal, minCount)` con fallback a `general`/`null`.
-- [ ] T012 — Exportar los nuevos módulos desde `packages/shared/src/index.ts`.
+- [x] T010 — `starting-unit.ts` + `starting-unit.test.ts` (12 tests): `getStartingUnitOrder`, `getStartingUnit`, `skippedUnits`.
+- [x] T011 — `goal-filter.ts` + `goal-filter.test.ts` (8 tests): `filterByGoal` con fallback a `general`/`null`, nunca mezcla goals.
+- [x] T012 — Exportados desde `packages/shared/src/player/index.ts`.
 
-## Fase 3 — Cliente: teaching cards
+## Fase 3 — Cliente: teaching cards ✅
 
-- [ ] T020 — `apps/mobile/src/player/TeachingCard.tsx`: componente puro con título, cuerpo, ejemplos filtrados por goal, botones 🔊, botón "Entendido".
-- [ ] T021 — Extender el reducer del `LessonRunner` (donde vive el `Step` type) para soportar `TeachingStep | ExerciseStep`. `checkAnswer` solo aplica a `ExerciseStep`.
-- [ ] T022 — `useLessonContent` (o el hook actual que trae la lección) trae `teachingCards` y `pronunciationHighlights` en el mismo query.
-- [ ] T023 — `LessonProgress` cuenta cards + ejercicios en el total.
-- [ ] T024 — Integrar el orquestador en `ExerciseRenderer.tsx` (o donde viva) para renderizar `TeachingCard` cuando el step actual es de tipo teaching.
+- [x] T020 — `TeachingCard.tsx`: título, cuerpo, ejemplos filtrados por goal (`filterByGoal`, minCount 2), botones 🔊, botón "Entendido".
+- [x] T021 — Decisión de implementación: en vez de tocar el reducer puro `lessonReducer` (packages/shared), la fase de teaching es estado local simple (`cardIndex`) en `[lessonId].tsx` — sin retry, más simple, sin riesgo sobre el reducer ya testeado de ejercicios. Ver research.md R-002 (la propuesta original sugería un Step unificado; se prefirió la capa local por menor riesgo).
+- [x] T022 — `useLesson` trae `teachingCards` + `pronunciationHighlights` en el mismo hook (`Promise.all`).
+- [x] T023 — Progress bar cuenta `teachingCards.length + exercises.length`.
+- [x] T024 — Integrado en `[lessonId].tsx`: fase teaching antes de exercises.
 
-## Fase 4 — Cliente: pronunciación
+## Fase 4 — Cliente: pronunciación ✅
 
-- [ ] T030 — `apps/mobile/src/player/PronunciationSummary.tsx`: lista de highlights con frase en inglés, respelling debajo, botón 🔊, botón "Continuar".
-- [ ] T031 — Insertar `PronunciationSummary` entre el último ejercicio y `LessonSummary`. Si no hay highlights, saltar directo al summary.
+- [x] T030 — `PronunciationSummary.tsx`: lista de highlights, respelling, botón 🔊, botón "Continuar".
+- [x] T031 — Insertada entre el último ejercicio y `LessonSummary`. Sin highlights → se salta directo al summary.
 
-## Fase 5 — Cliente: adaptación por nivel
+## Fase 5 — Cliente: adaptación por nivel ✅
 
-- [ ] T040 — `apps/mobile/src/hooks/useStartingUnit.ts`: devuelve la unidad de arranque combinando `useProfile()` + `useUnits()`.
-- [ ] T041 — En `apps/mobile/app/(protected)/index.tsx`, la CTA "Empezar lección" apunta a la primera lección no completada de la unidad de arranque.
-- [ ] T042 — En `apps/mobile/app/(protected)/progress.tsx`, unidades con `sortOrder < startingUnit.sortOrder` reciben un badge "Opcional — repaso". Siguen navegables.
-- [ ] T043 — Enlace discreto "¿Muy difícil? Empezá desde el principio →" en el header de las unidades ≥ arranque, condicionado a `self_level in ('conversational', 'intermediate')`.
+- [x] T040 — `useStartingUnit.ts`: unidad de arranque combinando catálogo publicado + `getStartingUnitOrder`.
+- [x] T041 — `useFirstLesson` reescrito: primera lección no completada desde la unidad de arranque en adelante (antes ignoraba completions y siempre devolvía la lección 1).
+- [x] T042 — Badge "Opcional — repaso" en `progress.tsx` para unidades previas a la de arranque.
+- [x] T043 — Enlace "¿Muy difícil? Empezá desde el principio →", visible solo cuando el catálogo *publicado* permite un salto real (no solo cuando el self_level lo sugiere — verificado con self_level temporal en browser).
 
 ## Fase 6 — Contenido
 
-- [ ] T050 — U1 (publicada): teaching cards para las 3 lecciones.
-- [ ] T051 — U1: pronunciation highlights para las 3 lecciones.
-- [ ] T052 — U1: etiquetar con `goal` los ejemplos y ejercicios donde el contexto sea claro (mucho quedará como `null`).
-- [ ] T053 — U2/U3 (draft): teaching cards. Va junto con la aprobación pedagógica pendiente — puede quedar para PR posterior.
+- [x] T050 — U1: teaching cards para las 3 lecciones (2 cada una, 5 ejemplos por card cubriendo los 5 goals).
+- [x] T051 — U1: pronunciation highlights para las 3 lecciones (6 cada una).
+- [x] T052 — U1: 1 ejercicio etiquetado con `goal='work'` donde el contexto era inequívoco (el resto queda `null`/agnóstico, por diseño).
+- [ ] T053 — U2/U3 (draft): teaching cards. **Bloqueado** por la revisión pedagógica pendiente del usuario — queda para cuando se publiquen.
 - [ ] T054 — U2/U3: pronunciation highlights. Idem.
 
-## Fase 7 — Verificación y cierre
+## Fase 7 — Verificación y cierre ✅
 
-- [ ] T080 — Tests unitarios verdes: `pnpm --filter @nivelate/shared test` incluye `goal-filter`, `starting-unit`, Zod nuevo.
-- [ ] T081 — E2E: extender `tests/e2e/lesson-flow.spec.ts` para verificar teaching cards + pantalla de pronunciación aparecen en el flujo.
-- [ ] T082 — Verificación manual en browser con usuarios de prueba de distintos `learning_goal` (travel vs work) y `self_level` (zero vs intermediate). Screenshots.
-- [ ] T083 — `pnpm typecheck && pnpm lint && pnpm test && pnpm test:e2e` verde.
-- [ ] T090 — `quickstart.md` con pasos para probar el módulo end-to-end.
-- [ ] T099 — PR `feat(009): adaptive learning` (rama `009-adaptive-learning`).
+- [x] T080 — Tests unitarios verdes: 128 tests (`goal-filter`, `starting-unit`, Zod nuevo incluidos).
+- [x] T081 — `lesson-flow.spec.ts` reescrito para cubrir teaching cards + pantalla de pronunciación, con planes de respuesta para las 3 lecciones de U1 (necesario porque la CTA ahora es completion-aware, ver T041).
+- [x] T082 — Verificación manual en browser: 2 perfiles de goal distintos (travel, work) mostrando ejemplos contextualizados + fallback general; self_level intermediate sin catálogo suficiente no muestra badge/enlace falsos positivos.
+- [x] T083 — `pnpm typecheck && pnpm lint && pnpm test && pnpm test:e2e` — todo verde (128 unit + 10 E2E).
+- [x] T090 — `quickstart.md` escrito.
+- [ ] T099 — PR `feat(009): adaptive learning` (rama `009-adaptive-learning` → `main`). Pendiente de decisión del usuario sobre cuándo abrir/mergear.
