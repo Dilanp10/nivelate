@@ -1,9 +1,11 @@
 import { CEFR_LABELS, levelForXp } from '@nivelate/shared';
-import { useRouter } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import { Text, View } from 'react-native';
 import { AchievementsGrid } from '../../src/components/AchievementsGrid';
 import { useAchievements } from '../../src/hooks/useAchievements';
+import { useFirstUnitEntry } from '../../src/hooks/useFirstUnitEntry';
 import { useProgress } from '../../src/hooks/useProgress';
+import { useStartingUnit } from '../../src/hooks/useStartingUnit';
 import { useAuthStore } from '../../src/stores/auth';
 import { Button } from '../../src/ui/Button';
 import { ScreenLayout } from '../../src/ui/ScreenLayout';
@@ -15,6 +17,17 @@ export default function ProgressScreen() {
   );
   const progress = useProgress();
   const achievements = useAchievements();
+  const { startingUnit, units } = useStartingUnit();
+  const firstUnitEntry = useFirstUnitEntry();
+  // No basta con mirar la intención del self_level: si el catálogo publicado
+  // no llega a la unidad objetivo (ej. self_level='intermediate' pero solo
+  // hay U1), no hubo salto real y el enlace "empezá desde el principio" no
+  // tiene sentido (ya está ahí).
+  const firstPublishedUnit = units[0];
+  const showBackToBasics =
+    startingUnit != null &&
+    firstPublishedUnit != null &&
+    startingUnit.sortOrder > firstPublishedUnit.sortOrder;
 
   const totalXp = profile?.total_xp ?? 0;
   const level = levelForXp(totalXp);
@@ -83,11 +96,23 @@ export default function ProgressScreen() {
 
           {/* Avance por unidad */}
           <View className="gap-3">
-            <Text className="text-text text-base font-bold">Avance por unidad</Text>
+            <View className="flex-row items-baseline justify-between">
+              <Text className="text-text text-base font-bold">Avance por unidad</Text>
+              {showBackToBasics && firstUnitEntry.data ? (
+                <Link
+                  href={`/lesson/${firstUnitEntry.data.lessonId}`}
+                  className="text-info text-xs font-semibold"
+                >
+                  ¿Muy difícil? Empezá desde el principio →
+                </Link>
+              ) : null}
+            </View>
             {progress.data?.perUnit.map((u) => {
               const pct =
                 u.totalLessons === 0 ? 0 : Math.round((u.completedLessons / u.totalLessons) * 100);
               const done = pct === 100;
+              const isOptionalReview =
+                startingUnit != null && u.unitSortOrder < startingUnit.sortOrder;
               return (
                 <View
                   key={u.unitId}
@@ -96,10 +121,19 @@ export default function ProgressScreen() {
                   }`}
                 >
                   <View className="flex-row justify-between items-center">
-                    <Text className="text-text text-sm font-bold">
-                      {done ? '✓ ' : ''}
-                      {u.unitTitle}
-                    </Text>
+                    <View className="flex-row items-center gap-2 flex-1">
+                      <Text className="text-text text-sm font-bold" numberOfLines={1}>
+                        {done ? '✓ ' : ''}
+                        {u.unitTitle}
+                      </Text>
+                      {isOptionalReview ? (
+                        <View className="bg-info/15 rounded-full px-2 py-0.5">
+                          <Text className="text-info text-[10px] font-bold uppercase tracking-wide">
+                            Opcional — repaso
+                          </Text>
+                        </View>
+                      ) : null}
+                    </View>
                     <Text className="text-muted text-xs font-semibold">
                       {u.completedLessons}/{u.totalLessons}
                     </Text>
