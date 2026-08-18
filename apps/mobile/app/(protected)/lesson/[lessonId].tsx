@@ -1,4 +1,5 @@
 import {
+  type LearningGoal,
   type UserAnswer,
   checkAnswer,
   currentExerciseId,
@@ -11,12 +12,16 @@ import { useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { ActivityIndicator, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useCompleteLesson } from '../../../src/hooks/useCompleteLesson';
+import type { PlayableHighlight, PlayableTeachingCard } from '../../../src/hooks/useLesson';
 import { type PlayableExercise, useLesson } from '../../../src/hooks/useLesson';
 import { randomUUID } from '../../../src/lib/uuid';
 import { ExerciseRenderer, isAnswerComplete } from '../../../src/player/ExerciseRenderer';
 import { FeedbackBanner } from '../../../src/player/FeedbackBanner';
 import { LessonProgress } from '../../../src/player/LessonProgress';
 import { LessonSummary } from '../../../src/player/LessonSummary';
+import { PronunciationSummary } from '../../../src/player/PronunciationSummary';
+import { TeachingCard } from '../../../src/player/TeachingCard';
+import { useAuthStore } from '../../../src/stores/auth';
 import { Button } from '../../../src/ui/Button';
 
 type PayloadWithExplanation = { explanation?: string };
@@ -61,6 +66,8 @@ export default function LessonScreen() {
     <LessonRunner
       lessonId={lessonId ?? ''}
       exercises={query.data.exercises}
+      teachingCards={query.data.teachingCards}
+      pronunciationHighlights={query.data.pronunciationHighlights}
       onExit={() => router.back()}
     />
   );
@@ -69,12 +76,30 @@ export default function LessonScreen() {
 function LessonRunner({
   lessonId,
   exercises,
+  teachingCards,
+  pronunciationHighlights,
   onExit,
 }: {
   lessonId: string;
   exercises: PlayableExercise[];
+  teachingCards: PlayableTeachingCard[];
+  pronunciationHighlights: PlayableHighlight[];
   onExit: () => void;
 }) {
+  const userGoal = useAuthStore((s) =>
+    s.state.status === 'authenticated'
+      ? ((s.state.profile?.learning_goal as LearningGoal | null) ?? null)
+      : null,
+  );
+
+  // Fase de enseñanza: se completa antes de los ejercicios. Estado local
+  // simple (no comparte reducer con los ejercicios — no hay reintento acá).
+  const [cardIndex, setCardIndex] = useState(0);
+  const inTeaching = cardIndex < teachingCards.length;
+
+  // Pantalla de pronunciación: se muestra una vez, entre el último ejercicio
+  // y el resumen de XP.
+  const [pronunciationSeen, setPronunciationSeen] = useState(pronunciationHighlights.length === 0);
   const byId = useMemo(() => {
     const m: Record<string, PlayableExercise> = {};
     for (const e of exercises) m[e.id] = e;
@@ -98,8 +123,9 @@ function LessonRunner({
   // no vuelva a otorgar XP (idempotencia server-side).
   const idempotencyKeyRef = useRef<string | null>(null);
 
-  const total = exercises.length;
-  const doneCount = Object.values(state.results).filter((r) => r.done).length;
+  const total = teachingCards.length + exercises.length;
+  const exerciseDoneCount = Object.values(state.results).filter((r) => r.done).length;
+  const progressDone = inTeaching ? cardIndex : teachingCards.length + exerciseDoneCount;
 
   // Persistir el resultado una sola vez al entrar al resumen (RPC atómico).
   useEffect(() => {
@@ -115,6 +141,34 @@ function LessonRunner({
       });
     }
   }, [state, submitted, completeMutate, lessonId]);
+
+  if (inTeaching) {
+    const card = teachingCards[cardIndex];
+    if (!card) return null;
+    return (
+      <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
+        <View className="px-4">
+          <LessonProgress done={progressDone} total={total} onClose={onExit} />
+        </View>
+        <TeachingCard
+          card={card}
+          userGoal={userGoal}
+          onContinue={() => setCardIndex((i) => i + 1)}
+        />
+      </SafeAreaView>
+    );
+  }
+
+  if (state.phase === 'summary' && !pronunciationSeen) {
+    return (
+      <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
+        <PronunciationSummary
+          highlights={pronunciationHighlights}
+          onContinue={() => setPronunciationSeen(true)}
+        />
+      </SafeAreaView>
+    );
+  }
 
   if (state.phase === 'summary') {
     const summary = summarize(state);
@@ -173,7 +227,7 @@ function LessonRunner({
   return (
     <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
       <View className="px-4">
-        <LessonProgress done={doneCount} total={total} onClose={onExit} />
+        <LessonProgress done={progressDone} total={total} onClose={onExit} />
       </View>
 
       <ScrollView

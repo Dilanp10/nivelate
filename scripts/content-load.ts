@@ -171,7 +171,8 @@ async function loadUnit(unit: AuthoringUnit): Promise<void> {
         respelling_es: h.respellingEs,
         sort_order: hIndex,
       });
-      if (hErr) throw new Error(`pronunciation_highlight ${lesson.slug}#${hIndex}: ${hErr.message}`);
+      if (hErr)
+        throw new Error(`pronunciation_highlight ${lesson.slug}#${hIndex}: ${hErr.message}`);
     }
   }
 
@@ -184,10 +185,7 @@ async function loadUnit(unit: AuthoringUnit): Promise<void> {
 
   const totalEx = unit.lessons.reduce((n, l) => n + l.exercises.length, 0);
   const totalCards = unit.lessons.reduce((n, l) => n + (l.teachingCards?.length ?? 0), 0);
-  const totalHi = unit.lessons.reduce(
-    (n, l) => n + (l.pronunciationHighlights?.length ?? 0),
-    0,
-  );
+  const totalHi = unit.lessons.reduce((n, l) => n + (l.pronunciationHighlights?.length ?? 0), 0);
   const extras = [
     totalCards > 0 ? `${totalCards} teaching cards` : null,
     totalHi > 0 ? `${totalHi} pronunciation` : null,

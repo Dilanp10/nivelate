@@ -42,9 +42,7 @@ const authoringPronunciationHighlightSchema = z.object({
   en: z.string().min(1),
   respellingEs: z.string().min(1),
 });
-export type AuthoringPronunciationHighlight = z.infer<
-  typeof authoringPronunciationHighlightSchema
->;
+export type AuthoringPronunciationHighlight = z.infer<typeof authoringPronunciationHighlightSchema>;
 
 const authoringLessonSchema = z.object({
   slug,
@@ -52,11 +50,7 @@ const authoringLessonSchema = z.object({
   grammarTopicSlugs: z.array(slug).optional(),
   teachingCards: z.array(authoringTeachingCardSchema).optional(),
   exercises: z.array(authoringExerciseSchema).min(1),
-  pronunciationHighlights: z
-    .array(authoringPronunciationHighlightSchema)
-    .min(1)
-    .max(10)
-    .optional(),
+  pronunciationHighlights: z.array(authoringPronunciationHighlightSchema).min(1).max(10).optional(),
 });
 export type AuthoringLesson = z.infer<typeof authoringLessonSchema>;
 
