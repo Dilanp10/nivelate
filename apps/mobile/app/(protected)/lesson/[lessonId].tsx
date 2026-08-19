@@ -112,9 +112,11 @@ function LessonRunner({
     initLesson,
   );
   const [answer, setAnswer] = useState<UserAnswer | null>(null);
-  const [lastResult, setLastResult] = useState<{ correct: boolean; correctAnswer: string } | null>(
-    null,
-  );
+  const [lastResult, setLastResult] = useState<{
+    correct: boolean;
+    correctAnswer: string;
+    typo?: boolean;
+  } | null>(null);
   const complete = useCompleteLesson();
   const completeMutate = complete.mutate;
   const [submitted, setSubmitted] = useState(false);
@@ -279,6 +281,7 @@ function LessonRunner({
             correct={lastResult.correct}
             correctAnswer={lastResult.correctAnswer}
             explanation={explanation}
+            typo={lastResult.typo}
           />
         ) : null}
 

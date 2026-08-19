@@ -103,6 +103,90 @@ describe('checkAnswer — translation', () => {
   });
 });
 
+describe('checkAnswer — tolerancia de tipeo', () => {
+  it('translation: acepta un tipeo simple con flag typo', () => {
+    const ex = {
+      type: 'translation' as const,
+      payload: {
+        prompt: 'Fui al cine.',
+        direction: 'es_to_en' as const,
+        acceptable: ['I went to the cinema.'],
+      },
+    };
+    // 1 letra faltante
+    const r = checkAnswer(ex, { type: 'translation', text: 'I went to the cinena' });
+    expect(r.correct).toBe(true);
+    expect(r.typo).toBe(true);
+  });
+
+  it('translation: transposición ("wnet" vs "went") se acepta como typo', () => {
+    const ex = {
+      type: 'translation' as const,
+      payload: {
+        prompt: 'Yo fui.',
+        direction: 'es_to_en' as const,
+        acceptable: ['I went'],
+      },
+    };
+    const r = checkAnswer(ex, { type: 'translation', text: 'I wnet' });
+    expect(r.correct).toBe(true);
+    expect(r.typo).toBe(true);
+  });
+
+  it('translation: coincidencia exacta NO trae flag typo', () => {
+    const ex = {
+      type: 'translation' as const,
+      payload: {
+        prompt: 'Yo fui.',
+        direction: 'es_to_en' as const,
+        acceptable: ['I went'],
+      },
+    };
+    const r = checkAnswer(ex, { type: 'translation', text: 'I went' });
+    expect(r.correct).toBe(true);
+    expect(r.typo).toBeFalsy();
+  });
+
+  it('translation: palabras cortas exigen exactitud (no acepta "he" por "she")', () => {
+    const ex = {
+      type: 'translation' as const,
+      payload: {
+        prompt: 'Ella va.',
+        direction: 'es_to_en' as const,
+        acceptable: ['She'],
+      },
+    };
+    expect(checkAnswer(ex, { type: 'translation', text: 'He' }).correct).toBe(false);
+  });
+
+  it('translation: rechaza cuando hay demasiadas ediciones', () => {
+    const ex = {
+      type: 'translation' as const,
+      payload: {
+        prompt: 'Fui al cine.',
+        direction: 'es_to_en' as const,
+        acceptable: ['I went to the cinema.'],
+      },
+    };
+    // "casa" en vez de "cinema" — no es un tipeo, es palabra distinta
+    const r = checkAnswer(ex, { type: 'translation', text: 'I went to the house' });
+    expect(r.correct).toBe(false);
+  });
+
+  it('fill_in_blank: acepta un tipeo en un hueco y marca typo', () => {
+    const ex = {
+      type: 'fill_in_blank' as const,
+      payload: {
+        segments: ['Yesterday I ', ' to the cinema.'],
+        answers: ['went'],
+      },
+    };
+    const r = checkAnswer(ex, { type: 'fill_in_blank', values: ['wnet'] });
+    expect(r.correct).toBe(true);
+    expect(r.typo).toBe(true);
+  });
+});
+
 describe('checkAnswer — dialogue', () => {
   const ex = {
     type: 'dialogue' as const,
