@@ -4,7 +4,7 @@
   "description": "Presente perfecto: experiencias de vida, resultados con already/yet/just, y cuándo usarlo frente al pasado simple.",
   "cefrLevel": "B1",
   "sortOrder": 3,
-  "isPublished": false,
+  "isPublished": true,
   "grammarTopics": [
     {
       "slug": "present-perfect-experience",
@@ -30,6 +30,72 @@
       "slug": "life-experiences",
       "title": "Experiencias de vida",
       "grammarTopicSlugs": ["present-perfect-experience"],
+      "teachingCards": [
+        {
+          "key": "u3l1-t1",
+          "titleEs": "Experiencias sin decir cuándo",
+          "bodyEs": "El presente perfecto (have/has + participio) se usa para hablar de experiencias de vida, sin importar en qué momento pasaron.",
+          "examples": [
+            {
+              "en": "I have been to three different countries.",
+              "es": "Estuve en tres países distintos.",
+              "goal": "general"
+            },
+            {
+              "en": "She has worked in two different companies.",
+              "es": "Ella trabajó en dos empresas distintas.",
+              "goal": "work"
+            },
+            {
+              "en": "I have traveled by train in Europe.",
+              "es": "Viajé en tren por Europa.",
+              "goal": "travel"
+            },
+            {
+              "en": "I have studied English for two years.",
+              "es": "Estudié inglés durante dos años.",
+              "goal": "study"
+            },
+            {
+              "en": "We have watched that series twice.",
+              "es": "Miramos esa serie dos veces.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u3l1-t2",
+          "titleEs": "ever y never",
+          "bodyEs": "'ever' (alguna vez) se usa en preguntas de experiencia; 'never' (nunca) en negativas. Ambos van entre el auxiliar y el participio.",
+          "examples": [
+            {
+              "en": "Have you ever lost your keys?",
+              "es": "¿Alguna vez perdiste las llaves?",
+              "goal": "general"
+            },
+            {
+              "en": "Has he ever managed a team?",
+              "es": "¿Él alguna vez dirigió un equipo?",
+              "goal": "work"
+            },
+            {
+              "en": "I have never been to Asia.",
+              "es": "Nunca estuve en Asia.",
+              "goal": "travel"
+            },
+            {
+              "en": "She has never failed an exam.",
+              "es": "Ella nunca desaprobó un examen.",
+              "goal": "study"
+            },
+            {
+              "en": "Have you ever watched a horror movie alone?",
+              "es": "¿Alguna vez miraste una película de terror solo?",
+              "goal": "entertainment"
+            }
+          ]
+        }
+      ],
       "exercises": [
         {
           "key": "u3l1-e1",
@@ -118,12 +184,86 @@
             "explanation": "Respuesta sobre una experiencia → presente perfecto: 'I've tried it once.'"
           }
         }
+      ],
+      "pronunciationHighlights": [
+        { "en": "have you ever", "respellingEs": "hav yu éver" },
+        { "en": "been", "respellingEs": "bin" },
+        { "en": "never", "respellingEs": "néver" },
+        { "en": "eaten", "respellingEs": "íten" },
+        { "en": "tried", "respellingEs": "tráid" },
+        { "en": "done", "respellingEs": "dan" }
       ]
     },
     {
       "slug": "already-yet-just",
       "title": "already, yet y just",
       "grammarTopicSlugs": ["present-perfect-result"],
+      "teachingCards": [
+        {
+          "key": "u3l2-t1",
+          "titleEs": "already y just: en afirmativas",
+          "bodyEs": "'already' (ya) y 'just' (recién) van entre el auxiliar y el participio, en frases afirmativas sobre algo reciente.",
+          "examples": [
+            {
+              "en": "I have already had breakfast.",
+              "es": "Ya desayuné.",
+              "goal": "general"
+            },
+            {
+              "en": "She has just sent the report.",
+              "es": "Ella recién mandó el informe.",
+              "goal": "work"
+            },
+            {
+              "en": "We have already booked the hotel.",
+              "es": "Ya reservamos el hotel.",
+              "goal": "travel"
+            },
+            {
+              "en": "I have just finished my homework.",
+              "es": "Recién terminé mi tarea.",
+              "goal": "study"
+            },
+            {
+              "en": "They have already watched the new episode.",
+              "es": "Ya miraron el episodio nuevo.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u3l2-t2",
+          "titleEs": "yet: en negativas y preguntas",
+          "bodyEs": "'yet' (todavía/ya) se usa en negativas y preguntas, siempre al final de la frase.",
+          "examples": [
+            {
+              "en": "I haven't had lunch yet.",
+              "es": "Todavía no almorcé.",
+              "goal": "general"
+            },
+            {
+              "en": "Has she replied to the client yet?",
+              "es": "¿Ella ya le respondió al cliente?",
+              "goal": "work"
+            },
+            {
+              "en": "We haven't booked the flights yet.",
+              "es": "Todavía no reservamos los vuelos.",
+              "goal": "travel"
+            },
+            {
+              "en": "Have you finished the exercise yet?",
+              "es": "¿Ya terminaste el ejercicio?",
+              "goal": "study"
+            },
+            {
+              "en": "They haven't watched the ending yet.",
+              "es": "Todavía no vieron el final.",
+              "goal": "entertainment"
+            }
+          ]
+        }
+      ],
       "exercises": [
         {
           "key": "u3l2-e1",
@@ -218,12 +358,86 @@
             "explanation": "El audio dice 'I have just finished cooking dinner' — acción recién terminada."
           }
         }
+      ],
+      "pronunciationHighlights": [
+        { "en": "already", "respellingEs": "olrédi" },
+        { "en": "yet", "respellingEs": "yet" },
+        { "en": "just", "respellingEs": "yast" },
+        { "en": "finished", "respellingEs": "fínisht" },
+        { "en": "arrived", "respellingEs": "eráivd" },
+        { "en": "hasn't", "respellingEs": "jásent" }
       ]
     },
     {
       "slug": "perfect-vs-past",
       "title": "Perfecto vs pasado simple",
       "grammarTopicSlugs": ["present-perfect-vs-past"],
+      "teachingCards": [
+        {
+          "key": "u3l3-t1",
+          "titleEs": "Con fecha → pasado simple",
+          "bodyEs": "Si la frase incluye un momento definido del pasado (yesterday, last year, in 2010), usamos pasado simple, no presente perfecto.",
+          "examples": [
+            {
+              "en": "I met her last year.",
+              "es": "La conocí el año pasado.",
+              "goal": "general"
+            },
+            {
+              "en": "She started this job in 2022.",
+              "es": "Ella empezó este trabajo en 2022.",
+              "goal": "work"
+            },
+            {
+              "en": "We visited Rome two years ago.",
+              "es": "Visitamos Roma hace dos años.",
+              "goal": "travel"
+            },
+            {
+              "en": "I took that course last semester.",
+              "es": "Hice ese curso el semestre pasado.",
+              "goal": "study"
+            },
+            {
+              "en": "We watched that movie last weekend.",
+              "es": "Miramos esa película el fin de semana pasado.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u3l3-t2",
+          "titleEs": "Sin fecha → presente perfecto",
+          "bodyEs": "Sin un momento definido, o para hablar de experiencia general, usamos presente perfecto.",
+          "examples": [
+            {
+              "en": "I have already met her.",
+              "es": "Ya la conocí.",
+              "goal": "general"
+            },
+            {
+              "en": "She has worked in that role before.",
+              "es": "Ella ya trabajó en ese puesto antes.",
+              "goal": "work"
+            },
+            {
+              "en": "We have visited Rome before.",
+              "es": "Ya visitamos Roma antes.",
+              "goal": "travel"
+            },
+            {
+              "en": "I have taken that course before.",
+              "es": "Ya hice ese curso antes.",
+              "goal": "study"
+            },
+            {
+              "en": "We have watched that movie before.",
+              "es": "Ya miramos esa película antes.",
+              "goal": "entertainment"
+            }
+          ]
+        }
+      ],
       "exercises": [
         {
           "key": "u3l3-e1",
@@ -306,6 +520,14 @@
             "explanation": "'ayer' es un momento definido → pasado simple: 'I went to the cinema yesterday.' (no 'I have gone')."
           }
         }
+      ],
+      "pronunciationHighlights": [
+        { "en": "yesterday", "respellingEs": "yésterdei" },
+        { "en": "last summer", "respellingEs": "last sámer" },
+        { "en": "abroad", "respellingEs": "ebród" },
+        { "en": "moved", "respellingEs": "muvd" },
+        { "en": "went", "respellingEs": "uént" },
+        { "en": "have you been", "respellingEs": "hav yu bin" }
       ]
     }
   ]
