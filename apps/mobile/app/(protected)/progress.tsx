@@ -51,7 +51,7 @@ export default function ProgressScreen() {
         <>
           {/* Camino global: lo primero, es la respuesta a "¿cuánto me falta?" */}
           {progress.data && progress.data.globalTotal > 0 ? (
-            <View className="bg-brand/10 border-2 border-b-4 border-brand rounded-2xl p-5 gap-1 items-center">
+            <View className="bg-brand/10 border-2 border-brand rounded-2xl p-5 gap-1 items-center">
               <Text className="text-muted text-xs font-bold uppercase tracking-widest">
                 Camino A2 → B1
               </Text>
@@ -123,7 +123,7 @@ export default function ProgressScreen() {
                   <View className="flex-row justify-between items-center">
                     <View className="flex-row items-center gap-2 flex-1">
                       <Text className="text-text text-sm font-bold" numberOfLines={1}>
-                        {done ? '✓ ' : ''}
+                        {done ? '✓' : ''}
                         {u.unitTitle}
                       </Text>
                       {isOptionalReview ? (
@@ -167,7 +167,7 @@ function Stat({
   tone: string;
 }) {
   return (
-    <View className="flex-1 bg-surface border-2 border-b-4 border-border rounded-2xl p-4 items-center gap-0.5">
+    <View className="flex-1 bg-surface border-2 border-border rounded-2xl p-4 items-center gap-0.5">
       <Text className="text-3xl">{emoji}</Text>
       <Text className={`text-2xl font-bold ${tone}`}>{value}</Text>
       <Text className="text-muted text-xs">{label}</Text>

@@ -35,7 +35,7 @@ export function ReviewSummary({ total, correct, onDone }: Props) {
 
 function Box({ label, value, tone }: { label: string; value: string; tone: string }) {
   return (
-    <View className="flex-1 items-center gap-1 bg-surface border-2 border-b-4 border-border rounded-2xl py-3">
+    <View className="flex-1 items-center gap-1 bg-surface border-2 border-border rounded-2xl py-3">
       <Text className={`text-xl font-bold ${tone}`}>{value}</Text>
       <Text className="text-muted text-xs">{label}</Text>
     </View>

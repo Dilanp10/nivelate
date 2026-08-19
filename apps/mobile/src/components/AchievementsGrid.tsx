@@ -35,7 +35,7 @@ export function AchievementsGrid({ achievements }: Props) {
 function AchievementCard({ a }: { a: AchievementWithStatus }) {
   return (
     <View
-      className={`w-[47%] rounded-2xl border-2 border-b-4 p-4 gap-1 ${
+      className={`w-[47%] rounded-2xl border-2 p-4 gap-1 ${
         a.unlocked ? 'border-gold bg-gold/10' : 'border-border bg-surface opacity-40'
       }`}
       accessibilityLabel={

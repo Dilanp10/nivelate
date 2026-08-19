@@ -58,7 +58,7 @@ export function LessonSummary({
           accessibilityRole="alert"
         >
           <Text className="text-gold text-sm font-bold">
-            🏅 Desbloqueaste{newlyUnlocked.length === 1 ? '' : ` ${newlyUnlocked.length} logros`}:
+            🏅 Desbloqueaste{newlyUnlocked.length === 1 ? '' :` ${newlyUnlocked.length} logros`}:
           </Text>
           <Text className="text-text text-sm">
             {newlyUnlocked.map((id) => ACHIEVEMENT_BY_ID[id]?.title ?? id).join(', ')}
@@ -92,9 +92,9 @@ function StatBox({
   loading?: boolean;
 }) {
   return (
-    <View className="flex-1 items-center gap-1 bg-surface border-2 border-b-4 border-border rounded-2xl py-3">
+    <View className="flex-1 items-center gap-1 bg-surface border-2 border-border rounded-2xl py-3">
       {loading ? (
-        <ActivityIndicator size="small" color="#58cc02" />
+        <ActivityIndicator size="small" color="#0E7C7B" />
       ) : (
         <Text className={`text-xl font-bold ${tone}`}>{value}</Text>
       )}

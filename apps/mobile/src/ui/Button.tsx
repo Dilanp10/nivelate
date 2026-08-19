@@ -9,38 +9,35 @@ type Props = Omit<PressableProps, 'children'> & {
   loadingLabel?: string;
 };
 
-// El "labio" inferior (border-b-4) más el translate en active dan la sensación
-// de tecla física que se hunde al tocarla. Es la interacción firma del estilo.
+// Sin labio 3D — el look sobrio prefiere planitud con feedback discreto (opacidad al presionar).
 const containerBase =
-  'items-center justify-center rounded-2xl px-6 py-4 min-h-[56px] flex-row gap-2 border-b-4 active:border-b-0 active:translate-y-1';
+  'items-center justify-center rounded-xl px-6 py-4 min-h-[52px] flex-row gap-2 border active:opacity-80';
 
 const containerVariants: Record<Variant, string> = {
-  primary: 'bg-brand border-brand-dark',
-  info: 'bg-info border-info-dark',
-  danger: 'bg-danger border-danger-dark',
-  secondary: 'bg-surface border-border active:bg-surface-light',
-  ghost: 'bg-transparent border-transparent active:bg-surface',
+  primary: 'bg-brand border-brand',
+  info: 'bg-info border-info',
+  danger: 'bg-danger border-danger',
+  secondary: 'bg-surface border-border',
+  ghost: 'bg-transparent border-transparent',
 };
 
-// Deshabilitado va a gris neutro en vez de al color lavado: un verde al 40%
-// se lee como "verde feo", no como "todavía no".
-const containerDisabled = 'bg-surface border-border opacity-60';
+const containerDisabled = 'bg-surface-light border-border opacity-60';
 
-const labelBase = 'text-base font-bold tracking-wide';
+const labelBase = 'text-base font-semibold tracking-wide font-display';
 const labelVariants: Record<Variant, string> = {
   primary: 'text-bg',
   info: 'text-bg',
-  danger: 'text-text',
+  danger: 'text-bg',
   secondary: 'text-text',
   ghost: 'text-muted',
 };
 
 const spinnerColor: Record<Variant, string> = {
-  primary: '#131f24',
-  info: '#131f24',
-  danger: '#f7fafc',
-  secondary: '#f7fafc',
-  ghost: '#8fa3ad',
+  primary: '#FBFAF8',
+  info: '#FBFAF8',
+  danger: '#FBFAF8',
+  secondary: '#131417',
+  ghost: '#6E6E76',
 };
 
 export function Button({
@@ -64,7 +61,7 @@ export function Button({
       className={`${containerBase} ${isDisabled ? containerDisabled : containerVariants[variant]}`}
     >
       {loading ? (
-        <ActivityIndicator size="small" color={isDisabled ? '#8fa3ad' : spinnerColor[variant]} />
+        <ActivityIndicator size="small" color={isDisabled ? '#6E6E76' : spinnerColor[variant]} />
       ) : null}
       <Text className={`${labelBase} ${isDisabled ? 'text-muted' : labelVariants[variant]}`}>
         {loading && loadingLabel ? loadingLabel : label}

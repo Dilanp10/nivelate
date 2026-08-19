@@ -31,7 +31,7 @@ export function PronunciationSummary({ highlights, onContinue }: Props) {
             <View
               // biome-ignore lint/suspicious/noArrayIndexKey: highlights estáticos por lección, sin reorder
               key={`hi-${i}`}
-              className="flex-row items-center gap-3 rounded-2xl border-2 border-b-4 border-border bg-surface px-4 py-3"
+              className="flex-row items-center gap-3 rounded-2xl border-2 border-border bg-surface px-4 py-3"
             >
               <View className="flex-1 gap-1">
                 <Text className="text-text text-lg font-semibold leading-6">{h.en}</Text>
@@ -42,7 +42,7 @@ export function PronunciationSummary({ highlights, onContinue }: Props) {
                 disabled={!ttsOk}
                 accessibilityRole="button"
                 accessibilityLabel={`Escuchar: ${h.en}`}
-                className={`w-11 h-11 rounded-full items-center justify-center border-b-4 active:border-b-0 active:translate-y-1 ${
+                className={`w-11 h-11 rounded-full items-center justify-center active:opacity-80 ${
                   ttsOk ? 'bg-info border-info-dark' : 'bg-surface-light border-border'
                 }`}
               >

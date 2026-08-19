@@ -16,7 +16,7 @@ export default function Callback() {
   if (state.status === 'loading') {
     return (
       <View className="flex-1 bg-bg items-center justify-center">
-        <ActivityIndicator color="#58cc02" />
+        <ActivityIndicator color="#0E7C7B" />
       </View>
     );
   }

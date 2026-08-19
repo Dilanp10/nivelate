@@ -10,10 +10,10 @@ import { Pressable, Text, View } from 'react-native';
 export type OptionState = 'idle' | 'selected' | 'correct' | 'wrong';
 
 const containerByState: Record<OptionState, string> = {
-  idle: 'border-border border-b-4 bg-surface active:bg-surface-light',
-  selected: 'border-info border-b-4 bg-info/15',
-  correct: 'border-brand border-b-4 bg-brand/15',
-  wrong: 'border-danger border-b-4 bg-danger/15',
+  idle: 'border-border bg-surface active:bg-surface-light',
+  selected: 'border-info bg-info/15',
+  correct: 'border-brand bg-brand/15',
+  wrong: 'border-danger bg-danger/15',
 };
 
 const labelByState: Record<OptionState, string> = {
@@ -76,7 +76,7 @@ export function TokenChip({
       onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={accessibilityLabel ?? label}
-      className={`rounded-xl border-2 border-b-4 px-4 py-2.5 ${
+      className={`rounded-xl border-2 px-4 py-2.5 ${
         used
           ? 'border-border/40 bg-bg opacity-30'
           : tone === 'chosen'

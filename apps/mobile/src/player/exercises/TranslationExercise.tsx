@@ -19,11 +19,11 @@ export function TranslationExercise({ payload, value, disabled, onChange }: Prop
         editable={!disabled}
         onChangeText={(text) => onChange({ type: 'translation', text })}
         placeholder="Escribí tu traducción"
-        placeholderTextColor="#8fa3ad"
+        placeholderTextColor="#6E6E76"
         multiline
         textAlignVertical="top"
         accessibilityLabel="Tu traducción"
-        className="bg-surface border-2 border-b-4 border-border rounded-2xl px-4 py-4 text-text text-lg min-h-[112px]"
+        className="bg-surface border-2 border-border rounded-2xl px-4 py-4 text-text text-lg min-h-[112px]"
       />
     </View>
   );

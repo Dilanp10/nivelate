@@ -24,14 +24,14 @@ const TOTAL_STEPS = STEP_IDS.length;
 
 function defaultNameFromEmail(email: string): string {
   const local = email.split('@')[0] ?? '';
-  return local.replace(/[._-]/g, ' ').slice(0, 40);
+  return local.replace(/[._-]/g,' ').slice(0, 40);
 }
 
 /** Una sola convención de color: azul = lo que elegiste. En los 4 pasos. */
 function pickClasses(selected: boolean): string {
   return selected
-    ? 'border-info border-b-4 bg-info/15'
-    : 'border-border border-b-4 bg-surface active:bg-surface-light';
+    ? 'border-info bg-info/15'
+    : 'border-border bg-surface active:bg-surface-light';
 }
 
 export default function Welcome() {

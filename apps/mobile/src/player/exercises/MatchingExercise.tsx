@@ -63,7 +63,7 @@ export function MatchingExercise({ payload, disabled, onChange }: Props) {
                 onPress={() => setSelectedLeft(left)}
                 accessibilityRole="button"
                 accessibilityState={{ selected: active }}
-                className={`rounded-2xl border-2 border-b-4 px-4 py-3 ${
+                className={`rounded-2xl border-2 px-4 py-3 ${
                   active
                     ? 'border-info bg-info/15'
                     : matched
@@ -92,7 +92,7 @@ export function MatchingExercise({ payload, disabled, onChange }: Props) {
                 disabled={disabled || used}
                 onPress={() => pickRight(right)}
                 accessibilityRole="button"
-                className={`rounded-2xl border-2 border-b-4 px-4 py-3 ${
+                className={`rounded-2xl border-2 px-4 py-3 ${
                   used
                     ? 'border-border/40 bg-bg opacity-30'
                     : 'border-border bg-surface active:bg-surface-light'
