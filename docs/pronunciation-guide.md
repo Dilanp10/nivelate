@@ -58,8 +58,9 @@ El audio 🔊 al lado del respelling es el modelo real. El respelling guía la l
 6. **-ed regular**:
    - Tras sonora → **d**: `played → pléid`.
    - Tras sorda → **t**: `worked → wérkt`.
-   - Tras /t/ o /d/ → **id**: `wanted → wánted`.
-7. **-s / -es plural o 3ª persona**:
+   - Tras /t/ o /d/ → **ed** (sílaba extra): `wanted → wánted`, `visited → vísited`.
+7. **Pronombres átonos con h (her, him, his)**: en habla conectada, después de un verbo suelen perder la h y enlazar con la palabra anterior. `call her → col er` (no `col jer`). Usar la forma reducida en frases completas — es la que se acerca más al audio real.
+8. **-s / -es plural o 3ª persona**:
    - Tras sorda → **s**: `books → buks`.
    - Tras sonora → **s** (aceptable, aunque IPA sería /z/): `dogs → dogs`.
    - Tras sibilante → **is** o **es**: `wishes → wíshis`.

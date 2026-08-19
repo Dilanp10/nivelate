@@ -6,42 +6,45 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Base neutra desaturada: deja que el verde sea el único color saturado
-        // del fondo. El navy anterior (#0f172a) competía con el brand.
-        bg: '#131f24',
-        surface: '#1c2b32',
-        'surface-light': '#24363f',
-        border: '#37464f',
-        text: '#f7fafc',
-        muted: '#8fa3ad',
+        // Sobrio moderno: fondo casi blanco, tinta grafito, acento teal profundo.
+        // Grises con leve sesgo cálido para no leerse frío/técnico.
+        bg: '#FBFAF8',
+        surface: '#FFFFFF',
+        'surface-light': '#F3F1EA',
+        border: '#E2DFD7',
+        text: '#131417',
+        muted: '#6E6E76',
 
-        // Roles semánticos. Cada color significa una cosa y solo una:
-        // verde = acción primaria / correcto · azul = repaso / secundario
-        // oro = XP y logros · rojo = error · naranja = racha
+        // Roles semánticos con equivalentes muted del mismo tono adulto:
+        // teal = acción primaria / correcto · slate = repaso / secundario
+        // brass = XP y logros · rust = racha · rojo apagado = error
         brand: {
-          DEFAULT: '#58cc02',
-          dark: '#48a302', // labio 3D del botón
-          light: '#7cdf37',
+          DEFAULT: '#0E7C7B',
+          dark: '#0A5F5E',
+          light: '#1CA09E',
         },
         info: {
-          DEFAULT: '#1cb0f6',
-          dark: '#1795d1',
+          DEFAULT: '#4F6D7A',
+          dark: '#3E5761',
         },
         gold: {
-          DEFAULT: '#ffc800',
-          dark: '#e0a800',
+          DEFAULT: '#B88A2E',
+          dark: '#8F6A21',
         },
         streak: {
-          DEFAULT: '#ff9600',
-          dark: '#e07f00',
+          DEFAULT: '#C55A2A',
+          dark: '#A04620',
         },
         danger: {
-          DEFAULT: '#ff4b4b',
-          dark: '#e03d3d',
+          DEFAULT: '#B92C2C',
+          dark: '#8F2020',
         },
       },
       fontFamily: {
-        sans: ['System'],
+        // Body: Inter (misma que la comparación). Display: Space Grotesk
+        // (para números, headings y prompts que quieren personalidad geométrica).
+        sans: ['Inter', 'System'],
+        display: ['Space Grotesk', 'Inter', 'System'],
       },
     },
   },

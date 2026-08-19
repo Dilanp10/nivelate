@@ -11,6 +11,6 @@ export default function ProtectedLayout() {
   }
 
   return (
-    <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: '#131f24' } }} />
+    <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: '#FBFAF8' } }} />
   );
 }

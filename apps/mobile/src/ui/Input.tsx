@@ -26,14 +26,14 @@ export function Input({
       {label ? <Text className="text-text text-sm font-bold">{label}</Text> : null}
 
       <View
-        className={`flex-row items-center bg-surface border-2 border-b-4 rounded-2xl px-4 ${
+        className={`flex-row items-center bg-surface border-2 rounded-2xl px-4 ${
           hasError ? 'border-danger' : 'border-border'
         }`}
       >
         <TextInput
           {...inputProps}
           secureTextEntry={isSecure}
-          placeholderTextColor="#8fa3ad"
+          placeholderTextColor="#6E6E76"
           className="flex-1 text-text text-base py-4"
           accessibilityLabel={label || inputProps.placeholder}
           accessibilityHint={hint}

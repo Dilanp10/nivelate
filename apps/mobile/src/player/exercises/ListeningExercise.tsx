@@ -23,7 +23,7 @@ export function ListeningExercise({ payload, sub, disabled, revealed = false, on
           disabled={!ttsOk}
           accessibilityRole="button"
           accessibilityLabel="Escuchar el audio"
-          className={`w-24 h-24 rounded-full items-center justify-center border-b-4 active:border-b-0 active:translate-y-1 ${
+          className={`w-24 h-24 rounded-full items-center justify-center active:opacity-80 ${
             ttsOk ? 'bg-info border-info-dark' : 'bg-surface border-border'
           }`}
         >
@@ -93,10 +93,10 @@ function ListeningFill({ payload, sub, disabled, onChange }: Props) {
               editable={!disabled}
               onChangeText={(text) => setBlank(i, text)}
               placeholder="…"
-              placeholderTextColor="#8fa3ad"
+              placeholderTextColor="#6E6E76"
               autoCapitalize="none"
               accessibilityLabel={`Hueco ${i + 1}`}
-              className="bg-surface border-2 border-b-4 border-info/60 rounded-xl px-3 py-1.5 text-info text-lg font-semibold min-w-[110px] text-center"
+              className="bg-surface border-2 border-info/60 rounded-xl px-3 py-1.5 text-info text-lg font-semibold min-w-[110px] text-center"
             />
           ) : null}
         </View>

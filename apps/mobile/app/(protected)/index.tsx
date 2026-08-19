@@ -41,7 +41,7 @@ export default function Home() {
             asChild
             accessibilityLabel={`Racha: ${streak} ${streak === 1 ? 'día' : 'días'}`}
           >
-            <Pressable className="flex-1 flex-row items-center gap-3 bg-surface rounded-2xl border-2 border-b-4 border-border px-4 py-3 active:bg-surface-light active:border-b-2">
+            <Pressable className="flex-1 flex-row items-center gap-3 bg-surface rounded-2xl border-2 border-border px-4 py-3 active:bg-surface-light ">
               <Text className="text-2xl">🔥</Text>
               <View>
                 <Text className="text-streak text-xl font-bold leading-6">{streak}</Text>
@@ -51,7 +51,7 @@ export default function Home() {
           </Link>
 
           <Link href="/progress" asChild accessibilityLabel={`XP total: ${totalXp}`}>
-            <Pressable className="flex-1 flex-row items-center gap-3 bg-surface rounded-2xl border-2 border-b-4 border-border px-4 py-3 active:bg-surface-light active:border-b-2">
+            <Pressable className="flex-1 flex-row items-center gap-3 bg-surface rounded-2xl border-2 border-border px-4 py-3 active:bg-surface-light ">
               <Text className="text-2xl">⚡</Text>
               <View>
                 <Text className="text-gold text-xl font-bold leading-6">{totalXp}</Text>
@@ -88,7 +88,7 @@ export default function Home() {
             asChild
             accessibilityLabel={`Empezar lección: ${firstLesson.data.lessonTitle}`}
           >
-            <Pressable className="bg-brand rounded-2xl border-b-4 border-brand-dark p-6 gap-1 active:border-b-0 active:translate-y-1">
+            <Pressable className="bg-brand rounded-2xl border-brand-dark p-6 gap-1 active:opacity-80 ">
               <Text className="text-bg/70 text-xs font-bold uppercase tracking-widest">
                 {firstLesson.data.unitTitle}
               </Text>
@@ -113,7 +113,7 @@ export default function Home() {
         {/* Repaso: acción secundaria, en azul */}
         {dueCards > 0 && (
           <Link href="/review" asChild accessibilityLabel={`Repasar ${dueCards} cards`}>
-            <Pressable className="bg-surface rounded-2xl border-2 border-b-4 border-info p-4 flex-row items-center gap-4 active:bg-surface-light active:border-b-2">
+            <Pressable className="bg-surface rounded-2xl border-2 border-info p-4 flex-row items-center gap-4 active:bg-surface-light ">
               <View className="w-12 h-12 rounded-full bg-info/20 items-center justify-center">
                 <Text className="text-2xl">🔁</Text>
               </View>
@@ -130,13 +130,13 @@ export default function Home() {
         {/* Nav */}
         <View className="flex-row gap-3 mt-2">
           <Link href="/progress" asChild accessibilityLabel="Mi progreso">
-            <Pressable className="flex-1 bg-surface rounded-2xl border-2 border-b-4 border-border py-4 items-center gap-1 active:bg-surface-light active:border-b-2">
+            <Pressable className="flex-1 bg-surface rounded-2xl border-2 border-border py-4 items-center gap-1 active:bg-surface-light ">
               <Text className="text-xl">📊</Text>
               <Text className="text-text text-sm font-bold">Mi progreso</Text>
             </Pressable>
           </Link>
           <Link href="/settings" asChild accessibilityLabel="Configuración">
-            <Pressable className="flex-1 bg-surface rounded-2xl border-2 border-b-4 border-border py-4 items-center gap-1 active:bg-surface-light active:border-b-2">
+            <Pressable className="flex-1 bg-surface rounded-2xl border-2 border-border py-4 items-center gap-1 active:bg-surface-light ">
               <Text className="text-xl">⚙️</Text>
               <Text className="text-muted text-sm font-bold">Configuración</Text>
             </Pressable>

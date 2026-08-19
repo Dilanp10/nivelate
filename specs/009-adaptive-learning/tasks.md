@@ -43,8 +43,8 @@ Cada tarea → un commit. Formato: `<tipo>(009): T### — <descripción breve>`.
 - [x] T050 — U1: teaching cards para las 3 lecciones (2 cada una, 5 ejemplos por card cubriendo los 5 goals).
 - [x] T051 — U1: pronunciation highlights para las 3 lecciones (6 cada una).
 - [x] T052 — U1: 1 ejercicio etiquetado con `goal='work'` donde el contexto era inequívoco (el resto queda `null`/agnóstico, por diseño).
-- [ ] T053 — U2/U3 (draft): teaching cards. **Bloqueado** por la revisión pedagógica pendiente del usuario — queda para cuando se publiquen.
-- [ ] T054 — U2/U3: pronunciation highlights. Idem.
+- [x] T053 — U2/U3: teaching cards (2 por lección × 6 lecciones, 5 ejemplos por goal cada una). Revisión pedagógica aprobada por el usuario; unidades publicadas (`isPublished: true`).
+- [x] T054 — U2/U3: pronunciation highlights (6 por lección × 6 lecciones).
 
 ## Fase 7 — Verificación y cierre ✅
 

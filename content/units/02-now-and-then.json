@@ -4,7 +4,7 @@
   "description": "Presente continuo, pasado continuo, y cuándo usarlos frente al presente/pasado simple.",
   "cefrLevel": "A2",
   "sortOrder": 2,
-  "isPublished": false,
+  "isPublished": true,
   "grammarTopics": [
     {
       "slug": "present-continuous",
@@ -30,6 +30,68 @@
       "slug": "present-continuous",
       "title": "Presente continuo",
       "grammarTopicSlugs": ["present-continuous"],
+      "teachingCards": [
+        {
+          "key": "u2l1-t1",
+          "titleEs": "Acciones que pasan ahora",
+          "bodyEs": "El presente continuo se usa para algo que está pasando en este momento o alrededor de ahora. Forma: am/is/are + verbo-ing.",
+          "examples": [
+            {
+              "en": "I'm reading a book right now.",
+              "es": "Estoy leyendo un libro ahora mismo.",
+              "goal": "general"
+            },
+            {
+              "en": "She's preparing a presentation this week.",
+              "es": "Ella está preparando una presentación esta semana.",
+              "goal": "work"
+            },
+            {
+              "en": "We're staying at a small hotel downtown.",
+              "es": "Nos estamos alojando en un hotel chico en el centro.",
+              "goal": "travel"
+            },
+            {
+              "en": "I'm reviewing the last chapter.",
+              "es": "Estoy repasando el último capítulo.",
+              "goal": "study"
+            },
+            {
+              "en": "They're watching the final episode tonight.",
+              "es": "Están mirando el episodio final esta noche.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u2l1-t2",
+          "titleEs": "Preguntas y negaciones",
+          "bodyEs": "Para preguntar invertimos el orden (am/is/are + sujeto + verbo-ing) y para negar agregamos 'not' después del auxiliar.",
+          "examples": [
+            { "en": "What are you doing?", "es": "¿Qué estás haciendo?", "goal": "general" },
+            {
+              "en": "Is he answering emails right now?",
+              "es": "¿Él está respondiendo emails ahora?",
+              "goal": "work"
+            },
+            {
+              "en": "Are you enjoying the trip so far?",
+              "es": "¿Estás disfrutando el viaje hasta ahora?",
+              "goal": "travel"
+            },
+            {
+              "en": "I'm not understanding this exercise.",
+              "es": "No estoy entendiendo este ejercicio.",
+              "goal": "study"
+            },
+            {
+              "en": "We aren't watching that show anymore.",
+              "es": "Ya no estamos mirando ese programa.",
+              "goal": "entertainment"
+            }
+          ]
+        }
+      ],
       "exercises": [
         {
           "key": "u2l1-e1",
@@ -114,12 +176,86 @@
             "explanation": "La pregunta 'What are you doing?' pide una respuesta en presente continuo: 'I'm cooking dinner.'"
           }
         }
+      ],
+      "pronunciationHighlights": [
+        { "en": "reading", "respellingEs": "ríding" },
+        { "en": "doing", "respellingEs": "dúing" },
+        { "en": "aren't", "respellingEs": "arnt" },
+        { "en": "is she working?", "respellingEs": "is shi wérking" },
+        { "en": "watching", "respellingEs": "wáching" },
+        { "en": "right now", "respellingEs": "ráit náu" }
       ]
     },
     {
       "slug": "past-continuous",
       "title": "Pasado continuo",
       "grammarTopicSlugs": ["past-continuous"],
+      "teachingCards": [
+        {
+          "key": "u2l2-t1",
+          "titleEs": "Una acción en progreso en el pasado",
+          "bodyEs": "El pasado continuo describe algo que estaba pasando en un momento del pasado. Forma: was/were + verbo-ing.",
+          "examples": [
+            {
+              "en": "I was sleeping when you called.",
+              "es": "Estaba durmiendo cuando llamaste.",
+              "goal": "general"
+            },
+            {
+              "en": "She was writing a report when the meeting started.",
+              "es": "Ella estaba escribiendo un informe cuando empezó la reunión.",
+              "goal": "work"
+            },
+            {
+              "en": "We were walking around the city when it started to rain.",
+              "es": "Estábamos caminando por la ciudad cuando empezó a llover.",
+              "goal": "travel"
+            },
+            {
+              "en": "I was studying when the power went out.",
+              "es": "Estaba estudiando cuando se cortó la luz.",
+              "goal": "study"
+            },
+            {
+              "en": "They were watching a movie when the internet stopped.",
+              "es": "Estaban mirando una película cuando se cortó internet.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u2l2-t2",
+          "titleEs": "Dos acciones al mismo tiempo",
+          "bodyEs": "También usamos el pasado continuo para dos acciones largas que pasaban al mismo tiempo, o para preguntar qué estaba pasando en un momento dado.",
+          "examples": [
+            {
+              "en": "What were you doing at nine last night?",
+              "es": "¿Qué estabas haciendo a las nueve anoche?",
+              "goal": "general"
+            },
+            {
+              "en": "While she was answering calls, he was checking emails.",
+              "es": "Mientras ella atendía llamadas, él revisaba emails.",
+              "goal": "work"
+            },
+            {
+              "en": "Were you traveling alone last year?",
+              "es": "¿Estabas viajando solo el año pasado?",
+              "goal": "travel"
+            },
+            {
+              "en": "I wasn't paying attention during the class.",
+              "es": "No estaba prestando atención durante la clase.",
+              "goal": "study"
+            },
+            {
+              "en": "We were laughing so much during the show.",
+              "es": "Nos estábamos riendo mucho durante el show.",
+              "goal": "entertainment"
+            }
+          ]
+        }
+      ],
       "exercises": [
         {
           "key": "u2l2-e1",
@@ -215,12 +351,78 @@
             "explanation": "El audio dice 'we were having dinner and watching a movie' — dos acciones en progreso a las seis."
           }
         }
+      ],
+      "pronunciationHighlights": [
+        { "en": "sleeping", "respellingEs": "slíping" },
+        { "en": "were you", "respellingEs": "wer yu" },
+        { "en": "wasn't", "respellingEs": "uásent" },
+        { "en": "writing", "respellingEs": "ráiting" },
+        { "en": "walking", "respellingEs": "uóking" },
+        { "en": "while", "respellingEs": "uáil" }
       ]
     },
     {
       "slug": "simple-vs-continuous",
       "title": "Simple vs continuo",
       "grammarTopicSlugs": ["present-continuous", "stative-verbs"],
+      "teachingCards": [
+        {
+          "key": "u2l3-t1",
+          "titleEs": "Rutina vs. lo que pasa ahora",
+          "bodyEs": "Presente simple = rutina o hábito. Presente continuo = lo que está pasando ahora, aunque sea distinto de lo habitual.",
+          "examples": [
+            {
+              "en": "I usually walk to work, but today I'm driving.",
+              "es": "Normalmente camino al trabajo, pero hoy estoy manejando.",
+              "goal": "general"
+            },
+            {
+              "en": "She usually works from the office, but this week she's working from home.",
+              "es": "Ella normalmente trabaja desde la oficina, pero esta semana está trabajando desde casa.",
+              "goal": "work"
+            },
+            {
+              "en": "We usually travel in summer, but this year we're traveling in winter.",
+              "es": "Normalmente viajamos en verano, pero este año estamos viajando en invierno.",
+              "goal": "travel"
+            },
+            {
+              "en": "I usually study alone, but today I'm studying with a friend.",
+              "es": "Normalmente estudio solo, pero hoy estoy estudiando con un amigo.",
+              "goal": "study"
+            },
+            {
+              "en": "They usually watch series, but tonight they're watching a movie.",
+              "es": "Normalmente miran series, pero esta noche están mirando una película.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u2l3-t2",
+          "titleEs": "Verbos de estado: sin continuo",
+          "bodyEs": "Verbos como know, understand, want, believe o like describen un estado, no una acción — no se usan en continuo aunque hablemos de 'ahora'.",
+          "examples": [
+            { "en": "I know the answer.", "es": "Sé la respuesta.", "goal": "general" },
+            {
+              "en": "He understands the project now.",
+              "es": "Él entiende el proyecto ahora.",
+              "goal": "work"
+            },
+            {
+              "en": "I want to visit Peru someday.",
+              "es": "Quiero visitar Perú algún día.",
+              "goal": "travel"
+            },
+            {
+              "en": "I believe this rule is important.",
+              "es": "Creo que esta regla es importante.",
+              "goal": "study"
+            },
+            { "en": "She likes this song a lot.", "es": "A ella le gusta mucho esta canción.", "goal": "entertainment" }
+          ]
+        }
+      ],
       "exercises": [
         {
           "key": "u2l3-e1",
@@ -304,6 +506,14 @@
             "explanation": "Rutina ('works in/at a bank') → presente simple. Situación temporal de hoy → presente continuo ('is working from home')."
           }
         }
+      ],
+      "pronunciationHighlights": [
+        { "en": "usually", "respellingEs": "yúshuali" },
+        { "en": "know", "respellingEs": "nóu" },
+        { "en": "understands", "respellingEs": "ánderstands" },
+        { "en": "believe", "respellingEs": "bilív" },
+        { "en": "likes", "respellingEs": "láiks" },
+        { "en": "driving", "respellingEs": "dráiving" }
       ]
     }
   ]

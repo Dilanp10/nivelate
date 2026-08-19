@@ -154,7 +154,6 @@
         {
           "key": "u1l1-e7",
           "type": "translation",
-          "goal": "work",
           "payload": {
             "prompt": "Yo trabajo todos los días.",
             "direction": "es_to_en",
@@ -340,7 +339,7 @@
         { "en": "went", "respellingEs": "uént" },
         { "en": "bought", "respellingEs": "bot" },
         { "en": "didn't", "respellingEs": "dídent" },
-        { "en": "did you call her yesterday?", "respellingEs": "did yu col jer yésterdei" },
+        { "en": "did you call her yesterday?", "respellingEs": "did yu col er yésterdei" },
         { "en": "watched", "respellingEs": "wacht" },
         { "en": "visited", "respellingEs": "vísited" }
       ]
@@ -430,9 +429,9 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "I'm hungry. Let's have ___.",
-            "options": ["lunch", "a chair", "a book"],
+            "options": ["lunch", "a shower", "a rest"],
             "correctIndex": 0,
-            "explanation": "'have lunch' = almorzar. Es una colocación común (have + comida). 'a chair' o 'a book' no combinan con 'have' en este contexto."
+            "explanation": "Las tres combinan con 'have' (have lunch, have a shower, have a rest), pero 'I'm hungry' pide comida: 'have lunch' = almorzar."
           }
         },
         {

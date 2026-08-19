@@ -35,10 +35,10 @@ export function FillInBlankExercise({ payload, values, disabled, onChange }: Pro
                 editable={!disabled}
                 onChangeText={(text) => setBlank(i, text)}
                 placeholder="…"
-                placeholderTextColor="#8fa3ad"
+                placeholderTextColor="#6E6E76"
                 autoCapitalize="none"
                 accessibilityLabel={`Hueco ${i + 1}`}
-                className="bg-surface border-2 border-b-4 border-info/60 rounded-xl px-3 py-1.5 text-info text-lg font-semibold min-w-[110px] text-center"
+                className="bg-surface border-2 border-info/60 rounded-xl px-3 py-1.5 text-info text-lg font-semibold min-w-[110px] text-center"
               />
             ) : null}
           </View>
