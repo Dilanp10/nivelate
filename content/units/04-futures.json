@@ -1,0 +1,722 @@
+{
+  "slug": "futures",
+  "title": "Futuros",
+  "description": "Cómo hablar del futuro en inglés: will, going to y presente continuo. Cuándo usar cada uno.",
+  "cefrLevel": "B1",
+  "sortOrder": 4,
+  "isPublished": true,
+  "grammarTopics": [
+    {
+      "slug": "will-future",
+      "title": "Futuro con will",
+      "explanationEs": "will + verbo base. Se usa para predicciones sin evidencia ('It will rain'), decisiones espontáneas ('I'll help you!'), promesas y ofertas. Negativo: won't. Pregunta: 'Will you...?'",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "going-to-future",
+      "title": "Futuro con going to",
+      "explanationEs": "am/is/are + going to + verbo base. Se usa para planes ya decididos ('I'm going to study medicine') y predicciones basadas en evidencia visible ('Look at those clouds — it's going to rain').",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "future-forms-contrast",
+      "title": "will vs going to vs presente continuo",
+      "explanationEs": "Los tres hablan del futuro pero con matices distintos. will = predicción o decisión del momento; going to = plan ya decidido; presente continuo = arreglo fijo con hora y lugar ('I'm meeting John at six').",
+      "cefrLevel": "B1"
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "will-future",
+      "title": "Futuro con will",
+      "grammarTopicSlugs": ["will-future"],
+      "teachingCards": [
+        {
+          "key": "u4l1-t1",
+          "titleEs": "Predicciones sin evidencia",
+          "bodyEs": "Usamos 'will' para predecir el futuro cuando no tenemos evidencia visible — es una intuición, opinión o creencia. Forma: will + verbo base, igual para todos los sujetos.",
+          "examples": [
+            { "en": "I think it will rain later.", "es": "Creo que va a llover más tarde.", "goal": "general" },
+            { "en": "This project will take three months.", "es": "Este proyecto va a llevar tres meses.", "goal": "work" },
+            { "en": "The flight will land on time.", "es": "El vuelo va a aterrizar a horario.", "goal": "travel" },
+            { "en": "You will pass the exam, don't worry.", "es": "Vas a aprobar el examen, no te preocupes.", "goal": "study" },
+            { "en": "That movie will be a hit.", "es": "Esa película va a ser un éxito.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u4l1-t2",
+          "titleEs": "Decisiones espontáneas",
+          "bodyEs": "Cuando decidimos algo en el momento (no antes), usamos 'will'. Es la típica reacción a algo que acaba de pasar: 'The phone is ringing!' — 'I'll answer it.'",
+          "examples": [
+            { "en": "It's cold in here. I'll close the window.", "es": "Hace frío acá. Voy a cerrar la ventana.", "goal": "general" },
+            { "en": "The meeting is running late — I'll email the client.", "es": "La reunión se está alargando — le mando un email al cliente.", "goal": "work" },
+            { "en": "You look tired. I'll drive.", "es": "Se te ve cansado. Manejo yo.", "goal": "travel" },
+            { "en": "I don't understand this — I'll ask the teacher.", "es": "No entiendo esto — le pregunto al profesor.", "goal": "study" },
+            { "en": "The show starts in five minutes. I'll get the popcorn.", "es": "El show empieza en cinco minutos. Traigo el pochoclo.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u4l1-t3",
+          "titleEs": "Promesas y ofertas",
+          "bodyEs": "'will' es también el tiempo de las promesas ('I will always love you') y de las ofertas ('I'll help you with that'). La contracción 'll (I'll, we'll, they'll) es muy común en habla natural.",
+          "examples": [
+            { "en": "I'll call you tomorrow, I promise.", "es": "Te llamo mañana, te lo prometo.", "goal": "general" },
+            { "en": "We'll finish the report by Friday.", "es": "Vamos a terminar el informe para el viernes.", "goal": "work" },
+            { "en": "I'll send you the hotel details.", "es": "Te mando los datos del hotel.", "goal": "travel" },
+            { "en": "I'll lend you my notes.", "es": "Te presto mis apuntes.", "goal": "study" },
+            { "en": "We'll save you a seat.", "es": "Te vamos a guardar un asiento.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u4l1-t4",
+          "titleEs": "Negativo y preguntas",
+          "bodyEs": "Negativo: won't (contracción de will not). Pregunta: Will + sujeto + verbo? En preguntas también podemos hacer ofertas o pedidos: 'Will you help me?'",
+          "examples": [
+            { "en": "I won't be late.", "es": "No voy a llegar tarde.", "goal": "general" },
+            { "en": "Will you send me the file?", "es": "¿Me mandás el archivo?", "goal": "work" },
+            { "en": "They won't arrive before nine.", "es": "No van a llegar antes de las nueve.", "goal": "travel" },
+            { "en": "Will the test be difficult?", "es": "¿Va a ser difícil el examen?", "goal": "study" },
+            { "en": "We won't miss the ending this time.", "es": "Esta vez no nos vamos a perder el final.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "key": "u4l1-e1",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "Look at those clouds. It ___ rain.",
+            "options": ["will", "goes to", "is"],
+            "correctIndex": 0,
+            "explanation": "'will' es la forma neutra de predicción; también funciona 'is going to rain' con evidencia. Con 'goes to' o 'is' no arma futuro."
+          }
+        },
+        {
+          "key": "u4l1-e2",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "The bag is heavy. I ___ carry it for you.",
+            "options": ["'ll", "am going to", "carry"],
+            "correctIndex": 0,
+            "explanation": "Decisión espontánea (ofertar ayuda al ver la bolsa pesada) → 'will' / 'I'll'."
+          }
+        },
+        {
+          "key": "u4l1-e3",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["Don't worry, I ", " help you."],
+            "answers": ["will"],
+            "acceptable": [["will", "'ll"]],
+            "explanation": "Oferta en el momento → 'I will help you' o contraído 'I'll help you'."
+          }
+        },
+        {
+          "key": "u4l1-e4",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["She ", " be back on Monday."],
+            "answers": ["won't"],
+            "acceptable": [["won't", "will not"]],
+            "explanation": "Negativo de will = won't (o 'will not' en formal): 'She won't be back on Monday.'"
+          }
+        },
+        {
+          "key": "u4l1-e5",
+          "type": "word_order",
+          "payload": {
+            "tokens": ["Will", "you", "call", "me", "later"],
+            "correctOrder": [0, 1, 2, 3, 4],
+            "explanation": "Pregunta con will: Will + sujeto + verbo base: 'Will you call me later?'"
+          }
+        },
+        {
+          "key": "u4l1-e6",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I promise I ___ tell anyone.",
+            "options": ["won't", "don't", "am not"],
+            "correctIndex": 0,
+            "explanation": "Promesa negativa en futuro → 'I won't tell anyone'."
+          }
+        },
+        {
+          "key": "u4l1-e7",
+          "type": "translation",
+          "payload": {
+            "prompt": "Te llamo mañana.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I'll call you tomorrow.",
+              "I will call you tomorrow."
+            ],
+            "explanation": "Promesa/plan del momento → 'I'll call you tomorrow'."
+          }
+        },
+        {
+          "key": "u4l1-e8",
+          "type": "translation",
+          "payload": {
+            "prompt": "Creo que va a llover más tarde.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I think it will rain later.",
+              "I think it'll rain later."
+            ],
+            "explanation": "Predicción → 'I think it will rain later'."
+          }
+        },
+        {
+          "key": "u4l1-e9",
+          "type": "dialogue",
+          "payload": {
+            "turns": [
+              { "speaker": "Ana", "text": "There's someone at the door." },
+              { "speaker": "Tom", "text": "" }
+            ],
+            "blankTurnIndex": 1,
+            "options": [
+              "I'll get it.",
+              "I get it.",
+              "I am getting it tomorrow."
+            ],
+            "correctIndex": 0,
+            "explanation": "Reacción del momento (decisión espontánea) → 'I'll get it'."
+          }
+        },
+        {
+          "key": "u4l1-e10",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "Do you think they ___ win?",
+            "options": ["will", "are", "do"],
+            "correctIndex": 0,
+            "explanation": "Predicción / opinión sobre el futuro → 'Do you think they will win?'"
+          }
+        },
+        {
+          "key": "u4l1-e11",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["We ", " ready by six."],
+            "answers": ["will be"],
+            "acceptable": [["will be", "'ll be"]],
+            "explanation": "'be' en futuro con will: 'We will be ready' o 'We'll be ready'."
+          }
+        },
+        {
+          "key": "u4l1-e12",
+          "type": "matching",
+          "payload": {
+            "pairs": [
+              { "left": "I will", "right": "I'll" },
+              { "left": "you will", "right": "you'll" },
+              { "left": "we will", "right": "we'll" },
+              { "left": "will not", "right": "won't" }
+            ],
+            "explanation": "Formas contractas de will muy usadas en habla natural."
+          }
+        },
+        {
+          "key": "u4l1-e13",
+          "type": "listening",
+          "payload": {
+            "audioText": "Don't worry, I'll be there before eight.",
+            "sub": {
+              "kind": "multiple_choice",
+              "prompt": "¿Qué está haciendo el que habla?",
+              "options": [
+                "Prometiendo estar antes de las ocho.",
+                "Preguntando si va a llegar.",
+                "Diciendo que ya llegó."
+              ],
+              "correctIndex": 0
+            },
+            "explanation": "'I'll be there before eight' es promesa/aseguración → 'prometiendo estar'."
+          }
+        },
+        {
+          "key": "u4l1-e14",
+          "type": "word_order",
+          "payload": {
+            "tokens": ["I", "won't", "forget", "your", "birthday"],
+            "correctOrder": [0, 1, 2, 3, 4],
+            "explanation": "Negativo de will = won't: 'I won't forget your birthday.'"
+          }
+        }
+      ],
+      "pronunciationHighlights": [
+        { "en": "will", "respellingEs": "wil" },
+        { "en": "won't", "respellingEs": "wóunt" },
+        { "en": "I'll", "respellingEs": "áil" },
+        { "en": "you'll", "respellingEs": "yul" },
+        { "en": "we'll", "respellingEs": "wil" },
+        { "en": "they'll", "respellingEs": "déil" },
+        { "en": "will you help me?", "respellingEs": "wil yu jelp mi" },
+        { "en": "I'll call you tomorrow", "respellingEs": "áil col yu tumórou" },
+        { "en": "it will rain", "respellingEs": "it wil réin" },
+        { "en": "I won't forget", "respellingEs": "ai wóunt forguét" }
+      ]
+    },
+    {
+      "slug": "going-to-future",
+      "title": "Futuro con going to",
+      "grammarTopicSlugs": ["going-to-future"],
+      "teachingCards": [
+        {
+          "key": "u4l2-t1",
+          "titleEs": "Planes ya decididos",
+          "bodyEs": "Usamos 'going to' cuando ya decidimos hacer algo antes del momento de hablar. Forma: am/is/are + going to + verbo base. No importa si el plan es firme o difuso — lo clave es que la decisión ya se tomó.",
+          "examples": [
+            { "en": "I'm going to learn to cook this year.", "es": "Este año voy a aprender a cocinar.", "goal": "general" },
+            { "en": "She's going to apply for that job.", "es": "Ella va a postularse a ese trabajo.", "goal": "work" },
+            { "en": "We're going to travel to Peru in July.", "es": "Vamos a viajar a Perú en julio.", "goal": "travel" },
+            { "en": "I'm going to take an online course next month.", "es": "Voy a hacer un curso online el mes que viene.", "goal": "study" },
+            { "en": "They're going to see the new movie on Friday.", "es": "Van a ver la película nueva el viernes.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u4l2-t2",
+          "titleEs": "Predicciones con evidencia",
+          "bodyEs": "'going to' también predice el futuro cuando hay evidencia visible en el presente. Comparado con 'will' (que es opinión pura), 'going to' se apoya en algo que vemos u oímos ahora.",
+          "examples": [
+            { "en": "Look at that sky — it's going to rain.", "es": "Mirá ese cielo — va a llover.", "goal": "general" },
+            { "en": "Traffic is bad — we're going to be late.", "es": "El tráfico está feo — vamos a llegar tarde.", "goal": "work" },
+            { "en": "The plane is starting to move — we're going to take off.", "es": "El avión está empezando a moverse — vamos a despegar.", "goal": "travel" },
+            { "en": "She's studied for weeks — she's going to pass.", "es": "Estudió durante semanas — va a aprobar.", "goal": "study" },
+            { "en": "The crowd is huge — it's going to be an amazing concert.", "es": "La multitud es enorme — va a ser un concierto increíble.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u4l2-t3",
+          "titleEs": "Conjugación completa",
+          "bodyEs": "El verbo be cambia según el sujeto: I am going to, you/we/they are going to, he/she/it is going to. Contracciones habituales: I'm going to, she's going to, they're going to.",
+          "examples": [
+            { "en": "I am going to start early.", "es": "Voy a empezar temprano.", "goal": "general" },
+            { "en": "He is going to speak with HR.", "es": "Él va a hablar con RR. HH.", "goal": "work" },
+            { "en": "We are going to book the hotel today.", "es": "Vamos a reservar el hotel hoy.", "goal": "travel" },
+            { "en": "You are going to love this book.", "es": "Te va a encantar este libro.", "goal": "study" },
+            { "en": "They are going to release a new song.", "es": "Van a sacar una canción nueva.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u4l2-t4",
+          "titleEs": "Negativo y preguntas",
+          "bodyEs": "Negativo: am/is/are + not + going to. Pregunta: Am/Is/Are + sujeto + going to + verbo? En habla natural: 'gonna' es muy común como reducción de 'going to' — se escribe informalmente pero se pronuncia todo el tiempo.",
+          "examples": [
+            { "en": "I'm not going to argue.", "es": "No voy a discutir.", "goal": "general" },
+            { "en": "Are you going to attend the meeting?", "es": "¿Vas a asistir a la reunión?", "goal": "work" },
+            { "en": "They aren't going to stay long.", "es": "No se van a quedar mucho tiempo.", "goal": "travel" },
+            { "en": "Is she going to take the exam again?", "es": "¿Ella va a rendir el examen de nuevo?", "goal": "study" },
+            { "en": "We aren't going to watch the finale live.", "es": "No vamos a ver el final en vivo.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "key": "u4l2-e1",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I ___ start a new job next Monday.",
+            "options": ["am going to", "will", "went"],
+            "correctIndex": 0,
+            "explanation": "Plan ya decidido con fecha → 'going to': 'I am going to start a new job next Monday.'"
+          }
+        },
+        {
+          "key": "u4l2-e2",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "Watch out! That glass ___ fall.",
+            "options": ["is going to", "will", "falls"],
+            "correctIndex": 0,
+            "explanation": "Evidencia visible (el vaso a punto de caer) → 'going to': 'is going to fall'."
+          }
+        },
+        {
+          "key": "u4l2-e3",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["We ", " visit my grandparents this weekend."],
+            "answers": ["are going to"],
+            "acceptable": [["are going to", "'re going to"]],
+            "explanation": "Plan decidido con fecha → 'We are going to visit...' o contraído 'We're going to visit...'"
+          }
+        },
+        {
+          "key": "u4l2-e4",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["She ", " study medicine after school."],
+            "answers": ["is going to"],
+            "acceptable": [["is going to", "'s going to"]],
+            "explanation": "Plan a futuro ya elegido → 'She is going to study medicine' o 'She's going to study medicine'."
+          }
+        },
+        {
+          "key": "u4l2-e5",
+          "type": "word_order",
+          "payload": {
+            "tokens": ["Are", "you", "going", "to", "come", "tomorrow"],
+            "correctOrder": [0, 1, 2, 3, 4, 5],
+            "explanation": "Pregunta con going to: Are + sujeto + going to + verbo base: 'Are you going to come tomorrow?'"
+          }
+        },
+        {
+          "key": "u4l2-e6",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "Look at his face — he ___ cry.",
+            "options": ["is going to", "will", "cries"],
+            "correctIndex": 0,
+            "explanation": "Evidencia inmediata (su cara) → 'going to': 'he is going to cry'."
+          }
+        },
+        {
+          "key": "u4l2-e7",
+          "type": "translation",
+          "payload": {
+            "prompt": "Voy a viajar a España el año que viene.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I am going to travel to Spain next year.",
+              "I'm going to travel to Spain next year."
+            ],
+            "explanation": "Plan ya decidido → 'I am going to travel to Spain next year' o contraído 'I'm going to...'"
+          }
+        },
+        {
+          "key": "u4l2-e8",
+          "type": "translation",
+          "payload": {
+            "prompt": "Va a llover.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "It is going to rain.",
+              "It's going to rain."
+            ],
+            "explanation": "Predicción con evidencia (el cielo) → 'It is going to rain' o 'It's going to rain'."
+          }
+        },
+        {
+          "key": "u4l2-e9",
+          "type": "dialogue",
+          "payload": {
+            "turns": [
+              { "speaker": "Ana", "text": "What are you doing this summer?" },
+              { "speaker": "Tom", "text": "" }
+            ],
+            "blankTurnIndex": 1,
+            "options": [
+              "I'm going to visit my family in Chile.",
+              "I visit my family in Chile.",
+              "I visited my family in Chile."
+            ],
+            "correctIndex": 0,
+            "explanation": "Pregunta por planes futuros → respuesta con 'going to': 'I'm going to visit my family in Chile.'"
+          }
+        },
+        {
+          "key": "u4l2-e10",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "They ___ move to Barcelona in September.",
+            "options": ["are going to", "will", "move"],
+            "correctIndex": 0,
+            "explanation": "Plan decidido con fecha específica → 'are going to move'."
+          }
+        },
+        {
+          "key": "u4l2-e11",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["I ", " tell anyone."],
+            "answers": ["am not going to"],
+            "acceptable": [["am not going to", "'m not going to"]],
+            "explanation": "Negativa firme (decisión ya tomada de no hacer algo) → 'I am not going to tell anyone' o contraído 'I'm not going to...'"
+          }
+        },
+        {
+          "key": "u4l2-e12",
+          "type": "matching",
+          "payload": {
+            "pairs": [
+              { "left": "I am going to", "right": "I'm going to" },
+              { "left": "she is going to", "right": "she's going to" },
+              { "left": "we are going to", "right": "we're going to" },
+              { "left": "they are not going to", "right": "they aren't going to" }
+            ],
+            "explanation": "Contracciones habituales de 'going to' en habla natural."
+          }
+        },
+        {
+          "key": "u4l2-e13",
+          "type": "listening",
+          "payload": {
+            "audioText": "I'm going to move to a new apartment next month.",
+            "sub": {
+              "kind": "multiple_choice",
+              "prompt": "¿Cuándo se muda?",
+              "options": ["El mes que viene.", "El mes pasado.", "Este mes."],
+              "correctIndex": 0
+            },
+            "explanation": "'next month' = el mes que viene."
+          }
+        },
+        {
+          "key": "u4l2-e14",
+          "type": "word_order",
+          "payload": {
+            "tokens": ["She", "is", "going", "to", "call", "you", "back"],
+            "correctOrder": [0, 1, 2, 3, 4, 5, 6],
+            "explanation": "Plan/promesa a futuro → 'She is going to call you back.'"
+          }
+        }
+      ],
+      "pronunciationHighlights": [
+        { "en": "going to", "respellingEs": "góing tu" },
+        { "en": "gonna", "respellingEs": "gána" },
+        { "en": "I'm going to", "respellingEs": "áim góing tu" },
+        { "en": "she's going to", "respellingEs": "shis góing tu" },
+        { "en": "we're going to", "respellingEs": "wir góing tu" },
+        { "en": "aren't going to", "respellingEs": "arnt góing tu" },
+        { "en": "are you going to come?", "respellingEs": "ar yu góing tu kam" },
+        { "en": "it's going to rain", "respellingEs": "its góing tu réin" },
+        { "en": "next month", "respellingEs": "next manz" },
+        { "en": "next year", "respellingEs": "next yíer" }
+      ]
+    },
+    {
+      "slug": "future-forms-contrast",
+      "title": "Comparación: will, going to y presente continuo",
+      "grammarTopicSlugs": ["future-forms-contrast"],
+      "teachingCards": [
+        {
+          "key": "u4l3-t1",
+          "titleEs": "will vs going to",
+          "bodyEs": "Regla práctica: si YA decidiste antes de este momento → 'going to'. Si estás decidiendo AHORA mismo, o es una predicción sin evidencia → 'will'. La misma frase puede llevar cualquiera de los dos, cambia el matiz.",
+          "examples": [
+            { "en": "I'm going to visit my mother this weekend. (plan)", "es": "Voy a visitar a mi mamá este fin de semana. (plan)", "goal": "general" },
+            { "en": "OK, I'll help you with the report. (decisión ahora)", "es": "Dale, te ayudo con el informe. (decisión ahora)", "goal": "work" },
+            { "en": "We're going to fly to Rome in June. (ya reservado)", "es": "Vamos a volar a Roma en junio. (ya reservado)", "goal": "travel" },
+            { "en": "This exercise is hard. I'll ask the teacher. (idea del momento)", "es": "Este ejercicio es difícil. Le voy a preguntar al profesor. (idea del momento)", "goal": "study" },
+            { "en": "I bought tickets — I'm going to see the show on Saturday.", "es": "Compré entradas — voy a ver el show el sábado.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u4l3-t2",
+          "titleEs": "going to vs presente continuo",
+          "bodyEs": "Cuando el plan tiene fecha, hora y lugar comprometidos (un arreglo concreto: reservaste, avisaste al otro), el presente continuo suena más natural. 'going to' es más general.",
+          "examples": [
+            { "en": "I'm meeting Sarah at 6 tomorrow. (arreglo fijo)", "es": "Me estoy juntando con Sarah a las 6 mañana. (arreglo fijo)", "goal": "general" },
+            { "en": "She's flying to Berlin on Monday. (boleto comprado)", "es": "Ella vuela a Berlín el lunes. (boleto comprado)", "goal": "travel" },
+            { "en": "I'm going to look for a new job. (intención general, sin fecha)", "es": "Voy a buscar trabajo nuevo. (intención general, sin fecha)", "goal": "work" },
+            { "en": "The class is starting at nine on Wednesday.", "es": "La clase empieza a las nueve el miércoles.", "goal": "study" },
+            { "en": "We're watching the game at Ben's on Sunday.", "es": "Vamos a ver el partido en lo de Ben el domingo.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u4l3-t3",
+          "titleEs": "Cambios de opinión con will",
+          "bodyEs": "Cuando alguien te propone algo o pasa algo inesperado y cambiás de idea en el momento, siempre usás 'will'. Es la marca clara de decisión spot-on.",
+          "examples": [
+            { "en": "'The elevator is broken.' 'Then I'll take the stairs.'", "es": "'El ascensor no anda.' 'Entonces subo por la escalera.'", "goal": "general" },
+            { "en": "'The client cancelled.' 'OK, I'll reschedule.'", "es": "'El cliente canceló.' 'Bueno, lo reprogramo.'", "goal": "work" },
+            { "en": "'The train is delayed.' 'Then we'll take a taxi.'", "es": "'El tren está demorado.' 'Entonces tomamos un taxi.'", "goal": "travel" },
+            { "en": "'The library is closed.' 'I'll study at home.'", "es": "'La biblioteca está cerrada.' 'Voy a estudiar en casa.'", "goal": "study" },
+            { "en": "'The concert is sold out.' 'Then we'll stream it.'", "es": "'El concierto está agotado.' 'Entonces lo vemos por streaming.'", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u4l3-t4",
+          "titleEs": "Resumen visual",
+          "bodyEs": "El truco práctico: pensá en la escala de compromiso. Más comprometido → presente continuo (arreglo fijo con la otra parte) > going to (plan sin cita) > will (idea del momento o predicción sin base).",
+          "examples": [
+            { "en": "I'm having dinner with them tonight. (arreglado)", "es": "Ceno con ellos esta noche. (arreglado)", "goal": "general" },
+            { "en": "I'm going to have dinner earlier today. (mi plan)", "es": "Voy a cenar más temprano hoy. (mi plan)", "goal": "general" },
+            { "en": "I'm hungry — I'll have a sandwich. (justo ahora)", "es": "Tengo hambre — me voy a hacer un sándwich. (justo ahora)", "goal": "general" },
+            { "en": "The meeting will be difficult. (predicción sin base)", "es": "La reunión va a ser difícil. (predicción sin base)", "goal": "work" },
+            { "en": "The meeting is going to be difficult — I've seen the agenda. (con base)", "es": "La reunión va a ser difícil — vi la agenda. (con base)", "goal": "work" }
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "key": "u4l3-e1",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "'Someone is at the door.' 'I ___ get it.'",
+            "options": ["'ll", "am going to", "get"],
+            "correctIndex": 0,
+            "explanation": "Decisión espontánea (reacción al timbre) → 'I'll get it'."
+          }
+        },
+        {
+          "key": "u4l3-e2",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I ___ start a new diet on Monday.",
+            "options": ["am going to", "will", "started"],
+            "correctIndex": 0,
+            "explanation": "Plan ya decidido con fecha → 'going to': 'I am going to start a new diet on Monday'."
+          }
+        },
+        {
+          "key": "u4l3-e3",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I ___ dinner with them at 8 tonight.",
+            "options": ["am having", "will have", "have"],
+            "correctIndex": 0,
+            "explanation": "Arreglo fijo con hora → presente continuo: 'I am having dinner with them at 8 tonight'."
+          }
+        },
+        {
+          "key": "u4l3-e4",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["Look at those clouds! It ", " rain."],
+            "answers": ["is going to"],
+            "acceptable": [["is going to", "'s going to"]],
+            "explanation": "Evidencia visible → 'going to'. 'It is going to rain' o 'It's going to rain'."
+          }
+        },
+        {
+          "key": "u4l3-e5",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["'The bag is heavy.' 'I ", " carry it.'"],
+            "answers": ["will"],
+            "acceptable": [["will", "'ll"]],
+            "explanation": "Oferta espontánea → 'I will' o contraído 'I'll'."
+          }
+        },
+        {
+          "key": "u4l3-e6",
+          "type": "word_order",
+          "payload": {
+            "tokens": ["I", "am", "meeting", "her", "at", "eight"],
+            "correctOrder": [0, 1, 2, 3, 4, 5],
+            "explanation": "Arreglo fijo → presente continuo: 'I am meeting her at eight.'"
+          }
+        },
+        {
+          "key": "u4l3-e7",
+          "type": "translation",
+          "payload": {
+            "prompt": "Mañana me junto con Ana a las siete.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I am meeting Ana at seven tomorrow.",
+              "I'm meeting Ana at seven tomorrow."
+            ],
+            "explanation": "Arreglo fijo con hora → presente continuo: 'I am meeting Ana at seven tomorrow.'"
+          }
+        },
+        {
+          "key": "u4l3-e8",
+          "type": "translation",
+          "payload": {
+            "prompt": "Voy a buscar un trabajo nuevo.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I am going to look for a new job.",
+              "I'm going to look for a new job."
+            ],
+            "explanation": "Plan general, sin fecha exacta → 'going to': 'I am going to look for a new job.'"
+          }
+        },
+        {
+          "key": "u4l3-e9",
+          "type": "dialogue",
+          "payload": {
+            "turns": [
+              { "speaker": "Ana", "text": "I feel cold." },
+              { "speaker": "Tom", "text": "" }
+            ],
+            "blankTurnIndex": 1,
+            "options": [
+              "I'll close the window.",
+              "I close the window.",
+              "I am closing the window tomorrow."
+            ],
+            "correctIndex": 0,
+            "explanation": "Reacción al comentario, decisión del momento → 'I'll close the window.'"
+          }
+        },
+        {
+          "key": "u4l3-e10",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "It's her birthday next week — she ___ 30.",
+            "options": ["is going to turn", "turns", "turned"],
+            "correctIndex": 0,
+            "explanation": "Predicción con evidencia (fecha próxima ya conocida) → 'is going to turn'. También válido 'will turn'; 'turns' funciona como horario/hecho fijo pero es menos natural acá."
+          }
+        },
+        {
+          "key": "u4l3-e11",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": ["We ", " to Rome in July. Our flights are booked."],
+            "answers": ["are going"],
+            "acceptable": [["are going", "'re going"]],
+            "explanation": "Arreglo firme con boletos comprados → presente continuo: 'We are going to Rome in July' o 'We're going to Rome in July'."
+          }
+        },
+        {
+          "key": "u4l3-e12",
+          "type": "matching",
+          "payload": {
+            "pairs": [
+              { "left": "predicción sin evidencia", "right": "will" },
+              { "left": "decisión espontánea", "right": "will" },
+              { "left": "plan ya decidido", "right": "going to" },
+              { "left": "arreglo fijo con hora", "right": "present continuous" }
+            ],
+            "explanation": "Cada forma de futuro tiene su matiz principal — ninguna es 'la única correcta', hay que elegir según el contexto."
+          }
+        },
+        {
+          "key": "u4l3-e13",
+          "type": "listening",
+          "payload": {
+            "audioText": "I've booked the tickets — we're flying to Madrid on Friday.",
+            "sub": {
+              "kind": "multiple_choice",
+              "prompt": "¿Por qué usa presente continuo ('we're flying') y no 'will fly'?",
+              "options": [
+                "Porque es un arreglo fijo (boletos ya comprados).",
+                "Porque va a llover.",
+                "Porque no está seguro."
+              ],
+              "correctIndex": 0
+            },
+            "explanation": "Los boletos ya están reservados: es un arreglo firme → presente continuo."
+          }
+        },
+        {
+          "key": "u4l3-e14",
+          "type": "word_order",
+          "payload": {
+            "tokens": ["The", "team", "is", "going", "to", "win"],
+            "correctOrder": [0, 1, 2, 3, 4, 5],
+            "explanation": "Predicción con base (viendo el partido en curso) → 'The team is going to win.'"
+          }
+        }
+      ],
+      "pronunciationHighlights": [
+        { "en": "I'll take it", "respellingEs": "áil téik it" },
+        { "en": "I'm going to start", "respellingEs": "áim góing tu start" },
+        { "en": "I'm meeting her", "respellingEs": "áim míting er" },
+        { "en": "we're flying", "respellingEs": "wir fláing" },
+        { "en": "she's having dinner", "respellingEs": "shis jáving díner" },
+        { "en": "next Monday", "respellingEs": "next mándei" },
+        { "en": "this weekend", "respellingEs": "dis wíkend" },
+        { "en": "at eight", "respellingEs": "at éit" },
+        { "en": "look at those clouds", "respellingEs": "luk at dous kláuds" },
+        { "en": "the tickets are booked", "respellingEs": "de tíkets ar bukt" }
+      ]
+    }
+  ]
+}
