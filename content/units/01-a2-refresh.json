@@ -29,7 +29,9 @@
     {
       "slug": "present-simple-review",
       "title": "Presente simple",
-      "grammarTopicSlugs": ["present-simple"],
+      "grammarTopicSlugs": [
+        "present-simple"
+      ],
       "teachingCards": [
         {
           "key": "u1l1-t1",
@@ -68,7 +70,11 @@
           "titleEs": "Preguntas y negaciones con do/does",
           "bodyEs": "Para preguntar o negar en presente simple usamos do/does (does con he/she/it) + el verbo en forma base, sin -s.",
           "examples": [
-            { "en": "Does he like coffee?", "es": "¿A él le gusta el café?", "goal": "general" },
+            {
+              "en": "Does he like coffee?",
+              "es": "¿A él le gusta el café?",
+              "goal": "general"
+            },
             {
               "en": "Does she work on Saturdays?",
               "es": "¿Ella trabaja los sábados?",
@@ -90,6 +96,70 @@
               "goal": "entertainment"
             }
           ]
+        },
+        {
+          "key": "u1l1-t3",
+          "titleEs": "Adverbios de frecuencia",
+          "bodyEs": "always, usually, often, sometimes y never dicen con qué frecuencia hacés algo. Van entre el sujeto y el verbo: 'I always wake up early'. Con el verbo 'be' van después: 'She is often late'.",
+          "examples": [
+            {
+              "en": "I always brush my teeth before bed.",
+              "es": "Siempre me lavo los dientes antes de dormir.",
+              "goal": "general"
+            },
+            {
+              "en": "She usually starts work at nine.",
+              "es": "Ella normalmente empieza a trabajar a las nueve.",
+              "goal": "work"
+            },
+            {
+              "en": "We sometimes travel abroad in summer.",
+              "es": "A veces viajamos al exterior en verano.",
+              "goal": "travel"
+            },
+            {
+              "en": "I often review my notes before class.",
+              "es": "Reviso a menudo mis notas antes de clase.",
+              "goal": "study"
+            },
+            {
+              "en": "He never watches romantic movies.",
+              "es": "Él nunca mira películas románticas.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u1l1-t4",
+          "titleEs": "Hechos y horarios fijos",
+          "bodyEs": "El presente simple también describe hechos que no cambian (leyes de la naturaleza, verdades) y horarios fijos (transportes, comercios, servicios).",
+          "examples": [
+            {
+              "en": "Water boils at 100 degrees Celsius.",
+              "es": "El agua hierve a 100 grados Celsius.",
+              "goal": "general"
+            },
+            {
+              "en": "The office opens at eight.",
+              "es": "La oficina abre a las ocho.",
+              "goal": "work"
+            },
+            {
+              "en": "The train to Rome leaves at noon.",
+              "es": "El tren a Roma sale al mediodía.",
+              "goal": "travel"
+            },
+            {
+              "en": "The library closes on Sundays.",
+              "es": "La biblioteca cierra los domingos.",
+              "goal": "study"
+            },
+            {
+              "en": "The show starts at nine.",
+              "es": "El show empieza a las nueve.",
+              "goal": "entertainment"
+            }
+          ]
         }
       ],
       "exercises": [
@@ -98,7 +168,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "She ___ coffee every morning.",
-            "options": ["drink", "drinks", "drinking"],
+            "options": [
+              "drink",
+              "drinks",
+              "drinking"
+            ],
             "correctIndex": 1,
             "explanation": "En tercera persona del singular (she) el verbo lleva -s: 'drinks'."
           }
@@ -108,7 +182,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "They ___ in a big city.",
-            "options": ["live", "lives", "living"],
+            "options": [
+              "live",
+              "lives",
+              "living"
+            ],
             "correctIndex": 0,
             "explanation": "Con 'they' el verbo va en forma base, sin -s."
           }
@@ -117,9 +195,18 @@
           "key": "u1l1-e3",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["My brother ", " to work by bus."],
-            "answers": ["goes"],
-            "acceptable": [["goes"]],
+            "segments": [
+              "My brother ",
+              " to work by bus."
+            ],
+            "answers": [
+              "goes"
+            ],
+            "acceptable": [
+              [
+                "goes"
+              ]
+            ],
             "explanation": "'go' en tercera persona del singular es 'goes'."
           }
         },
@@ -127,8 +214,13 @@
           "key": "u1l1-e4",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["We ", " TV in the evening."],
-            "answers": ["watch"],
+            "segments": [
+              "We ",
+              " TV in the evening."
+            ],
+            "answers": [
+              "watch"
+            ],
             "explanation": "Con 'we' el verbo va sin -s: 'watch'."
           }
         },
@@ -136,8 +228,18 @@
           "key": "u1l1-e5",
           "type": "word_order",
           "payload": {
-            "tokens": ["He", "doesn't", "like", "fish"],
-            "correctOrder": [0, 1, 2, 3],
+            "tokens": [
+              "He",
+              "doesn't",
+              "like",
+              "fish"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3
+            ],
             "explanation": "El negativo en presente usa 'doesn't' + verbo base: 'He doesn't like fish.'"
           }
         },
@@ -146,7 +248,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "___ she speak English?",
-            "options": ["Do", "Does", "Is"],
+            "options": [
+              "Do",
+              "Does",
+              "Is"
+            ],
             "correctIndex": 1,
             "explanation": "La pregunta en tercera persona del singular usa 'Does'."
           }
@@ -157,7 +263,9 @@
           "payload": {
             "prompt": "Yo trabajo todos los días.",
             "direction": "es_to_en",
-            "acceptable": ["I work every day."],
+            "acceptable": [
+              "I work every day."
+            ],
             "explanation": "Presente simple para una rutina: 'I work every day.' Ojo: 'everyday' (junto) es adjetivo (an everyday routine), no adverbio."
           }
         },
@@ -166,29 +274,191 @@
           "type": "dialogue",
           "payload": {
             "turns": [
-              { "speaker": "Ana", "text": "What time do you get up?" },
-              { "speaker": "Tom", "text": "" }
+              {
+                "speaker": "Ana",
+                "text": "What time do you get up?"
+              },
+              {
+                "speaker": "Tom",
+                "text": ""
+              }
             ],
             "blankTurnIndex": 1,
-            "options": ["I get up at seven.", "I got up at seven.", "I getting up at seven."],
+            "options": [
+              "I get up at seven.",
+              "I got up at seven.",
+              "I getting up at seven."
+            ],
             "correctIndex": 0,
             "explanation": "Respuesta en presente simple: 'I get up at seven.'"
+          }
+        },
+        {
+          "key": "u1l1-e9",
+          "type": "matching",
+          "payload": {
+            "pairs": [
+              {
+                "left": "always",
+                "right": "siempre"
+              },
+              {
+                "left": "usually",
+                "right": "normalmente"
+              },
+              {
+                "left": "often",
+                "right": "a menudo"
+              },
+              {
+                "left": "never",
+                "right": "nunca"
+              }
+            ],
+            "explanation": "Los adverbios de frecuencia más comunes de mayor a menor."
+          }
+        },
+        {
+          "key": "u1l1-e10",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "She ___ tea in the afternoon.",
+            "options": [
+              "usually drinks",
+              "drinks usually",
+              "usual drinks"
+            ],
+            "correctIndex": 0,
+            "explanation": "El adverbio de frecuencia va antes del verbo principal: 'She usually drinks tea'."
+          }
+        },
+        {
+          "key": "u1l1-e11",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": [
+              "My father ",
+              " goes to bed early."
+            ],
+            "answers": [
+              "always"
+            ],
+            "acceptable": [
+              [
+                "always",
+                "usually",
+                "often",
+                "sometimes",
+                "never"
+              ]
+            ],
+            "explanation": "Cualquier adverbio de frecuencia funciona gramaticalmente acá; la respuesta canónica es la que refleja rutina fuerte."
+          }
+        },
+        {
+          "key": "u1l1-e12",
+          "type": "word_order",
+          "payload": {
+            "tokens": [
+              "I",
+              "sometimes",
+              "eat",
+              "pizza",
+              "on",
+              "Fridays"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "explanation": "El adverbio va entre sujeto y verbo: 'I sometimes eat pizza on Fridays'."
+          }
+        },
+        {
+          "key": "u1l1-e13",
+          "type": "translation",
+          "payload": {
+            "prompt": "El agua hierve a 100 grados.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "Water boils at 100 degrees.",
+              "Water boils at 100 degrees Celsius."
+            ],
+            "explanation": "Hecho científico → presente simple: 'Water boils at 100 degrees'."
+          }
+        },
+        {
+          "key": "u1l1-e14",
+          "type": "listening",
+          "payload": {
+            "audioText": "My brother usually walks to school, but today he is taking the bus.",
+            "sub": {
+              "kind": "multiple_choice",
+              "prompt": "¿Cómo va usualmente a la escuela?",
+              "options": [
+                "Caminando.",
+                "En bus.",
+                "En bicicleta."
+              ],
+              "correctIndex": 0
+            },
+            "explanation": "El audio dice 'usually walks to school' — la rutina es caminar; hoy es la excepción."
           }
         }
       ],
       "pronunciationHighlights": [
-        { "en": "goes", "respellingEs": "góus" },
-        { "en": "doesn't", "respellingEs": "dásent" },
-        { "en": "does she speak English?", "respellingEs": "das shi spik ínglish" },
-        { "en": "watch TV", "respellingEs": "wach tiví" },
-        { "en": "get up", "respellingEs": "guet ap" },
-        { "en": "every morning", "respellingEs": "évri mórning" }
+        {
+          "en": "goes",
+          "respellingEs": "góus"
+        },
+        {
+          "en": "doesn't",
+          "respellingEs": "dásent"
+        },
+        {
+          "en": "does she speak English?",
+          "respellingEs": "das shi spik ínglish"
+        },
+        {
+          "en": "watch TV",
+          "respellingEs": "wach tiví"
+        },
+        {
+          "en": "get up",
+          "respellingEs": "guet ap"
+        },
+        {
+          "en": "every morning",
+          "respellingEs": "évri mórning"
+        },
+        {
+          "en": "always",
+          "respellingEs": "óluéis"
+        },
+        {
+          "en": "sometimes",
+          "respellingEs": "sámtaims"
+        },
+        {
+          "en": "wake up early",
+          "respellingEs": "wéik ap érli"
+        },
+        {
+          "en": "the office opens at eight",
+          "respellingEs": "di ófis óupens at éit"
+        }
       ]
     },
     {
       "slug": "past-simple-review",
       "title": "Pasado simple",
-      "grammarTopicSlugs": ["past-simple"],
+      "grammarTopicSlugs": [
+        "past-simple"
+      ],
       "teachingCards": [
         {
           "key": "u1l2-t1",
@@ -227,9 +497,21 @@
           "titleEs": "Preguntas y negaciones con did",
           "bodyEs": "Para preguntar o negar en pasado usamos did/didn't + el verbo en forma base (nunca en pasado): 'Did you go?', no 'Did you went?'.",
           "examples": [
-            { "en": "Did you sleep well?", "es": "¿Dormiste bien?", "goal": "general" },
-            { "en": "Did she call the client?", "es": "¿Ella llamó al cliente?", "goal": "work" },
-            { "en": "Did you visit the museum?", "es": "¿Visitaste el museo?", "goal": "travel" },
+            {
+              "en": "Did you sleep well?",
+              "es": "¿Dormiste bien?",
+              "goal": "general"
+            },
+            {
+              "en": "Did she call the client?",
+              "es": "¿Ella llamó al cliente?",
+              "goal": "work"
+            },
+            {
+              "en": "Did you visit the museum?",
+              "es": "¿Visitaste el museo?",
+              "goal": "travel"
+            },
             {
               "en": "I didn't understand the lesson.",
               "es": "No entendí la lección.",
@@ -241,6 +523,70 @@
               "goal": "entertainment"
             }
           ]
+        },
+        {
+          "key": "u1l2-t3",
+          "titleEs": "Expresiones de tiempo pasado",
+          "bodyEs": "Las expresiones de tiempo pasado te ayudan a saber cuándo usar el pasado simple: yesterday, last week/month/year, ago (dos días atrás → two days ago), in + año, when I was young.",
+          "examples": [
+            {
+              "en": "I saw her yesterday.",
+              "es": "La vi ayer.",
+              "goal": "general"
+            },
+            {
+              "en": "We had a meeting last week.",
+              "es": "Tuvimos una reunión la semana pasada.",
+              "goal": "work"
+            },
+            {
+              "en": "They moved here two years ago.",
+              "es": "Se mudaron acá hace dos años.",
+              "goal": "travel"
+            },
+            {
+              "en": "I finished the course in 2023.",
+              "es": "Terminé el curso en 2023.",
+              "goal": "study"
+            },
+            {
+              "en": "We watched that film last night.",
+              "es": "Vimos esa película anoche.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u1l2-t4",
+          "titleEs": "Los 3 sonidos de -ed",
+          "bodyEs": "El -ed regular se pronuncia de tres formas: /t/ después de sonido sordo ('worked → wérkt'), /d/ después de sonido sonoro ('played → pléid'), y /id/ como sílaba extra después de /t/ o /d/ ('wanted → wánted').",
+          "examples": [
+            {
+              "en": "I worked all day yesterday.",
+              "es": "Trabajé todo el día ayer.",
+              "goal": "general"
+            },
+            {
+              "en": "She finished the presentation.",
+              "es": "Ella terminó la presentación.",
+              "goal": "work"
+            },
+            {
+              "en": "We visited three museums.",
+              "es": "Visitamos tres museos.",
+              "goal": "travel"
+            },
+            {
+              "en": "I studied for hours.",
+              "es": "Estudié durante horas.",
+              "goal": "study"
+            },
+            {
+              "en": "They enjoyed the concert.",
+              "es": "Disfrutaron el concierto.",
+              "goal": "entertainment"
+            }
+          ]
         }
       ],
       "exercises": [
@@ -249,7 +595,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "Yesterday I ___ to the cinema.",
-            "options": ["go", "went", "gone"],
+            "options": [
+              "go",
+              "went",
+              "gone"
+            ],
             "correctIndex": 1,
             "explanation": "'go' es irregular: su pasado simple es 'went'."
           }
@@ -258,9 +608,18 @@
           "key": "u1l2-e2",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["She ", " a great film last night."],
-            "answers": ["watched"],
-            "acceptable": [["watched"]],
+            "segments": [
+              "She ",
+              " a great film last night."
+            ],
+            "answers": [
+              "watched"
+            ],
+            "acceptable": [
+              [
+                "watched"
+              ]
+            ],
             "explanation": "'watch' es regular: se agrega -ed → 'watched'."
           }
         },
@@ -268,9 +627,24 @@
           "key": "u1l2-e3",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["We ", " pizza and then we ", " home."],
-            "answers": ["ate", "went"],
-            "acceptable": [["ate", "had"], ["went"]],
+            "segments": [
+              "We ",
+              " pizza and then we ",
+              " home."
+            ],
+            "answers": [
+              "ate",
+              "went"
+            ],
+            "acceptable": [
+              [
+                "ate",
+                "had"
+              ],
+              [
+                "went"
+              ]
+            ],
             "explanation": "'eat → ate' y 'go → went', ambos irregulares. 'had pizza' también es natural ('have pizza' = comer pizza)."
           }
         },
@@ -278,8 +652,20 @@
           "key": "u1l2-e4",
           "type": "word_order",
           "payload": {
-            "tokens": ["Did", "you", "call", "her", "yesterday"],
-            "correctOrder": [0, 1, 2, 3, 4],
+            "tokens": [
+              "Did",
+              "you",
+              "call",
+              "her",
+              "yesterday"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
             "explanation": "La pregunta en pasado usa 'Did' + sujeto + verbo base: 'Did you call her yesterday?'"
           }
         },
@@ -288,7 +674,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "I ___ see the message. Sorry!",
-            "options": ["didn't", "don't", "wasn't"],
+            "options": [
+              "didn't",
+              "don't",
+              "wasn't"
+            ],
             "correctIndex": 0,
             "explanation": "El negativo en pasado usa 'didn't' + verbo base."
           }
@@ -298,10 +688,22 @@
           "type": "matching",
           "payload": {
             "pairs": [
-              { "left": "go", "right": "went" },
-              { "left": "have", "right": "had" },
-              { "left": "buy", "right": "bought" },
-              { "left": "see", "right": "saw" }
+              {
+                "left": "go",
+                "right": "went"
+              },
+              {
+                "left": "have",
+                "right": "had"
+              },
+              {
+                "left": "buy",
+                "right": "bought"
+              },
+              {
+                "left": "see",
+                "right": "saw"
+              }
             ],
             "explanation": "Pares de verbo base → pasado simple (todos irregulares)."
           }
@@ -312,7 +714,9 @@
           "payload": {
             "prompt": "Ella compró un vestido nuevo.",
             "direction": "es_to_en",
-            "acceptable": ["She bought a new dress."],
+            "acceptable": [
+              "She bought a new dress."
+            ],
             "explanation": "'buy → bought' (irregular)."
           }
         },
@@ -333,28 +737,170 @@
             },
             "explanation": "El audio dice 'we visited my grandparents and had lunch together'."
           }
+        },
+        {
+          "key": "u1l2-e9",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I ___ home late last night.",
+            "options": [
+              "came",
+              "come",
+              "coming"
+            ],
+            "correctIndex": 0,
+            "explanation": "'come' es irregular: pasado simple 'came'."
+          }
+        },
+        {
+          "key": "u1l2-e10",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": [
+              "We ",
+              " a great time on holiday."
+            ],
+            "answers": [
+              "had"
+            ],
+            "explanation": "'have' en pasado es 'had'."
+          }
+        },
+        {
+          "key": "u1l2-e11",
+          "type": "matching",
+          "payload": {
+            "pairs": [
+              {
+                "left": "see",
+                "right": "saw"
+              },
+              {
+                "left": "take",
+                "right": "took"
+              },
+              {
+                "left": "come",
+                "right": "came"
+              },
+              {
+                "left": "give",
+                "right": "gave"
+              }
+            ],
+            "explanation": "Cuatro verbos irregulares comunes."
+          }
+        },
+        {
+          "key": "u1l2-e12",
+          "type": "word_order",
+          "payload": {
+            "tokens": [
+              "They",
+              "moved",
+              "to",
+              "Madrid",
+              "in",
+              "2019"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "explanation": "'in + año' pide pasado simple: 'They moved to Madrid in 2019'."
+          }
+        },
+        {
+          "key": "u1l2-e13",
+          "type": "translation",
+          "payload": {
+            "prompt": "La vi la semana pasada.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I saw her last week."
+            ],
+            "explanation": "'last week' es marcador de tiempo pasado → pasado simple 'saw'."
+          }
+        },
+        {
+          "key": "u1l2-e14",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "___ you enjoy the movie?",
+            "options": [
+              "Did",
+              "Do",
+              "Are"
+            ],
+            "correctIndex": 0,
+            "explanation": "Pregunta en pasado simple con 'Did' + sujeto + verbo base."
+          }
         }
       ],
       "pronunciationHighlights": [
-        { "en": "went", "respellingEs": "uént" },
-        { "en": "bought", "respellingEs": "bot" },
-        { "en": "didn't", "respellingEs": "dídent" },
-        { "en": "did you call her yesterday?", "respellingEs": "did yu col er yésterdei" },
-        { "en": "watched", "respellingEs": "wacht" },
-        { "en": "visited", "respellingEs": "vísited" }
+        {
+          "en": "went",
+          "respellingEs": "uént"
+        },
+        {
+          "en": "bought",
+          "respellingEs": "bot"
+        },
+        {
+          "en": "didn't",
+          "respellingEs": "dídent"
+        },
+        {
+          "en": "did you call her yesterday?",
+          "respellingEs": "did yu col er yésterdei"
+        },
+        {
+          "en": "watched",
+          "respellingEs": "wacht"
+        },
+        {
+          "en": "visited",
+          "respellingEs": "vísited"
+        },
+        {
+          "en": "worked",
+          "respellingEs": "wérkt"
+        },
+        {
+          "en": "played",
+          "respellingEs": "pléid"
+        },
+        {
+          "en": "wanted",
+          "respellingEs": "wánted"
+        },
+        {
+          "en": "two years ago",
+          "respellingEs": "tu yíers egóu"
+        }
       ]
     },
     {
       "slug": "everyday-vocabulary",
       "title": "Vocabulario cotidiano",
-      "grammarTopicSlugs": ["everyday-vocabulary"],
+      "grammarTopicSlugs": [
+        "everyday-vocabulary"
+      ],
       "teachingCards": [
         {
           "key": "u1l3-t1",
           "titleEs": "Rutina diaria y casa",
           "bodyEs": "Vocabulario para hablar de las comidas del día, las partes de la casa y los momentos de la rutina.",
           "examples": [
-            { "en": "I have breakfast at eight.", "es": "Desayuno a las ocho.", "goal": "general" },
+            {
+              "en": "I have breakfast at eight.",
+              "es": "Desayuno a las ocho.",
+              "goal": "general"
+            },
             {
               "en": "I check my email before breakfast.",
               "es": "Reviso mi email antes de desayunar.",
@@ -408,6 +954,70 @@
               "goal": "entertainment"
             }
           ]
+        },
+        {
+          "key": "u1l3-t3",
+          "titleEs": "Familia y descripciones",
+          "bodyEs": "Vocabulario para hablar de la familia (mother, father, brother, sister, son, daughter) y adjetivos comunes para describir personas (tall, short, kind, funny, serious).",
+          "examples": [
+            {
+              "en": "My sister is very funny.",
+              "es": "Mi hermana es muy graciosa.",
+              "goal": "general"
+            },
+            {
+              "en": "My boss is kind and patient.",
+              "es": "Mi jefa es amable y paciente.",
+              "goal": "work"
+            },
+            {
+              "en": "I traveled with my brother last year.",
+              "es": "Viajé con mi hermano el año pasado.",
+              "goal": "travel"
+            },
+            {
+              "en": "My teacher is very serious.",
+              "es": "Mi profesor es muy serio.",
+              "goal": "study"
+            },
+            {
+              "en": "That singer is really talented.",
+              "es": "Esa cantante es realmente talentosa.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u1l3-t4",
+          "titleEs": "Tiempo y clima",
+          "bodyEs": "Para hablar del clima usamos 'it' + verbo o adjetivo: 'It rains a lot', 'It is sunny today'. Palabras clave: sunny, cloudy, rainy, cold, hot, windy.",
+          "examples": [
+            {
+              "en": "It is very hot today.",
+              "es": "Hoy hace mucho calor.",
+              "goal": "general"
+            },
+            {
+              "en": "The weather is perfect for a meeting outside.",
+              "es": "El clima es perfecto para una reunión afuera.",
+              "goal": "work"
+            },
+            {
+              "en": "It rains a lot in Bogotá.",
+              "es": "Llueve mucho en Bogotá.",
+              "goal": "travel"
+            },
+            {
+              "en": "It is too cold to study in the park.",
+              "es": "Hace demasiado frío para estudiar en el parque.",
+              "goal": "study"
+            },
+            {
+              "en": "It is a great night for a concert.",
+              "es": "Es una noche genial para un concierto.",
+              "goal": "entertainment"
+            }
+          ]
         }
       ],
       "exercises": [
@@ -416,10 +1026,22 @@
           "type": "matching",
           "payload": {
             "pairs": [
-              { "left": "breakfast", "right": "desayuno" },
-              { "left": "kitchen", "right": "cocina" },
-              { "left": "weekend", "right": "fin de semana" },
-              { "left": "shopping", "right": "compras" }
+              {
+                "left": "breakfast",
+                "right": "desayuno"
+              },
+              {
+                "left": "kitchen",
+                "right": "cocina"
+              },
+              {
+                "left": "weekend",
+                "right": "fin de semana"
+              },
+              {
+                "left": "shopping",
+                "right": "compras"
+              }
             ],
             "explanation": "Vocabulario cotidiano: inglés ↔ español."
           }
@@ -429,7 +1051,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "I'm hungry. Let's have ___.",
-            "options": ["lunch", "a shower", "a rest"],
+            "options": [
+              "lunch",
+              "a shower",
+              "a rest"
+            ],
             "correctIndex": 0,
             "explanation": "Las tres combinan con 'have' (have lunch, have a shower, have a rest), pero 'I'm hungry' pide comida: 'have lunch' = almorzar."
           }
@@ -438,9 +1064,19 @@
           "key": "u1l3-e3",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["It's cold today. Take your ", "."],
-            "answers": ["jacket"],
-            "acceptable": [["jacket", "coat"]],
+            "segments": [
+              "It's cold today. Take your ",
+              "."
+            ],
+            "answers": [
+              "jacket"
+            ],
+            "acceptable": [
+              [
+                "jacket",
+                "coat"
+              ]
+            ],
             "explanation": "'jacket' o 'coat' funcionan para abrigarse."
           }
         },
@@ -464,9 +1100,18 @@
           "type": "dialogue",
           "payload": {
             "turns": [
-              { "speaker": "Clerk", "text": "How can I help you?" },
-              { "speaker": "You", "text": "" },
-              { "speaker": "Clerk", "text": "Sure, they're over there." }
+              {
+                "speaker": "Clerk",
+                "text": "How can I help you?"
+              },
+              {
+                "speaker": "You",
+                "text": ""
+              },
+              {
+                "speaker": "Clerk",
+                "text": "Sure, they're over there."
+              }
             ],
             "blankTurnIndex": 1,
             "options": [
@@ -485,9 +1130,19 @@
             "audioText": "The supermarket is open from nine in the morning to eight in the evening.",
             "sub": {
               "kind": "fill_in_blank",
-              "segments": ["The supermarket closes at ", " in the evening."],
-              "answers": ["eight"],
-              "acceptable": [["eight", "8"]]
+              "segments": [
+                "The supermarket closes at ",
+                " in the evening."
+              ],
+              "answers": [
+                "eight"
+              ],
+              "acceptable": [
+                [
+                  "eight",
+                  "8"
+                ]
+              ]
             },
             "explanation": "El audio dice 'to eight in the evening'."
           }
@@ -496,19 +1151,177 @@
           "key": "u1l3-e7",
           "type": "word_order",
           "payload": {
-            "tokens": ["I", "usually", "have", "dinner", "at", "eight"],
-            "correctOrder": [0, 1, 2, 3, 4, 5],
+            "tokens": [
+              "I",
+              "usually",
+              "have",
+              "dinner",
+              "at",
+              "eight"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
             "explanation": "Los adverbios de frecuencia ('usually') van antes del verbo principal: 'I usually have dinner at eight.'"
+          }
+        },
+        {
+          "key": "u1l3-e8",
+          "type": "matching",
+          "payload": {
+            "pairs": [
+              {
+                "left": "sunny",
+                "right": "soleado"
+              },
+              {
+                "left": "cloudy",
+                "right": "nublado"
+              },
+              {
+                "left": "rainy",
+                "right": "lluvioso"
+              },
+              {
+                "left": "windy",
+                "right": "ventoso"
+              }
+            ],
+            "explanation": "Vocabulario de clima básico."
+          }
+        },
+        {
+          "key": "u1l3-e9",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "My ___ is my mother's sister.",
+            "options": [
+              "aunt",
+              "uncle",
+              "cousin"
+            ],
+            "correctIndex": 0,
+            "explanation": "'aunt' = tía. 'uncle' = tío, 'cousin' = primo/a."
+          }
+        },
+        {
+          "key": "u1l3-e10",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": [
+              "It is very ",
+              " today. Take an umbrella."
+            ],
+            "answers": [
+              "rainy"
+            ],
+            "acceptable": [
+              [
+                "rainy",
+                "wet"
+              ]
+            ],
+            "explanation": "'rainy' o 'wet' funcionan; el contexto ('umbrella') lo confirma."
+          }
+        },
+        {
+          "key": "u1l3-e11",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "She is very ___. She always tells jokes.",
+            "options": [
+              "funny",
+              "serious",
+              "quiet"
+            ],
+            "correctIndex": 0,
+            "explanation": "'jokes' (chistes) pide 'funny' (graciosa)."
+          }
+        },
+        {
+          "key": "u1l3-e12",
+          "type": "translation",
+          "payload": {
+            "prompt": "Hoy hace calor.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "It is hot today.",
+              "It's hot today."
+            ],
+            "explanation": "El clima se expresa con 'it' + is: 'It is hot today'."
+          }
+        },
+        {
+          "key": "u1l3-e13",
+          "type": "dialogue",
+          "payload": {
+            "turns": [
+              {
+                "speaker": "Ana",
+                "text": "How is your family?"
+              },
+              {
+                "speaker": "Tom",
+                "text": ""
+              }
+            ],
+            "blankTurnIndex": 1,
+            "options": [
+              "They are all fine, thanks.",
+              "They is all fine, thanks.",
+              "They fine, thanks."
+            ],
+            "correctIndex": 0,
+            "explanation": "Familia como sujeto plural → 'they are': 'They are all fine, thanks.'"
           }
         }
       ],
       "pronunciationHighlights": [
-        { "en": "breakfast", "respellingEs": "brékfest" },
-        { "en": "kitchen", "respellingEs": "kíchen" },
-        { "en": "weekend", "respellingEs": "uikénd" },
-        { "en": "shopping", "respellingEs": "shóping" },
-        { "en": "I'm looking for", "respellingEs": "áim lúking for" },
-        { "en": "the supermarket closes at eight", "respellingEs": "de súpermarket clóuses at éit" }
+        {
+          "en": "breakfast",
+          "respellingEs": "brékfest"
+        },
+        {
+          "en": "kitchen",
+          "respellingEs": "kíchen"
+        },
+        {
+          "en": "weekend",
+          "respellingEs": "uikénd"
+        },
+        {
+          "en": "shopping",
+          "respellingEs": "shóping"
+        },
+        {
+          "en": "I'm looking for",
+          "respellingEs": "áim lúking for"
+        },
+        {
+          "en": "the supermarket closes at eight",
+          "respellingEs": "de súpermarket clóuses at éit"
+        },
+        {
+          "en": "sunny",
+          "respellingEs": "sáni"
+        },
+        {
+          "en": "cloudy",
+          "respellingEs": "kláudi"
+        },
+        {
+          "en": "brother",
+          "respellingEs": "bráder"
+        },
+        {
+          "en": "my sister is very funny",
+          "respellingEs": "mai síster is véri fáni"
+        }
       ]
     }
   ]

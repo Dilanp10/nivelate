@@ -29,7 +29,9 @@
     {
       "slug": "present-continuous",
       "title": "Presente continuo",
-      "grammarTopicSlugs": ["present-continuous"],
+      "grammarTopicSlugs": [
+        "present-continuous"
+      ],
       "teachingCards": [
         {
           "key": "u2l1-t1",
@@ -68,7 +70,11 @@
           "titleEs": "Preguntas y negaciones",
           "bodyEs": "Para preguntar invertimos el orden (am/is/are + sujeto + verbo-ing) y para negar agregamos 'not' después del auxiliar.",
           "examples": [
-            { "en": "What are you doing?", "es": "¿Qué estás haciendo?", "goal": "general" },
+            {
+              "en": "What are you doing?",
+              "es": "¿Qué estás haciendo?",
+              "goal": "general"
+            },
             {
               "en": "Is he answering emails right now?",
               "es": "¿Él está respondiendo emails ahora?",
@@ -90,6 +96,70 @@
               "goal": "entertainment"
             }
           ]
+        },
+        {
+          "key": "u2l1-t3",
+          "titleEs": "Situaciones temporales",
+          "bodyEs": "El presente continuo también se usa para algo que está pasando en este período (no exactamente ahora): 'this week', 'this month', 'these days'.",
+          "examples": [
+            {
+              "en": "I am reading a great book this week.",
+              "es": "Estoy leyendo un libro genial esta semana.",
+              "goal": "general"
+            },
+            {
+              "en": "She is working on a big project this month.",
+              "es": "Ella está trabajando en un proyecto grande este mes.",
+              "goal": "work"
+            },
+            {
+              "en": "We are staying in a small town these days.",
+              "es": "Nos estamos quedando en un pueblo chico estos días.",
+              "goal": "travel"
+            },
+            {
+              "en": "I am taking two courses this semester.",
+              "es": "Estoy tomando dos cursos este semestre.",
+              "goal": "study"
+            },
+            {
+              "en": "They are watching a lot of documentaries lately.",
+              "es": "Están mirando muchos documentales últimamente.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u2l1-t4",
+          "titleEs": "Planes futuros ya arreglados",
+          "bodyEs": "También usamos presente continuo para planes ya acordados en el futuro cercano: 'I'm meeting John tomorrow'. La palabra clave es el tiempo futuro (tomorrow, next week, tonight).",
+          "examples": [
+            {
+              "en": "I am seeing my friend tonight.",
+              "es": "Me estoy viendo con mi amigo esta noche.",
+              "goal": "general"
+            },
+            {
+              "en": "She is meeting the client at three.",
+              "es": "Ella se está reuniendo con el cliente a las tres.",
+              "goal": "work"
+            },
+            {
+              "en": "We're flying to Madrid tomorrow.",
+              "es": "Volamos a Madrid mañana.",
+              "goal": "travel"
+            },
+            {
+              "en": "I am taking the exam on Monday.",
+              "es": "Doy el examen el lunes.",
+              "goal": "study"
+            },
+            {
+              "en": "They are going to the concert next Friday.",
+              "es": "Van al concierto el próximo viernes.",
+              "goal": "entertainment"
+            }
+          ]
         }
       ],
       "exercises": [
@@ -98,7 +168,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "Look! It ___ raining.",
-            "options": ["is", "are", "does"],
+            "options": [
+              "is",
+              "are",
+              "does"
+            ],
             "correctIndex": 0,
             "explanation": "Presente continuo con 'it' (3ª persona singular): is + verbo-ing → 'it is raining'."
           }
@@ -108,7 +182,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "They ___ working at the moment.",
-            "options": ["is", "are", "do"],
+            "options": [
+              "is",
+              "are",
+              "do"
+            ],
             "correctIndex": 1,
             "explanation": "Con 'they' (plural) usamos 'are' + verbo-ing: 'they are working'."
           }
@@ -117,9 +195,19 @@
           "key": "u2l1-e3",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["I ", " a great book right now."],
-            "answers": ["am reading"],
-            "acceptable": [["am reading", "'m reading"]],
+            "segments": [
+              "I ",
+              " a great book right now."
+            ],
+            "answers": [
+              "am reading"
+            ],
+            "acceptable": [
+              [
+                "am reading",
+                "'m reading"
+              ]
+            ],
             "explanation": "Presente continuo con 'I': 'I am reading' o su contracción 'I'm reading'."
           }
         },
@@ -127,9 +215,20 @@
           "key": "u2l1-e4",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["She ", " TV right now. She's studying for an exam."],
-            "answers": ["isn't watching"],
-            "acceptable": [["isn't watching", "is not watching", "'s not watching"]],
+            "segments": [
+              "She ",
+              " TV right now. She's studying for an exam."
+            ],
+            "answers": [
+              "isn't watching"
+            ],
+            "acceptable": [
+              [
+                "isn't watching",
+                "is not watching",
+                "'s not watching"
+              ]
+            ],
             "explanation": "El contexto ('she's studying') pide el negativo: is + not + verbo-ing → 'She isn't watching TV right now.'"
           }
         },
@@ -137,8 +236,20 @@
           "key": "u2l1-e5",
           "type": "word_order",
           "payload": {
-            "tokens": ["Why", "are", "you", "smiling", "now"],
-            "correctOrder": [0, 1, 2, 3, 4],
+            "tokens": [
+              "Why",
+              "are",
+              "you",
+              "smiling",
+              "now"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
             "explanation": "Pregunta en presente continuo: palabra Wh + verbo auxiliar (are) + sujeto + verbo-ing: 'Why are you smiling now?'"
           }
         },
@@ -147,7 +258,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "Listen! The baby ___.",
-            "options": ["cries", "is crying", "cry"],
+            "options": [
+              "cries",
+              "is crying",
+              "cry"
+            ],
             "correctIndex": 1,
             "explanation": "'Listen!' señala que la acción ocurre en este momento → presente continuo: 'is crying'."
           }
@@ -158,7 +273,10 @@
           "payload": {
             "prompt": "Estamos aprendiendo inglés.",
             "direction": "es_to_en",
-            "acceptable": ["We are learning English.", "We're learning English."],
+            "acceptable": [
+              "We are learning English.",
+              "We're learning English."
+            ],
             "explanation": "Presente continuo con 'we': 'We are learning' o contraído 'We're learning'."
           }
         },
@@ -167,29 +285,183 @@
           "type": "dialogue",
           "payload": {
             "turns": [
-              { "speaker": "Ana", "text": "What are you doing?" },
-              { "speaker": "Tom", "text": "" }
+              {
+                "speaker": "Ana",
+                "text": "What are you doing?"
+              },
+              {
+                "speaker": "Tom",
+                "text": ""
+              }
             ],
             "blankTurnIndex": 1,
-            "options": ["I'm cooking dinner.", "I cook dinner.", "I cooked dinner."],
+            "options": [
+              "I'm cooking dinner.",
+              "I cook dinner.",
+              "I cooked dinner."
+            ],
             "correctIndex": 0,
             "explanation": "La pregunta 'What are you doing?' pide una respuesta en presente continuo: 'I'm cooking dinner.'"
+          }
+        },
+        {
+          "key": "u2l1-e9",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I ___ to the dentist tomorrow.",
+            "options": [
+              "am going",
+              "go",
+              "went"
+            ],
+            "correctIndex": 0,
+            "explanation": "Plan futuro ya acordado → presente continuo: 'I am going to the dentist tomorrow'."
+          }
+        },
+        {
+          "key": "u2l1-e10",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": [
+              "This week I ",
+              " a lot of reports."
+            ],
+            "answers": [
+              "am writing"
+            ],
+            "acceptable": [
+              [
+                "am writing",
+                "'m writing"
+              ]
+            ],
+            "explanation": "Situación temporal ('this week') → presente continuo."
+          }
+        },
+        {
+          "key": "u2l1-e11",
+          "type": "word_order",
+          "payload": {
+            "tokens": [
+              "She",
+              "is",
+              "meeting",
+              "them",
+              "at",
+              "six"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "explanation": "Plan futuro con presente continuo: 'She is meeting them at six'."
+          }
+        },
+        {
+          "key": "u2l1-e12",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "What ___ these days?",
+            "options": [
+              "are you doing",
+              "do you do",
+              "you do"
+            ],
+            "correctIndex": 0,
+            "explanation": "'these days' pide presente continuo: 'What are you doing these days?'"
+          }
+        },
+        {
+          "key": "u2l1-e13",
+          "type": "translation",
+          "payload": {
+            "prompt": "Vuelo a Buenos Aires mañana.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I am flying to Buenos Aires tomorrow.",
+              "I'm flying to Buenos Aires tomorrow."
+            ],
+            "explanation": "Plan futuro cercano → presente continuo: 'I am flying to Buenos Aires tomorrow'."
+          }
+        },
+        {
+          "key": "u2l1-e14",
+          "type": "dialogue",
+          "payload": {
+            "turns": [
+              {
+                "speaker": "Ana",
+                "text": "Are you free on Sunday?"
+              },
+              {
+                "speaker": "Tom",
+                "text": ""
+              }
+            ],
+            "blankTurnIndex": 1,
+            "options": [
+              "No, I'm working that day.",
+              "No, I work that day.",
+              "No, I worked that day."
+            ],
+            "correctIndex": 0,
+            "explanation": "Plan futuro comprometido → presente continuo: 'I'm working that day'."
           }
         }
       ],
       "pronunciationHighlights": [
-        { "en": "reading", "respellingEs": "ríding" },
-        { "en": "doing", "respellingEs": "dúing" },
-        { "en": "aren't", "respellingEs": "arnt" },
-        { "en": "is she working?", "respellingEs": "is shi wérking" },
-        { "en": "watching", "respellingEs": "wáching" },
-        { "en": "right now", "respellingEs": "ráit náu" }
+        {
+          "en": "reading",
+          "respellingEs": "ríding"
+        },
+        {
+          "en": "doing",
+          "respellingEs": "dúing"
+        },
+        {
+          "en": "aren't",
+          "respellingEs": "arnt"
+        },
+        {
+          "en": "is she working?",
+          "respellingEs": "is shi wérking"
+        },
+        {
+          "en": "watching",
+          "respellingEs": "wáching"
+        },
+        {
+          "en": "right now",
+          "respellingEs": "ráit náu"
+        },
+        {
+          "en": "this week",
+          "respellingEs": "dis wik"
+        },
+        {
+          "en": "tomorrow",
+          "respellingEs": "tumórou"
+        },
+        {
+          "en": "meeting",
+          "respellingEs": "míting"
+        },
+        {
+          "en": "these days",
+          "respellingEs": "dis déis"
+        }
       ]
     },
     {
       "slug": "past-continuous",
       "title": "Pasado continuo",
-      "grammarTopicSlugs": ["past-continuous"],
+      "grammarTopicSlugs": [
+        "past-continuous"
+      ],
       "teachingCards": [
         {
           "key": "u2l2-t1",
@@ -254,6 +526,70 @@
               "goal": "entertainment"
             }
           ]
+        },
+        {
+          "key": "u2l2-t3",
+          "titleEs": "while + pasado continuo",
+          "bodyEs": "'While' presenta la acción larga en pasado continuo. Se combina con otra acción en pasado continuo (dos cosas al mismo tiempo) o simple (interrupción).",
+          "examples": [
+            {
+              "en": "While I was cooking, the phone rang.",
+              "es": "Mientras cocinaba, sonó el teléfono.",
+              "goal": "general"
+            },
+            {
+              "en": "While she was answering emails, he was in a call.",
+              "es": "Mientras ella respondía emails, él estaba en una llamada.",
+              "goal": "work"
+            },
+            {
+              "en": "While we were walking, it started to rain.",
+              "es": "Mientras caminábamos, empezó a llover.",
+              "goal": "travel"
+            },
+            {
+              "en": "While I was studying, my phone died.",
+              "es": "Mientras estudiaba, se apagó el celular.",
+              "goal": "study"
+            },
+            {
+              "en": "While we were watching the movie, the power went out.",
+              "es": "Mientras mirábamos la película, se cortó la luz.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u2l2-t4",
+          "titleEs": "Marcar la escena del pasado",
+          "bodyEs": "El pasado continuo pinta el contexto de una historia: dice cómo estaban las cosas en ese momento. Después el pasado simple cuenta lo que sucedió.",
+          "examples": [
+            {
+              "en": "It was raining and everyone was walking fast.",
+              "es": "Llovía y todos caminaban rápido.",
+              "goal": "general"
+            },
+            {
+              "en": "The meeting was ending when the boss arrived.",
+              "es": "La reunión estaba terminando cuando llegó el jefe.",
+              "goal": "work"
+            },
+            {
+              "en": "The sun was setting when we reached the beach.",
+              "es": "El sol se ponía cuando llegamos a la playa.",
+              "goal": "travel"
+            },
+            {
+              "en": "The class was starting when I opened the door.",
+              "es": "La clase empezaba cuando abrí la puerta.",
+              "goal": "study"
+            },
+            {
+              "en": "The band was playing when we arrived.",
+              "es": "La banda estaba tocando cuando llegamos.",
+              "goal": "entertainment"
+            }
+          ]
         }
       ],
       "exercises": [
@@ -262,7 +598,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "I ___ TV when the phone rang.",
-            "options": ["watched", "was watching", "am watching"],
+            "options": [
+              "watched",
+              "was watching",
+              "am watching"
+            ],
             "correctIndex": 1,
             "explanation": "Pasado continuo para la acción en curso ('was watching') interrumpida por otra en pasado simple ('rang')."
           }
@@ -272,7 +612,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "They ___ dinner at 8 p.m. yesterday.",
-            "options": ["were having", "had", "have"],
+            "options": [
+              "were having",
+              "had",
+              "have"
+            ],
             "correctIndex": 0,
             "explanation": "Acción en progreso en un momento pasado (a las 8) → pasado continuo: 'were having'."
           }
@@ -281,9 +625,18 @@
           "key": "u2l2-e3",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["While she ", " home, it started to rain."],
-            "answers": ["was walking"],
-            "acceptable": [["was walking"]],
+            "segments": [
+              "While she ",
+              " home, it started to rain."
+            ],
+            "answers": [
+              "was walking"
+            ],
+            "acceptable": [
+              [
+                "was walking"
+              ]
+            ],
             "explanation": "'While + pasado continuo' presenta la acción larga: 'While she was walking home...'."
           }
         },
@@ -291,8 +644,22 @@
           "key": "u2l2-e4",
           "type": "word_order",
           "payload": {
-            "tokens": ["What", "were", "you", "doing", "at", "ten"],
-            "correctOrder": [0, 1, 2, 3, 4, 5],
+            "tokens": [
+              "What",
+              "were",
+              "you",
+              "doing",
+              "at",
+              "ten"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
             "explanation": "Pregunta en pasado continuo: Wh + were + sujeto + verbo-ing: 'What were you doing at ten?'"
           }
         },
@@ -301,7 +668,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "We ___ football when it started to snow.",
-            "options": ["played", "were playing", "are playing"],
+            "options": [
+              "played",
+              "were playing",
+              "are playing"
+            ],
             "correctIndex": 1,
             "explanation": "La acción larga interrumpida va en pasado continuo: 'were playing'."
           }
@@ -311,10 +682,22 @@
           "type": "matching",
           "payload": {
             "pairs": [
-              { "left": "I", "right": "was" },
-              { "left": "he", "right": "was" },
-              { "left": "they", "right": "were" },
-              { "left": "you", "right": "were" }
+              {
+                "left": "I",
+                "right": "was"
+              },
+              {
+                "left": "he",
+                "right": "was"
+              },
+              {
+                "left": "they",
+                "right": "were"
+              },
+              {
+                "left": "you",
+                "right": "were"
+              }
             ],
             "explanation": "En pasado continuo: I/he/she/it → was; you/we/they → were."
           }
@@ -350,21 +733,157 @@
             },
             "explanation": "El audio dice 'we were having dinner and watching a movie' — dos acciones en progreso a las seis."
           }
+        },
+        {
+          "key": "u2l2-e9",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "She ___ the newspaper when I called.",
+            "options": [
+              "was reading",
+              "read",
+              "reads"
+            ],
+            "correctIndex": 0,
+            "explanation": "Acción interrumpida → pasado continuo: 'was reading'."
+          }
+        },
+        {
+          "key": "u2l2-e10",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": [
+              "While they ",
+              ", it started to snow."
+            ],
+            "answers": [
+              "were driving"
+            ],
+            "acceptable": [
+              [
+                "were driving"
+              ]
+            ],
+            "explanation": "'While' + pasado continuo para la acción larga: 'were driving'."
+          }
+        },
+        {
+          "key": "u2l2-e11",
+          "type": "word_order",
+          "payload": {
+            "tokens": [
+              "I",
+              "was",
+              "sleeping",
+              "at",
+              "midnight"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "explanation": "Estado en un momento pasado → pasado continuo: 'I was sleeping at midnight'."
+          }
+        },
+        {
+          "key": "u2l2-e12",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "___ you doing when the alarm rang?",
+            "options": [
+              "Were",
+              "Was",
+              "Did"
+            ],
+            "correctIndex": 0,
+            "explanation": "Pregunta en pasado continuo con 'you' → 'Were you doing...?'"
+          }
+        },
+        {
+          "key": "u2l2-e13",
+          "type": "translation",
+          "payload": {
+            "prompt": "Estaba lloviendo cuando salí.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "It was raining when I went out.",
+              "It was raining when I left."
+            ],
+            "explanation": "'estaba + gerundio' → pasado continuo; 'salí' → pasado simple para la acción puntual."
+          }
+        },
+        {
+          "key": "u2l2-e14",
+          "type": "listening",
+          "payload": {
+            "audioText": "While we were having lunch, my sister called with great news.",
+            "sub": {
+              "kind": "multiple_choice",
+              "prompt": "¿Qué estaban haciendo cuando llamó la hermana?",
+              "options": [
+                "Almorzando.",
+                "Cenando.",
+                "Cocinando."
+              ],
+              "correctIndex": 0
+            },
+            "explanation": "El audio dice 'while we were having lunch' — estaban almorzando."
+          }
         }
       ],
       "pronunciationHighlights": [
-        { "en": "sleeping", "respellingEs": "slíping" },
-        { "en": "were you", "respellingEs": "wer yu" },
-        { "en": "wasn't", "respellingEs": "uásent" },
-        { "en": "writing", "respellingEs": "ráiting" },
-        { "en": "walking", "respellingEs": "uóking" },
-        { "en": "while", "respellingEs": "uáil" }
+        {
+          "en": "sleeping",
+          "respellingEs": "slíping"
+        },
+        {
+          "en": "were you",
+          "respellingEs": "wer yu"
+        },
+        {
+          "en": "wasn't",
+          "respellingEs": "uásent"
+        },
+        {
+          "en": "writing",
+          "respellingEs": "ráiting"
+        },
+        {
+          "en": "walking",
+          "respellingEs": "uóking"
+        },
+        {
+          "en": "while",
+          "respellingEs": "uáil"
+        },
+        {
+          "en": "was reading",
+          "respellingEs": "uás ríding"
+        },
+        {
+          "en": "while",
+          "respellingEs": "uáil"
+        },
+        {
+          "en": "it was raining",
+          "respellingEs": "it uás réining"
+        },
+        {
+          "en": "when I arrived",
+          "respellingEs": "wen ai eráivd"
+        }
       ]
     },
     {
       "slug": "simple-vs-continuous",
       "title": "Simple vs continuo",
-      "grammarTopicSlugs": ["present-continuous", "stative-verbs"],
+      "grammarTopicSlugs": [
+        "present-continuous",
+        "stative-verbs"
+      ],
       "teachingCards": [
         {
           "key": "u2l3-t1",
@@ -403,7 +922,11 @@
           "titleEs": "Verbos de estado: sin continuo",
           "bodyEs": "Verbos como know, understand, want, believe o like describen un estado, no una acción — no se usan en continuo aunque hablemos de 'ahora'.",
           "examples": [
-            { "en": "I know the answer.", "es": "Sé la respuesta.", "goal": "general" },
+            {
+              "en": "I know the answer.",
+              "es": "Sé la respuesta.",
+              "goal": "general"
+            },
             {
               "en": "He understands the project now.",
               "es": "Él entiende el proyecto ahora.",
@@ -419,7 +942,75 @@
               "es": "Creo que esta regla es importante.",
               "goal": "study"
             },
-            { "en": "She likes this song a lot.", "es": "A ella le gusta mucho esta canción.", "goal": "entertainment" }
+            {
+              "en": "She likes this song a lot.",
+              "es": "A ella le gusta mucho esta canción.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u2l3-t3",
+          "titleEs": "'always' con continuo: fastidio",
+          "bodyEs": "Cuando usamos 'always' con presente continuo, damos idea de queja o irritación: 'She is always losing her keys!' = ¡Siempre pierde las llaves!",
+          "examples": [
+            {
+              "en": "You are always leaving the door open!",
+              "es": "¡Siempre dejás la puerta abierta!",
+              "goal": "general"
+            },
+            {
+              "en": "He's always sending emails at midnight.",
+              "es": "Siempre está mandando emails a medianoche.",
+              "goal": "work"
+            },
+            {
+              "en": "They're always losing their tickets.",
+              "es": "Siempre están perdiendo los pasajes.",
+              "goal": "travel"
+            },
+            {
+              "en": "I'm always forgetting my notebook.",
+              "es": "Siempre me estoy olvidando el cuaderno.",
+              "goal": "study"
+            },
+            {
+              "en": "He's always talking during movies.",
+              "es": "Siempre habla durante las películas.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u2l3-t4",
+          "titleEs": "Verbos con dos usos",
+          "bodyEs": "Algunos verbos son de estado y también de acción con distinto significado. 'think' (creer, estado) vs 'be thinking about' (considerar, acción). 'have' (poseer) vs 'be having' (comer/tomar).",
+          "examples": [
+            {
+              "en": "I think you are right.",
+              "es": "Creo que tenés razón.",
+              "goal": "general"
+            },
+            {
+              "en": "I am thinking about a new project.",
+              "es": "Estoy pensando en un proyecto nuevo.",
+              "goal": "work"
+            },
+            {
+              "en": "We are having breakfast in the hotel.",
+              "es": "Estamos desayunando en el hotel.",
+              "goal": "travel"
+            },
+            {
+              "en": "I have three exams this week.",
+              "es": "Tengo tres exámenes esta semana.",
+              "goal": "study"
+            },
+            {
+              "en": "We are having a great time.",
+              "es": "La estamos pasando muy bien.",
+              "goal": "entertainment"
+            }
           ]
         }
       ],
@@ -429,7 +1020,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "I usually ___ coffee, but today I'm drinking tea.",
-            "options": ["drink", "am drinking", "drinks"],
+            "options": [
+              "drink",
+              "am drinking",
+              "drinks"
+            ],
             "correctIndex": 0,
             "explanation": "'usually' señala rutina → presente simple ('drink'). El contraste con 'today I'm drinking' marca la excepción de hoy."
           }
@@ -439,7 +1034,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "Look, it ___! Let's go inside.",
-            "options": ["rains", "is raining", "rained"],
+            "options": [
+              "rains",
+              "is raining",
+              "rained"
+            ],
             "correctIndex": 1,
             "explanation": "'Look!' + acción justo en este momento → presente continuo: 'is raining'."
           }
@@ -448,9 +1047,18 @@
           "key": "u2l3-e3",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["I ", " the answer."],
-            "answers": ["know"],
-            "acceptable": [["know"]],
+            "segments": [
+              "I ",
+              " the answer."
+            ],
+            "answers": [
+              "know"
+            ],
+            "acceptable": [
+              [
+                "know"
+              ]
+            ],
             "explanation": "'know' es un verbo de estado: no se usa en continuo. Se dice 'I know', nunca 'I am knowing'."
           }
         },
@@ -458,9 +1066,24 @@
           "key": "u2l3-e4",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["She usually ", " to work, but today she ", " the bus."],
-            "answers": ["drives", "is taking"],
-            "acceptable": [["drives"], ["is taking", "'s taking"]],
+            "segments": [
+              "She usually ",
+              " to work, but today she ",
+              " the bus."
+            ],
+            "answers": [
+              "drives",
+              "is taking"
+            ],
+            "acceptable": [
+              [
+                "drives"
+              ],
+              [
+                "is taking",
+                "'s taking"
+              ]
+            ],
             "explanation": "'usually' → rutina en presente simple ('drives'). 'today' + acción hoy → presente continuo ('is taking')."
           }
         },
@@ -468,8 +1091,20 @@
           "key": "u2l3-e5",
           "type": "word_order",
           "payload": {
-            "tokens": ["She", "often", "works", "from", "home"],
-            "correctOrder": [0, 1, 2, 3, 4],
+            "tokens": [
+              "She",
+              "often",
+              "works",
+              "from",
+              "home"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
             "explanation": "Adverbio de frecuencia ('often') antes del verbo principal en presente simple: 'She often works from home'."
           }
         },
@@ -478,8 +1113,14 @@
           "type": "dialogue",
           "payload": {
             "turns": [
-              { "speaker": "Ana", "text": "Are you busy?" },
-              { "speaker": "Tom", "text": "" }
+              {
+                "speaker": "Ana",
+                "text": "Are you busy?"
+              },
+              {
+                "speaker": "Tom",
+                "text": ""
+              }
             ],
             "blankTurnIndex": 1,
             "options": [
@@ -505,15 +1146,151 @@
             ],
             "explanation": "Rutina ('works in/at a bank') → presente simple. Situación temporal de hoy → presente continuo ('is working from home')."
           }
+        },
+        {
+          "key": "u2l3-e8",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "He ___ his keys — how annoying!",
+            "options": [
+              "is always losing",
+              "always loses",
+              "loses always"
+            ],
+            "correctIndex": 0,
+            "explanation": "'always + continuo' expresa fastidio: 'He is always losing his keys'."
+          }
+        },
+        {
+          "key": "u2l3-e9",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I ___ dinner with my parents. Can I call you later?",
+            "options": [
+              "am having",
+              "have",
+              "had"
+            ],
+            "correctIndex": 0,
+            "explanation": "'have dinner' como acción en curso → 'am having dinner'."
+          }
+        },
+        {
+          "key": "u2l3-e10",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": [
+              "I ",
+              " you are right."
+            ],
+            "answers": [
+              "think"
+            ],
+            "explanation": "'think' como estado (creer) no va en continuo: 'I think'."
+          }
+        },
+        {
+          "key": "u2l3-e11",
+          "type": "word_order",
+          "payload": {
+            "tokens": [
+              "She",
+              "is",
+              "always",
+              "complaining",
+              "about",
+              "work"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "explanation": "'always + continuo' para fastidio: 'She is always complaining about work'."
+          }
+        },
+        {
+          "key": "u2l3-e12",
+          "type": "translation",
+          "payload": {
+            "prompt": "Estoy pensando en cambiar de trabajo.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I am thinking about changing jobs.",
+              "I'm thinking about changing jobs."
+            ],
+            "explanation": "'thinking about' = considerando (acción) → presente continuo."
+          }
+        },
+        {
+          "key": "u2l3-e13",
+          "type": "dialogue",
+          "payload": {
+            "turns": [
+              {
+                "speaker": "Ana",
+                "text": "Do you want a coffee?"
+              },
+              {
+                "speaker": "Tom",
+                "text": ""
+              }
+            ],
+            "blankTurnIndex": 1,
+            "options": [
+              "No, thanks — I have three already.",
+              "No, thanks — I am having three already.",
+              "No, thanks — I having three already."
+            ],
+            "correctIndex": 0,
+            "explanation": "'have' como posesión (ya me tomé tres) → presente simple."
+          }
         }
       ],
       "pronunciationHighlights": [
-        { "en": "usually", "respellingEs": "yúshuali" },
-        { "en": "know", "respellingEs": "nóu" },
-        { "en": "understands", "respellingEs": "ánderstands" },
-        { "en": "believe", "respellingEs": "bilív" },
-        { "en": "likes", "respellingEs": "láiks" },
-        { "en": "driving", "respellingEs": "dráiving" }
+        {
+          "en": "usually",
+          "respellingEs": "yúshuali"
+        },
+        {
+          "en": "know",
+          "respellingEs": "nóu"
+        },
+        {
+          "en": "understands",
+          "respellingEs": "ánderstands"
+        },
+        {
+          "en": "believe",
+          "respellingEs": "bilív"
+        },
+        {
+          "en": "likes",
+          "respellingEs": "láiks"
+        },
+        {
+          "en": "driving",
+          "respellingEs": "dráiving"
+        },
+        {
+          "en": "always losing",
+          "respellingEs": "óluéis lúsing"
+        },
+        {
+          "en": "thinking about",
+          "respellingEs": "zínking ebáut"
+        },
+        {
+          "en": "having breakfast",
+          "respellingEs": "jáving brékfest"
+        },
+        {
+          "en": "how annoying",
+          "respellingEs": "jau enóing"
+        }
       ]
     }
   ]

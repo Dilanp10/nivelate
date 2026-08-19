@@ -29,7 +29,9 @@
     {
       "slug": "life-experiences",
       "title": "Experiencias de vida",
-      "grammarTopicSlugs": ["present-perfect-experience"],
+      "grammarTopicSlugs": [
+        "present-perfect-experience"
+      ],
       "teachingCards": [
         {
           "key": "u3l1-t1",
@@ -94,6 +96,70 @@
               "goal": "entertainment"
             }
           ]
+        },
+        {
+          "key": "u3l1-t3",
+          "titleEs": "Preguntas de seguimiento en pasado simple",
+          "bodyEs": "Después de una pregunta de experiencia ('Have you ever...?'), las preguntas de seguimiento con detalles específicos van en pasado simple: 'When did you go?', 'Where did you eat?', 'How was it?'",
+          "examples": [
+            {
+              "en": "Have you ever been to Peru? When did you go?",
+              "es": "¿Alguna vez estuviste en Perú? ¿Cuándo fuiste?",
+              "goal": "general"
+            },
+            {
+              "en": "Have you ever worked from home? How was it?",
+              "es": "¿Alguna vez trabajaste desde casa? ¿Qué tal fue?",
+              "goal": "work"
+            },
+            {
+              "en": "Have you ever tried surfing? Where did you go?",
+              "es": "¿Alguna vez probaste surf? ¿Dónde fuiste?",
+              "goal": "travel"
+            },
+            {
+              "en": "Have you ever taken an online course? Did you finish it?",
+              "es": "¿Alguna vez tomaste un curso online? ¿Lo terminaste?",
+              "goal": "study"
+            },
+            {
+              "en": "Have you seen that show? What did you think?",
+              "es": "¿Viste ese show? ¿Qué te pareció?",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u3l1-t4",
+          "titleEs": "been vs. gone",
+          "bodyEs": "'has been to' = fue y volvió (visitó). 'has gone to' = fue y sigue allá. 'I have been to Paris' significa que ya viajaste; 'She has gone to Paris' significa que ella está en Paris ahora.",
+          "examples": [
+            {
+              "en": "I have been to five countries.",
+              "es": "Estuve en cinco países.",
+              "goal": "travel"
+            },
+            {
+              "en": "She has gone to the doctor. She'll be back at 5.",
+              "es": "Ella fue al médico. Vuelve a las 5.",
+              "goal": "general"
+            },
+            {
+              "en": "He has been to that client three times this month.",
+              "es": "Estuvo con ese cliente tres veces este mes.",
+              "goal": "work"
+            },
+            {
+              "en": "She has gone to the library — call her later.",
+              "es": "Ella fue a la biblioteca — llamala después.",
+              "goal": "study"
+            },
+            {
+              "en": "They have been to that concert already.",
+              "es": "Ellos ya estuvieron en ese concierto.",
+              "goal": "entertainment"
+            }
+          ]
         }
       ],
       "exercises": [
@@ -102,7 +168,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "Have you ever ___ sushi?",
-            "options": ["eat", "eaten", "ate"],
+            "options": [
+              "eat",
+              "eaten",
+              "ate"
+            ],
             "correctIndex": 1,
             "explanation": "Presente perfecto: have + participio pasado. El participio de 'eat' es 'eaten': 'Have you ever eaten sushi?'"
           }
@@ -112,7 +182,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "She ___ never been to Japan.",
-            "options": ["has", "have", "is"],
+            "options": [
+              "has",
+              "have",
+              "is"
+            ],
             "correctIndex": 0,
             "explanation": "Con 'she' (3ª persona singular) el auxiliar es 'has': 'She has never been to Japan.'"
           }
@@ -121,9 +195,19 @@
           "key": "u3l1-e3",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["I ", " that movie three times."],
-            "answers": ["have seen"],
-            "acceptable": [["have seen", "'ve seen"]],
+            "segments": [
+              "I ",
+              " that movie three times."
+            ],
+            "answers": [
+              "have seen"
+            ],
+            "acceptable": [
+              [
+                "have seen",
+                "'ve seen"
+              ]
+            ],
             "explanation": "Experiencia repetida sin fecha concreta → presente perfecto: 'I have seen' o 'I've seen'. Participio de 'see' = 'seen'."
           }
         },
@@ -131,9 +215,19 @@
           "key": "u3l1-e4",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["They ", " to London. It will be their first visit."],
-            "answers": ["have never been"],
-            "acceptable": [["have never been", "'ve never been"]],
+            "segments": [
+              "They ",
+              " to London. It will be their first visit."
+            ],
+            "answers": [
+              "have never been"
+            ],
+            "acceptable": [
+              [
+                "have never been",
+                "'ve never been"
+              ]
+            ],
             "explanation": "El contexto ('first visit') pide el negativo con 'never', que va entre el auxiliar y el participio: 'They have never been to London.'"
           }
         },
@@ -141,8 +235,22 @@
           "key": "u3l1-e5",
           "type": "word_order",
           "payload": {
-            "tokens": ["Have", "you", "ever", "been", "to", "Paris"],
-            "correctOrder": [0, 1, 2, 3, 4, 5],
+            "tokens": [
+              "Have",
+              "you",
+              "ever",
+              "been",
+              "to",
+              "Paris"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
             "explanation": "Pregunta de experiencia: Have + sujeto + ever + participio: 'Have you ever been to Paris?'"
           }
         },
@@ -151,7 +259,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "He has ___ his homework, so he's free now.",
-            "options": ["do", "did", "done"],
+            "options": [
+              "do",
+              "did",
+              "done"
+            ],
             "correctIndex": 2,
             "explanation": "Participio pasado de 'do' = 'done': 'He has done his homework.'"
           }
@@ -162,7 +274,10 @@
           "payload": {
             "prompt": "Nunca he estado en Francia.",
             "direction": "es_to_en",
-            "acceptable": ["I have never been to France.", "I've never been to France."],
+            "acceptable": [
+              "I have never been to France.",
+              "I've never been to France."
+            ],
             "explanation": "Experiencia negativa de vida → presente perfecto con 'never': 'I have never been to France.'"
           }
         },
@@ -171,8 +286,14 @@
           "type": "dialogue",
           "payload": {
             "turns": [
-              { "speaker": "Ana", "text": "Have you ever tried Thai food?" },
-              { "speaker": "Tom", "text": "" }
+              {
+                "speaker": "Ana",
+                "text": "Have you ever tried Thai food?"
+              },
+              {
+                "speaker": "Tom",
+                "text": ""
+              }
             ],
             "blankTurnIndex": 1,
             "options": [
@@ -183,21 +304,155 @@
             "correctIndex": 0,
             "explanation": "Respuesta sobre una experiencia → presente perfecto: 'I've tried it once.'"
           }
+        },
+        {
+          "key": "u3l1-e9",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I have ___ to Rome — I loved it!",
+            "options": [
+              "been",
+              "gone",
+              "went"
+            ],
+            "correctIndex": 0,
+            "explanation": "'been to' = fui y volví (visité). Es lo que va cuando ya estás de vuelta."
+          }
+        },
+        {
+          "key": "u3l1-e10",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "She isn't here. She has ___ to the bank.",
+            "options": [
+              "gone",
+              "been",
+              "go"
+            ],
+            "correctIndex": 0,
+            "explanation": "'gone to' = fue y no volvió todavía. 'She isn't here' lo confirma."
+          }
+        },
+        {
+          "key": "u3l1-e11",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": [
+              "Have you ever ",
+              " Japanese food?"
+            ],
+            "answers": [
+              "tried"
+            ],
+            "explanation": "Participio de 'try' = 'tried'. Experiencia → presente perfecto."
+          }
+        },
+        {
+          "key": "u3l1-e12",
+          "type": "word_order",
+          "payload": {
+            "tokens": [
+              "I",
+              "have",
+              "never",
+              "seen",
+              "that",
+              "movie"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "explanation": "'never' entre auxiliar y participio: 'I have never seen that movie'."
+          }
+        },
+        {
+          "key": "u3l1-e13",
+          "type": "translation",
+          "payload": {
+            "prompt": "Ella ya se fue.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "She has gone.",
+              "She's gone.",
+              "She has left.",
+              "She's left."
+            ],
+            "explanation": "'gone' (fue y no volvió) o 'left' (se fue). Ambas válidas."
+          }
+        },
+        {
+          "key": "u3l1-e14",
+          "type": "listening",
+          "payload": {
+            "audioText": "I have been to Italy twice, but I have never tried real pizza.",
+            "sub": {
+              "kind": "multiple_choice",
+              "prompt": "¿Cuántas veces estuvo en Italia?",
+              "options": [
+                "Nunca.",
+                "Una vez.",
+                "Dos veces."
+              ],
+              "correctIndex": 2
+            },
+            "explanation": "'I have been to Italy twice' = estuve dos veces."
+          }
         }
       ],
       "pronunciationHighlights": [
-        { "en": "have you ever", "respellingEs": "hav yu éver" },
-        { "en": "been", "respellingEs": "bin" },
-        { "en": "never", "respellingEs": "néver" },
-        { "en": "eaten", "respellingEs": "íten" },
-        { "en": "tried", "respellingEs": "tráid" },
-        { "en": "done", "respellingEs": "dan" }
+        {
+          "en": "have you ever",
+          "respellingEs": "hav yu éver"
+        },
+        {
+          "en": "been",
+          "respellingEs": "bin"
+        },
+        {
+          "en": "never",
+          "respellingEs": "néver"
+        },
+        {
+          "en": "eaten",
+          "respellingEs": "íten"
+        },
+        {
+          "en": "tried",
+          "respellingEs": "tráid"
+        },
+        {
+          "en": "done",
+          "respellingEs": "dan"
+        },
+        {
+          "en": "been to",
+          "respellingEs": "bin tu"
+        },
+        {
+          "en": "gone to",
+          "respellingEs": "gon tu"
+        },
+        {
+          "en": "tried",
+          "respellingEs": "tráid"
+        },
+        {
+          "en": "have you ever tried",
+          "respellingEs": "hav yu éver tráid"
+        }
       ]
     },
     {
       "slug": "already-yet-just",
       "title": "already, yet y just",
-      "grammarTopicSlugs": ["present-perfect-result"],
+      "grammarTopicSlugs": [
+        "present-perfect-result"
+      ],
       "teachingCards": [
         {
           "key": "u3l2-t1",
@@ -262,6 +517,70 @@
               "goal": "entertainment"
             }
           ]
+        },
+        {
+          "key": "u3l2-t3",
+          "titleEs": "still: 'todavía' en positivas y negativas",
+          "bodyEs": "'still' significa 'todavía' e indica que algo sigue pasando o no. En positivas va antes del verbo principal: 'I still live here'. En negativas va entre sujeto y auxiliar: 'She still hasn't called'.",
+          "examples": [
+            {
+              "en": "I still live with my parents.",
+              "es": "Todavía vivo con mis padres.",
+              "goal": "general"
+            },
+            {
+              "en": "He still works at the same company.",
+              "es": "Todavía trabaja en la misma empresa.",
+              "goal": "work"
+            },
+            {
+              "en": "We still haven't decided the destination.",
+              "es": "Todavía no decidimos el destino.",
+              "goal": "travel"
+            },
+            {
+              "en": "I still don't understand this rule.",
+              "es": "Todavía no entiendo esta regla.",
+              "goal": "study"
+            },
+            {
+              "en": "She still watches that old show.",
+              "es": "Todavía mira ese show viejo.",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u3l2-t4",
+          "titleEs": "for y since (con presente perfecto)",
+          "bodyEs": "'for' + duración (for two years, for a long time). 'since' + momento de inicio (since 2020, since Monday, since I was a child). Ambos van al final: 'I have lived here for five years' / 'since 2019'.",
+          "examples": [
+            {
+              "en": "I have known her for ten years.",
+              "es": "La conozco desde hace diez años.",
+              "goal": "general"
+            },
+            {
+              "en": "She has worked here since 2020.",
+              "es": "Ella trabaja acá desde 2020.",
+              "goal": "work"
+            },
+            {
+              "en": "We have been in this city for a week.",
+              "es": "Estamos en esta ciudad hace una semana.",
+              "goal": "travel"
+            },
+            {
+              "en": "I have studied English since I was a child.",
+              "es": "Estudio inglés desde que era chico.",
+              "goal": "study"
+            },
+            {
+              "en": "They have been fans since the first season.",
+              "es": "Son fans desde la primera temporada.",
+              "goal": "entertainment"
+            }
+          ]
         }
       ],
       "exercises": [
@@ -270,7 +589,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "I've ___ finished my homework. I can relax now.",
-            "options": ["already", "yet", "ever"],
+            "options": [
+              "already",
+              "yet",
+              "ever"
+            ],
             "correctIndex": 0,
             "explanation": "'already' (ya) en afirmativas, entre el auxiliar y el participio: 'I've already finished.'"
           }
@@ -280,7 +603,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "Have you finished your work ___?",
-            "options": ["yet", "already", "just"],
+            "options": [
+              "yet",
+              "already",
+              "just"
+            ],
             "correctIndex": 0,
             "explanation": "'yet' (ya/todavía) va al final de preguntas y negativas: 'Have you finished yet?'"
           }
@@ -289,9 +616,19 @@
           "key": "u3l2-e3",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["She ", " arrived. She's at the door."],
-            "answers": ["has just"],
-            "acceptable": [["has just", "'s just"]],
+            "segments": [
+              "She ",
+              " arrived. She's at the door."
+            ],
+            "answers": [
+              "has just"
+            ],
+            "acceptable": [
+              [
+                "has just",
+                "'s just"
+              ]
+            ],
             "explanation": "'just' (recién) entre auxiliar y participio: 'She has just arrived.'"
           }
         },
@@ -299,8 +636,20 @@
           "key": "u3l2-e4",
           "type": "word_order",
           "payload": {
-            "tokens": ["I", "have", "already", "eaten", "lunch"],
-            "correctOrder": [0, 1, 2, 3, 4],
+            "tokens": [
+              "I",
+              "have",
+              "already",
+              "eaten",
+              "lunch"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
             "explanation": "'already' va entre el auxiliar y el participio: 'I have already eaten lunch.'"
           }
         },
@@ -309,7 +658,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "He hasn't called me ___.",
-            "options": ["yet", "already", "just"],
+            "options": [
+              "yet",
+              "already",
+              "just"
+            ],
             "correctIndex": 0,
             "explanation": "En negativas se usa 'yet' al final: 'He hasn't called me yet.'"
           }
@@ -319,10 +672,22 @@
           "type": "matching",
           "payload": {
             "pairs": [
-              { "left": "finish", "right": "finished" },
-              { "left": "arrive", "right": "arrived" },
-              { "left": "leave", "right": "left" },
-              { "left": "buy", "right": "bought" }
+              {
+                "left": "finish",
+                "right": "finished"
+              },
+              {
+                "left": "arrive",
+                "right": "arrived"
+              },
+              {
+                "left": "leave",
+                "right": "left"
+              },
+              {
+                "left": "buy",
+                "right": "bought"
+              }
             ],
             "explanation": "Verbo base → participio pasado. 'finish/arrive' son regulares (-ed); 'leave→left' y 'buy→bought' son irregulares."
           }
@@ -357,21 +722,166 @@
             },
             "explanation": "El audio dice 'I have just finished cooking dinner' — acción recién terminada."
           }
+        },
+        {
+          "key": "u3l2-e9",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I have lived here ___ five years.",
+            "options": [
+              "for",
+              "since",
+              "ago"
+            ],
+            "correctIndex": 0,
+            "explanation": "'for' + duración: 'for five years' (durante cinco años)."
+          }
+        },
+        {
+          "key": "u3l2-e10",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "She has worked here ___ 2020.",
+            "options": [
+              "since",
+              "for",
+              "from"
+            ],
+            "correctIndex": 0,
+            "explanation": "'since' + momento de inicio: 'since 2020' (desde 2020)."
+          }
+        },
+        {
+          "key": "u3l2-e11",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": [
+              "She ",
+              " called me back."
+            ],
+            "answers": [
+              "still hasn't"
+            ],
+            "acceptable": [
+              [
+                "still hasn't",
+                "still has not"
+              ]
+            ],
+            "explanation": "'still' en negativas va entre sujeto y auxiliar: 'She still hasn't called me back'."
+          }
+        },
+        {
+          "key": "u3l2-e12",
+          "type": "word_order",
+          "payload": {
+            "tokens": [
+              "They",
+              "have",
+              "lived",
+              "there",
+              "since",
+              "March"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "explanation": "'since + mes' al final: 'They have lived there since March'."
+          }
+        },
+        {
+          "key": "u3l2-e13",
+          "type": "translation",
+          "payload": {
+            "prompt": "Hace dos horas que espero.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I have been waiting for two hours.",
+              "I've been waiting for two hours.",
+              "I have waited for two hours."
+            ],
+            "explanation": "Duración hasta ahora → presente perfecto (continuo) + 'for two hours'."
+          }
+        },
+        {
+          "key": "u3l2-e14",
+          "type": "dialogue",
+          "payload": {
+            "turns": [
+              {
+                "speaker": "Ana",
+                "text": "Have you finished the report?"
+              },
+              {
+                "speaker": "Tom",
+                "text": ""
+              }
+            ],
+            "blankTurnIndex": 1,
+            "options": [
+              "Not yet. I still need one hour.",
+              "Not still. I yet need one hour.",
+              "Not yet. I don't need one hour."
+            ],
+            "correctIndex": 0,
+            "explanation": "'not yet' + 'still need' es la combinación natural."
+          }
         }
       ],
       "pronunciationHighlights": [
-        { "en": "already", "respellingEs": "olrédi" },
-        { "en": "yet", "respellingEs": "yet" },
-        { "en": "just", "respellingEs": "yast" },
-        { "en": "finished", "respellingEs": "fínisht" },
-        { "en": "arrived", "respellingEs": "eráivd" },
-        { "en": "hasn't", "respellingEs": "jásent" }
+        {
+          "en": "already",
+          "respellingEs": "olrédi"
+        },
+        {
+          "en": "yet",
+          "respellingEs": "yet"
+        },
+        {
+          "en": "just",
+          "respellingEs": "yast"
+        },
+        {
+          "en": "finished",
+          "respellingEs": "fínisht"
+        },
+        {
+          "en": "arrived",
+          "respellingEs": "eráivd"
+        },
+        {
+          "en": "hasn't",
+          "respellingEs": "jásent"
+        },
+        {
+          "en": "still",
+          "respellingEs": "stil"
+        },
+        {
+          "en": "for",
+          "respellingEs": "for"
+        },
+        {
+          "en": "since",
+          "respellingEs": "sins"
+        },
+        {
+          "en": "have you finished",
+          "respellingEs": "hav yu fínisht"
+        }
       ]
     },
     {
       "slug": "perfect-vs-past",
       "title": "Perfecto vs pasado simple",
-      "grammarTopicSlugs": ["present-perfect-vs-past"],
+      "grammarTopicSlugs": [
+        "present-perfect-vs-past"
+      ],
       "teachingCards": [
         {
           "key": "u3l3-t1",
@@ -436,6 +946,70 @@
               "goal": "entertainment"
             }
           ]
+        },
+        {
+          "key": "u3l3-t3",
+          "titleEs": "How long...? — duración hasta ahora",
+          "bodyEs": "Para preguntar cuánto tiempo llevás haciendo algo (que sigue pasando), usamos 'How long have you...?' + presente perfecto. La respuesta usa 'for' + duración o 'since' + inicio.",
+          "examples": [
+            {
+              "en": "How long have you known him?",
+              "es": "¿Hace cuánto lo conocés?",
+              "goal": "general"
+            },
+            {
+              "en": "How long has she worked here?",
+              "es": "¿Hace cuánto trabaja acá?",
+              "goal": "work"
+            },
+            {
+              "en": "How long have you been in this city?",
+              "es": "¿Hace cuánto estás en esta ciudad?",
+              "goal": "travel"
+            },
+            {
+              "en": "How long have you studied English?",
+              "es": "¿Hace cuánto estudiás inglés?",
+              "goal": "study"
+            },
+            {
+              "en": "How long have you liked that band?",
+              "es": "¿Hace cuánto que te gusta esa banda?",
+              "goal": "entertainment"
+            }
+          ]
+        },
+        {
+          "key": "u3l3-t4",
+          "titleEs": "recently vs. fecha específica",
+          "bodyEs": "'recently' (recientemente, en el pasado cercano sin fecha exacta) suele ir con presente perfecto: 'I have moved recently'. Si das fecha exacta, va pasado simple: 'I moved last month'.",
+          "examples": [
+            {
+              "en": "I have started a new hobby recently.",
+              "es": "Empecé un hobby nuevo recientemente.",
+              "goal": "general"
+            },
+            {
+              "en": "She has changed jobs recently.",
+              "es": "Ella cambió de trabajo hace poco.",
+              "goal": "work"
+            },
+            {
+              "en": "We have traveled a lot recently.",
+              "es": "Viajamos mucho últimamente.",
+              "goal": "travel"
+            },
+            {
+              "en": "I have read three books recently.",
+              "es": "Leí tres libros hace poco.",
+              "goal": "study"
+            },
+            {
+              "en": "They have released a new album recently.",
+              "es": "Lanzaron un álbum nuevo hace poco.",
+              "goal": "entertainment"
+            }
+          ]
         }
       ],
       "exercises": [
@@ -444,7 +1018,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "I ___ him yesterday.",
-            "options": ["have met", "met", "meet"],
+            "options": [
+              "have met",
+              "met",
+              "meet"
+            ],
             "correctIndex": 1,
             "explanation": "'yesterday' es un momento definido del pasado → pasado simple: 'I met him yesterday.'"
           }
@@ -454,7 +1032,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "She ___ to Italy last summer.",
-            "options": ["has gone", "went", "goes"],
+            "options": [
+              "has gone",
+              "went",
+              "goes"
+            ],
             "correctIndex": 1,
             "explanation": "'last summer' marca un momento pasado concreto → pasado simple: 'She went to Italy last summer.'"
           }
@@ -463,9 +1045,23 @@
           "key": "u3l3-e3",
           "type": "fill_in_blank",
           "payload": {
-            "segments": ["", " you ever ", " abroad?"],
-            "answers": ["Have", "been"],
-            "acceptable": [["Have"], ["been"]],
+            "segments": [
+              "",
+              " you ever ",
+              " abroad?"
+            ],
+            "answers": [
+              "Have",
+              "been"
+            ],
+            "acceptable": [
+              [
+                "Have"
+              ],
+              [
+                "been"
+              ]
+            ],
             "explanation": "Pregunta de experiencia sin fecha → presente perfecto: 'Have you ever been abroad?'"
           }
         },
@@ -474,7 +1070,11 @@
           "type": "multiple_choice",
           "payload": {
             "prompt": "We ___ to this city in 2010.",
-            "options": ["have moved", "moved", "move"],
+            "options": [
+              "have moved",
+              "moved",
+              "move"
+            ],
             "correctIndex": 1,
             "explanation": "'in 2010' es una fecha concreta → pasado simple: 'We moved to this city in 2010.'"
           }
@@ -483,8 +1083,20 @@
           "key": "u3l3-e5",
           "type": "word_order",
           "payload": {
-            "tokens": ["When", "did", "you", "see", "her"],
-            "correctOrder": [0, 1, 2, 3, 4],
+            "tokens": [
+              "When",
+              "did",
+              "you",
+              "see",
+              "her"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
             "explanation": "'When' pide un momento definido → pregunta en pasado simple con 'did': 'When did you see her?'"
           }
         },
@@ -493,8 +1105,14 @@
           "type": "dialogue",
           "payload": {
             "turns": [
-              { "speaker": "Ana", "text": "Have you ever been to New York?" },
-              { "speaker": "Tom", "text": "" }
+              {
+                "speaker": "Ana",
+                "text": "Have you ever been to New York?"
+              },
+              {
+                "speaker": "Tom",
+                "text": ""
+              }
             ],
             "blankTurnIndex": 1,
             "options": [
@@ -519,15 +1137,157 @@
             ],
             "explanation": "'ayer' es un momento definido → pasado simple: 'I went to the cinema yesterday.' (no 'I have gone')."
           }
+        },
+        {
+          "key": "u3l3-e8",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "How long ___ English?",
+            "options": [
+              "have you studied",
+              "did you study",
+              "do you study"
+            ],
+            "correctIndex": 0,
+            "explanation": "Duración hasta ahora → presente perfecto: 'How long have you studied English?'"
+          }
+        },
+        {
+          "key": "u3l3-e9",
+          "type": "multiple_choice",
+          "payload": {
+            "prompt": "I ___ him at a party last week.",
+            "options": [
+              "met",
+              "have met",
+              "meet"
+            ],
+            "correctIndex": 0,
+            "explanation": "'last week' es fecha específica → pasado simple: 'met'."
+          }
+        },
+        {
+          "key": "u3l3-e10",
+          "type": "fill_in_blank",
+          "payload": {
+            "segments": [
+              "She ",
+              " a new album recently."
+            ],
+            "answers": [
+              "has released"
+            ],
+            "acceptable": [
+              [
+                "has released",
+                "'s released"
+              ]
+            ],
+            "explanation": "'recently' sin fecha exacta → presente perfecto: 'has released'."
+          }
+        },
+        {
+          "key": "u3l3-e11",
+          "type": "word_order",
+          "payload": {
+            "tokens": [
+              "How",
+              "long",
+              "have",
+              "you",
+              "lived",
+              "here"
+            ],
+            "correctOrder": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "explanation": "'How long' + presente perfecto: 'How long have you lived here?'"
+          }
+        },
+        {
+          "key": "u3l3-e12",
+          "type": "translation",
+          "payload": {
+            "prompt": "Trabajo acá desde 2022.",
+            "direction": "es_to_en",
+            "acceptable": [
+              "I have worked here since 2022.",
+              "I've worked here since 2022."
+            ],
+            "explanation": "'desde 2022' → 'since 2022' + presente perfecto."
+          }
+        },
+        {
+          "key": "u3l3-e13",
+          "type": "dialogue",
+          "payload": {
+            "turns": [
+              {
+                "speaker": "Ana",
+                "text": "How long have you known Marta?"
+              },
+              {
+                "speaker": "Tom",
+                "text": ""
+              }
+            ],
+            "blankTurnIndex": 1,
+            "options": [
+              "I've known her since university.",
+              "I knew her since university.",
+              "I know her since university."
+            ],
+            "correctIndex": 0,
+            "explanation": "Respuesta con 'since' → presente perfecto: 'I've known her since university'."
+          }
         }
       ],
       "pronunciationHighlights": [
-        { "en": "yesterday", "respellingEs": "yésterdei" },
-        { "en": "last summer", "respellingEs": "last sámer" },
-        { "en": "abroad", "respellingEs": "ebród" },
-        { "en": "moved", "respellingEs": "muvd" },
-        { "en": "went", "respellingEs": "uént" },
-        { "en": "have you been", "respellingEs": "hav yu bin" }
+        {
+          "en": "yesterday",
+          "respellingEs": "yésterdei"
+        },
+        {
+          "en": "last summer",
+          "respellingEs": "last sámer"
+        },
+        {
+          "en": "abroad",
+          "respellingEs": "ebród"
+        },
+        {
+          "en": "moved",
+          "respellingEs": "muvd"
+        },
+        {
+          "en": "went",
+          "respellingEs": "uént"
+        },
+        {
+          "en": "have you been",
+          "respellingEs": "hav yu bin"
+        },
+        {
+          "en": "how long",
+          "respellingEs": "jau long"
+        },
+        {
+          "en": "recently",
+          "respellingEs": "rísentli"
+        },
+        {
+          "en": "released",
+          "respellingEs": "rilíst"
+        },
+        {
+          "en": "have you known",
+          "respellingEs": "hav yu nóun"
+        }
       ]
     }
   ]
