@@ -2,12 +2,20 @@ import { useQuery } from '@tanstack/react-query';
 import { supabase } from '../lib/supabase';
 import { useAuthStore } from '../stores/auth';
 
+export type LessonProgress = {
+  lessonId: string;
+  lessonTitle: string;
+  sortOrder: number;
+  completed: boolean;
+};
+
 export type UnitProgress = {
   unitId: string;
   unitTitle: string;
   unitSortOrder: number;
   totalLessons: number;
   completedLessons: number;
+  lessons: LessonProgress[];
 };
 
 export type ProgressData = {
@@ -19,10 +27,10 @@ export type ProgressData = {
 async function fetchProgress(userId: string): Promise<ProgressData> {
   if (!supabase) throw new Error('Supabase no configurado');
 
-  // Unidades publicadas con sus lecciones.
+  // Unidades publicadas con sus lecciones (id + título + orden).
   const { data: units, error: unitsErr } = await supabase
     .from('units')
-    .select('id, title, sort_order, lessons(id)')
+    .select('id, title, sort_order, lessons(id, title, sort_order)')
     .eq('is_published', true)
     .order('sort_order', { ascending: true });
   if (unitsErr) throw new Error(unitsErr.message);
@@ -39,8 +47,16 @@ async function fetchProgress(userId: string): Promise<ProgressData> {
   let globalCompleted = 0;
   let globalTotal = 0;
   const perUnit: UnitProgress[] = (units ?? []).map((u) => {
-    const lessons = (u.lessons ?? []) as { id: string }[];
-    const completedLessons = lessons.filter((l) => completedSet.has(l.id)).length;
+    const rawLessons = (u.lessons ?? []) as { id: string; title: string; sort_order: number }[];
+    const lessons: LessonProgress[] = [...rawLessons]
+      .sort((a, b) => a.sort_order - b.sort_order)
+      .map((l) => ({
+        lessonId: l.id,
+        lessonTitle: l.title,
+        sortOrder: l.sort_order,
+        completed: completedSet.has(l.id),
+      }));
+    const completedLessons = lessons.filter((l) => l.completed).length;
     globalCompleted += completedLessons;
     globalTotal += lessons.length;
     return {
@@ -49,6 +65,7 @@ async function fetchProgress(userId: string): Promise<ProgressData> {
       unitSortOrder: u.sort_order,
       totalLessons: lessons.length,
       completedLessons,
+      lessons,
     };
   });
 

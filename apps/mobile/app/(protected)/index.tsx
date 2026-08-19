@@ -129,6 +129,12 @@ export default function Home() {
 
         {/* Nav */}
         <View className="flex-row gap-3 mt-2">
+          <Link href="/lecciones" asChild accessibilityLabel="Todas las lecciones">
+            <Pressable className="flex-1 bg-surface rounded-2xl border-2 border-border py-4 items-center gap-1 active:bg-surface-light ">
+              <Text className="text-xl">📚</Text>
+              <Text className="text-text text-sm font-bold">Lecciones</Text>
+            </Pressable>
+          </Link>
           <Link href="/progress" asChild accessibilityLabel="Mi progreso">
             <Pressable className="flex-1 bg-surface rounded-2xl border-2 border-border py-4 items-center gap-1 active:bg-surface-light ">
               <Text className="text-xl">📊</Text>
