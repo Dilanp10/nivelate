@@ -421,6 +421,94 @@ export type Database = {
           },
         ]
       }
+      unit_exam_attempts: {
+        Row: {
+          correct: number
+          created_at: string
+          idempotency_key: string
+          new_total_xp: number
+          passed: boolean
+          total: number
+          unit_id: string
+          user_id: string
+          xp_awarded: number
+        }
+        Insert: {
+          correct: number
+          created_at?: string
+          idempotency_key: string
+          new_total_xp: number
+          passed: boolean
+          total: number
+          unit_id: string
+          user_id: string
+          xp_awarded: number
+        }
+        Update: {
+          correct?: number
+          created_at?: string
+          idempotency_key?: string
+          new_total_xp?: number
+          passed?: boolean
+          total?: number
+          unit_id?: string
+          user_id?: string
+          xp_awarded?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "unit_exam_attempts_unit_id_fkey"
+            columns: ["unit_id"]
+            isOneToOne: false
+            referencedRelation: "units"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      unit_exam_completions: {
+        Row: {
+          attempts_count: number
+          best_correct: number
+          best_passed: boolean
+          best_total: number
+          first_attempted_at: string
+          first_passed_at: string | null
+          last_attempted_at: string
+          unit_id: string
+          user_id: string
+        }
+        Insert: {
+          attempts_count?: number
+          best_correct?: number
+          best_passed?: boolean
+          best_total?: number
+          first_attempted_at?: string
+          first_passed_at?: string | null
+          last_attempted_at?: string
+          unit_id: string
+          user_id: string
+        }
+        Update: {
+          attempts_count?: number
+          best_correct?: number
+          best_passed?: boolean
+          best_total?: number
+          first_attempted_at?: string
+          first_passed_at?: string | null
+          last_attempted_at?: string
+          unit_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "unit_exam_completions_unit_id_fkey"
+            columns: ["unit_id"]
+            isOneToOne: false
+            referencedRelation: "units"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       units: {
         Row: {
           cefr_level: string
@@ -553,6 +641,22 @@ export type Database = {
           current_streak: number
           new_total_xp: number
           newly_unlocked: string[]
+          xp_awarded: number
+        }[]
+      }
+      complete_unit_exam: {
+        Args: {
+          p_correct: number
+          p_idempotency_key?: string
+          p_total: number
+          p_unit_id: string
+        }
+        Returns: {
+          best_correct: number
+          best_passed: boolean
+          best_total: number
+          new_total_xp: number
+          passed: boolean
           xp_awarded: number
         }[]
       }

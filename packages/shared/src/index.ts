@@ -5,4 +5,5 @@ export * from './player';
 export * from './progress';
 export * from './srs';
 export * from './achievements';
+export * from './exam/pick-exam';
 export type { Database } from './database.types';

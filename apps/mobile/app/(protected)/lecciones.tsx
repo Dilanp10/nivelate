@@ -2,6 +2,7 @@ import { CEFR_LABELS } from '@nivelate/shared';
 import { Link, useRouter } from 'expo-router';
 import { Pressable, Text, View } from 'react-native';
 import { useProgress } from '../../src/hooks/useProgress';
+import { useUnitExamStatuses } from '../../src/hooks/useUnitExamStatuses';
 import { Button } from '../../src/ui/Button';
 import { ScreenLayout } from '../../src/ui/ScreenLayout';
 
@@ -14,6 +15,7 @@ import { ScreenLayout } from '../../src/ui/ScreenLayout';
 export default function LessonsMapScreen() {
   const router = useRouter();
   const progress = useProgress();
+  const examStatuses = useUnitExamStatuses();
 
   // La primera lección incompleta global es la "siguiente" oficial. A partir
   // de ahí, todo lo que venga después se marca con candado.
@@ -61,6 +63,43 @@ export default function LessonsMapScreen() {
                 </View>
 
                 <View className="gap-2">
+                  {(() => {
+                    const st = examStatuses.data?.get(u.unitId);
+                    if (!unitDone) return null;
+                    // Solo mostramos el CTA de examen cuando terminaste todas las lecciones.
+                    const label = st
+                      ? st.bestPassed
+                        ? `Aprobado ${st.bestCorrect}/${st.bestTotal}`
+                        : `Reprobado ${st.bestCorrect}/${st.bestTotal}`
+                      : 'Sin hacer';
+                    const chipTone = !st
+                      ? 'bg-surface-light text-muted'
+                      : st.bestPassed
+                        ? 'bg-brand/15 text-brand'
+                        : 'bg-danger/15 text-danger';
+                    return (
+                      <Link href={`/unit-exam/${u.unitId}`} asChild>
+                        <Pressable
+                          accessibilityRole="button"
+                          accessibilityLabel={`Examen final de ${u.unitTitle}`}
+                          className="flex-row items-center gap-3 rounded-xl px-4 py-3 border-2 border-brand bg-brand/10 active:opacity-80"
+                        >
+                          <View className="w-8 h-8 rounded-full bg-brand/20 items-center justify-center">
+                            <Text className="text-sm">🎓</Text>
+                          </View>
+                          <View className="flex-1">
+                            <Text className="text-brand text-base font-bold">Examen final</Text>
+                            <Text className="text-muted text-xs">10 preguntas · aprobás con 80%</Text>
+                          </View>
+                          <View className={`rounded-full px-2 py-0.5 ${chipTone.split(' ')[0]}`}>
+                            <Text className={`text-[10px] font-bold uppercase tracking-wide ${chipTone.split(' ')[1]}`}>
+                              {label}
+                            </Text>
+                          </View>
+                        </Pressable>
+                      </Link>
+                    );
+                  })()}
                   {u.lessons.map((l) => {
                     const isNext = l.lessonId === nextLessonId;
                     const isAhead = !l.completed && !isNext;
