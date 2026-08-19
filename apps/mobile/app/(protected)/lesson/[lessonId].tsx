@@ -148,7 +148,12 @@ function LessonRunner({
     return (
       <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
         <View className="px-4">
-          <LessonProgress done={progressDone} total={total} onClose={onExit} />
+          <LessonProgress
+            done={progressDone}
+            total={total}
+            onClose={onExit}
+            onBack={cardIndex > 0 ? () => setCardIndex((i) => i - 1) : undefined}
+          />
         </View>
         <TeachingCard
           card={card}
@@ -224,10 +229,24 @@ function LessonRunner({
 
   const explanation = (exercise.payload as PayloadWithExplanation).explanation;
 
+  // Durante "answering" (esperando respuesta), permitir volver a la última
+  // teaching card para releer la regla. El reducer no se toca — al continuar
+  // vuelven al mismo ejercicio con el `answer` local intacto. En feedback ya
+  // comprometieron respuesta, no tiene sentido volver.
+  const canRevisitTeaching =
+    !inFeedback && teachingCards.length > 0 && state.phase === 'answering';
+
   return (
     <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
       <View className="px-4">
-        <LessonProgress done={progressDone} total={total} onClose={onExit} />
+        <LessonProgress
+          done={progressDone}
+          total={total}
+          onClose={onExit}
+          onBack={
+            canRevisitTeaching ? () => setCardIndex(teachingCards.length - 1) : undefined
+          }
+        />
       </View>
 
       <ScrollView

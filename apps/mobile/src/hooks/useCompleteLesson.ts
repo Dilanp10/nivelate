@@ -51,6 +51,11 @@ export function useCompleteLesson() {
       qc.invalidateQueries({ queryKey: ['progress'] });
       // 007: si desbloqueó logros, invalidamos el grid.
       qc.invalidateQueries({ queryKey: ['user-achievements'] });
+      // Sin esto, el dashboard sigue ofreciendo la misma lección durante los
+      // 30s del staleTime de useFirstLesson — porque su cache no se entera de
+      // la nueva completion. Reproducible: completar U1L1 → volver a home →
+      // te sigue diciendo "Presente simple" en vez de "Pasado simple".
+      qc.invalidateQueries({ queryKey: ['first-lesson'] });
     },
   });
 }
