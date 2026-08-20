@@ -1,0 +1,279 @@
+{
+  "slug": "perfect-advanced-past-habits",
+  "title": "Perfecto avanzado y hábitos pasados",
+  "description": "Cómo hablar de acciones prolongadas hasta el presente, hábitos que ya no ocurren y reportar lo que otros dijeron: presente perfecto continuo, used to / would y reported speech básico.",
+  "cefrLevel": "B1",
+  "sortOrder": 10,
+  "isPublished": true,
+  "grammarTopics": [
+    {
+      "slug": "present-perfect-continuous",
+      "title": "Presente perfecto continuo",
+      "explanationEs": "Have/has + been + verbo-ing. Se usa para acciones que empezaron en el pasado y siguen ocurriendo (o acaban de terminar y dejan huella visible). Con 'for' + duración ('for two hours') o 'since' + punto de partida ('since 2020'). Contrasta con el presente perfecto simple, que enfoca en el resultado.",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "used-to-would-past-habits",
+      "title": "used to y would para hábitos pasados",
+      "explanationEs": "'used to + verbo base' para hábitos o estados pasados que ya no son verdad: 'I used to smoke.' Funciona con acciones y con estados. 'would + verbo base' solo para hábitos pasados (acciones repetidas), NO con estados: 'When I was a kid, I would play in the park.' Negativa: 'didn't use to'.",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "reported-speech-basics",
+      "title": "Reported speech básico",
+      "explanationEs": "Al reportar lo que otros dijeron, los tiempos suelen retroceder un paso: presente simple → pasado simple, presente continuo → pasado continuo, will → would, can → could, must → had to. Pronombres y referencias temporales también cambian ('tomorrow' → 'the next day'). Se usa 'said' o 'told + persona'.",
+      "cefrLevel": "B1"
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "present-perfect-continuous",
+      "title": "Presente perfecto continuo",
+      "grammarTopicSlugs": ["present-perfect-continuous"],
+      "teachingCards": [
+        {
+          "key": "u10l1-t1",
+          "titleEs": "Formación: have/has + been + verbo-ing",
+          "bodyEs": "El presente perfecto continuo se forma con 'have/has been + gerundio'. Se usa para acciones que empezaron en el pasado y continúan en el presente, o que acaban de terminar y dejan un efecto visible. Ejemplo: 'I have been working all day' (empecé temprano y sigo, o recién termino y estoy cansado).",
+          "examples": [
+            { "en": "I have been reading this book for a week.", "es": "Hace una semana que estoy leyendo este libro.", "goal": "general" },
+            { "en": "She has been preparing the presentation all morning.", "es": "Ella lleva toda la mañana preparando la presentación.", "goal": "work" },
+            { "en": "We have been driving for six hours.", "es": "Llevamos seis horas manejando.", "goal": "travel" },
+            { "en": "He has been studying English since January.", "es": "Él está estudiando inglés desde enero.", "goal": "study" },
+            { "en": "I have been watching this series all weekend.", "es": "Estuve mirando esta serie todo el fin de semana.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u10l1-t2",
+          "titleEs": "for y since — duración y punto de partida",
+          "bodyEs": "Usamos 'for' + duración de tiempo ('for two hours', 'for a long time') y 'since' + punto de partida ('since Monday', 'since 2020', 'since I was a child'). Ambos van con el presente perfecto (simple o continuo). No los mezcles: 'since 3 hours' es un error clásico.",
+          "examples": [
+            { "en": "I've been living here for five years.", "es": "Hace cinco años que vivo acá.", "goal": "general" },
+            { "en": "She's been working at that company since 2019.", "es": "Ella trabaja en esa empresa desde 2019.", "goal": "work" },
+            { "en": "We've been traveling for three weeks.", "es": "Llevamos tres semanas viajando.", "goal": "travel" },
+            { "en": "He's been learning Spanish since he moved.", "es": "Él está aprendiendo español desde que se mudó.", "goal": "study" },
+            { "en": "They've been playing together for over a decade.", "es": "Tocan juntos hace más de una década.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u10l1-t3",
+          "titleEs": "Continuo vs. simple — el matiz",
+          "bodyEs": "El presente perfecto CONTINUO enfoca la actividad y su duración: 'I've been running' (todavía corro o acabo de terminar). El presente perfecto SIMPLE enfoca el resultado o cantidad: 'I've run 10 km' (cuánto logré). Con verbos de estado (know, love, own) usamos siempre el simple, no el continuo.",
+          "examples": [
+            { "en": "I've been writing emails all morning. (actividad)", "es": "Estuve escribiendo emails toda la mañana. (actividad)", "goal": "work" },
+            { "en": "I've written 20 emails today. (resultado)", "es": "Escribí 20 emails hoy. (resultado)", "goal": "work" },
+            { "en": "We've been visiting museums all week.", "es": "Estuvimos visitando museos toda la semana.", "goal": "travel" },
+            { "en": "We've visited five museums so far.", "es": "Ya visitamos cinco museos.", "goal": "travel" },
+            { "en": "I've known him since 2010. (estado — solo simple)", "es": "Lo conozco desde 2010. (estado — solo simple)", "goal": "general" }
+          ]
+        },
+        {
+          "key": "u10l1-t4",
+          "titleEs": "Efectos visibles del presente",
+          "bodyEs": "Un uso muy natural: describir por qué alguien se ve cansado, sudado, mojado, etc. — usás el continuo para explicar la actividad reciente. 'You look tired! — Yes, I've been working out.' El efecto está en el presente; la causa está en la actividad prolongada.",
+          "examples": [
+            { "en": "You look exhausted! — I've been running.", "es": "¡Te ves agotado! — Estuve corriendo.", "goal": "general" },
+            { "en": "Why are you covered in paint? — I've been painting the kitchen.", "es": "¿Por qué estás lleno de pintura? — Estuve pintando la cocina.", "goal": "general" },
+            { "en": "Sorry I'm late — I've been dealing with a client.", "es": "Perdón que llegue tarde — estuve lidiando con un cliente.", "goal": "work" },
+            { "en": "My feet hurt — I've been walking all day.", "es": "Me duelen los pies — estuve caminando todo el día.", "goal": "travel" },
+            { "en": "My eyes are red — I've been reading for hours.", "es": "Tengo los ojos rojos — estuve leyendo por horas.", "goal": "study" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u10l1-e1", "type": "multiple_choice", "payload": { "prompt": "I ___ English for two years.", "options": ["have been studying", "have studied", "am studying"], "correctIndex": 0, "explanation": "Acción que empezó en el pasado y continúa → presente perfecto continuo con 'for'." } },
+        { "key": "u10l1-e2", "type": "multiple_choice", "payload": { "prompt": "She has been working here ___ 2019.", "options": ["since", "for", "from"], "correctIndex": 0, "explanation": "'since' + punto de partida específico (año, fecha)." } },
+        { "key": "u10l1-e3", "type": "fill_in_blank", "payload": { "segments": ["We ", " (wait) for the bus for 20 minutes."], "answers": ["have been waiting"], "acceptable": [["have been waiting", "'ve been waiting"]], "explanation": "Presente perfecto continuo: have/has been + verbo-ing." } },
+        { "key": "u10l1-e4", "type": "fill_in_blank", "payload": { "segments": ["He's been learning guitar ", " six months."], "answers": ["for"], "acceptable": [["for"]], "explanation": "'for' + duración." } },
+        { "key": "u10l1-e5", "type": "word_order", "payload": { "tokens": ["I", "have", "been", "reading", "this", "book", "for", "a", "week."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8], "explanation": "Presente perfecto continuo + for + duración." } },
+        { "key": "u10l1-e6", "type": "multiple_choice", "payload": { "prompt": "You look tired! — Yes, I ___ all day.", "options": ["have been working", "worked", "am working"], "correctIndex": 0, "explanation": "Efecto visible del presente + causa prolongada → presente perfecto continuo." } },
+        { "key": "u10l1-e7", "type": "translation", "payload": { "prompt": "Hace dos horas que espero.", "direction": "es_to_en", "acceptable": ["I have been waiting for two hours.", "I've been waiting for two hours."], "explanation": "Duración de una acción que sigue → presente perfecto continuo + for." } },
+        { "key": "u10l1-e8", "type": "translation", "payload": { "prompt": "Ella está viviendo acá desde marzo.", "direction": "es_to_en", "acceptable": ["She has been living here since March.", "She's been living here since March."], "explanation": "Acción prolongada + punto de inicio → presente perfecto continuo + since." } },
+        { "key": "u10l1-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "Why are your hands dirty?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["I've been fixing the car.", "I fixed the car.", "I fix the car."], "correctIndex": 0, "explanation": "Efecto visible en el presente + actividad reciente → presente perfecto continuo." } },
+        { "key": "u10l1-e10", "type": "multiple_choice", "payload": { "prompt": "How long ___ you ___ Spanish?", "options": ["have / been learning", "did / learn", "are / learning"], "correctIndex": 0, "explanation": "Pregunta sobre duración de una actividad en curso → 'How long have you been + -ing?'" } },
+        { "key": "u10l1-e11", "type": "fill_in_blank", "payload": { "segments": ["They ", " (train) for the marathon since January."], "answers": ["have been training"], "acceptable": [["have been training", "'ve been training"]], "explanation": "Actividad prolongada desde un punto específico → presente perfecto continuo." } },
+        { "key": "u10l1-e12", "type": "matching", "payload": { "pairs": [{ "left": "have been + verbo-ing", "right": "acción prolongada hasta ahora" }, { "left": "for + duración", "right": "cuánto tiempo llevás" }, { "left": "since + punto de partida", "right": "desde cuándo" }, { "left": "have + participio (simple)", "right": "resultado o cantidad" }], "explanation": "Estructuras y matices del presente perfecto." } },
+        { "key": "u10l1-e13", "type": "listening", "payload": { "audioText": "I've been working on this project since Monday.", "sub": { "kind": "multiple_choice", "prompt": "¿Desde cuándo trabaja en el proyecto?", "options": ["Desde el lunes.", "Hasta el lunes.", "Durante los lunes."], "correctIndex": 0 }, "explanation": "'since Monday' = desde el lunes (punto de partida)." } },
+        { "key": "u10l1-e14", "type": "word_order", "payload": { "tokens": ["She", "has", "been", "living", "in", "Rome", "since", "2020."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7], "explanation": "Presente perfecto continuo + since + año." } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "have been", "respellingEs": "jav bin" },
+        { "en": "has been", "respellingEs": "jas bin" },
+        { "en": "I've been", "respellingEs": "aiv bin" },
+        { "en": "she's been", "respellingEs": "shis bin" },
+        { "en": "for two hours", "respellingEs": "for tu áuers" },
+        { "en": "since 2020", "respellingEs": "sins tuénti tuénti" },
+        { "en": "working", "respellingEs": "wérking" },
+        { "en": "waiting", "respellingEs": "wéiting" },
+        { "en": "how long", "respellingEs": "jau long" },
+        { "en": "all day", "respellingEs": "ool déi" }
+      ]
+    },
+    {
+      "slug": "used-to-would-past-habits",
+      "title": "used to y would — hábitos pasados",
+      "grammarTopicSlugs": ["used-to-would-past-habits"],
+      "teachingCards": [
+        {
+          "key": "u10l2-t1",
+          "titleEs": "used to — hábitos y estados pasados",
+          "bodyEs": "'used to + verbo base' expresa algo que era verdad en el pasado (un hábito o un estado) pero ya no lo es. Es la forma más versátil: funciona con acciones ('I used to smoke') y con estados ('She used to live in Paris'). Se pronuncia 'yúust tu'.",
+          "examples": [
+            { "en": "I used to smoke, but I quit last year.", "es": "Yo fumaba, pero dejé el año pasado.", "goal": "general" },
+            { "en": "She used to work in finance before switching to tech.", "es": "Ella trabajaba en finanzas antes de pasarse a tecnología.", "goal": "work" },
+            { "en": "We used to travel every summer.", "es": "Solíamos viajar todos los veranos.", "goal": "travel" },
+            { "en": "I used to hate English classes in school.", "es": "Antes odiaba las clases de inglés en el colegio.", "goal": "study" },
+            { "en": "There used to be a great cinema on this corner.", "es": "Había un cine buenísimo en esta esquina.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u10l2-t2",
+          "titleEs": "Negativa y preguntas con used to",
+          "bodyEs": "Negativa: 'didn't use to' (¡sin la -d final!). Pregunta: 'Did you use to...?' En ambos casos usás 'use', no 'used'. Es un error muy común escribir 'didn't used to'.",
+          "examples": [
+            { "en": "I didn't use to like coffee.", "es": "Antes no me gustaba el café.", "goal": "general" },
+            { "en": "She didn't use to work weekends.", "es": "Ella antes no trabajaba fines de semana.", "goal": "work" },
+            { "en": "Did you use to travel a lot?", "es": "¿Solías viajar mucho?", "goal": "travel" },
+            { "en": "Did you use to study Latin?", "es": "¿Estudiabas latín?", "goal": "study" },
+            { "en": "We didn't use to watch much TV as kids.", "es": "De chicos no mirábamos mucha TV.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u10l2-t3",
+          "titleEs": "would — hábitos pasados (solo acciones)",
+          "bodyEs": "'would + verbo base' también expresa hábitos pasados, pero SOLO con acciones repetidas, NUNCA con estados. Se usa mucho para evocar recuerdos: 'When I was a kid, we would spend summers at my grandma's.' Con estados usás 'used to' obligatoriamente.",
+          "examples": [
+            { "en": "When we were kids, we would play in the park every afternoon.", "es": "De chicos, jugábamos en el parque todas las tardes.", "goal": "general" },
+            { "en": "My grandfather would tell us amazing stories.", "es": "Mi abuelo nos contaba historias increíbles.", "goal": "general" },
+            { "en": "In my old job, I would arrive at 7 every morning.", "es": "En mi trabajo anterior, llegaba a las 7 todas las mañanas.", "goal": "work" },
+            { "en": "During my student years, I would study in the library on weekends.", "es": "En mis años de estudiante, estudiaba en la biblioteca los fines de semana.", "goal": "study" },
+            { "en": "As teenagers, we would go to that arcade every Friday.", "es": "De adolescentes, íbamos a esa sala de arcades todos los viernes.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u10l2-t4",
+          "titleEs": "Cuidado: would NO funciona con estados",
+          "bodyEs": "Con verbos de estado (be, live, have, know, love, own) usás 'used to', no 'would'. 'I used to live in Madrid' ✓ / 'I would live in Madrid' ✗ (suena a hipotético). Regla práctica: si el verbo describe un estado o una situación permanente, siempre 'used to'.",
+          "examples": [
+            { "en": "I used to live in Madrid. (estado — solo used to)", "es": "Yo vivía en Madrid. (estado — solo used to)", "goal": "general" },
+            { "en": "She used to have long hair. (estado)", "es": "Ella tenía el pelo largo. (estado)", "goal": "general" },
+            { "en": "He used to be very shy. (estado)", "es": "Él era muy tímido. (estado)", "goal": "general" },
+            { "en": "We would go camping every summer. (acción — used to o would)", "es": "Íbamos de camping todos los veranos.", "goal": "travel" },
+            { "en": "I used to know his brother. (estado — solo used to)", "es": "Yo conocía a su hermano. (estado — solo used to)", "goal": "general" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u10l2-e1", "type": "multiple_choice", "payload": { "prompt": "I ___ smoke, but I quit two years ago.", "options": ["used to", "use to", "would"], "correctIndex": 0, "explanation": "Hábito pasado que ya no ocurre → 'used to' (afirmativo con -d)." } },
+        { "key": "u10l2-e2", "type": "multiple_choice", "payload": { "prompt": "___ you ___ play soccer as a kid?", "options": ["Did / use to", "Did / used to", "Do / use to"], "correctIndex": 0, "explanation": "Pregunta con 'used to': 'Did you USE to...?' (sin -d)." } },
+        { "key": "u10l2-e3", "type": "fill_in_blank", "payload": { "segments": ["When I was young, I ", " (play) outside every day."], "answers": ["used to play"], "acceptable": [["used to play", "would play"]], "explanation": "Acción habitual pasada → 'used to' o 'would' (ambos válidos con acciones)." } },
+        { "key": "u10l2-e4", "type": "fill_in_blank", "payload": { "segments": ["She ", " (live) in Buenos Aires before moving here."], "answers": ["used to live"], "acceptable": [["used to live"]], "explanation": "Verbo de estado ('live') → solo 'used to', no 'would'." } },
+        { "key": "u10l2-e5", "type": "word_order", "payload": { "tokens": ["We", "used", "to", "go", "camping", "every", "summer."], "correctOrder": [0, 1, 2, 3, 4, 5, 6], "explanation": "'used to + verbo base' para hábitos pasados." } },
+        { "key": "u10l2-e6", "type": "multiple_choice", "payload": { "prompt": "He ___ love pizza, but now he can't eat gluten.", "options": ["used to", "would", "use to"], "correctIndex": 0, "explanation": "'love' es estado → 'used to' (no 'would')." } },
+        { "key": "u10l2-e7", "type": "translation", "payload": { "prompt": "Antes vivía en Barcelona.", "direction": "es_to_en", "acceptable": ["I used to live in Barcelona.", "I used to live in Barcelona before."], "explanation": "'live' es estado → 'used to live'." } },
+        { "key": "u10l2-e8", "type": "translation", "payload": { "prompt": "¿Solías ir al cine los sábados?", "direction": "es_to_en", "acceptable": ["Did you use to go to the cinema on Saturdays?", "Did you use to go to the movies on Saturdays?"], "explanation": "Pregunta con 'used to': 'Did you USE to...?'" } },
+        { "key": "u10l2-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "Do you still play the piano?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["No, but I used to when I was a kid.", "No, but I would when I was a kid.", "No, but I use to when I was a kid."], "correctIndex": 0, "explanation": "Hábito pasado que ya no ocurre → 'used to' (afirmativo, con -d)." } },
+        { "key": "u10l2-e10", "type": "multiple_choice", "payload": { "prompt": "In high school, we ___ meet at the same café every Friday.", "options": ["would", "used", "use"], "correctIndex": 0, "explanation": "Acción repetida pasada + contexto narrativo → 'would' es natural (también 'used to')." } },
+        { "key": "u10l2-e11", "type": "fill_in_blank", "payload": { "segments": ["I ", " (not / like) vegetables, but now I love them."], "answers": ["didn't use to like"], "acceptable": [["didn't use to like", "did not use to like"]], "explanation": "Negativa: 'didn't use to' (sin -d) + verbo base." } },
+        { "key": "u10l2-e12", "type": "matching", "payload": { "pairs": [{ "left": "used to + base", "right": "hábitos y estados pasados" }, { "left": "would + base", "right": "solo hábitos (acciones)" }, { "left": "didn't use to", "right": "negativa de used to" }, { "left": "Did you use to...?", "right": "pregunta de used to" }], "explanation": "Diferencias clave entre 'used to' y 'would' para el pasado." } },
+        { "key": "u10l2-e13", "type": "listening", "payload": { "audioText": "I used to be very shy when I was a teenager.", "sub": { "kind": "multiple_choice", "prompt": "¿Cómo era de adolescente?", "options": ["Muy tímido.", "Muy sociable.", "Muy enojado."], "correctIndex": 0 }, "explanation": "'used to be shy' = era tímido (estado pasado)." } },
+        { "key": "u10l2-e14", "type": "word_order", "payload": { "tokens": ["My", "dad", "would", "read", "us", "stories", "every", "night."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7], "explanation": "'would + verbo base' para hábitos pasados en un contexto narrativo." } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "used to", "respellingEs": "yúust tu" },
+        { "en": "didn't use to", "respellingEs": "dídent yúus tu" },
+        { "en": "did you use to?", "respellingEs": "did yu yúus tu" },
+        { "en": "would go", "respellingEs": "wud góu" },
+        { "en": "would play", "respellingEs": "wud pléi" },
+        { "en": "I used to live", "respellingEs": "ai yúust tu liv" },
+        { "en": "she used to work", "respellingEs": "shi yúust tu werk" },
+        { "en": "when I was a kid", "respellingEs": "wen ai wos a kid" },
+        { "en": "every summer", "respellingEs": "évri sámer" },
+        { "en": "as a teenager", "respellingEs": "as a tíneidyer" }
+      ]
+    },
+    {
+      "slug": "reported-speech-basics",
+      "title": "Reported speech básico",
+      "grammarTopicSlugs": ["reported-speech-basics"],
+      "teachingCards": [
+        {
+          "key": "u10l3-t1",
+          "titleEs": "Reglas básicas — los tiempos retroceden",
+          "bodyEs": "Cuando reportás lo que alguien dijo, los tiempos suelen retroceder un paso: presente simple → pasado simple; presente continuo → pasado continuo; pasado simple → past perfect; will → would; can → could; must → had to. También cambian los pronombres para tener sentido desde tu perspectiva.",
+          "examples": [
+            { "en": "\"I'm tired.\" → She said (that) she was tired.", "es": "\"Estoy cansada.\" → Ella dijo que estaba cansada.", "goal": "general" },
+            { "en": "\"We need more time.\" → They said they needed more time.", "es": "\"Necesitamos más tiempo.\" → Dijeron que necesitaban más tiempo.", "goal": "work" },
+            { "en": "\"I'm going to Rome.\" → He said he was going to Rome.", "es": "\"Voy a Roma.\" → Dijo que iba a Roma.", "goal": "travel" },
+            { "en": "\"I don't understand.\" → She said she didn't understand.", "es": "\"No entiendo.\" → Dijo que no entendía.", "goal": "study" },
+            { "en": "\"The show starts at 9.\" → He said the show started at 9.", "es": "\"El show empieza a las 9.\" → Dijo que el show empezaba a las 9.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u10l3-t2",
+          "titleEs": "said vs. told — dos formas de reportar",
+          "bodyEs": "'said' se usa sin persona: 'She said (that) she was busy.' 'told' SIEMPRE lleva a la persona a la que se le dijo: 'She told me (that) she was busy.' Nunca digas 'she told that...' (sin persona) ni 'she said me that...' (con persona).",
+          "examples": [
+            { "en": "She said she was going to be late.", "es": "Dijo que iba a llegar tarde.", "goal": "general" },
+            { "en": "He told me he wanted a raise.", "es": "Me dijo que quería un aumento.", "goal": "work" },
+            { "en": "The guide told us to be careful with our bags.", "es": "El guía nos dijo que tuviéramos cuidado con las mochilas.", "goal": "travel" },
+            { "en": "The teacher said the exam was next Friday.", "es": "El profesor dijo que el examen era el próximo viernes.", "goal": "study" },
+            { "en": "She told me she loved the concert.", "es": "Me dijo que le encantó el concierto.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u10l3-t3",
+          "titleEs": "Modales y referencias temporales",
+          "bodyEs": "Los modales cambian: will → would, can → could, may → might, must → had to. Las referencias temporales también: today → that day; tomorrow → the next day; yesterday → the day before; now → then; here → there; this → that.",
+          "examples": [
+            { "en": "\"I'll call you tomorrow.\" → He said he'd call me the next day.", "es": "\"Te llamo mañana.\" → Dijo que me llamaría al día siguiente.", "goal": "general" },
+            { "en": "\"I can't work late today.\" → She said she couldn't work late that day.", "es": "\"No puedo quedarme hasta tarde hoy.\" → Dijo que no podía quedarse hasta tarde ese día.", "goal": "work" },
+            { "en": "\"We must leave now.\" → They said they had to leave then.", "es": "\"Tenemos que irnos ahora.\" → Dijeron que se tenían que ir en ese momento.", "goal": "travel" },
+            { "en": "\"I'll finish this essay tomorrow.\" → He said he'd finish the essay the next day.", "es": "\"Termino este ensayo mañana.\" → Dijo que terminaría el ensayo al día siguiente.", "goal": "study" },
+            { "en": "\"The band may release a new album.\" → She said the band might release a new album.", "es": "\"La banda quizás saque un álbum nuevo.\" → Dijo que la banda quizás sacara un álbum nuevo.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u10l3-t4",
+          "titleEs": "Preguntas reportadas: sin ? y con orden afirmativo",
+          "bodyEs": "Al reportar una pregunta: 1) usás 'asked' (no said/told); 2) sin signo de pregunta; 3) el orden vuelve a afirmativo (sujeto antes del verbo); 4) para preguntas yes/no usás 'if' o 'whether'. Ejemplo: '\"Are you tired?\"' → 'She asked if I was tired.'",
+          "examples": [
+            { "en": "\"Where do you live?\" → He asked where I lived.", "es": "\"¿Dónde vivís?\" → Preguntó dónde vivía.", "goal": "general" },
+            { "en": "\"Can you start on Monday?\" → She asked if I could start on Monday.", "es": "\"¿Podés empezar el lunes?\" → Preguntó si podía empezar el lunes.", "goal": "work" },
+            { "en": "\"Have you been to Japan?\" → He asked if I had been to Japan.", "es": "\"¿Estuviste en Japón?\" → Preguntó si había estado en Japón.", "goal": "travel" },
+            { "en": "\"What are you studying?\" → She asked what I was studying.", "es": "\"¿Qué estás estudiando?\" → Preguntó qué estaba estudiando.", "goal": "study" },
+            { "en": "\"Did you see the movie?\" → He asked if I had seen the movie.", "es": "\"¿Viste la película?\" → Preguntó si había visto la película.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u10l3-e1", "type": "multiple_choice", "payload": { "prompt": "\"I'm tired.\" → She said she ___ tired.", "options": ["was", "is", "has been"], "correctIndex": 0, "explanation": "Presente simple ('am') → pasado simple ('was') al reportar." } },
+        { "key": "u10l3-e2", "type": "multiple_choice", "payload": { "prompt": "\"I'll help you.\" → He said he ___ help me.", "options": ["would", "will", "can"], "correctIndex": 0, "explanation": "'will' → 'would' al reportar." } },
+        { "key": "u10l3-e3", "type": "fill_in_blank", "payload": { "segments": ["\"I don't have time.\" → She said she ", " time."], "answers": ["didn't have"], "acceptable": [["didn't have", "did not have"]], "explanation": "Presente simple negativo → pasado simple negativo." } },
+        { "key": "u10l3-e4", "type": "fill_in_blank", "payload": { "segments": ["\"We can meet tomorrow.\" → They said they ", " meet the next day."], "answers": ["could"], "acceptable": [["could"]], "explanation": "'can' → 'could'. 'Tomorrow' → 'the next day'." } },
+        { "key": "u10l3-e5", "type": "word_order", "payload": { "tokens": ["She", "told", "me", "she", "was", "leaving", "early."], "correctOrder": [0, 1, 2, 3, 4, 5, 6], "explanation": "'told + persona (me) + cláusula reportada'. Continuo → pasado continuo." } },
+        { "key": "u10l3-e6", "type": "multiple_choice", "payload": { "prompt": "\"Do you speak French?\" → He asked ___ I spoke French.", "options": ["if", "that", "what"], "correctIndex": 0, "explanation": "Preguntas yes/no reportadas: 'if' o 'whether'." } },
+        { "key": "u10l3-e7", "type": "translation", "payload": { "prompt": "Ella dijo que estaba cansada.", "direction": "es_to_en", "acceptable": ["She said (that) she was tired.", "She said she was tired.", "She said that she was tired."], "explanation": "'said' sin persona + cláusula con verbo en pasado." } },
+        { "key": "u10l3-e8", "type": "translation", "payload": { "prompt": "Me dijo que llegaría tarde.", "direction": "es_to_en", "acceptable": ["He told me he would be late.", "She told me she would be late.", "He told me he'd be late."], "explanation": "'told me' + cláusula. 'will' → 'would'." } },
+        { "key": "u10l3-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "What did Marta tell you last night?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["She told me she was moving to Chile.", "She said me she is moving to Chile.", "She told that she was moving to Chile."], "correctIndex": 0, "explanation": "'told + persona + cláusula reportada'. Continuo → pasado continuo." } },
+        { "key": "u10l3-e10", "type": "multiple_choice", "payload": { "prompt": "\"Where is the exit?\" → He asked where the exit ___.", "options": ["was", "is", "were"], "correctIndex": 0, "explanation": "Presente simple ('is') → pasado simple ('was'). Orden afirmativo sin '?'." } },
+        { "key": "u10l3-e11", "type": "fill_in_blank", "payload": { "segments": ["He ", " me that he was hungry."], "answers": ["told"], "acceptable": [["told"]], "explanation": "'told + persona' (me)." } },
+        { "key": "u10l3-e12", "type": "matching", "payload": { "pairs": [{ "left": "said", "right": "sin persona" }, { "left": "told + persona", "right": "con persona" }, { "left": "will → would", "right": "cambio de modal" }, { "left": "tomorrow → the next day", "right": "cambio de referencia temporal" }], "explanation": "Reglas clave del reported speech básico." } },
+        { "key": "u10l3-e13", "type": "listening", "payload": { "audioText": "She said she couldn't come to the party.", "sub": { "kind": "multiple_choice", "prompt": "¿Qué dijo ella sobre la fiesta?", "options": ["Que no podía venir.", "Que iba a llegar tarde.", "Que quería venir."], "correctIndex": 0 }, "explanation": "'she couldn't come' = no podía venir." } },
+        { "key": "u10l3-e14", "type": "word_order", "payload": { "tokens": ["He", "asked", "if", "I", "had", "finished", "the", "report."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7], "explanation": "Pregunta yes/no reportada: 'asked if' + orden afirmativo + past perfect (present perfect → past perfect)." } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "she said", "respellingEs": "shi sed" },
+        { "en": "he told me", "respellingEs": "ji tóuld mi" },
+        { "en": "she asked", "respellingEs": "shi askt" },
+        { "en": "would", "respellingEs": "wud" },
+        { "en": "could", "respellingEs": "cud" },
+        { "en": "had to", "respellingEs": "jad tu" },
+        { "en": "the next day", "respellingEs": "de nekst déi" },
+        { "en": "he asked if", "respellingEs": "ji askt if" },
+        { "en": "that she was", "respellingEs": "dat shi wos" },
+        { "en": "he said that", "respellingEs": "ji sed dat" }
+      ]
+    }
+  ]
+}
