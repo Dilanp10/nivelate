@@ -1,0 +1,279 @@
+{
+  "slug": "modals-ability-advice",
+  "title": "Modales: habilidad, consejo y posibilidad",
+  "description": "Cómo usar los modales más útiles: can/could para habilidad, should para consejos, may/might/could para posibilidad.",
+  "cefrLevel": "B1",
+  "sortOrder": 5,
+  "isPublished": true,
+  "grammarTopics": [
+    {
+      "slug": "can-could-ability",
+      "title": "can, could y be able to",
+      "explanationEs": "can = habilidad en presente ('I can swim'). could = habilidad general en pasado ('I could swim when I was five'). be able to = alternativa formal y en tiempos donde can no funciona (futuro, perfecto): 'I'll be able to help', 'I've been able to save money'.",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "should-advice",
+      "title": "should, had better y ought to",
+      "explanationEs": "should = consejo suave, opinión ('You should try'). had better ('d better) = consejo más fuerte, casi advertencia con consecuencia implícita ('You'd better hurry — the train leaves in 5'). ought to = registro formal, muy similar a should.",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "may-might-possibility",
+      "title": "may, might y could (posibilidad)",
+      "explanationEs": "may / might dicen 'quizás sí, quizás no' sobre el futuro o el presente ('It may rain', 'She might be tired'). could también funciona pero con matiz de habilidad + oportunidad ('She could be at the office'). Negativos: may not, might not.",
+      "cefrLevel": "B1"
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "can-could-ability",
+      "title": "can, could y be able to",
+      "grammarTopicSlugs": ["can-could-ability"],
+      "teachingCards": [
+        {
+          "key": "u5l1-t1",
+          "titleEs": "can — habilidad presente",
+          "bodyEs": "Usamos 'can' para decir que sabemos hacer algo. Se combina siempre con verbo base (sin 'to') y no cambia con el sujeto: I can, he can, they can — todos iguales.",
+          "examples": [
+            { "en": "I can swim.", "es": "Sé nadar.", "goal": "general" },
+            { "en": "She can lead the meeting.", "es": "Ella puede liderar la reunión.", "goal": "work" },
+            { "en": "We can speak a little French.", "es": "Sabemos un poco de francés.", "goal": "travel" },
+            { "en": "I can understand English movies.", "es": "Puedo entender películas en inglés.", "goal": "study" },
+            { "en": "He can play three instruments.", "es": "Él sabe tocar tres instrumentos.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u5l1-t2",
+          "titleEs": "can't y preguntas",
+          "bodyEs": "Negativo: can't (contracción de cannot). Pregunta: Can + sujeto + verbo. Muy útil para pedir ayuda o permiso: 'Can you help me?', 'Can I leave early?'",
+          "examples": [
+            { "en": "I can't drive a truck.", "es": "No puedo manejar un camión.", "goal": "general" },
+            { "en": "Can you send me the report?", "es": "¿Me podés mandar el informe?", "goal": "work" },
+            { "en": "She can't come to the trip.", "es": "Ella no puede venir al viaje.", "goal": "travel" },
+            { "en": "Can I ask a question?", "es": "¿Puedo hacer una pregunta?", "goal": "study" },
+            { "en": "We can't hear the music.", "es": "No podemos oír la música.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u5l1-t3",
+          "titleEs": "could — habilidad pasada",
+          "bodyEs": "'could' = 'sabía hacer' en pasado general (algo que podía hacer durante un período). No sirve para acciones puntuales del pasado (para eso: 'was/were able to'). Negativo: couldn't.",
+          "examples": [
+            { "en": "I could read at age five.", "es": "Yo sabía leer a los cinco.", "goal": "general" },
+            { "en": "She could handle any client.", "es": "Ella podía manejar a cualquier cliente.", "goal": "work" },
+            { "en": "We couldn't find a good hotel.", "es": "No pudimos encontrar un buen hotel.", "goal": "travel" },
+            { "en": "I couldn't solve that problem.", "es": "No podía resolver ese problema.", "goal": "study" },
+            { "en": "He could sing very high notes.", "es": "Él podía cantar notas muy agudas.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u5l1-t4",
+          "titleEs": "be able to",
+          "bodyEs": "'be able to' significa lo mismo que can/could pero sirve en tiempos donde can no existe: futuro (will be able to), presente perfecto (have been able to), infinitivo (to be able to). Más formal que can.",
+          "examples": [
+            { "en": "I'll be able to help you tomorrow.", "es": "Voy a poder ayudarte mañana.", "goal": "general" },
+            { "en": "She has been able to save money.", "es": "Ella pudo ahorrar dinero.", "goal": "work" },
+            { "en": "We won't be able to visit Rome.", "es": "No vamos a poder visitar Roma.", "goal": "travel" },
+            { "en": "I want to be able to speak fluently.", "es": "Quiero poder hablar con fluidez.", "goal": "study" },
+            { "en": "They weren't able to finish the show.", "es": "No pudieron terminar el show.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u5l1-e1", "type": "multiple_choice", "payload": { "prompt": "___ you swim?", "options": ["Can", "Do", "Are"], "correctIndex": 0, "explanation": "Habilidad → 'Can you swim?'" } },
+        { "key": "u5l1-e2", "type": "multiple_choice", "payload": { "prompt": "She ___ speak three languages.", "options": ["can", "cans", "is can"], "correctIndex": 0, "explanation": "'can' no cambia con he/she/it: 'She can speak'." } },
+        { "key": "u5l1-e3", "type": "fill_in_blank", "payload": { "segments": ["I ", " swim, but I can dive."], "answers": ["can't"], "acceptable": [["can't", "cannot"]], "explanation": "Negativo: 'can't' o 'cannot'." } },
+        { "key": "u5l1-e4", "type": "fill_in_blank", "payload": { "segments": ["When I was young, I ", " play the guitar."], "answers": ["could"], "explanation": "Habilidad pasada general → 'could'." } },
+        { "key": "u5l1-e5", "type": "word_order", "payload": { "tokens": ["Can", "you", "help", "me", "please"], "correctOrder": [0, 1, 2, 3, 4], "explanation": "Pregunta con can: 'Can you help me please?'" } },
+        { "key": "u5l1-e6", "type": "multiple_choice", "payload": { "prompt": "Next year I ___ speak English better.", "options": ["will be able to", "can", "could"], "correctIndex": 0, "explanation": "Futuro con habilidad → 'will be able to' (can no tiene futuro)." } },
+        { "key": "u5l1-e7", "type": "translation", "payload": { "prompt": "¿Podés ayudarme?", "direction": "es_to_en", "acceptable": ["Can you help me?", "Could you help me?"], "explanation": "Pedido de ayuda: 'Can you help me?' (casual) o 'Could you help me?' (más cortés)." } },
+        { "key": "u5l1-e8", "type": "translation", "payload": { "prompt": "No pude terminar el ejercicio ayer.", "direction": "es_to_en", "acceptable": ["I couldn't finish the exercise yesterday.", "I wasn't able to finish the exercise yesterday."], "explanation": "Pasado negativo de habilidad → 'couldn't' o 'wasn't able to'." } },
+        { "key": "u5l1-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "Do you speak Portuguese?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["I can understand it, but I can't speak it well.", "I understand, but I don't speak.", "I speaking a little."], "correctIndex": 0, "explanation": "Habilidad + limitación → 'I can understand it, but I can't speak it well.'" } },
+        { "key": "u5l1-e10", "type": "multiple_choice", "payload": { "prompt": "She ___ come — she's sick.", "options": ["can't", "doesn't can", "not can"], "correctIndex": 0, "explanation": "Negativo: 'She can't come'." } },
+        { "key": "u5l1-e11", "type": "fill_in_blank", "payload": { "segments": ["I hope I ", " visit Japan someday."], "answers": ["will be able to"], "acceptable": [["will be able to", "'ll be able to"]], "explanation": "Futuro + habilidad → 'will be able to' (can no tiene futuro)." } },
+        { "key": "u5l1-e12", "type": "matching", "payload": { "pairs": [{ "left": "can", "right": "habilidad presente" }, { "left": "could", "right": "habilidad pasada general" }, { "left": "was able to", "right": "logro puntual pasado" }, { "left": "will be able to", "right": "habilidad futura" }], "explanation": "Cada forma tiene su ámbito temporal específico." } },
+        { "key": "u5l1-e13", "type": "listening", "payload": { "audioText": "I can play the piano, but I can't read music.", "sub": { "kind": "multiple_choice", "prompt": "¿Qué sabe y qué no sabe hacer?", "options": ["Sabe tocar piano pero no leer partituras.", "Sabe leer partituras pero no tocar piano.", "No sabe hacer ninguna de las dos."], "correctIndex": 0 }, "explanation": "'can play' + 'can't read music'." } },
+        { "key": "u5l1-e14", "type": "word_order", "payload": { "tokens": ["We", "couldn't", "hear", "the", "speaker"], "correctOrder": [0, 1, 2, 3, 4], "explanation": "Negativo pasado: 'We couldn't hear the speaker'." } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "can", "respellingEs": "kan" },
+        { "en": "can't", "respellingEs": "kant" },
+        { "en": "could", "respellingEs": "kud" },
+        { "en": "couldn't", "respellingEs": "kúdent" },
+        { "en": "be able to", "respellingEs": "bi éibol tu" },
+        { "en": "I can", "respellingEs": "ai kan" },
+        { "en": "I can't", "respellingEs": "ai kant" },
+        { "en": "could you", "respellingEs": "kud yu" },
+        { "en": "I'll be able to", "respellingEs": "áil bi éibol tu" },
+        { "en": "we couldn't hear", "respellingEs": "wi kúdent jíer" }
+      ]
+    },
+    {
+      "slug": "should-advice",
+      "title": "should, had better y ought to",
+      "grammarTopicSlugs": ["should-advice"],
+      "teachingCards": [
+        {
+          "key": "u5l2-t1",
+          "titleEs": "should — consejo suave",
+          "bodyEs": "Usamos 'should' + verbo base para dar consejos u opiniones sobre lo que es una buena idea. No es una orden — es una sugerencia. Forma: sujeto + should + verbo base.",
+          "examples": [
+            { "en": "You should drink more water.", "es": "Deberías tomar más agua.", "goal": "general" },
+            { "en": "You should apply for that job.", "es": "Deberías postularte a ese trabajo.", "goal": "work" },
+            { "en": "You should visit the old town.", "es": "Deberías visitar el casco viejo.", "goal": "travel" },
+            { "en": "You should review the chapter tonight.", "es": "Deberías repasar el capítulo esta noche.", "goal": "study" },
+            { "en": "You should watch that documentary.", "es": "Deberías ver ese documental.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u5l2-t2",
+          "titleEs": "shouldn't — algo a evitar",
+          "bodyEs": "'shouldn't' (should not) = consejo negativo, algo que es mala idea hacer. Muy usado para hábitos poco sanos o decisiones que van a salir mal.",
+          "examples": [
+            { "en": "You shouldn't drink so much coffee.", "es": "No deberías tomar tanto café.", "goal": "general" },
+            { "en": "You shouldn't reply that email angry.", "es": "No deberías responder ese email enojado.", "goal": "work" },
+            { "en": "We shouldn't leave without a map.", "es": "No deberíamos irnos sin un mapa.", "goal": "travel" },
+            { "en": "You shouldn't study only the night before.", "es": "No deberías estudiar solo la noche anterior.", "goal": "study" },
+            { "en": "You shouldn't spoil the ending.", "es": "No deberías spoilear el final.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u5l2-t3",
+          "titleEs": "had better — consejo con urgencia",
+          "bodyEs": "'had better' ('d better) es más fuerte que 'should': implica que hay una consecuencia si no lo hacés. Casi una advertencia amistosa. Negativo: 'd better not.",
+          "examples": [
+            { "en": "You'd better take an umbrella.", "es": "Mejor que lleves un paraguas.", "goal": "general" },
+            { "en": "You'd better finish the report today.", "es": "Mejor que termines el informe hoy.", "goal": "work" },
+            { "en": "We'd better leave now or we'll miss the flight.", "es": "Mejor nos vamos ya o perdemos el vuelo.", "goal": "travel" },
+            { "en": "You'd better not skip the exam.", "es": "Mejor no faltes al examen.", "goal": "study" },
+            { "en": "You'd better book the tickets today.", "es": "Mejor comprás las entradas hoy.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u5l2-t4",
+          "titleEs": "ought to — más formal",
+          "bodyEs": "'ought to' significa lo mismo que 'should' pero suena más formal. Se usa menos en habla cotidiana, más en textos escritos o consejos serios.",
+          "examples": [
+            { "en": "You ought to see a doctor about that cough.", "es": "Deberías ver un médico por esa tos.", "goal": "general" },
+            { "en": "We ought to review the contract carefully.", "es": "Deberíamos revisar el contrato con cuidado.", "goal": "work" },
+            { "en": "Travelers ought to respect local customs.", "es": "Los viajeros deberían respetar las costumbres locales.", "goal": "travel" },
+            { "en": "Students ought to attend class regularly.", "es": "Los estudiantes deberían asistir a clase con regularidad.", "goal": "study" },
+            { "en": "You ought to give that band a chance.", "es": "Deberías darle una chance a esa banda.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u5l2-e1", "type": "multiple_choice", "payload": { "prompt": "You look tired. You ___ get some rest.", "options": ["should", "must", "are"], "correctIndex": 0, "explanation": "Consejo suave → 'should'. 'must' sería una obligación, no un consejo." } },
+        { "key": "u5l2-e2", "type": "multiple_choice", "payload": { "prompt": "You ___ eat so much sugar.", "options": ["shouldn't", "don't should", "not should"], "correctIndex": 0, "explanation": "Negativo de should = 'shouldn't'." } },
+        { "key": "u5l2-e3", "type": "fill_in_blank", "payload": { "segments": ["You ", " see a doctor if the pain doesn't go away."], "answers": ["should"], "acceptable": [["should", "ought to"]], "explanation": "Consejo → 'should' o el más formal 'ought to'." } },
+        { "key": "u5l2-e4", "type": "fill_in_blank", "payload": { "segments": ["We ", " hurry or we'll miss the bus."], "answers": ["'d better"], "acceptable": [["'d better", "had better"]], "explanation": "Consecuencia clara ('missing the bus') → 'had better' es más apropiado que 'should'." } },
+        { "key": "u5l2-e5", "type": "word_order", "payload": { "tokens": ["You", "should", "try", "the", "local", "food"], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "Consejo con should: 'You should try the local food.'" } },
+        { "key": "u5l2-e6", "type": "multiple_choice", "payload": { "prompt": "___ I open the window?", "options": ["Should", "Do", "Am"], "correctIndex": 0, "explanation": "Pregunta pidiendo opinión → 'Should I open the window?'" } },
+        { "key": "u5l2-e7", "type": "translation", "payload": { "prompt": "No deberías trabajar tanto.", "direction": "es_to_en", "acceptable": ["You shouldn't work so much.", "You should not work so much."], "explanation": "Consejo negativo con should → 'You shouldn't work so much.'" } },
+        { "key": "u5l2-e8", "type": "translation", "payload": { "prompt": "Deberías ver un médico.", "direction": "es_to_en", "acceptable": ["You should see a doctor.", "You ought to see a doctor."], "explanation": "Consejo → 'should' (o el más formal 'ought to')." } },
+        { "key": "u5l2-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "I've had a headache all day." }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["You should take some water and rest.", "You take some water and rest.", "You had take some water and rest."], "correctIndex": 0, "explanation": "Consejo espontáneo → 'You should take some water and rest.'" } },
+        { "key": "u5l2-e10", "type": "multiple_choice", "payload": { "prompt": "You ___ not tell anyone this secret.", "options": ["'d better", "shouldn't better", "ought"], "correctIndex": 0, "explanation": "Negativo de 'had better' = 'd better not' — expresa consecuencia si no cumplís." } },
+        { "key": "u5l2-e11", "type": "fill_in_blank", "payload": { "segments": ["You ", " visit the museum. It's amazing."], "answers": ["should"], "acceptable": [["should", "ought to", "'d better"]], "explanation": "Recomendación positiva; 'should' es la forma más natural." } },
+        { "key": "u5l2-e12", "type": "matching", "payload": { "pairs": [{ "left": "should", "right": "consejo suave" }, { "left": "shouldn't", "right": "consejo negativo" }, { "left": "had better", "right": "advertencia con consecuencia" }, { "left": "ought to", "right": "consejo formal" }], "explanation": "Cada modal tiene su matiz de intensidad." } },
+        { "key": "u5l2-e13", "type": "listening", "payload": { "audioText": "You should apply for that scholarship — you have a real chance.", "sub": { "kind": "multiple_choice", "prompt": "¿Qué recomienda?", "options": ["Postularse a la beca.", "Dejar el trabajo.", "Cambiar de país."], "correctIndex": 0 }, "explanation": "'You should apply for that scholarship' = postularse a la beca." } },
+        { "key": "u5l2-e14", "type": "word_order", "payload": { "tokens": ["We", "shouldn't", "leave", "the", "door", "open"], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "Negativo con should: 'We shouldn't leave the door open.'" } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "should", "respellingEs": "shud" },
+        { "en": "shouldn't", "respellingEs": "shúdent" },
+        { "en": "you should", "respellingEs": "yu shud" },
+        { "en": "we shouldn't", "respellingEs": "wi shúdent" },
+        { "en": "had better", "respellingEs": "jad béder" },
+        { "en": "'d better", "respellingEs": "d béder" },
+        { "en": "you'd better", "respellingEs": "yud béder" },
+        { "en": "ought to", "respellingEs": "ót tu" },
+        { "en": "should I open the window?", "respellingEs": "shud ai óupen de wíndou" },
+        { "en": "you should see a doctor", "respellingEs": "yu shud si e dóctor" }
+      ]
+    },
+    {
+      "slug": "may-might-possibility",
+      "title": "may, might y could (posibilidad)",
+      "grammarTopicSlugs": ["may-might-possibility"],
+      "teachingCards": [
+        {
+          "key": "u5l3-t1",
+          "titleEs": "may / might — posibilidad",
+          "bodyEs": "'may' y 'might' expresan posibilidad: quizás sí, quizás no. Las dos formas son casi intercambiables — 'might' suena un poquito menos seguro que 'may', pero en la práctica se usan igual. Forma: sujeto + may/might + verbo base.",
+          "examples": [
+            { "en": "It may rain later.", "es": "Puede que llueva más tarde.", "goal": "general" },
+            { "en": "She might join the meeting.", "es": "Ella tal vez se una a la reunión.", "goal": "work" },
+            { "en": "We may visit Portugal next year.", "es": "Tal vez visitemos Portugal el año que viene.", "goal": "travel" },
+            { "en": "I might take that course online.", "es": "Tal vez tome ese curso online.", "goal": "study" },
+            { "en": "The concert may start late.", "es": "El concierto puede que empiece tarde.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u5l3-t2",
+          "titleEs": "could — posibilidad con matiz",
+          "bodyEs": "'could' también expresa posibilidad, pero con un matiz de 'es una opción, es factible'. Se usa mucho para sugerir alternativas ('We could go by train') o para adivinar ('She could be at home').",
+          "examples": [
+            { "en": "She could be at the office.", "es": "Podría estar en la oficina.", "goal": "general" },
+            { "en": "We could hire more people if needed.", "es": "Podríamos contratar más gente si hace falta.", "goal": "work" },
+            { "en": "We could go by train — it's cheaper.", "es": "Podríamos ir en tren — es más barato.", "goal": "travel" },
+            { "en": "You could ask the teacher for help.", "es": "Podrías pedirle ayuda al profesor.", "goal": "study" },
+            { "en": "We could watch the game at my place.", "es": "Podríamos ver el partido en mi casa.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u5l3-t3",
+          "titleEs": "Negativos: may not / might not",
+          "bodyEs": "El negativo de may/might es may not / might not = 'puede que no'. Cuidado: 'mayn't' NO se usa; 'mightn't' existe pero es raro. En negativas se prefiere 'might not'.",
+          "examples": [
+            { "en": "She might not come tonight.", "es": "Puede que no venga esta noche.", "goal": "general" },
+            { "en": "The client may not accept the offer.", "es": "El cliente puede que no acepte la oferta.", "goal": "work" },
+            { "en": "We might not have time for the museum.", "es": "Puede que no tengamos tiempo para el museo.", "goal": "travel" },
+            { "en": "I may not pass this exam.", "es": "Puede que no apruebe este examen.", "goal": "study" },
+            { "en": "The band might not play the old songs.", "es": "Puede que la banda no toque los temas viejos.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u5l3-t4",
+          "titleEs": "En preguntas: usar could, no might",
+          "bodyEs": "Para preguntar por posibilidad no usamos 'might' (suena raro). Preferimos 'Could...?' o replanteamos con 'Do you think...will/might?'.",
+          "examples": [
+            { "en": "Could this be true?", "es": "¿Podrá ser esto verdad?", "goal": "general" },
+            { "en": "Could she be late for the meeting?", "es": "¿Podrá estar tarde para la reunión?", "goal": "work" },
+            { "en": "Do you think it might rain?", "es": "¿Vos pensás que puede llover?", "goal": "general" },
+            { "en": "Could there be a problem with the flight?", "es": "¿Podrá haber un problema con el vuelo?", "goal": "travel" },
+            { "en": "Do you think we might see them at the concert?", "es": "¿Pensás que podríamos verlos en el concierto?", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u5l3-e1", "type": "multiple_choice", "payload": { "prompt": "It ___ rain — the sky is dark.", "options": ["might", "must", "does"], "correctIndex": 0, "explanation": "Posibilidad → 'might' (o 'may'). 'must' sería certeza deducida, más fuerte." } },
+        { "key": "u5l3-e2", "type": "multiple_choice", "payload": { "prompt": "She ___ be at home right now.", "options": ["could", "cans", "does"], "correctIndex": 0, "explanation": "Posibilidad en presente → 'could' (o 'may/might'): 'She could be at home right now.'" } },
+        { "key": "u5l3-e3", "type": "fill_in_blank", "payload": { "segments": ["We ", " visit Peru next year — we haven't decided yet."], "answers": ["might"], "acceptable": [["might", "may"]], "explanation": "Posibilidad futura sin decidir → 'might' o 'may'." } },
+        { "key": "u5l3-e4", "type": "fill_in_blank", "payload": { "segments": ["He ", " not come to the party."], "answers": ["might"], "acceptable": [["might", "may"]], "explanation": "Posibilidad negativa: 'might not' o 'may not' (evitá 'mayn't')." } },
+        { "key": "u5l3-e5", "type": "word_order", "payload": { "tokens": ["We", "could", "go", "by", "bus"], "correctOrder": [0, 1, 2, 3, 4], "explanation": "Sugerencia con could: 'We could go by bus.'" } },
+        { "key": "u5l3-e6", "type": "multiple_choice", "payload": { "prompt": "___ this be a mistake?", "options": ["Could", "Might", "May"], "correctIndex": 0, "explanation": "Pregunta de posibilidad → 'Could' (might y may suenan raros en preguntas directas)." } },
+        { "key": "u5l3-e7", "type": "translation", "payload": { "prompt": "Tal vez llueva más tarde.", "direction": "es_to_en", "acceptable": ["It might rain later.", "It may rain later."], "explanation": "'tal vez' futuro → 'may' o 'might'." } },
+        { "key": "u5l3-e8", "type": "translation", "payload": { "prompt": "Podríamos ir al cine.", "direction": "es_to_en", "acceptable": ["We could go to the cinema.", "We could go to the movies."], "explanation": "Sugerencia → 'We could go to the cinema.'" } },
+        { "key": "u5l3-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "Where's Marta?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["She might be in the meeting room.", "She is might in the meeting room.", "She could to be in the meeting room."], "correctIndex": 0, "explanation": "Posibilidad → 'She might be in the meeting room.'" } },
+        { "key": "u5l3-e10", "type": "multiple_choice", "payload": { "prompt": "You ___ want to check the weather before you leave.", "options": ["might", "must", "should have"], "correctIndex": 0, "explanation": "'might want to' = tal vez quieras — sugerencia suave, muy común." } },
+        { "key": "u5l3-e11", "type": "fill_in_blank", "payload": { "segments": ["I ", " not be able to attend the class."], "answers": ["may"], "acceptable": [["may", "might"]], "explanation": "Posibilidad negativa futura → 'may not' o 'might not'." } },
+        { "key": "u5l3-e12", "type": "matching", "payload": { "pairs": [{ "left": "may / might", "right": "posibilidad neutra" }, { "left": "could", "right": "opción / adivinanza" }, { "left": "might not", "right": "posibilidad negativa" }, { "left": "Could ...?", "right": "pregunta de posibilidad" }], "explanation": "Los modales de posibilidad se distribuyen así según uso." } },
+        { "key": "u5l3-e13", "type": "listening", "payload": { "audioText": "Marta might come, but I'm not sure yet.", "sub": { "kind": "multiple_choice", "prompt": "¿Cuál es la actitud del que habla sobre si Marta vendrá?", "options": ["No está seguro, es posible.", "Está seguro que va a venir.", "Está seguro que no va a venir."], "correctIndex": 0 }, "explanation": "'might come' + 'not sure yet' → posibilidad sin certeza." } },
+        { "key": "u5l3-e14", "type": "word_order", "payload": { "tokens": ["The", "package", "might", "arrive", "tomorrow"], "correctOrder": [0, 1, 2, 3, 4], "explanation": "Posibilidad futura → 'The package might arrive tomorrow.'" } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "may", "respellingEs": "méi" },
+        { "en": "might", "respellingEs": "máit" },
+        { "en": "could", "respellingEs": "kud" },
+        { "en": "may not", "respellingEs": "méi not" },
+        { "en": "might not", "respellingEs": "máit not" },
+        { "en": "it might rain", "respellingEs": "it máit réin" },
+        { "en": "she might come", "respellingEs": "shi máit kam" },
+        { "en": "we could go", "respellingEs": "wi kud góu" },
+        { "en": "could this be true?", "respellingEs": "kud dis bi tru" },
+        { "en": "you might want to check", "respellingEs": "yu máit want tu chek" }
+      ]
+    }
+  ]
+}
