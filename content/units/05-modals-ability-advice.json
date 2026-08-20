@@ -62,7 +62,7 @@
           "examples": [
             { "en": "I could read at age five.", "es": "Yo sabía leer a los cinco.", "goal": "general" },
             { "en": "She could handle any client.", "es": "Ella podía manejar a cualquier cliente.", "goal": "work" },
-            { "en": "We couldn't find a good hotel.", "es": "No pudimos encontrar un buen hotel.", "goal": "travel" },
+            { "en": "We couldn't speak any German before the trip.", "es": "No sabíamos nada de alemán antes del viaje.", "goal": "travel" },
             { "en": "I couldn't solve that problem.", "es": "No podía resolver ese problema.", "goal": "study" },
             { "en": "He could sing very high notes.", "es": "Él podía cantar notas muy agudas.", "goal": "entertainment" }
           ]
@@ -238,10 +238,10 @@
           "titleEs": "En preguntas: usar could, no might",
           "bodyEs": "Para preguntar por posibilidad no usamos 'might' (suena raro). Preferimos 'Could...?' o replanteamos con 'Do you think...will/might?'.",
           "examples": [
-            { "en": "Could this be true?", "es": "¿Podrá ser esto verdad?", "goal": "general" },
-            { "en": "Could she be late for the meeting?", "es": "¿Podrá estar tarde para la reunión?", "goal": "work" },
+            { "en": "Could this be true?", "es": "¿Puede ser esto verdad?", "goal": "general" },
+            { "en": "Could she be late for the meeting?", "es": "¿Podrá llegar tarde a la reunión?", "goal": "work" },
             { "en": "Do you think it might rain?", "es": "¿Vos pensás que puede llover?", "goal": "general" },
-            { "en": "Could there be a problem with the flight?", "es": "¿Podrá haber un problema con el vuelo?", "goal": "travel" },
+            { "en": "Could there be a problem with the flight?", "es": "¿Puede haber un problema con el vuelo?", "goal": "travel" },
             { "en": "Do you think we might see them at the concert?", "es": "¿Pensás que podríamos verlos en el concierto?", "goal": "entertainment" }
           ]
         }

@@ -85,10 +85,10 @@
           "key": "u4l1-e1",
           "type": "multiple_choice",
           "payload": {
-            "prompt": "Look at those clouds. It ___ rain.",
+            "prompt": "I think it ___ rain later.",
             "options": ["will", "goes to", "is"],
             "correctIndex": 0,
-            "explanation": "'will' es la forma neutra de predicción; también funciona 'is going to rain' con evidencia. Con 'goes to' o 'is' no arma futuro."
+            "explanation": "Predicción sin evidencia visible ('I think') → 'will'. 'goes to' y 'is' no forman futuro."
           }
         },
         {
@@ -508,7 +508,7 @@
           "titleEs": "going to vs presente continuo",
           "bodyEs": "Cuando el plan tiene fecha, hora y lugar comprometidos (un arreglo concreto: reservaste, avisaste al otro), el presente continuo suena más natural. 'going to' es más general.",
           "examples": [
-            { "en": "I'm meeting Sarah at 6 tomorrow. (arreglo fijo)", "es": "Me estoy juntando con Sarah a las 6 mañana. (arreglo fijo)", "goal": "general" },
+            { "en": "I'm meeting Sarah at 6 tomorrow. (arreglo fijo)", "es": "Me junto con Sarah a las 6 mañana. (arreglo fijo)", "goal": "general" },
             { "en": "She's flying to Berlin on Monday. (boleto comprado)", "es": "Ella vuela a Berlín el lunes. (boleto comprado)", "goal": "travel" },
             { "en": "I'm going to look for a new job. (intención general, sin fecha)", "es": "Voy a buscar trabajo nuevo. (intención general, sin fecha)", "goal": "work" },
             { "en": "The class is starting at nine on Wednesday.", "es": "La clase empieza a las nueve el miércoles.", "goal": "study" },
