@@ -1,0 +1,279 @@
+{
+  "slug": "comparisons",
+  "title": "Comparaciones",
+  "description": "Cómo comparar personas, lugares y cosas en inglés: comparativos, superlativos y estructuras de igualdad e inferioridad.",
+  "cefrLevel": "B1",
+  "sortOrder": 8,
+  "isPublished": true,
+  "grammarTopics": [
+    {
+      "slug": "comparative-adjectives",
+      "title": "Comparativos",
+      "explanationEs": "Adjetivos cortos (1-2 sílabas): adjetivo + -er + than (taller than, bigger than). Adjetivos largos (3+ sílabas): more + adjetivo + than (more interesting than). Irregulares: good→better, bad→worse, far→further/farther. Dobles consonantes: big→bigger, hot→hotter.",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "superlative-adjectives",
+      "title": "Superlativos",
+      "explanationEs": "Adjetivos cortos: the + adjetivo + -est (the tallest, the fastest). Adjetivos largos: the most + adjetivo (the most interesting). Irregulares: the best, the worst, the furthest. Se usa 'in' con lugares/grupos ('the tallest in the class') y 'of' con tiempo/cantidad ('the best of all').",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "as-as-less-than",
+      "title": "as...as, less...than y modificadores",
+      "explanationEs": "Igualdad: as + adjetivo + as ('She's as tall as her brother'). Inferioridad: not as + adjetivo + as ('It's not as cheap as I thought') o less + adjetivo + than ('It's less expensive than the other'). Grado: much/a lot/far + comparativo para diferencia grande; a bit/slightly para diferencia pequeña.",
+      "cefrLevel": "B1"
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "comparative-adjectives",
+      "title": "Comparativos",
+      "grammarTopicSlugs": ["comparative-adjectives"],
+      "teachingCards": [
+        {
+          "key": "u8l1-t1",
+          "titleEs": "Comparativos cortos: adjetivo + -er",
+          "bodyEs": "Con adjetivos de 1 sílaba (y algunos de 2), añadimos -er. Si el adjetivo termina en consonante-vocal-consonante, duplicamos la última consonante. Siempre se usa 'than' para completar la comparación.",
+          "examples": [
+            { "en": "My new apartment is bigger than the old one.", "es": "Mi nuevo departamento es más grande que el anterior.", "goal": "general" },
+            { "en": "The morning shift is harder than the afternoon one.", "es": "El turno de la mañana es más duro que el de la tarde.", "goal": "work" },
+            { "en": "This route is shorter than the highway.", "es": "Esta ruta es más corta que la autopista.", "goal": "travel" },
+            { "en": "The second chapter is easier than the first.", "es": "El segundo capítulo es más fácil que el primero.", "goal": "study" },
+            { "en": "The sequel is longer than the original film.", "es": "La secuela es más larga que la película original.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u8l1-t2",
+          "titleEs": "Comparativos largos: more + adjetivo",
+          "bodyEs": "Con adjetivos de 3 o más sílabas (y muchos de 2), usamos 'more' antes del adjetivo. NUNCA combinamos 'more' con '-er'. Ejemplo correcto: 'more interesting' — nunca 'more interestinger'.",
+          "examples": [
+            { "en": "This documentary is more interesting than the last one.", "es": "Este documental es más interesante que el anterior.", "goal": "general" },
+            { "en": "Working from home is more comfortable than commuting.", "es": "Trabajar desde casa es más cómodo que viajar al trabajo.", "goal": "work" },
+            { "en": "Traveling by train is more relaxing than driving.", "es": "Viajar en tren es más relajante que manejar.", "goal": "travel" },
+            { "en": "Online courses are more flexible than in-person classes.", "es": "Los cursos en línea son más flexibles que las clases presenciales.", "goal": "study" },
+            { "en": "Streaming is more convenient than going to the cinema.", "es": "El streaming es más conveniente que ir al cine.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u8l1-t3",
+          "titleEs": "Comparativos irregulares",
+          "bodyEs": "Algunos adjetivos tienen formas comparativas completamente irregulares — hay que memorizarlos. Los más comunes: good → better, bad → worse, far → further (o farther). No siguen ninguna regla de formación.",
+          "examples": [
+            { "en": "This coffee is better than the one from yesterday.", "es": "Este café está mejor que el de ayer.", "goal": "general" },
+            { "en": "The situation is worse than we expected.", "es": "La situación es peor de lo que esperábamos.", "goal": "work" },
+            { "en": "The hotel is further from the city center than I thought.", "es": "El hotel está más lejos del centro de lo que pensaba.", "goal": "travel" },
+            { "en": "My English is better now than it was six months ago.", "es": "Mi inglés está mejor ahora que hace seis meses.", "goal": "study" },
+            { "en": "The live show was much better than the studio recording.", "es": "El show en vivo estuvo mucho mejor que la grabación de estudio.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u8l1-t4",
+          "titleEs": "Comparativos en uso: than + sustantivo o pronombre",
+          "bodyEs": "Después de 'than' podés poner un sustantivo, pronombre o cláusula. Con pronombres: en habla cotidiana se usa el objeto ('taller than me'), en formal se usa el sujeto ('taller than I am'). Ambos son correctos.",
+          "examples": [
+            { "en": "She's taller than me.", "es": "Ella es más alta que yo.", "goal": "general" },
+            { "en": "He earns more than his colleagues.", "es": "Él gana más que sus colegas.", "goal": "work" },
+            { "en": "This city is more crowded than I expected.", "es": "Esta ciudad es más concurrida de lo que esperaba.", "goal": "travel" },
+            { "en": "The exam was harder than I thought.", "es": "El examen fue más difícil de lo que pensé.", "goal": "study" },
+            { "en": "The book is better than the movie.", "es": "El libro es mejor que la película.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u8l1-e1", "type": "multiple_choice", "payload": { "prompt": "Madrid is ___ than my hometown.", "options": ["bigger", "more big", "biggest"], "correctIndex": 0, "explanation": "Adjetivo corto (big → bigger). Se duplica la 'g' porque termina en consonante-vocal-consonante." } },
+        { "key": "u8l1-e2", "type": "multiple_choice", "payload": { "prompt": "This exercise is ___ than the previous one.", "options": ["more difficult", "difficulter", "most difficult"], "correctIndex": 0, "explanation": "Adjetivo largo (3 sílabas) → 'more + adjetivo'." } },
+        { "key": "u8l1-e3", "type": "fill_in_blank", "payload": { "segments": ["She works ", " (hard) than her colleagues."], "answers": ["harder"], "acceptable": [["harder"]], "explanation": "Comparativo corto: hard → harder." } },
+        { "key": "u8l1-e4", "type": "fill_in_blank", "payload": { "segments": ["Today is ", " (hot) than yesterday."], "answers": ["hotter"], "acceptable": [["hotter"]], "explanation": "hot → hotter (se duplica la 't')." } },
+        { "key": "u8l1-e5", "type": "word_order", "payload": { "tokens": ["This", "coffee", "is", "better", "than", "yesterday's."], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "Comparativo irregular: good → better + than." } },
+        { "key": "u8l1-e6", "type": "multiple_choice", "payload": { "prompt": "The traffic today is ___ than usual.", "options": ["worse", "more bad", "worst"], "correctIndex": 0, "explanation": "Comparativo irregular: bad → worse." } },
+        { "key": "u8l1-e7", "type": "translation", "payload": { "prompt": "Mi nuevo trabajo es más interesante que el anterior.", "direction": "es_to_en", "acceptable": ["My new job is more interesting than my previous one.", "My new job is more interesting than the previous one."], "explanation": "Adjetivo largo → 'more interesting than'." } },
+        { "key": "u8l1-e8", "type": "translation", "payload": { "prompt": "Tu idea es mejor que la mía.", "direction": "es_to_en", "acceptable": ["Your idea is better than mine.", "Your idea is better than my idea."], "explanation": "Comparativo irregular: good → better." } },
+        { "key": "u8l1-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "Which laptop should I buy?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["The silver one is faster than the black one.", "The silver one is more fast than the black one.", "The silver one is fastest than the black one."], "correctIndex": 0, "explanation": "Adjetivo corto: fast → faster." } },
+        { "key": "u8l1-e10", "type": "multiple_choice", "payload": { "prompt": "This road is ___ than the highway.", "options": ["more dangerous", "dangerouser", "most dangerous"], "correctIndex": 0, "explanation": "Adjetivo largo → 'more dangerous'." } },
+        { "key": "u8l1-e11", "type": "fill_in_blank", "payload": { "segments": ["He is ", " (good) at chess than his sister."], "answers": ["better"], "acceptable": [["better"]], "explanation": "Comparativo irregular: good → better." } },
+        { "key": "u8l1-e12", "type": "matching", "payload": { "pairs": [{ "left": "tall", "right": "taller" }, { "left": "expensive", "right": "more expensive" }, { "left": "good", "right": "better" }, { "left": "bad", "right": "worse" }], "explanation": "Comparativos: cortos con -er, largos con more, irregulares de memoria." } },
+        { "key": "u8l1-e13", "type": "listening", "payload": { "audioText": "The new office is much bigger than the old one.", "sub": { "kind": "multiple_choice", "prompt": "¿Qué dice sobre la oficina nueva?", "options": ["Es mucho más grande que la anterior.", "Es más pequeña que la anterior.", "Es igual que la anterior."], "correctIndex": 0 }, "explanation": "'much bigger' = mucho más grande (comparativo reforzado)." } },
+        { "key": "u8l1-e14", "type": "word_order", "payload": { "tokens": ["Learning", "English", "is", "easier", "than", "I", "thought."], "correctOrder": [0, 1, 2, 3, 4, 5, 6], "explanation": "Comparativo + than + cláusula: 'easier than I thought'." } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "better", "respellingEs": "béter" },
+        { "en": "worse", "respellingEs": "wers" },
+        { "en": "bigger", "respellingEs": "bíguer" },
+        { "en": "more interesting", "respellingEs": "mor íntresting" },
+        { "en": "than", "respellingEs": "dan" },
+        { "en": "faster", "respellingEs": "fáster" },
+        { "en": "more expensive", "respellingEs": "mor ekspénsiv" },
+        { "en": "further", "respellingEs": "férder" },
+        { "en": "much bigger", "respellingEs": "mach bíguer" },
+        { "en": "easier", "respellingEs": "ísier" }
+      ]
+    },
+    {
+      "slug": "superlative-adjectives",
+      "title": "Superlativos",
+      "grammarTopicSlugs": ["superlative-adjectives"],
+      "teachingCards": [
+        {
+          "key": "u8l2-t1",
+          "titleEs": "Superlativos cortos: the + adjetivo + -est",
+          "bodyEs": "Con adjetivos cortos (1 sílaba y algunos de 2), formamos el superlativo con 'the + adjetivo + -est'. Mismas reglas de ortografía que los comparativos: big→biggest, hot→hottest. Siempre se usa 'the' porque el superlativo es único.",
+          "examples": [
+            { "en": "K2 is the second highest mountain in the world.", "es": "K2 es la segunda montaña más alta del mundo.", "goal": "general" },
+            { "en": "She's the youngest person on the team.", "es": "Ella es la persona más joven del equipo.", "goal": "work" },
+            { "en": "That was the longest flight of my life.", "es": "Ese fue el vuelo más largo de mi vida.", "goal": "travel" },
+            { "en": "This is the hardest exam I've ever taken.", "es": "Este es el examen más difícil que rendí.", "goal": "study" },
+            { "en": "It's the shortest episode of the whole series.", "es": "Es el episodio más corto de toda la serie.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u8l2-t2",
+          "titleEs": "Superlativos largos: the most + adjetivo",
+          "bodyEs": "Con adjetivos de 3 o más sílabas (y muchos de 2), usamos 'the most + adjetivo'. Igual que con los comparativos: NUNCA se combina 'the most' con '-est'.",
+          "examples": [
+            { "en": "This is the most delicious dish I've ever tried.", "es": "Este es el plato más delicioso que probé.", "goal": "general" },
+            { "en": "She's the most experienced candidate we interviewed.", "es": "Ella es la candidata más experimentada que entrevistamos.", "goal": "work" },
+            { "en": "That was the most beautiful sunset I've ever seen.", "es": "Ese fue el atardecer más hermoso que vi.", "goal": "travel" },
+            { "en": "Grammar is the most challenging part of learning English.", "es": "La gramática es la parte más desafiante de aprender inglés.", "goal": "study" },
+            { "en": "It's the most popular song on the album.", "es": "Es la canción más popular del álbum.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u8l2-t3",
+          "titleEs": "Superlativos irregulares",
+          "bodyEs": "Los mismos adjetivos con comparativo irregular también tienen superlativo irregular: good → the best, bad → the worst, far → the furthest (o the farthest). Son los más usados, así que vale la pena memorizarlos.",
+          "examples": [
+            { "en": "That's the best pizza I've ever had.", "es": "Esa es la mejor pizza que comí.", "goal": "general" },
+            { "en": "It was the worst meeting of the year.", "es": "Fue la peor reunión del año.", "goal": "work" },
+            { "en": "Ushuaia is the furthest city from here on our route.", "es": "Ushuaia es la ciudad más lejana en nuestra ruta.", "goal": "travel" },
+            { "en": "That was the best explanation I've ever heard.", "es": "Esa fue la mejor explicación que escuché.", "goal": "study" },
+            { "en": "It's the worst film I've seen this year.", "es": "Es la peor película que vi este año.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u8l2-t4",
+          "titleEs": "In vs of en superlativos",
+          "bodyEs": "Después del superlativo: usamos 'in' para lugares o grupos específicos ('the tallest in the class', 'the best in the city'); usamos 'of' con tiempo, conjuntos o listas ('the best of all', 'the worst of the three', 'the fastest of my career').",
+          "examples": [
+            { "en": "She's the tallest girl in the class.", "es": "Ella es la chica más alta de la clase.", "goal": "general" },
+            { "en": "He's the best salesperson in the company.", "es": "Él es el mejor vendedor de la empresa.", "goal": "work" },
+            { "en": "That's the most visited museum in the country.", "es": "Ese es el museo más visitado del país.", "goal": "travel" },
+            { "en": "It was the most useful course of my career.", "es": "Fue el curso más útil de mi carrera.", "goal": "study" },
+            { "en": "Of all the films she directed, this is the best.", "es": "De todas las películas que dirigió, esta es la mejor.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u8l2-e1", "type": "multiple_choice", "payload": { "prompt": "___ mountain in the world is Everest.", "options": ["The highest", "The most high", "Higher"], "correctIndex": 0, "explanation": "Superlativo corto: high → the highest." } },
+        { "key": "u8l2-e2", "type": "multiple_choice", "payload": { "prompt": "This is ___ movie I've ever seen.", "options": ["the most boring", "the boringest", "most boring"], "correctIndex": 0, "explanation": "Adjetivo largo → 'the most boring'. Siempre va 'the' con el superlativo." } },
+        { "key": "u8l2-e3", "type": "fill_in_blank", "payload": { "segments": ["She's ", " (tall) student in the class."], "answers": ["the tallest"], "acceptable": [["the tallest"]], "explanation": "Superlativo corto: the + tall + -est." } },
+        { "key": "u8l2-e4", "type": "fill_in_blank", "payload": { "segments": ["It was ", " (bad) day of my life."], "answers": ["the worst"], "acceptable": [["the worst"]], "explanation": "Superlativo irregular: bad → the worst." } },
+        { "key": "u8l2-e5", "type": "word_order", "payload": { "tokens": ["This", "is", "the", "most", "beautiful", "city", "I", "have", "ever", "visited."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], "explanation": "Superlativo largo: the most + adjetivo. Con 'I have ever' para intensificar." } },
+        { "key": "u8l2-e6", "type": "multiple_choice", "payload": { "prompt": "What's ___ way to get to the airport?", "options": ["the fastest", "the most fast", "faster"], "correctIndex": 0, "explanation": "Superlativo corto: fast → the fastest." } },
+        { "key": "u8l2-e7", "type": "translation", "payload": { "prompt": "Es el hotel más caro de la ciudad.", "direction": "es_to_en", "acceptable": ["It's the most expensive hotel in the city.", "It is the most expensive hotel in the city."], "explanation": "Superlativo largo + 'in' para lugar." } },
+        { "key": "u8l2-e8", "type": "translation", "payload": { "prompt": "Fue la mejor decisión de mi vida.", "direction": "es_to_en", "acceptable": ["It was the best decision of my life.", "That was the best decision of my life."], "explanation": "Superlativo irregular: good → the best. 'Of my life' con 'of'." } },
+        { "key": "u8l2-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "How was the concert last night?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["Amazing — it was the best concert I've ever been to.", "Amazing — it was the most good concert I've ever been to.", "Amazing — it was the better concert I've ever been to."], "correctIndex": 0, "explanation": "Superlativo irregular: good → the best." } },
+        { "key": "u8l2-e10", "type": "multiple_choice", "payload": { "prompt": "She's ___ person in the office.", "options": ["the kindest", "the most kindest", "kindest"], "correctIndex": 0, "explanation": "Superlativo corto (1 sílaba): kind → the kindest. Siempre con 'the'." } },
+        { "key": "u8l2-e11", "type": "fill_in_blank", "payload": { "segments": ["Which is ", " (far) point from here?"], "answers": ["the furthest"], "acceptable": [["the furthest", "the farthest"]], "explanation": "Superlativo irregular: far → the furthest / the farthest." } },
+        { "key": "u8l2-e12", "type": "matching", "payload": { "pairs": [{ "left": "good", "right": "the best" }, { "left": "bad", "right": "the worst" }, { "left": "far", "right": "the furthest" }, { "left": "comfortable", "right": "the most comfortable" }], "explanation": "Superlativos irregulares y regulares largos." } },
+        { "key": "u8l2-e13", "type": "listening", "payload": { "audioText": "The Nile is the longest river in the world.", "sub": { "kind": "multiple_choice", "prompt": "¿Qué dice sobre el Nilo?", "options": ["Es el río más largo del mundo.", "Es el río más ancho del mundo.", "Es el río más largo de África."], "correctIndex": 0 }, "explanation": "'the longest river in the world' = el río más largo del mundo." } },
+        { "key": "u8l2-e14", "type": "word_order", "payload": { "tokens": ["January", "is", "the", "coldest", "month", "of", "the", "year."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7], "explanation": "Superlativo corto + 'of the year' para periodo de tiempo." } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "the best", "respellingEs": "de best" },
+        { "en": "the worst", "respellingEs": "de werst" },
+        { "en": "the tallest", "respellingEs": "de tóolest" },
+        { "en": "the most expensive", "respellingEs": "de moust ekspénsiv" },
+        { "en": "the fastest", "respellingEs": "de fástest" },
+        { "en": "the furthest", "respellingEs": "de férðest" },
+        { "en": "the most interesting", "respellingEs": "de moust íntresting" },
+        { "en": "the kindest", "respellingEs": "de káindest" },
+        { "en": "in the world", "respellingEs": "in de world" },
+        { "en": "I've ever seen", "respellingEs": "aiv éver siin" }
+      ]
+    },
+    {
+      "slug": "as-as-less-than",
+      "title": "as...as, less...than y modificadores",
+      "grammarTopicSlugs": ["as-as-less-than"],
+      "teachingCards": [
+        {
+          "key": "u8l3-t1",
+          "titleEs": "as...as — igualdad",
+          "bodyEs": "Para decir que dos cosas son iguales en alguna cualidad, usamos 'as + adjetivo + as'. Si van iguales, 'as...as'. Si hay diferencia hacia menos, 'not as...as' (ver próxima card). Muy útil para hacer comparaciones neutras.",
+          "examples": [
+            { "en": "She's as tall as her brother.", "es": "Ella es tan alta como su hermano.", "goal": "general" },
+            { "en": "This project is as important as the previous one.", "es": "Este proyecto es tan importante como el anterior.", "goal": "work" },
+            { "en": "The new hotel is as comfortable as the old one.", "es": "El hotel nuevo es tan cómodo como el anterior.", "goal": "travel" },
+            { "en": "Your essay is as long as mine.", "es": "Tu ensayo es tan largo como el mío.", "goal": "study" },
+            { "en": "The remake is as good as the original.", "es": "El remake es tan bueno como el original.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u8l3-t2",
+          "titleEs": "not as...as — inferioridad (estilo coloquial)",
+          "bodyEs": "'Not as + adjetivo + as' expresa inferioridad de forma indirecta y muy natural: 'This hotel isn't as expensive as that one' (= ese hotel es más caro). Es la forma más común en inglés cotidiano para expresar que algo es inferior.",
+          "examples": [
+            { "en": "This phone isn't as fast as the newer model.", "es": "Este celular no es tan rápido como el modelo nuevo.", "goal": "general" },
+            { "en": "The new manager isn't as strict as the previous one.", "es": "El nuevo jefe no es tan estricto como el anterior.", "goal": "work" },
+            { "en": "The beach isn't as crowded as I expected.", "es": "La playa no está tan llena como esperaba.", "goal": "travel" },
+            { "en": "This grammar topic isn't as difficult as it looks.", "es": "Este tema de gramática no es tan difícil como parece.", "goal": "study" },
+            { "en": "The second season isn't as good as the first.", "es": "La segunda temporada no es tan buena como la primera.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u8l3-t3",
+          "titleEs": "less...than — inferioridad (más formal)",
+          "bodyEs": "'Less + adjetivo + than' expresa lo mismo que 'not as...as' pero suena más formal. 'This route is less direct than the highway' = 'This route isn't as direct as the highway'. Ambas son correctas; 'not as...as' es más frecuente en conversación.",
+          "examples": [
+            { "en": "This option is less expensive than the other one.", "es": "Esta opción es menos cara que la otra.", "goal": "general" },
+            { "en": "The new system is less complicated than the old one.", "es": "El sistema nuevo es menos complicado que el anterior.", "goal": "work" },
+            { "en": "Traveling by bus is less comfortable than by train.", "es": "Viajar en colectivo es menos cómodo que en tren.", "goal": "travel" },
+            { "en": "Written exams are less stressful than oral ones for me.", "es": "Los exámenes escritos son menos estresantes que los orales para mí.", "goal": "study" },
+            { "en": "The book is less exciting than the film adaptation.", "es": "El libro es menos emocionante que la adaptación cinematográfica.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u8l3-t4",
+          "titleEs": "much / a lot / a bit + comparativo",
+          "bodyEs": "Para indicar el grado de diferencia, se añade un modificador antes del comparativo: much / a lot / far = diferencia grande ('much better'); a bit / slightly = diferencia pequeña ('a bit warmer'). También funciona con 'not as...as': 'not nearly as good'.",
+          "examples": [
+            { "en": "The new version is much better than the old one.", "es": "La versión nueva es mucho mejor que la anterior.", "goal": "general" },
+            { "en": "Remote work is a lot more productive for me.", "es": "El trabajo remoto es mucho más productivo para mí.", "goal": "work" },
+            { "en": "The second hotel was far more comfortable.", "es": "El segundo hotel fue mucho más cómodo.", "goal": "travel" },
+            { "en": "The second test was a bit easier than the first.", "es": "El segundo examen fue un poco más fácil que el primero.", "goal": "study" },
+            { "en": "The concert was slightly better than I expected.", "es": "El concierto estuvo un poco mejor de lo que esperaba.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u8l3-e1", "type": "multiple_choice", "payload": { "prompt": "She's ___ talented ___ her sister.", "options": ["as / as", "more / than", "the most / of"], "correctIndex": 0, "explanation": "Igualdad: as + adjetivo + as." } },
+        { "key": "u8l3-e2", "type": "multiple_choice", "payload": { "prompt": "This phone isn't ___ fast ___ the new model.", "options": ["as / as", "more / than", "less / that"], "correctIndex": 0, "explanation": "Inferioridad con 'not as...as': not as fast as." } },
+        { "key": "u8l3-e3", "type": "fill_in_blank", "payload": { "segments": ["My apartment is ", " big ", " yours."], "answers": ["as", "as"], "acceptable": [["as"], ["as"]], "explanation": "Igualdad: as + adjetivo + as." } },
+        { "key": "u8l3-e4", "type": "fill_in_blank", "payload": { "segments": ["The train is ", " comfortable ", " flying."], "answers": ["less", "than"], "acceptable": [["less"], ["than"]], "explanation": "Inferioridad formal: less + adjetivo + than." } },
+        { "key": "u8l3-e5", "type": "word_order", "payload": { "tokens": ["She", "is", "not", "as", "tall", "as", "her", "brother."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7], "explanation": "Inferioridad coloquial: not as + adjetivo + as." } },
+        { "key": "u8l3-e6", "type": "multiple_choice", "payload": { "prompt": "The new version is ___ complicated than the original.", "options": ["less", "fewer", "least"], "correctIndex": 0, "explanation": "'Less' para adjetivos (fewer es para sustantivos contables)." } },
+        { "key": "u8l3-e7", "type": "translation", "payload": { "prompt": "Ella es tan alta como su hermana.", "direction": "es_to_en", "acceptable": ["She's as tall as her sister.", "She is as tall as her sister."], "explanation": "Igualdad: as + tall + as." } },
+        { "key": "u8l3-e8", "type": "translation", "payload": { "prompt": "Este restaurante no es tan caro como el otro.", "direction": "es_to_en", "acceptable": ["This restaurant isn't as expensive as the other one.", "This restaurant is not as expensive as the other one.", "This restaurant isn't as expensive as the other."], "explanation": "Inferioridad: not as expensive as." } },
+        { "key": "u8l3-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "Is the new phone worth the upgrade?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["Definitely — it's much faster and a lot cheaper now.", "Definitely — it's more much faster and a lot cheaper now.", "Definitely — it's much more fast and a lot cheaper now."], "correctIndex": 0, "explanation": "'much faster' = mucho más rápido. Modificador + comparativo corto." } },
+        { "key": "u8l3-e10", "type": "multiple_choice", "payload": { "prompt": "The weather here is ___ better ___ yesterday.", "options": ["much / than", "very / than", "a lot / as"], "correctIndex": 0, "explanation": "'much + comparativo + than' para diferencia grande." } },
+        { "key": "u8l3-e11", "type": "fill_in_blank", "payload": { "segments": ["This task is ", " easier than I expected."], "answers": ["a lot"], "acceptable": [["a lot", "much", "far"]], "explanation": "Modificador de grado: a lot / much / far + comparativo." } },
+        { "key": "u8l3-e12", "type": "matching", "payload": { "pairs": [{ "left": "as...as", "right": "igualdad" }, { "left": "not as...as", "right": "inferioridad (coloquial)" }, { "left": "less...than", "right": "inferioridad (formal)" }, { "left": "much / a lot + comparativo", "right": "diferencia grande" }], "explanation": "Estructuras de comparación: igualdad, inferioridad y grado." } },
+        { "key": "u8l3-e13", "type": "listening", "payload": { "audioText": "The second test was a lot harder than the first one.", "sub": { "kind": "multiple_choice", "prompt": "¿Qué dice sobre el segundo examen?", "options": ["Fue mucho más difícil que el primero.", "Fue más fácil que el primero.", "Fue igual que el primero."], "correctIndex": 0 }, "explanation": "'a lot harder' = mucho más difícil." } },
+        { "key": "u8l3-e14", "type": "word_order", "payload": { "tokens": ["This", "city", "is", "less", "polluted", "than", "the", "capital."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7], "explanation": "Inferioridad formal: less + adjetivo + than." } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "as tall as", "respellingEs": "as tool as" },
+        { "en": "not as good as", "respellingEs": "not as gud as" },
+        { "en": "less expensive", "respellingEs": "les ekspénsiv" },
+        { "en": "less than", "respellingEs": "les dan" },
+        { "en": "much better", "respellingEs": "mach béter" },
+        { "en": "a lot cheaper", "respellingEs": "a lot chíper" },
+        { "en": "far easier", "respellingEs": "far ísier" },
+        { "en": "not as fast as", "respellingEs": "not as fast as" },
+        { "en": "less complicated", "respellingEs": "les komplikéited" },
+        { "en": "a bit warmer", "respellingEs": "a bit wórmer" }
+      ]
+    }
+  ]
+}
