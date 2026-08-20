@@ -1,0 +1,279 @@
+{
+  "slug": "conditionals",
+  "title": "Condicionales",
+  "description": "Cómo expresar hechos generales, situaciones posibles e hipótesis en inglés: zero, first y second conditional.",
+  "cefrLevel": "B1",
+  "sortOrder": 7,
+  "isPublished": true,
+  "grammarTopics": [
+    {
+      "slug": "zero-conditional",
+      "title": "Zero conditional",
+      "explanationEs": "Si + presente simple → presente simple. Expresa hechos siempre verdaderos: leyes de la naturaleza, instrucciones generales, rutinas fijas. 'If you heat ice, it melts.' La cláusula con 'if' puede ir al principio o al final.",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "first-conditional",
+      "title": "First conditional",
+      "explanationEs": "Si + presente simple → will + base verbal. Habla de situaciones reales o posibles en el futuro. 'If it rains, I'll stay home.' En el resultado también se puede usar may/might/should/can. 'Unless' = 'if not'.",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "second-conditional",
+      "title": "Second conditional",
+      "explanationEs": "Si + pasado simple → would + base verbal. Habla de situaciones hipotéticas, irreales o muy poco probables en el presente/futuro. 'If I had more money, I'd travel.' Con 'to be' se prefiere 'were' para todos los sujetos ('If I were you...').",
+      "cefrLevel": "B1"
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "zero-conditional",
+      "title": "Zero conditional",
+      "grammarTopicSlugs": ["zero-conditional"],
+      "teachingCards": [
+        {
+          "key": "u7l1-t1",
+          "titleEs": "Zero conditional — hechos siempre verdaderos",
+          "bodyEs": "Usamos 'if + presente simple, presente simple' para hablar de cosas que siempre son verdad: leyes de la naturaleza, hechos científicos, reglas generales. NO es una predicción — es algo que ocurre siempre que se da la condición.",
+          "examples": [
+            { "en": "If you heat water to 100°C, it boils.", "es": "Si calentás agua a 100°C, hierve.", "goal": "general" },
+            { "en": "If you make a mistake, you apologize and fix it.", "es": "Si cometés un error, te disculpás y lo arreglás.", "goal": "work" },
+            { "en": "If you lose your passport, you go to the embassy.", "es": "Si perdés el pasaporte, vas a la embajada.", "goal": "travel" },
+            { "en": "If you don't understand something, you ask your teacher.", "es": "Si no entendés algo, le preguntás al profesor.", "goal": "study" },
+            { "en": "If you play loud music late, your neighbors complain.", "es": "Si ponés música fuerte de noche, los vecinos se quejan.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u7l1-t2",
+          "titleEs": "Orden flexible — la if-clause puede ir al final",
+          "bodyEs": "La cláusula con 'if' puede ir al principio o al final de la oración. Si va al principio, se usa coma. Si va al final, NO se usa coma. El significado es exactamente el mismo.",
+          "examples": [
+            { "en": "If it rains, the streets get wet.", "es": "Si llueve, las calles se mojan.", "goal": "general" },
+            { "en": "The streets get wet if it rains.", "es": "Las calles se mojan si llueve.", "goal": "general" },
+            { "en": "You get cheaper tickets if you book early.", "es": "Conseguís pasajes más baratos si reservás con anticipación.", "goal": "travel" },
+            { "en": "You improve if you practice every day.", "es": "Mejorás si practicás todos los días.", "goal": "study" },
+            { "en": "If you press that button, the machine starts.", "es": "Si apretás ese botón, la máquina arranca.", "goal": "work" }
+          ]
+        },
+        {
+          "key": "u7l1-t3",
+          "titleEs": "When vs If — ¿cuándo usar cada uno?",
+          "bodyEs": "En el zero conditional, 'when' e 'if' son casi intercambiables. Diferencia sutil: 'when' implica que algo ocurre siempre o regularmente; 'if' puede sugerir que quizás no ocurra. Con hechos científicos o rutinas fijas, 'when' suena más natural.",
+          "examples": [
+            { "en": "When you mix blue and yellow, you get green.", "es": "Cuando mezclás azul y amarillo, obtenés verde.", "goal": "general" },
+            { "en": "When the system crashes, we call IT support.", "es": "Cuando el sistema falla, llamamos al soporte técnico.", "goal": "work" },
+            { "en": "When the weather is clear, you can see the whole city.", "es": "Cuando el clima está despejado, se ve toda la ciudad.", "goal": "travel" },
+            { "en": "When I study late, I always drink coffee.", "es": "Cuando estudio tarde, siempre tomo café.", "goal": "study" },
+            { "en": "When the credits roll, people usually leave.", "es": "Cuando salen los créditos, la gente se suele ir.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u7l1-t4",
+          "titleEs": "Instrucciones con zero conditional",
+          "bodyEs": "El zero conditional es ideal para dar instrucciones claras: 'If/When + condición, hacés X'. Muy común en manuales, recetas y carteles de seguridad. La condición dispara la instrucción de forma automática y universal.",
+          "examples": [
+            { "en": "If the alarm rings, leave the building immediately.", "es": "Si suena la alarma, salí del edificio de inmediato.", "goal": "general" },
+            { "en": "If a client complains, listen first and then offer a solution.", "es": "Si un cliente se queja, escuchá primero y después ofrecé una solución.", "goal": "work" },
+            { "en": "If you miss the last bus, take a taxi to the hotel.", "es": "Si perdés el último colectivo, tomá un taxi al hotel.", "goal": "travel" },
+            { "en": "If you don't know a word, look it up in the dictionary.", "es": "Si no sabés una palabra, buscala en el diccionario.", "goal": "study" },
+            { "en": "If the app crashes, restart your phone.", "es": "Si la aplicación se cuelga, reiniciá el teléfono.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u7l1-e1", "type": "multiple_choice", "payload": { "prompt": "If you touch fire, it ___ you.", "options": ["burns", "burned", "will burn"], "correctIndex": 0, "explanation": "Zero conditional: hecho siempre verdadero → presente simple en ambas cláusulas." } },
+        { "key": "u7l1-e2", "type": "multiple_choice", "payload": { "prompt": "Water turns into ice if the temperature ___ below zero.", "options": ["falls", "fell", "will fall"], "correctIndex": 0, "explanation": "Hecho científico → zero conditional, ambas partes en presente simple." } },
+        { "key": "u7l1-e3", "type": "fill_in_blank", "payload": { "segments": ["If you ", " too much sugar, you get cavities."], "answers": ["eat"], "acceptable": [["eat"]], "explanation": "Zero conditional: condición en presente simple." } },
+        { "key": "u7l1-e4", "type": "fill_in_blank", "payload": { "segments": ["Plants die if they ", " water."], "answers": ["don't get"], "acceptable": [["don't get", "do not get"]], "explanation": "Zero conditional: condición negativa en presente simple." } },
+        { "key": "u7l1-e5", "type": "word_order", "payload": { "tokens": ["If", "it", "rains,", "the", "streets", "get", "wet."], "correctOrder": [0, 1, 2, 3, 4, 5, 6], "explanation": "Zero conditional: if + presente, presente. La coma va después de la if-clause." } },
+        { "key": "u7l1-e6", "type": "multiple_choice", "payload": { "prompt": "If my boss calls and I'm in a meeting, I ___ the call.", "options": ["miss", "missed", "will miss"], "correctIndex": 0, "explanation": "Situación de rutina → zero conditional, presente simple." } },
+        { "key": "u7l1-e7", "type": "translation", "payload": { "prompt": "Si no estudiás, reprobás.", "direction": "es_to_en", "acceptable": ["If you don't study, you fail.", "You fail if you don't study."], "explanation": "Zero conditional: ambas cláusulas en presente simple." } },
+        { "key": "u7l1-e8", "type": "translation", "payload": { "prompt": "Si llueve, la gente usa paraguas.", "direction": "es_to_en", "acceptable": ["If it rains, people use umbrellas.", "People use umbrellas if it rains."], "explanation": "Hecho general → zero conditional." } },
+        { "key": "u7l1-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "What happens if you press that red button?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["If you press it, the alarm rings.", "If you press it, the alarm will ring.", "If you pressed it, the alarm rings."], "correctIndex": 0, "explanation": "Zero conditional: if + presente → presente." } },
+        { "key": "u7l1-e10", "type": "multiple_choice", "payload": { "prompt": "If you heat ice, it ___.", "options": ["melts", "would melt", "melted"], "correctIndex": 0, "explanation": "Ley física → zero conditional, resultado en presente simple." } },
+        { "key": "u7l1-e11", "type": "fill_in_blank", "payload": { "segments": ["When I ", " late, I feel tired the next day."], "answers": ["go to bed"], "acceptable": [["go to bed", "sleep", "stay up"]], "explanation": "Rutina habitual → zero conditional. 'When' es natural para hábitos." } },
+        { "key": "u7l1-e12", "type": "matching", "payload": { "pairs": [{ "left": "If you heat ice, it melts.", "right": "hecho científico" }, { "left": "If the alarm rings, leave.", "right": "instrucción" }, { "left": "When I'm stressed, I eat chocolate.", "right": "rutina personal" }, { "left": "If you mix blue and yellow, you get green.", "right": "resultado siempre igual" }], "explanation": "Todos son zero conditional: condición → resultado universal o habitual." } },
+        { "key": "u7l1-e13", "type": "listening", "payload": { "audioText": "If you heat ice, it melts.", "sub": { "kind": "multiple_choice", "prompt": "¿Qué pasa si calentás hielo?", "options": ["Se derrite.", "Se congela.", "No pasa nada."] , "correctIndex": 0 }, "explanation": "'melt' = derretirse." } },
+        { "key": "u7l1-e14", "type": "word_order", "payload": { "tokens": ["You", "get", "a", "headache", "if", "you", "don't", "drink", "enough", "water."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], "explanation": "Zero conditional con la if-clause al final: sin coma." } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "if", "respellingEs": "if" },
+        { "en": "when", "respellingEs": "uen" },
+        { "en": "it boils", "respellingEs": "it bóils" },
+        { "en": "it melts", "respellingEs": "it melts" },
+        { "en": "you get", "respellingEs": "yu guet" },
+        { "en": "they freeze", "respellingEs": "déi friis" },
+        { "en": "if it rains", "respellingEs": "if it réins" },
+        { "en": "the alarm rings", "respellingEs": "di alárm rings" },
+        { "en": "you feel tired", "respellingEs": "yu fiil táierd" },
+        { "en": "look it up", "respellingEs": "luk it ap" }
+      ]
+    },
+    {
+      "slug": "first-conditional",
+      "title": "First conditional",
+      "grammarTopicSlugs": ["first-conditional"],
+      "teachingCards": [
+        {
+          "key": "u7l2-t1",
+          "titleEs": "First conditional — situaciones reales y posibles",
+          "bodyEs": "El first conditional habla de cosas que pueden pasar en el futuro — son reales o posibles. Estructura: 'If + presente simple, will + verbo base.' La cláusula con if describe la condición; la parte principal describe el resultado probable.",
+          "examples": [
+            { "en": "If it rains tomorrow, I'll stay home.", "es": "Si llueve mañana, me quedo en casa.", "goal": "general" },
+            { "en": "If you finish early, I'll let you go home.", "es": "Si terminás antes, te dejo irte a casa.", "goal": "work" },
+            { "en": "If we arrive on time, we'll catch the train.", "es": "Si llegamos a tiempo, alcanzamos el tren.", "goal": "travel" },
+            { "en": "If you study tonight, you'll pass the test.", "es": "Si estudiás esta noche, vas a aprobar el examen.", "goal": "study" },
+            { "en": "If the movie is good, I'll recommend it to you.", "es": "Si la película es buena, te la recomiendo.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u7l2-t2",
+          "titleEs": "Variaciones: can, may, might, should en el resultado",
+          "bodyEs": "En la cláusula principal podés usar 'can, may, might, should' en lugar de 'will'. Cada uno matiza el grado de certeza o tipo de resultado: will = casi seguro, may/might = posible, can = capacidad/permiso, should = recomendación.",
+          "examples": [
+            { "en": "If you feel sick, you should see a doctor.", "es": "Si te sentís mal, deberías ir al médico.", "goal": "general" },
+            { "en": "If you work hard, you may get a promotion.", "es": "Si trabajás duro, puede que consigas un ascenso.", "goal": "work" },
+            { "en": "If you visit Paris, you can climb the Eiffel Tower.", "es": "Si visitás París, podés subir a la Torre Eiffel.", "goal": "travel" },
+            { "en": "If you do the exercises, you might improve quickly.", "es": "Si hacés los ejercicios, quizás mejorés rápido.", "goal": "study" },
+            { "en": "If you like thrillers, you should watch that series.", "es": "Si te gustan los thrillers, deberías ver esa serie.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u7l2-t3",
+          "titleEs": "Unless = if not",
+          "bodyEs": "'Unless' significa 'excepto si' o 'si no'. Funciona exactamente como 'if not'. 'Unless you hurry, you'll miss the bus' = 'If you don't hurry, you'll miss the bus.' Importante: no usés 'unless' con 'not' — sería doble negativo.",
+          "examples": [
+            { "en": "Unless you call her, she won't know.", "es": "Si no la llamás, no va a saber.", "goal": "general" },
+            { "en": "Unless we cut costs, we'll lose money.", "es": "Si no reducimos costos, vamos a perder dinero.", "goal": "work" },
+            { "en": "Unless you book now, all rooms will be full.", "es": "Si no reservás ahora, todos los cuartos van a estar llenos.", "goal": "travel" },
+            { "en": "Unless you review your notes, you'll forget.", "es": "Si no repasás los apuntes, te vas a olvidar.", "goal": "study" },
+            { "en": "Unless the weather improves, the festival will be canceled.", "es": "Si el tiempo no mejora, el festival va a ser cancelado.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u7l2-t4",
+          "titleEs": "Advertencias, promesas y negociaciones",
+          "bodyEs": "El first conditional es ideal para advertencias ('If you do that, you'll regret it'), promesas ('If you help me, I'll help you back') y negociaciones ('If you lower the price, I'll buy it'). Es muy común en conversaciones cotidianas.",
+          "examples": [
+            { "en": "If you don't apologize, she'll be upset.", "es": "Si no te disculpás, ella se va a enojar.", "goal": "general" },
+            { "en": "If you finish the report today, I'll give you Friday off.", "es": "Si terminás el informe hoy, te doy el viernes libre.", "goal": "work" },
+            { "en": "If you miss the flight, the airline won't refund you.", "es": "Si perdés el vuelo, la aerolínea no te va a reembolsar.", "goal": "travel" },
+            { "en": "If you pass the exam, I'll take you out for dinner.", "es": "Si aprobás el examen, te invito a cenar.", "goal": "study" },
+            { "en": "If you buy two tickets, you'll get one free.", "es": "Si comprás dos entradas, te dan una gratis.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u7l2-e1", "type": "multiple_choice", "payload": { "prompt": "If it ___ tomorrow, we'll cancel the picnic.", "options": ["rains", "rained", "will rain"], "correctIndex": 0, "explanation": "First conditional: la cláusula con 'if' va en presente simple, no en futuro." } },
+        { "key": "u7l2-e2", "type": "multiple_choice", "payload": { "prompt": "You'll feel better if you ___ some rest.", "options": ["get", "got", "will get"], "correctIndex": 0, "explanation": "Después de 'if' en first conditional: presente simple." } },
+        { "key": "u7l2-e3", "type": "fill_in_blank", "payload": { "segments": ["If she calls, I ", " her the news."], "answers": ["'ll tell"], "acceptable": [["'ll tell", "will tell"]], "explanation": "First conditional: resultado → will + verbo base." } },
+        { "key": "u7l2-e4", "type": "fill_in_blank", "payload": { "segments": ["We'll miss the train if we ", " now."], "answers": ["don't leave"], "acceptable": [["don't leave", "do not leave"]], "explanation": "La condición en first conditional va en presente simple, aunque refiera al futuro." } },
+        { "key": "u7l2-e5", "type": "word_order", "payload": { "tokens": ["If", "you", "eat", "well,", "you", "will", "feel", "great."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7], "explanation": "First conditional: if + presente simple, will + base verbal." } },
+        { "key": "u7l2-e6", "type": "multiple_choice", "payload": { "prompt": "___ you practice every day, your English will improve.", "options": ["If", "Unless", "Although"], "correctIndex": 0, "explanation": "'If' introduce la condición positiva." } },
+        { "key": "u7l2-e7", "type": "translation", "payload": { "prompt": "Si estudiás esta noche, vas a aprobar.", "direction": "es_to_en", "acceptable": ["If you study tonight, you'll pass.", "If you study tonight, you will pass."], "explanation": "First conditional: if + presente simple, will + base." } },
+        { "key": "u7l2-e8", "type": "translation", "payload": { "prompt": "A menos que reservés ahora, no va a haber lugar.", "direction": "es_to_en", "acceptable": ["Unless you book now, there won't be any seats.", "Unless you book now, there will be no seats.", "Unless you reserve now, there won't be any seats."], "explanation": "'Unless' = 'if not'; el resultado usa will/won't." } },
+        { "key": "u7l2-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "What if I forget my ID at the door?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["If you forget it, you won't be able to enter.", "If you forgot it, you won't be able to enter.", "If you forget it, you wouldn't be able to enter."], "correctIndex": 0, "explanation": "First conditional: if + presente simple, will (o won't) + base." } },
+        { "key": "u7l2-e10", "type": "multiple_choice", "payload": { "prompt": "If you feel tired, you ___ take a short break.", "options": ["should", "would", "were"], "correctIndex": 0, "explanation": "Recomendación en first conditional → 'should'." } },
+        { "key": "u7l2-e11", "type": "fill_in_blank", "payload": { "segments": ["Unless she ", ", she'll be late."], "answers": ["hurries"], "acceptable": [["hurries", "leaves now", "goes now"]], "explanation": "'Unless she hurries' = 'If she doesn't hurry' → negativo implícito." } },
+        { "key": "u7l2-e12", "type": "matching", "payload": { "pairs": [{ "left": "will", "right": "resultado casi seguro" }, { "left": "might", "right": "resultado posible" }, { "left": "should", "right": "recomendación" }, { "left": "unless", "right": "si no / excepto si" }], "explanation": "Variaciones del resultado en first conditional según el grado de certeza." } },
+        { "key": "u7l2-e13", "type": "listening", "payload": { "audioText": "If you don't call me, I won't know you arrived safely.", "sub": { "kind": "multiple_choice", "prompt": "¿Qué pasa si no la llamás?", "options": ["No va a saber si llegaste bien.", "Te va a llamar ella primero.", "Va a llegar tarde al aeropuerto."], "correctIndex": 0 }, "explanation": "'I won't know you arrived safely' = no va a saber que llegaste sano/a." } },
+        { "key": "u7l2-e14", "type": "word_order", "payload": { "tokens": ["Unless", "you", "hurry,", "we", "will", "miss", "the", "flight."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7], "explanation": "'Unless you hurry' = 'If you don't hurry'. Resultado con 'will + miss'." } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "if it rains", "respellingEs": "if it réins" },
+        { "en": "I'll", "respellingEs": "ail" },
+        { "en": "you'll", "respellingEs": "yul" },
+        { "en": "we'll", "respellingEs": "wil" },
+        { "en": "unless", "respellingEs": "anles" },
+        { "en": "unless you hurry", "respellingEs": "anles yu jóri" },
+        { "en": "you'll miss", "respellingEs": "yul mis" },
+        { "en": "might improve", "respellingEs": "mait imprúuv" },
+        { "en": "you'll feel better", "respellingEs": "yul fiil béter" },
+        { "en": "I won't", "respellingEs": "ai uóunt" }
+      ]
+    },
+    {
+      "slug": "second-conditional",
+      "title": "Second conditional",
+      "grammarTopicSlugs": ["second-conditional"],
+      "teachingCards": [
+        {
+          "key": "u7l3-t1",
+          "titleEs": "Second conditional — situaciones hipotéticas o irreales",
+          "bodyEs": "El second conditional habla de situaciones imaginarias, improbables o irreales en el presente o futuro. Estructura: 'If + pasado simple, would + verbo base.' Aunque usamos pasado en la if-clause, NO hablamos del pasado — hablamos de algo irreal ahora o en el futuro.",
+          "examples": [
+            { "en": "If I had more free time, I would read more.", "es": "Si tuviera más tiempo libre, leería más.", "goal": "general" },
+            { "en": "If I earned more money, I would invest it.", "es": "Si ganara más dinero, lo invertiría.", "goal": "work" },
+            { "en": "If I lived in Paris, I would visit the Louvre every week.", "es": "Si viviera en París, iría al Louvre todas las semanas.", "goal": "travel" },
+            { "en": "If I spoke English perfectly, I would move abroad.", "es": "Si hablara inglés perfecto, me mudaría al extranjero.", "goal": "study" },
+            { "en": "If I were a singer, I would perform in huge concerts.", "es": "Si fuera cantante, daría conciertos enormes.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u7l3-t2",
+          "titleEs": "If I were you — consejos con second conditional",
+          "bodyEs": "Con el verbo 'to be', se prefiere 'were' para todos los sujetos (no 'was') en la escritura formal. 'If I were you, I would...' es una frase muy útil para dar consejos de forma indirecta y cortés. En habla cotidiana 'If I was you' también se escucha.",
+          "examples": [
+            { "en": "If I were you, I would talk to her directly.", "es": "Si yo fuera vos, hablaría con ella directamente.", "goal": "general" },
+            { "en": "If I were the manager, I would change this policy.", "es": "Si yo fuera el jefe, cambiaría esta política.", "goal": "work" },
+            { "en": "If I were in London, I would visit every museum.", "es": "Si estuviera en Londres, visitaría todos los museos.", "goal": "travel" },
+            { "en": "If I were a student again, I would study much harder.", "es": "Si fuera estudiante de nuevo, estudiaría mucho más.", "goal": "study" },
+            { "en": "If she were a director, she would make very different films.", "es": "Si ella fuera directora, haría películas muy distintas.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u7l3-t3",
+          "titleEs": "Could y might en el resultado",
+          "bodyEs": "Como en el first conditional, el resultado puede usar 'could' (capacidad hipotética) o 'might' (posibilidad más incierta) en lugar de 'would'. 'If I had a car, I could drive there' = tendría la capacidad. 'I might go' = quizás lo haría, pero no estoy seguro.",
+          "examples": [
+            { "en": "If I had a car, I could drive to the coast.", "es": "Si tuviera auto, podría manejar hasta la costa.", "goal": "general" },
+            { "en": "If we had more staff, we could take on more projects.", "es": "Si tuviéramos más personal, podríamos aceptar más proyectos.", "goal": "work" },
+            { "en": "If she spoke Spanish, she could communicate much better.", "es": "Si ella hablara español, podría comunicarse mucho mejor.", "goal": "travel" },
+            { "en": "If you started today, you might finish by December.", "es": "Si empezaras hoy, quizás terminarías para diciembre.", "goal": "study" },
+            { "en": "If they had a bigger budget, they could make a better film.", "es": "Si tuvieran más presupuesto, podrían hacer una mejor película.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u7l3-t4",
+          "titleEs": "First vs Second conditional — contraste clave",
+          "bodyEs": "La diferencia es el grado de probabilidad. First conditional = posible o probable ('If I get the job, I'll celebrate' — puede pasar). Second conditional = hipotético o poco probable ('If I got the job, I'd celebrate' — es una fantasía, no espero que pase). El español no distingue igual, así que prestá atención al contexto.",
+          "examples": [
+            { "en": "If I win the lottery, I'll buy a house. (posible)", "es": "Si gano la lotería, compro una casa. (posible)", "goal": "general" },
+            { "en": "If I won the lottery, I'd buy a house. (hipotético)", "es": "Si ganara la lotería, compraría una casa. (hipotético)", "goal": "general" },
+            { "en": "If I get promoted, I'll work even harder. (probable)", "es": "Si me ascendieran, trabajaría más duro. (probable)", "goal": "work" },
+            { "en": "If I got promoted, I would feel amazing. (hipotético)", "es": "Si me ascendieran, me sentiría increíble. (hipotético)", "goal": "work" },
+            { "en": "If I pass this level, I'll start the next one. (probable)", "es": "Si paso este nivel, empiezo el siguiente. (probable)", "goal": "study" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u7l3-e1", "type": "multiple_choice", "payload": { "prompt": "If I ___ rich, I would travel the world.", "options": ["were", "am", "will be"], "correctIndex": 0, "explanation": "Second conditional: if + pasado simple (o 'were' con to be). Situación hipotética." } },
+        { "key": "u7l3-e2", "type": "multiple_choice", "payload": { "prompt": "She would be happier if she ___ a new job.", "options": ["had", "has", "will have"], "correctIndex": 0, "explanation": "Second conditional: pasado simple en la cláusula con if." } },
+        { "key": "u7l3-e3", "type": "fill_in_blank", "payload": { "segments": ["If I were you, I ", " to the manager."], "answers": ["would talk"], "acceptable": [["would talk", "'d talk"]], "explanation": "Consejo con second conditional: 'If I were you, I would...'." } },
+        { "key": "u7l3-e4", "type": "fill_in_blank", "payload": { "segments": ["We ", " the trip more if we had more time."], "answers": ["would enjoy"], "acceptable": [["would enjoy", "'d enjoy"]], "explanation": "Second conditional: would + verbo base en el resultado." } },
+        { "key": "u7l3-e5", "type": "word_order", "payload": { "tokens": ["If", "he", "studied", "more,", "he", "would", "pass", "every", "exam."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8], "explanation": "Second conditional: if + pasado simple, would + base." } },
+        { "key": "u7l3-e6", "type": "multiple_choice", "payload": { "prompt": "If I ___ a superpower, I would choose speed.", "options": ["had", "have", "will have"], "correctIndex": 0, "explanation": "Hipótesis irreal → second conditional, pasado simple en la if-clause." } },
+        { "key": "u7l3-e7", "type": "translation", "payload": { "prompt": "Si tuviera más dinero, viajaría más.", "direction": "es_to_en", "acceptable": ["If I had more money, I would travel more.", "If I had more money, I'd travel more."], "explanation": "Second conditional: hipótesis en presente/futuro." } },
+        { "key": "u7l3-e8", "type": "translation", "payload": { "prompt": "Si yo fuera vos, hablaría con ella.", "direction": "es_to_en", "acceptable": ["If I were you, I would talk to her.", "If I were you, I'd talk to her.", "If I was you, I would talk to her."], "explanation": "'If I were you' → consejo hipotético con second conditional." } },
+        { "key": "u7l3-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "I hate my job — it's so boring." }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["If I were you, I would look for a new one.", "If I am you, I will look for a new one.", "If I were you, I looked for a new one."], "correctIndex": 0, "explanation": "Consejo hipotético: 'If I were you, I would + base'." } },
+        { "key": "u7l3-e10", "type": "multiple_choice", "payload": { "prompt": "If I lived near the beach, I ___ swimming every day.", "options": ["would go", "will go", "go"], "correctIndex": 0, "explanation": "Second conditional: resultado → would + base." } },
+        { "key": "u7l3-e11", "type": "fill_in_blank", "payload": { "segments": ["If she spoke French, she ", " the job more easily."], "answers": ["would get"], "acceptable": [["would get", "'d get", "could get"]], "explanation": "Second conditional: hipótesis sobre habilidad → 'would get' o 'could get'." } },
+        { "key": "u7l3-e12", "type": "matching", "payload": { "pairs": [{ "left": "If + pasado simple", "right": "condición hipotética (second conditional)" }, { "left": "would + base", "right": "resultado hipotético" }, { "left": "If I were you...", "right": "consejo indirecto cortés" }, { "left": "could + base", "right": "capacidad hipotética" }], "explanation": "Estructura y usos del second conditional." } },
+        { "key": "u7l3-e13", "type": "listening", "payload": { "audioText": "If I had a bigger apartment, I would invite more people.", "sub": { "kind": "multiple_choice", "prompt": "¿Por qué no invita a más gente?", "options": ["Su apartamento es chico.", "No tiene amigos.", "No le gusta recibir visitas."], "correctIndex": 0 }, "explanation": "'If I had a bigger apartment' implica que ahora su apartamento es chico." } },
+        { "key": "u7l3-e14", "type": "word_order", "payload": { "tokens": ["If", "I", "were", "the", "president,", "I", "would", "change", "many", "things."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], "explanation": "Second conditional con 'were': 'If I were the president, I would change many things.'" } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "if I had", "respellingEs": "if ai jad" },
+        { "en": "I would", "respellingEs": "ai wud" },
+        { "en": "I'd", "respellingEs": "aid" },
+        { "en": "if I were you", "respellingEs": "if ai wer yu" },
+        { "en": "would go", "respellingEs": "wud góu" },
+        { "en": "could travel", "respellingEs": "cud trável" },
+        { "en": "might feel", "respellingEs": "mait fiil" },
+        { "en": "if she spoke", "respellingEs": "if shi spóuk" },
+        { "en": "I would travel", "respellingEs": "ai wud trável" },
+        { "en": "he would pass", "respellingEs": "ji wud paas" }
+      ]
+    }
+  ]
+}
