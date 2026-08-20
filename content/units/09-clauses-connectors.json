@@ -1,0 +1,279 @@
+{
+  "slug": "clauses-connectors",
+  "title": "Cláusulas y conexiones",
+  "description": "Cómo conectar ideas y dar más información en inglés: cláusulas relativas (who, which, that), conectores (because, so, although, however) y gerundio vs. infinitivo.",
+  "cefrLevel": "B1",
+  "sortOrder": 9,
+  "isPublished": true,
+  "grammarTopics": [
+    {
+      "slug": "relative-clauses-defining",
+      "title": "Cláusulas relativas definitorias",
+      "explanationEs": "Se usan para dar información esencial sobre un sustantivo. 'who' para personas, 'which' para cosas, 'that' para cualquiera de los dos (más común en habla cotidiana). 'where' para lugares, 'when' para tiempos. Sin comas: 'The man who lives next door is a doctor.' Si el relativo es objeto, se puede omitir: 'The book (that) I read was great.'",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "connectors-because-so-although",
+      "title": "Conectores: because, so, although, however",
+      "explanationEs": "because (porque, causa) + cláusula: 'I stayed home because I was tired.' so (así que, consecuencia): 'I was tired, so I stayed home.' although (aunque, contraste) + cláusula: 'Although it rained, we went out.' however (sin embargo, contraste) va solo, con coma: 'It rained. However, we went out.' Cada uno tiene su posición y puntuación.",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "gerund-vs-infinitive",
+      "title": "Gerundio vs. infinitivo",
+      "explanationEs": "Algunos verbos llevan gerundio (-ing): enjoy, like, love, hate, finish, avoid, mind. Otros llevan infinitivo (to + base): want, need, decide, hope, plan, promise, offer. Después de preposiciones siempre va -ing: 'good at cooking'. Algunos aceptan ambos con cambio de significado: 'stop smoking' (dejar de fumar) vs. 'stop to smoke' (parar para fumar).",
+      "cefrLevel": "B1"
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "relative-clauses-defining",
+      "title": "Cláusulas relativas: who, which, that",
+      "grammarTopicSlugs": ["relative-clauses-defining"],
+      "teachingCards": [
+        {
+          "key": "u9l1-t1",
+          "titleEs": "who — para personas",
+          "bodyEs": "'who' introduce información esencial sobre una persona. Va inmediatamente después del sustantivo al que se refiere, sin coma. 'The doctor who treated me was very kind.' En habla cotidiana se puede reemplazar por 'that', pero 'who' suena más natural con personas.",
+          "examples": [
+            { "en": "The man who lives upstairs plays piano every night.", "es": "El hombre que vive arriba toca el piano todas las noches.", "goal": "general" },
+            { "en": "The colleague who trained me was very patient.", "es": "El colega que me entrenó fue muy paciente.", "goal": "work" },
+            { "en": "The guide who showed us the city spoke perfect English.", "es": "El guía que nos mostró la ciudad hablaba inglés perfecto.", "goal": "travel" },
+            { "en": "The teacher who explains best is Mr. Smith.", "es": "El profesor que mejor explica es el Sr. Smith.", "goal": "study" },
+            { "en": "The singer who performed last night was amazing.", "es": "El cantante que se presentó anoche estuvo increíble.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u9l1-t2",
+          "titleEs": "which y that — para cosas",
+          "bodyEs": "'which' y 'that' introducen información esencial sobre cosas o animales. 'That' es más común en habla cotidiana; 'which' suena más formal. Ambos funcionan igual: 'The book that/which I bought is fascinating.'",
+          "examples": [
+            { "en": "The house that we bought needs some repairs.", "es": "La casa que compramos necesita algunas reparaciones.", "goal": "general" },
+            { "en": "The report which I submitted was well received.", "es": "El informe que entregué fue bien recibido.", "goal": "work" },
+            { "en": "The train that goes to Paris leaves at 8.", "es": "El tren que va a París sale a las 8.", "goal": "travel" },
+            { "en": "The app that I use for vocabulary is great.", "es": "La aplicación que uso para vocabulario es genial.", "goal": "study" },
+            { "en": "The film which won the award was a comedy.", "es": "La película que ganó el premio fue una comedia.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u9l1-t3",
+          "titleEs": "where y when — lugares y tiempos",
+          "bodyEs": "'where' introduce información sobre un lugar; 'when' sobre un momento o período. 'The café where we met is closed now.' 'I remember the day when we first spoke.' Son cláusulas definitorias, sin coma.",
+          "examples": [
+            { "en": "The park where I run every morning is beautiful.", "es": "El parque donde corro cada mañana es hermoso.", "goal": "general" },
+            { "en": "The office where I work is downtown.", "es": "La oficina donde trabajo está en el centro.", "goal": "work" },
+            { "en": "The hotel where we stayed had an amazing view.", "es": "El hotel donde nos quedamos tenía una vista increíble.", "goal": "travel" },
+            { "en": "I remember the day when I passed my final exam.", "es": "Recuerdo el día en que aprobé mi examen final.", "goal": "study" },
+            { "en": "That's the theater where the play premiered.", "es": "Ese es el teatro donde se estrenó la obra.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u9l1-t4",
+          "titleEs": "Omisión del pronombre relativo (objeto)",
+          "bodyEs": "Cuando el pronombre relativo funciona como objeto de la cláusula, se puede omitir. 'The book (that) I read...' — 'that' es objeto de 'read', así que se puede eliminar. Pero si es sujeto, NO se puede omitir: 'The book that inspired me...' → aquí 'that' es sujeto, no se puede eliminar.",
+          "examples": [
+            { "en": "The movie (that) we watched last night was terrible.", "es": "La película que vimos anoche fue terrible.", "goal": "general" },
+            { "en": "The client (who) I called never answered.", "es": "El cliente al que llamé nunca respondió.", "goal": "work" },
+            { "en": "The city (that) we visited had wonderful food.", "es": "La ciudad que visitamos tenía comida maravillosa.", "goal": "travel" },
+            { "en": "The book (which) I recommended is out of stock.", "es": "El libro que recomendé está agotado.", "goal": "study" },
+            { "en": "The song (that) I heard on the radio is by Taylor Swift.", "es": "La canción que escuché en la radio es de Taylor Swift.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u9l1-e1", "type": "multiple_choice", "payload": { "prompt": "The woman ___ lives next door is a doctor.", "options": ["who", "which", "where"], "correctIndex": 0, "explanation": "Para personas: 'who'. 'Which' es para cosas." } },
+        { "key": "u9l1-e2", "type": "multiple_choice", "payload": { "prompt": "The book ___ I'm reading is very interesting.", "options": ["that", "who", "where"], "correctIndex": 0, "explanation": "Para cosas: 'that' o 'which'. 'That' es más frecuente en habla cotidiana." } },
+        { "key": "u9l1-e3", "type": "fill_in_blank", "payload": { "segments": ["The hotel ", " we stayed had a great pool."], "answers": ["where"], "acceptable": [["where"]], "explanation": "Para lugares: 'where'." } },
+        { "key": "u9l1-e4", "type": "fill_in_blank", "payload": { "segments": ["I remember the day ", " I met her."], "answers": ["when"], "acceptable": [["when"]], "explanation": "Para momentos: 'when'." } },
+        { "key": "u9l1-e5", "type": "word_order", "payload": { "tokens": ["The", "man", "who", "called", "me", "yesterday", "is", "my", "cousin."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8], "explanation": "Cláusula relativa con 'who' + sujeto de la cláusula (called me)." } },
+        { "key": "u9l1-e6", "type": "multiple_choice", "payload": { "prompt": "That's the restaurant ___ we had dinner last night.", "options": ["where", "which", "who"], "correctIndex": 0, "explanation": "'Restaurant' es un lugar → 'where'." } },
+        { "key": "u9l1-e7", "type": "translation", "payload": { "prompt": "El chico que ganó el premio es mi vecino.", "direction": "es_to_en", "acceptable": ["The boy who won the prize is my neighbor.", "The boy that won the prize is my neighbor."], "explanation": "Persona + relativo como sujeto → 'who' (o 'that')." } },
+        { "key": "u9l1-e8", "type": "translation", "payload": { "prompt": "La película que vi ayer fue aburrida.", "direction": "es_to_en", "acceptable": ["The movie that I saw yesterday was boring.", "The movie I saw yesterday was boring.", "The movie which I saw yesterday was boring."], "explanation": "Relativo como objeto de 'saw' → se puede omitir." } },
+        { "key": "u9l1-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "Do you remember the woman we met at the party?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["Yes, the one who works at the museum.", "Yes, the one which works at the museum.", "Yes, the one where works at the museum."], "correctIndex": 0, "explanation": "Persona → 'who'." } },
+        { "key": "u9l1-e10", "type": "multiple_choice", "payload": { "prompt": "The car ___ I bought last year is very reliable.", "options": ["that", "who", "when"], "correctIndex": 0, "explanation": "Para cosas: 'that' (o 'which'). 'Who' es para personas." } },
+        { "key": "u9l1-e11", "type": "fill_in_blank", "payload": { "segments": ["The teacher ", " taught me English is retiring this year."], "answers": ["who"], "acceptable": [["who", "that"]], "explanation": "Persona + sujeto de la cláusula → 'who' o 'that'." } },
+        { "key": "u9l1-e12", "type": "matching", "payload": { "pairs": [{ "left": "who", "right": "personas" }, { "left": "which", "right": "cosas (formal)" }, { "left": "that", "right": "personas o cosas (informal)" }, { "left": "where", "right": "lugares" }], "explanation": "Cada pronombre relativo tiene su uso principal." } },
+        { "key": "u9l1-e13", "type": "listening", "payload": { "audioText": "The friend who called me yesterday is coming for dinner.", "sub": { "kind": "multiple_choice", "prompt": "¿Quién viene a cenar?", "options": ["El amigo que llamó ayer.", "El amigo que va a llamar.", "Un amigo que vino ayer."], "correctIndex": 0 }, "explanation": "'The friend who called me yesterday' identifica a un amigo específico." } },
+        { "key": "u9l1-e14", "type": "word_order", "payload": { "tokens": ["This", "is", "the", "café", "where", "we", "first", "met."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7], "explanation": "Cláusula relativa con 'where' para el lugar." } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "who", "respellingEs": "juu" },
+        { "en": "which", "respellingEs": "wich" },
+        { "en": "that", "respellingEs": "dat" },
+        { "en": "where", "respellingEs": "wéar" },
+        { "en": "when", "respellingEs": "uen" },
+        { "en": "the man who", "respellingEs": "de man juu" },
+        { "en": "the book that", "respellingEs": "de buk dat" },
+        { "en": "the place where", "respellingEs": "de pléis wéar" },
+        { "en": "the day when", "respellingEs": "de déi uen" },
+        { "en": "which I like", "respellingEs": "wich ai láik" }
+      ]
+    },
+    {
+      "slug": "connectors-because-so-although",
+      "title": "Conectores: because, so, although, however",
+      "grammarTopicSlugs": ["connectors-because-so-although"],
+      "teachingCards": [
+        {
+          "key": "u9l2-t1",
+          "titleEs": "because — expresa causa",
+          "bodyEs": "'because' introduce la razón o causa de algo. Se usa antes de una cláusula (sujeto + verbo). Puede ir al principio o al medio de la oración. Al principio: coma después de la cláusula. Al medio: sin coma.",
+          "examples": [
+            { "en": "I stayed home because I was tired.", "es": "Me quedé en casa porque estaba cansado.", "goal": "general" },
+            { "en": "The meeting was postponed because the boss got sick.", "es": "La reunión se pospuso porque el jefe se enfermó.", "goal": "work" },
+            { "en": "We missed the flight because there was traffic.", "es": "Perdimos el vuelo porque había tráfico.", "goal": "travel" },
+            { "en": "I need more time because the topic is complex.", "es": "Necesito más tiempo porque el tema es complejo.", "goal": "study" },
+            { "en": "I love that band because their lyrics are meaningful.", "es": "Amo esa banda porque sus letras tienen significado.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u9l2-t2",
+          "titleEs": "so — expresa consecuencia",
+          "bodyEs": "'so' introduce el resultado o consecuencia de algo. Va entre las dos cláusulas, precedido de coma. Estructura: 'Cláusula 1, so cláusula 2.' Es como decir 'por lo tanto' o 'así que'.",
+          "examples": [
+            { "en": "I was tired, so I went to bed early.", "es": "Estaba cansado, así que me fui a dormir temprano.", "goal": "general" },
+            { "en": "The client didn't reply, so we moved on.", "es": "El cliente no respondió, así que seguimos adelante.", "goal": "work" },
+            { "en": "The bus was late, so we took a taxi.", "es": "El colectivo llegó tarde, así que tomamos un taxi.", "goal": "travel" },
+            { "en": "I failed the first test, so I studied harder for the second.", "es": "Reprobé el primer examen, así que estudié más para el segundo.", "goal": "study" },
+            { "en": "The tickets sold out, so we watched at home.", "es": "Las entradas se agotaron, así que miramos en casa.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u9l2-t3",
+          "titleEs": "although — expresa contraste",
+          "bodyEs": "'although' introduce una idea que contrasta con la principal. Va antes de una cláusula (sujeto + verbo). Es equivalente a 'even though' o 'though'. Al principio: coma después de la cláusula. Al medio: sin coma. NO se usa con 'but' en la misma oración.",
+          "examples": [
+            { "en": "Although it was raining, we went for a walk.", "es": "Aunque estaba lloviendo, salimos a caminar.", "goal": "general" },
+            { "en": "Although the salary is low, I love my job.", "es": "Aunque el sueldo es bajo, amo mi trabajo.", "goal": "work" },
+            { "en": "We visited the museum although we were tired.", "es": "Visitamos el museo aunque estábamos cansados.", "goal": "travel" },
+            { "en": "Although the course is difficult, I'm enjoying it.", "es": "Aunque el curso es difícil, lo estoy disfrutando.", "goal": "study" },
+            { "en": "I finished the series although the ending was bad.", "es": "Terminé la serie aunque el final fue malo.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u9l2-t4",
+          "titleEs": "however — contraste entre oraciones",
+          "bodyEs": "'however' es un adverbio de contraste. Se usa al principio de una oración nueva (o después de punto y coma), seguido de coma. NO conecta cláusulas como 'although' — conecta oraciones separadas. Es más formal que 'but'.",
+          "examples": [
+            { "en": "It was raining. However, we decided to go out.", "es": "Estaba lloviendo. Sin embargo, decidimos salir.", "goal": "general" },
+            { "en": "The project is ambitious. However, we have limited resources.", "es": "El proyecto es ambicioso. Sin embargo, tenemos recursos limitados.", "goal": "work" },
+            { "en": "The flight was long. However, the service was excellent.", "es": "El vuelo fue largo. Sin embargo, el servicio fue excelente.", "goal": "travel" },
+            { "en": "I studied a lot. However, I didn't pass the exam.", "es": "Estudié mucho. Sin embargo, no aprobé el examen.", "goal": "study" },
+            { "en": "The film was praised. However, I didn't enjoy it.", "es": "La película fue elogiada. Sin embargo, no la disfruté.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u9l2-e1", "type": "multiple_choice", "payload": { "prompt": "I didn't go to the party ___ I was sick.", "options": ["because", "so", "however"], "correctIndex": 0, "explanation": "'because' introduce la causa." } },
+        { "key": "u9l2-e2", "type": "multiple_choice", "payload": { "prompt": "It was late, ___ I took a taxi.", "options": ["so", "because", "although"], "correctIndex": 0, "explanation": "'so' introduce la consecuencia." } },
+        { "key": "u9l2-e3", "type": "fill_in_blank", "payload": { "segments": ["", " it was raining, we went for a walk."], "answers": ["Although"], "acceptable": [["Although", "Even though", "Though"]], "explanation": "Contraste al principio con cláusula → 'Although'." } },
+        { "key": "u9l2-e4", "type": "fill_in_blank", "payload": { "segments": ["The meeting was long. ", ", it was very productive."], "answers": ["However"], "acceptable": [["However"]], "explanation": "'However' inicia oración nueva, seguido de coma." } },
+        { "key": "u9l2-e5", "type": "word_order", "payload": { "tokens": ["I", "was", "tired,", "so", "I", "went", "to", "bed", "early."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8], "explanation": "'so' + consecuencia, precedido de coma." } },
+        { "key": "u9l2-e6", "type": "multiple_choice", "payload": { "prompt": "___ the salary was low, she accepted the job.", "options": ["Although", "Because", "So"], "correctIndex": 0, "explanation": "Contraste (sueldo bajo vs. aceptar) → 'Although'." } },
+        { "key": "u9l2-e7", "type": "translation", "payload": { "prompt": "No fui a trabajar porque estaba enfermo.", "direction": "es_to_en", "acceptable": ["I didn't go to work because I was sick.", "I didn't go to work because I was ill."], "explanation": "'because' + causa." } },
+        { "key": "u9l2-e8", "type": "translation", "payload": { "prompt": "Estaba cansado, así que me fui a dormir.", "direction": "es_to_en", "acceptable": ["I was tired, so I went to bed.", "I was tired, so I went to sleep."], "explanation": "'so' + consecuencia." } },
+        { "key": "u9l2-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "Why didn't you come to the meeting?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["Because I had a doctor's appointment.", "So I had a doctor's appointment.", "However I had a doctor's appointment."], "correctIndex": 0, "explanation": "Respuesta a 'why?' → 'because' + razón." } },
+        { "key": "u9l2-e10", "type": "multiple_choice", "payload": { "prompt": "The film got great reviews. ___, it wasn't very popular.", "options": ["However", "Because", "So"], "correctIndex": 0, "explanation": "Contraste entre oraciones separadas → 'However' con coma." } },
+        { "key": "u9l2-e11", "type": "fill_in_blank", "payload": { "segments": ["I love this city ", " it's very safe."], "answers": ["because"], "acceptable": [["because"]], "explanation": "'because' + razón, al medio, sin coma." } },
+        { "key": "u9l2-e12", "type": "matching", "payload": { "pairs": [{ "left": "because", "right": "causa" }, { "left": "so", "right": "consecuencia" }, { "left": "although", "right": "contraste + cláusula" }, { "left": "however", "right": "contraste entre oraciones" }], "explanation": "Cada conector tiene su función y posición." } },
+        { "key": "u9l2-e13", "type": "listening", "payload": { "audioText": "Although I was tired, I finished the report.", "sub": { "kind": "multiple_choice", "prompt": "¿Qué hizo a pesar del cansancio?", "options": ["Terminó el informe.", "Se fue a dormir.", "Empezó un informe nuevo."], "correctIndex": 0 }, "explanation": "'Although I was tired, I finished the report' = a pesar del cansancio, terminó el informe." } },
+        { "key": "u9l2-e14", "type": "word_order", "payload": { "tokens": ["Although", "it", "was", "cold,", "we", "went", "swimming."], "correctOrder": [0, 1, 2, 3, 4, 5, 6], "explanation": "'Although' + cláusula, coma, cláusula principal." } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "because", "respellingEs": "bicós" },
+        { "en": "so", "respellingEs": "sóu" },
+        { "en": "although", "respellingEs": "ooldóu" },
+        { "en": "however", "respellingEs": "jauéver" },
+        { "en": "even though", "respellingEs": "íven dóu" },
+        { "en": "though", "respellingEs": "dóu" },
+        { "en": "because I was", "respellingEs": "bicós ai wos" },
+        { "en": "so I went", "respellingEs": "sóu ai went" },
+        { "en": "although it rained", "respellingEs": "ooldóu it réind" },
+        { "en": "however, we tried", "respellingEs": "jauéver wi tráid" }
+      ]
+    },
+    {
+      "slug": "gerund-vs-infinitive",
+      "title": "Gerundio vs. infinitivo",
+      "grammarTopicSlugs": ["gerund-vs-infinitive"],
+      "teachingCards": [
+        {
+          "key": "u9l3-t1",
+          "titleEs": "Verbos que llevan gerundio (-ing)",
+          "bodyEs": "Algunos verbos siempre van seguidos de gerundio (verbo + -ing): enjoy, like, love, hate, finish, avoid, mind, suggest, keep, practice. Ejemplo: 'I enjoy reading.' NO 'I enjoy to read.'",
+          "examples": [
+            { "en": "I enjoy cooking on weekends.", "es": "Disfruto cocinar los fines de semana.", "goal": "general" },
+            { "en": "She finished writing the report at 6 pm.", "es": "Terminó de escribir el informe a las 6.", "goal": "work" },
+            { "en": "I love traveling to new places.", "es": "Me encanta viajar a lugares nuevos.", "goal": "travel" },
+            { "en": "He practices speaking English every day.", "es": "Él practica hablar inglés todos los días.", "goal": "study" },
+            { "en": "I don't mind watching that movie again.", "es": "No me molesta ver esa película de nuevo.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u9l3-t2",
+          "titleEs": "Verbos que llevan infinitivo (to + base)",
+          "bodyEs": "Otros verbos siempre van seguidos de infinitivo con 'to': want, need, decide, hope, plan, promise, offer, expect, learn, would like. Ejemplo: 'I want to leave.' NO 'I want leaving.'",
+          "examples": [
+            { "en": "I want to buy a new car.", "es": "Quiero comprar un auto nuevo.", "goal": "general" },
+            { "en": "She decided to accept the offer.", "es": "Decidió aceptar la oferta.", "goal": "work" },
+            { "en": "We plan to visit Italy next summer.", "es": "Planeamos visitar Italia el próximo verano.", "goal": "travel" },
+            { "en": "I need to study more before the exam.", "es": "Necesito estudiar más antes del examen.", "goal": "study" },
+            { "en": "They hope to release the album in March.", "es": "Esperan lanzar el álbum en marzo.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u9l3-t3",
+          "titleEs": "Después de preposiciones: siempre -ing",
+          "bodyEs": "Cualquier verbo que venga después de una preposición (of, at, in, on, about, before, after, without, for) va en gerundio (-ing). 'I'm good AT cooking.' 'She's interested IN learning.' 'Thanks FOR helping.' Este es un patrón que hay que fijar bien.",
+          "examples": [
+            { "en": "I'm good at solving problems.", "es": "Soy bueno resolviendo problemas.", "goal": "general" },
+            { "en": "She's responsible for managing the team.", "es": "Ella es responsable de manejar el equipo.", "goal": "work" },
+            { "en": "We're excited about visiting Japan.", "es": "Estamos entusiasmados por visitar Japón.", "goal": "travel" },
+            { "en": "He's interested in learning Chinese.", "es": "Él está interesado en aprender chino.", "goal": "study" },
+            { "en": "Thanks for recommending that series.", "es": "Gracias por recomendar esa serie.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u9l3-t4",
+          "titleEs": "Verbos con ambas formas — mismo o distinto significado",
+          "bodyEs": "Algunos verbos aceptan gerundio o infinitivo. Con 'like/love/hate/prefer' el significado es prácticamente el mismo. Con 'stop' cambia: 'stop smoking' (dejar de fumar) vs. 'stop to smoke' (parar para fumar). Con 'remember': 'I remembered locking the door' (recuerdo haberla cerrado) vs. 'I remembered to lock the door' (me acordé de cerrarla).",
+          "examples": [
+            { "en": "I like swimming. / I like to swim.", "es": "Me gusta nadar. (equivalente)", "goal": "general" },
+            { "en": "He stopped working at 6 pm.", "es": "Dejó de trabajar a las 6.", "goal": "work" },
+            { "en": "We stopped to have lunch during the trip.", "es": "Paramos para almorzar durante el viaje.", "goal": "travel" },
+            { "en": "I remembered turning off the lights.", "es": "Recuerdo haber apagado las luces.", "goal": "general" },
+            { "en": "Remember to submit the essay by Friday.", "es": "Acordate de entregar el ensayo el viernes.", "goal": "study" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u9l3-e1", "type": "multiple_choice", "payload": { "prompt": "I enjoy ___ books in my free time.", "options": ["reading", "to read", "read"], "correctIndex": 0, "explanation": "'enjoy' siempre lleva gerundio (-ing)." } },
+        { "key": "u9l3-e2", "type": "multiple_choice", "payload": { "prompt": "She wants ___ a new language.", "options": ["to learn", "learning", "learn"], "correctIndex": 0, "explanation": "'want' siempre lleva infinitivo con 'to'." } },
+        { "key": "u9l3-e3", "type": "fill_in_blank", "payload": { "segments": ["I'm interested in ", " (learn) Italian."], "answers": ["learning"], "acceptable": [["learning"]], "explanation": "Después de preposición ('in'): -ing." } },
+        { "key": "u9l3-e4", "type": "fill_in_blank", "payload": { "segments": ["We decided ", " (move) to a bigger apartment."], "answers": ["to move"], "acceptable": [["to move"]], "explanation": "'decide' + infinitivo." } },
+        { "key": "u9l3-e5", "type": "word_order", "payload": { "tokens": ["She", "loves", "traveling", "to", "new", "countries."], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "'love' + gerundio o infinitivo. Aquí con -ing." } },
+        { "key": "u9l3-e6", "type": "multiple_choice", "payload": { "prompt": "He finished ___ the project last week.", "options": ["completing", "to complete", "complete"], "correctIndex": 0, "explanation": "'finish' siempre lleva gerundio." } },
+        { "key": "u9l3-e7", "type": "translation", "payload": { "prompt": "Espero verte pronto.", "direction": "es_to_en", "acceptable": ["I hope to see you soon.", "I hope to see you again soon."], "explanation": "'hope' + infinitivo con 'to'." } },
+        { "key": "u9l3-e8", "type": "translation", "payload": { "prompt": "Gracias por ayudarme.", "direction": "es_to_en", "acceptable": ["Thanks for helping me.", "Thank you for helping me."], "explanation": "Después de 'for' (preposición): -ing." } },
+        { "key": "u9l3-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "What do you like doing on weekends?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["I enjoy hiking and reading.", "I enjoy to hike and to read.", "I enjoy hike and read."], "correctIndex": 0, "explanation": "'enjoy' + gerundio (dos verbos coordinados)." } },
+        { "key": "u9l3-e10", "type": "multiple_choice", "payload": { "prompt": "She's good at ___ problems quickly.", "options": ["solving", "to solve", "solve"], "correctIndex": 0, "explanation": "Después de 'at' (preposición): -ing." } },
+        { "key": "u9l3-e11", "type": "fill_in_blank", "payload": { "segments": ["Please remember ", " (lock) the door."], "answers": ["to lock"], "acceptable": [["to lock"]], "explanation": "'remember + to' = acordarse de hacer algo (futuro)." } },
+        { "key": "u9l3-e12", "type": "matching", "payload": { "pairs": [{ "left": "enjoy / finish / avoid", "right": "+ gerundio (-ing)" }, { "left": "want / decide / plan", "right": "+ infinitivo (to)" }, { "left": "at / for / about", "right": "+ gerundio (-ing)" }, { "left": "like / love / hate", "right": "+ gerundio o infinitivo" }], "explanation": "Patrones más comunes de gerundio vs. infinitivo." } },
+        { "key": "u9l3-e13", "type": "listening", "payload": { "audioText": "I stopped drinking coffee because it made me anxious.", "sub": { "kind": "multiple_choice", "prompt": "¿Qué hizo con el café?", "options": ["Dejó de tomarlo.", "Paró para tomar uno.", "Empezó a tomarlo."], "correctIndex": 0 }, "explanation": "'stop + gerund' = dejar de hacer algo. 'stop + infinitive' = parar para hacer algo." } },
+        { "key": "u9l3-e14", "type": "word_order", "payload": { "tokens": ["I", "need", "to", "finish", "this", "report", "today."], "correctOrder": [0, 1, 2, 3, 4, 5, 6], "explanation": "'need + to + verbo base'." } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "enjoy", "respellingEs": "enyói" },
+        { "en": "want to", "respellingEs": "wóna" },
+        { "en": "decide to", "respellingEs": "disáid tu" },
+        { "en": "finished", "respellingEs": "fínisht" },
+        { "en": "interested in", "respellingEs": "íntrested in" },
+        { "en": "good at", "respellingEs": "gud at" },
+        { "en": "thanks for", "respellingEs": "zanks for" },
+        { "en": "hope to see", "respellingEs": "jóup tu sii" },
+        { "en": "keep going", "respellingEs": "kiip góuing" },
+        { "en": "avoid doing", "respellingEs": "avóid dúing" }
+      ]
+    }
+  ]
+}
