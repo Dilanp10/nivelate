@@ -1,0 +1,279 @@
+{
+  "slug": "modals-obligation",
+  "title": "Modales: obligación y necesidad",
+  "description": "Cómo expresar obligación, prohibición y falta de necesidad en inglés: must, have to, mustn't, don't have to, needn't y sus formas pasadas.",
+  "cefrLevel": "B1",
+  "sortOrder": 6,
+  "isPublished": true,
+  "grammarTopics": [
+    {
+      "slug": "must-have-to",
+      "title": "must y have to",
+      "explanationEs": "must = obligación fuerte, muchas veces personal ('I must call my mother'). have to = obligación más externa o práctica ('I have to work on Saturday'). En la mayoría de contextos son intercambiables; la diferencia principal es que must no tiene pasado (usás 'had to') ni futuro (usás 'will have to').",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "mustnt-vs-dont-have-to",
+      "title": "mustn't vs don't have to",
+      "explanationEs": "mustn't (must not) = prohibición ('you can't do it'). don't have to = falta de obligación ('you don't need to do it, pero podés si querés'). NO son sinónimos — mucho ojo con esto, es error clásico de hispanohablantes.",
+      "cefrLevel": "B1"
+    },
+    {
+      "slug": "had-to-past-obligation",
+      "title": "had to y didn't have to",
+      "explanationEs": "Para hablar de obligaciones o falta de obligación en el pasado no existe 'musted'. Se usa had to (obligación pasada) y didn't have to (no tuve obligación de hacerlo). Preguntas: 'Did you have to...?'",
+      "cefrLevel": "B1"
+    }
+  ],
+  "lessons": [
+    {
+      "slug": "must-have-to",
+      "title": "must y have to",
+      "grammarTopicSlugs": ["must-have-to"],
+      "teachingCards": [
+        {
+          "key": "u6l1-t1",
+          "titleEs": "must — obligación personal",
+          "bodyEs": "'must' es un modal (nunca cambia con el sujeto, siempre se usa con verbo base). Se usa para obligaciones que sentís como internas o importantes: reglas propias, deberes morales o cosas que vos considerás urgentes.",
+          "examples": [
+            { "en": "I must call my mother tonight.", "es": "Tengo que llamar a mi mamá esta noche.", "goal": "general" },
+            { "en": "We must finish this before the deadline.", "es": "Tenemos que terminar esto antes del deadline.", "goal": "work" },
+            { "en": "You must try the local coffee.", "es": "Tenés que probar el café local.", "goal": "travel" },
+            { "en": "I must review these notes tonight.", "es": "Tengo que repasar estos apuntes esta noche.", "goal": "study" },
+            { "en": "You must watch this series — it's amazing.", "es": "Tenés que ver esta serie — es increíble.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u6l1-t2",
+          "titleEs": "have to — obligación externa",
+          "bodyEs": "'have to' expresa obligaciones que vienen de afuera: reglas, jefes, horarios, leyes. Se conjuga como verbo normal: I have to, he has to, we have to. En negativa: don't have to / doesn't have to (¡ver la próxima lección!).",
+          "examples": [
+            { "en": "I have to wear glasses to read.", "es": "Tengo que usar anteojos para leer.", "goal": "general" },
+            { "en": "She has to attend the Monday meeting.", "es": "Ella tiene que asistir a la reunión del lunes.", "goal": "work" },
+            { "en": "You have to show your passport at the border.", "es": "Tenés que mostrar el pasaporte en la frontera.", "goal": "travel" },
+            { "en": "Students have to submit the essay by Friday.", "es": "Los estudiantes tienen que entregar el ensayo el viernes.", "goal": "study" },
+            { "en": "You have to book tickets in advance.", "es": "Hay que reservar entradas con anticipación.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u6l1-t3",
+          "titleEs": "must vs have to en la práctica",
+          "bodyEs": "En la mayoría de los casos podés usar cualquiera de los dos. Regla útil: 'must' cuando la obligación viene de vos ('I must diet'); 'have to' cuando viene de otros ('I have to wear a uniform'). En habla cotidiana 'have to' es más común.",
+          "examples": [
+            { "en": "I must lose weight. (yo mismo)", "es": "Tengo que bajar de peso. (yo mismo)", "goal": "general" },
+            { "en": "I have to work overtime. (obligación externa)", "es": "Tengo que hacer horas extra. (obligación externa)", "goal": "work" },
+            { "en": "We must see the pyramids on this trip.", "es": "Tenemos que ver las pirámides en este viaje.", "goal": "travel" },
+            { "en": "Students have to bring their ID to the exam.", "es": "Los estudiantes tienen que traer el DNI al examen.", "goal": "study" },
+            { "en": "You have to be 18 to enter this show.", "es": "Hay que tener 18 para entrar a este show.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u6l1-t4",
+          "titleEs": "Futuro con have to",
+          "bodyEs": "Como 'must' no tiene futuro, para hablar de obligaciones futuras usamos 'will have to' (o 'am going to have to'). Es la forma más natural.",
+          "examples": [
+            { "en": "I'll have to renew my passport soon.", "es": "Voy a tener que renovar mi pasaporte pronto.", "goal": "general" },
+            { "en": "We'll have to hire more people next quarter.", "es": "Vamos a tener que contratar más gente el próximo trimestre.", "goal": "work" },
+            { "en": "You'll have to change trains in Zurich.", "es": "Vas a tener que cambiar de tren en Zurich.", "goal": "travel" },
+            { "en": "I'll have to study extra hours this month.", "es": "Voy a tener que estudiar horas extras este mes.", "goal": "study" },
+            { "en": "We'll have to leave early to make the concert.", "es": "Vamos a tener que salir temprano para llegar al concierto.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u6l1-e1", "type": "multiple_choice", "payload": { "prompt": "I ___ finish this today.", "options": ["must", "musts", "am must"], "correctIndex": 0, "explanation": "'must' no cambia con el sujeto." } },
+        { "key": "u6l1-e2", "type": "multiple_choice", "payload": { "prompt": "She ___ work on Saturdays.", "options": ["has to", "must to", "have to"], "correctIndex": 0, "explanation": "Con he/she/it: 'has to' (obligación externa)." } },
+        { "key": "u6l1-e3", "type": "fill_in_blank", "payload": { "segments": ["Passengers ", " show their boarding pass."], "answers": ["have to"], "acceptable": [["have to", "must"]], "explanation": "Regla externa (norma de seguridad) → 'have to' natural; 'must' también válido en cartelería formal." } },
+        { "key": "u6l1-e4", "type": "fill_in_blank", "payload": { "segments": ["I ", " study harder for the next test."], "answers": ["must"], "acceptable": [["must", "have to"]], "explanation": "Obligación autoimpuesta ('yo lo decido') → 'must' es más natural." } },
+        { "key": "u6l1-e5", "type": "word_order", "payload": { "tokens": ["You", "have", "to", "wear", "a", "helmet"], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "Obligación con have to: 'You have to wear a helmet.'" } },
+        { "key": "u6l1-e6", "type": "multiple_choice", "payload": { "prompt": "Next year we ___ move to a bigger office.", "options": ["will have to", "must", "have"], "correctIndex": 0, "explanation": "Futuro con obligación → 'will have to' (must no tiene futuro)." } },
+        { "key": "u6l1-e7", "type": "translation", "payload": { "prompt": "Tengo que ir al médico.", "direction": "es_to_en", "acceptable": ["I have to go to the doctor.", "I must go to the doctor."], "explanation": "Ambos válidos; 'have to' más común en habla cotidiana." } },
+        { "key": "u6l1-e8", "type": "translation", "payload": { "prompt": "Ella tiene que trabajar hoy.", "direction": "es_to_en", "acceptable": ["She has to work today.", "She must work today."], "explanation": "Con she en presente → 'has to'." } },
+        { "key": "u6l1-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "Why can't you come tonight?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["I have to finish a report.", "I must finish a report yesterday.", "I have finish a report."], "correctIndex": 0, "explanation": "Obligación laboral → 'I have to finish a report.'" } },
+        { "key": "u6l1-e10", "type": "multiple_choice", "payload": { "prompt": "___ I sign this form?", "options": ["Do I have to", "Must I to", "I must"], "correctIndex": 0, "explanation": "Pregunta de obligación en habla cotidiana → 'Do I have to...?'. 'Must I' existe pero es muy formal." } },
+        { "key": "u6l1-e11", "type": "fill_in_blank", "payload": { "segments": ["He ", " get up early tomorrow."], "answers": ["has to"], "acceptable": [["has to", "'ll have to"]], "explanation": "'He has to get up early' (obligación) o 'He'll have to get up early' (obligación futura)." } },
+        { "key": "u6l1-e12", "type": "matching", "payload": { "pairs": [{ "left": "must", "right": "obligación personal / regla escrita" }, { "left": "have to", "right": "obligación externa / cotidiana" }, { "left": "will have to", "right": "obligación futura" }, { "left": "had to", "right": "obligación pasada" }], "explanation": "Cada forma tiene su ámbito de uso." } },
+        { "key": "u6l1-e13", "type": "listening", "payload": { "audioText": "You have to be quiet in the library.", "sub": { "kind": "multiple_choice", "prompt": "¿Qué regla dice?", "options": ["Hay que estar en silencio en la biblioteca.", "Hay que hablar en la biblioteca.", "Hay que salir de la biblioteca."], "correctIndex": 0 }, "explanation": "'have to be quiet' = obligación de estar en silencio." } },
+        { "key": "u6l1-e14", "type": "word_order", "payload": { "tokens": ["I", "must", "call", "him", "back"], "correctOrder": [0, 1, 2, 3, 4], "explanation": "Modal + verbo base: 'I must call him back.'" } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "must", "respellingEs": "mast" },
+        { "en": "have to", "respellingEs": "jav tu" },
+        { "en": "has to", "respellingEs": "jas tu" },
+        { "en": "I have to", "respellingEs": "ai jaf tu" },
+        { "en": "she has to", "respellingEs": "shi jas tu" },
+        { "en": "you must", "respellingEs": "yu mast" },
+        { "en": "we must", "respellingEs": "wi mast" },
+        { "en": "will have to", "respellingEs": "wil jaf tu" },
+        { "en": "do I have to?", "respellingEs": "du ai jaf tu" },
+        { "en": "I have to go", "respellingEs": "ai jaf tu góu" }
+      ]
+    },
+    {
+      "slug": "mustnt-vs-dont-have-to",
+      "title": "mustn't vs don't have to",
+      "grammarTopicSlugs": ["mustnt-vs-dont-have-to"],
+      "teachingCards": [
+        {
+          "key": "u6l2-t1",
+          "titleEs": "mustn't — prohibición",
+          "bodyEs": "'mustn't' (must not) significa 'está prohibido / no se debe'. Es una regla firme. NO es la negación normal de 'must' — es una prohibición específica. Se usa en carteles, reglas de trabajo, avisos.",
+          "examples": [
+            { "en": "You mustn't smoke in here.", "es": "No se debe fumar acá.", "goal": "general" },
+            { "en": "Employees mustn't share client passwords.", "es": "Los empleados no deben compartir contraseñas de clientes.", "goal": "work" },
+            { "en": "Tourists mustn't touch the ancient walls.", "es": "Los turistas no deben tocar los muros antiguos.", "goal": "travel" },
+            { "en": "Students mustn't use their phones in the exam.", "es": "Los estudiantes no deben usar el celular en el examen.", "goal": "study" },
+            { "en": "Fans mustn't record the show.", "es": "Los fans no deben grabar el show.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u6l2-t2",
+          "titleEs": "don't have to — falta de obligación",
+          "bodyEs": "'don't/doesn't have to' significa 'no hace falta / no es obligatorio, podés si querés'. Es MUY distinto a 'mustn't'. Comparar: 'You don't have to come' = si querés venir, dale, pero no es obligación. 'You mustn't come' = tenés prohibido venir.",
+          "examples": [
+            { "en": "You don't have to shout — I can hear you.", "es": "No hace falta que grites — te escucho.", "goal": "general" },
+            { "en": "You don't have to answer emails on weekends.", "es": "No hace falta que respondas emails los fines de semana.", "goal": "work" },
+            { "en": "You don't have to book in advance — walk-ins are welcome.", "es": "No hace falta reservar — se puede llegar sin turno.", "goal": "travel" },
+            { "en": "Students don't have to attend every lecture.", "es": "Los estudiantes no tienen obligación de asistir a todas las clases.", "goal": "study" },
+            { "en": "We don't have to leave right after the movie.", "es": "No hace falta que nos vayamos apenas termine la película.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u6l2-t3",
+          "titleEs": "Contraste directo",
+          "bodyEs": "El error clásico: pensar que 'mustn't' y 'don't have to' significan lo mismo. NO. Una prohíbe, la otra libera. Recordá siempre el ejemplo simple: 'You mustn't leave' (no te vayas) vs 'You don't have to leave' (podés irte o no, como quieras).",
+          "examples": [
+            { "en": "You mustn't drive without a license. (prohibido)", "es": "No debés manejar sin licencia. (prohibido)", "goal": "general" },
+            { "en": "You don't have to drive — I can take you. (no hace falta)", "es": "No hace falta que manejes — te llevo yo. (no hace falta)", "goal": "general" },
+            { "en": "You mustn't miss the meeting. (obligación estricta)", "es": "No podés faltar a la reunión. (obligación estricta)", "goal": "work" },
+            { "en": "You don't have to stay after 6. (libertad)", "es": "No hace falta que te quedes después de las 6. (libertad)", "goal": "work" },
+            { "en": "You mustn't eat before the exam. (prohibido)", "es": "No debés comer antes del examen. (prohibido)", "goal": "study" }
+          ]
+        },
+        {
+          "key": "u6l2-t4",
+          "titleEs": "needn't — alternativa a don't have to",
+          "bodyEs": "'needn't' + verbo base es sinónimo formal de 'don't have to'. Común en carteles y textos escritos, menos en habla cotidiana. También existe 'need to' como verbo normal ('I need to leave'), que es más frecuente.",
+          "examples": [
+            { "en": "You needn't worry — everything is fine.", "es": "No tenés que preocuparte — está todo bien.", "goal": "general" },
+            { "en": "You needn't attend the optional workshop.", "es": "No hace falta que asistas al taller opcional.", "goal": "work" },
+            { "en": "You needn't tip in this restaurant.", "es": "No hace falta dejar propina en este restaurante.", "goal": "travel" },
+            { "en": "You needn't buy the textbook — the PDF is free.", "es": "No hace falta que compres el libro — el PDF es gratis.", "goal": "study" },
+            { "en": "You needn't come early — the show starts at nine.", "es": "No hace falta que vengas temprano — el show empieza a las nueve.", "goal": "entertainment" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u6l2-e1", "type": "multiple_choice", "payload": { "prompt": "You ___ smoke in the hospital — it's forbidden.", "options": ["mustn't", "don't have to", "needn't"], "correctIndex": 0, "explanation": "Prohibición → 'mustn't'." } },
+        { "key": "u6l2-e2", "type": "multiple_choice", "payload": { "prompt": "You ___ pay — the entrance is free.", "options": ["don't have to", "mustn't", "must not"], "correctIndex": 0, "explanation": "Falta de obligación (podés pagar si querés, pero no hace falta) → 'don't have to'." } },
+        { "key": "u6l2-e3", "type": "fill_in_blank", "payload": { "segments": ["Students ", " use dictionaries in this exam."], "answers": ["mustn't"], "acceptable": [["mustn't", "must not"]], "explanation": "Prohibición en un contexto específico (examen) → 'mustn't'." } },
+        { "key": "u6l2-e4", "type": "fill_in_blank", "payload": { "segments": ["You ", " come if you're busy — it's optional."], "answers": ["don't have to"], "acceptable": [["don't have to", "needn't"]], "explanation": "'optional' confirma que no hay obligación → 'don't have to' o 'needn't'." } },
+        { "key": "u6l2-e5", "type": "word_order", "payload": { "tokens": ["You", "mustn't", "share", "your", "password"], "correctOrder": [0, 1, 2, 3, 4], "explanation": "Prohibición: 'You mustn't share your password.'" } },
+        { "key": "u6l2-e6", "type": "multiple_choice", "payload": { "prompt": "Great news — you ___ work tomorrow!", "options": ["don't have to", "mustn't", "have to"], "correctIndex": 0, "explanation": "'Great news' implica alivio → falta de obligación: 'don't have to work'." } },
+        { "key": "u6l2-e7", "type": "translation", "payload": { "prompt": "No hace falta que traigas comida.", "direction": "es_to_en", "acceptable": ["You don't have to bring food.", "You needn't bring food."], "explanation": "Falta de obligación → 'don't have to' o 'needn't'." } },
+        { "key": "u6l2-e8", "type": "translation", "payload": { "prompt": "No debés tocar eso.", "direction": "es_to_en", "acceptable": ["You mustn't touch that.", "You must not touch that."], "explanation": "Prohibición fuerte → 'mustn't touch that'." } },
+        { "key": "u6l2-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "Do I need to bring my ID?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["No, you don't have to.", "No, you mustn't.", "Yes, you needn't."], "correctIndex": 0, "explanation": "Respuesta a 'do I need to...?': 'No, you don't have to' (no hace falta)." } },
+        { "key": "u6l2-e10", "type": "multiple_choice", "payload": { "prompt": "You ___ take photos in the museum — it's forbidden.", "options": ["mustn't", "don't have to", "needn't"], "correctIndex": 0, "explanation": "'forbidden' confirma prohibición → 'mustn't'." } },
+        { "key": "u6l2-e11", "type": "fill_in_blank", "payload": { "segments": ["You ", " wait for me — go ahead."], "answers": ["don't have to"], "acceptable": [["don't have to", "needn't"]], "explanation": "'go ahead' implica liberar de esperar → 'don't have to' o 'needn't'." } },
+        { "key": "u6l2-e12", "type": "matching", "payload": { "pairs": [{ "left": "mustn't", "right": "prohibido" }, { "left": "don't have to", "right": "no obligatorio" }, { "left": "needn't", "right": "no obligatorio (formal)" }, { "left": "have to", "right": "obligatorio" }], "explanation": "Contraste central: prohibición vs. falta de obligación." } },
+        { "key": "u6l2-e13", "type": "listening", "payload": { "audioText": "You don't have to bring anything — I have everything ready.", "sub": { "kind": "multiple_choice", "prompt": "¿Qué le dice sobre traer cosas?", "options": ["Que no hace falta que traiga nada.", "Que le prohíbe traer cosas.", "Que tiene que traer todo."], "correctIndex": 0 }, "explanation": "'don't have to bring anything' = falta de obligación, no prohibición." } },
+        { "key": "u6l2-e14", "type": "word_order", "payload": { "tokens": ["You", "don't", "have", "to", "answer"], "correctOrder": [0, 1, 2, 3, 4], "explanation": "Falta de obligación: 'You don't have to answer.'" } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "mustn't", "respellingEs": "másent" },
+        { "en": "don't have to", "respellingEs": "dount jaf tu" },
+        { "en": "doesn't have to", "respellingEs": "dásent jaf tu" },
+        { "en": "needn't", "respellingEs": "nídent" },
+        { "en": "you mustn't smoke", "respellingEs": "yu másent smóuk" },
+        { "en": "you don't have to come", "respellingEs": "yu dount jaf tu kam" },
+        { "en": "she doesn't have to work", "respellingEs": "shi dásent jaf tu werk" },
+        { "en": "you needn't worry", "respellingEs": "yu nídent uóri" },
+        { "en": "no, you don't have to", "respellingEs": "nóu yu dount jaf tu" },
+        { "en": "it's forbidden", "respellingEs": "its forbíden" }
+      ]
+    },
+    {
+      "slug": "had-to-past-obligation",
+      "title": "had to y didn't have to",
+      "grammarTopicSlugs": ["had-to-past-obligation"],
+      "teachingCards": [
+        {
+          "key": "u6l3-t1",
+          "titleEs": "had to — obligación pasada",
+          "bodyEs": "Para hablar de obligaciones en el pasado usamos 'had to' + verbo base, para todos los sujetos: I had to, she had to, we had to. NO existe 'musted' — 'must' no tiene pasado.",
+          "examples": [
+            { "en": "I had to wake up at 5 yesterday.", "es": "Tuve que levantarme a las 5 ayer.", "goal": "general" },
+            { "en": "She had to cancel the meeting.", "es": "Ella tuvo que cancelar la reunión.", "goal": "work" },
+            { "en": "We had to change our flight last minute.", "es": "Tuvimos que cambiar el vuelo a último momento.", "goal": "travel" },
+            { "en": "I had to repeat the year.", "es": "Tuve que repetir el año.", "goal": "study" },
+            { "en": "We had to leave the concert early.", "es": "Tuvimos que irnos temprano del concierto.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u6l3-t2",
+          "titleEs": "didn't have to — no fue obligatorio",
+          "bodyEs": "'didn't have to' = 'no tuve obligación de hacerlo' (y quizás lo hice igual, o quizás no). NO significa 'no lo hice'. Es solo la ausencia de obligación en el pasado.",
+          "examples": [
+            { "en": "I didn't have to work last Saturday.", "es": "No tuve que trabajar el sábado pasado.", "goal": "general" },
+            { "en": "We didn't have to prepare a presentation.", "es": "No tuvimos que preparar una presentación.", "goal": "work" },
+            { "en": "You didn't have to bring gifts — thanks anyway.", "es": "No hacía falta que trajeras regalos — gracias igual.", "goal": "travel" },
+            { "en": "I didn't have to study much for that exam.", "es": "No tuve que estudiar mucho para ese examen.", "goal": "study" },
+            { "en": "We didn't have to pay for the parking.", "es": "No tuvimos que pagar el estacionamiento.", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u6l3-t3",
+          "titleEs": "Preguntas: Did you have to...?",
+          "bodyEs": "Para preguntar sobre obligaciones pasadas: Did + sujeto + have to + verbo? Por ejemplo: 'Did you have to wait long?', 'Did she have to work overtime?'",
+          "examples": [
+            { "en": "Did you have to wait long?", "es": "¿Tuviste que esperar mucho?", "goal": "general" },
+            { "en": "Did she have to work on Sunday?", "es": "¿Tuvo ella que trabajar el domingo?", "goal": "work" },
+            { "en": "Did you have to show any documents?", "es": "¿Tuviste que mostrar algún documento?", "goal": "travel" },
+            { "en": "Did you have to buy the textbook?", "es": "¿Tuviste que comprar el libro?", "goal": "study" },
+            { "en": "Did you have to queue for tickets?", "es": "¿Tuvieron que hacer fila para las entradas?", "goal": "entertainment" }
+          ]
+        },
+        {
+          "key": "u6l3-t4",
+          "titleEs": "Cuidado con 'didn't have to' vs 'shouldn't have'",
+          "bodyEs": "'didn't have to do it' = no era obligación (neutro). 'shouldn't have done it' = lo hice pero no debería haber. NO son iguales: 'I didn't have to call' (no era obligatorio) ≠ 'I shouldn't have called' (llamé y fue mal decidido).",
+          "examples": [
+            { "en": "I didn't have to bring wine, but I did anyway.", "es": "No tenía que traer vino, pero lo traje igual.", "goal": "general" },
+            { "en": "I shouldn't have brought wine — she doesn't drink.", "es": "No debería haber traído vino — ella no toma.", "goal": "general" },
+            { "en": "She didn't have to accept the offer.", "es": "No tenía obligación de aceptar la oferta.", "goal": "work" },
+            { "en": "She shouldn't have accepted the offer — the terms were terrible.", "es": "No debería haber aceptado la oferta — los términos eran pésimos.", "goal": "work" },
+            { "en": "You didn't have to reply so fast, but thanks!", "es": "No hacía falta que respondieras tan rápido, ¡pero gracias!", "goal": "general" }
+          ]
+        }
+      ],
+      "exercises": [
+        { "key": "u6l3-e1", "type": "multiple_choice", "payload": { "prompt": "I ___ get up early yesterday.", "options": ["had to", "must", "have to"], "correctIndex": 0, "explanation": "Obligación pasada → 'had to'. 'must' no tiene pasado." } },
+        { "key": "u6l3-e2", "type": "multiple_choice", "payload": { "prompt": "She ___ work late last night.", "options": ["had to", "musted", "did have to"], "correctIndex": 0, "explanation": "Pasado de have to: 'had to'." } },
+        { "key": "u6l3-e3", "type": "fill_in_blank", "payload": { "segments": ["We ", " leave the party early."], "answers": ["had to"], "explanation": "Obligación pasada → 'We had to leave the party early.'" } },
+        { "key": "u6l3-e4", "type": "fill_in_blank", "payload": { "segments": ["I ", " pay — the meal was on the house."], "answers": ["didn't have to"], "acceptable": [["didn't have to", "did not have to"]], "explanation": "Falta de obligación pasada → 'didn't have to pay'." } },
+        { "key": "u6l3-e5", "type": "word_order", "payload": { "tokens": ["Did", "you", "have", "to", "wait"], "correctOrder": [0, 1, 2, 3, 4], "explanation": "Pregunta pasada: 'Did you have to wait?'" } },
+        { "key": "u6l3-e6", "type": "multiple_choice", "payload": { "prompt": "You ___ come, but I'm glad you did.", "options": ["didn't have to", "mustn't", "shouldn't"], "correctIndex": 0, "explanation": "'no era obligación pero viniste igual' → 'didn't have to'." } },
+        { "key": "u6l3-e7", "type": "translation", "payload": { "prompt": "Tuve que trabajar el fin de semana.", "direction": "es_to_en", "acceptable": ["I had to work on the weekend.", "I had to work over the weekend."], "explanation": "Obligación pasada → 'I had to work'." } },
+        { "key": "u6l3-e8", "type": "translation", "payload": { "prompt": "No tuvimos que pagar entrada.", "direction": "es_to_en", "acceptable": ["We didn't have to pay for the entrance.", "We didn't have to pay for admission."], "explanation": "Falta de obligación pasada → 'didn't have to pay'." } },
+        { "key": "u6l3-e9", "type": "dialogue", "payload": { "turns": [{ "speaker": "Ana", "text": "How was the exam?" }, { "speaker": "Tom", "text": "" }], "blankTurnIndex": 1, "options": ["Fine — we didn't have to answer all the questions.", "Fine — we don't had to answer all the questions.", "Fine — we hadn't answered all the questions."], "correctIndex": 0, "explanation": "Negativo pasado: 'we didn't have to answer'." } },
+        { "key": "u6l3-e10", "type": "multiple_choice", "payload": { "prompt": "___ she have to attend the meeting?", "options": ["Did", "Does", "Has"], "correctIndex": 0, "explanation": "Pregunta pasada con 'have to' → 'Did she have to attend...?'" } },
+        { "key": "u6l3-e11", "type": "fill_in_blank", "payload": { "segments": ["He ", " walk two hours to school every day."], "answers": ["had to"], "explanation": "Obligación habitual pasada → 'had to'." } },
+        { "key": "u6l3-e12", "type": "matching", "payload": { "pairs": [{ "left": "had to", "right": "obligación pasada" }, { "left": "didn't have to", "right": "no obligatorio en pasado" }, { "left": "Did you have to...?", "right": "pregunta pasada" }, { "left": "will have to", "right": "obligación futura" }], "explanation": "Distribución temporal de 'have to'." } },
+        { "key": "u6l3-e13", "type": "listening", "payload": { "audioText": "I had to change three trains to get here!", "sub": { "kind": "multiple_choice", "prompt": "¿Qué tuvo que hacer?", "options": ["Cambiar de tren tres veces.", "Tomar el tercer tren.", "Pagar tres pasajes."], "correctIndex": 0 }, "explanation": "'change three trains' = cambiar de tren tres veces." } },
+        { "key": "u6l3-e14", "type": "word_order", "payload": { "tokens": ["I", "didn't", "have", "to", "cook", "dinner"], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "Negativo pasado: 'I didn't have to cook dinner.'" } }
+      ],
+      "pronunciationHighlights": [
+        { "en": "had to", "respellingEs": "jad tu" },
+        { "en": "I had to", "respellingEs": "ai jad tu" },
+        { "en": "she had to", "respellingEs": "shi jad tu" },
+        { "en": "didn't have to", "respellingEs": "dídent jaf tu" },
+        { "en": "did you have to?", "respellingEs": "did yu jaf tu" },
+        { "en": "did she have to?", "respellingEs": "did shi jaf tu" },
+        { "en": "I had to wait", "respellingEs": "ai jad tu wéit" },
+        { "en": "we didn't have to pay", "respellingEs": "wi dídent jaf tu péi" },
+        { "en": "did they have to work?", "respellingEs": "did déi jaf tu werk" },
+        { "en": "yesterday", "respellingEs": "yésterdei" }
+      ]
+    }
+  ]
+}
