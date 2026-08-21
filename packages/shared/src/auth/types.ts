@@ -24,12 +24,12 @@ export const LEARNING_GOAL_OPTIONS = [
 ] as const;
 export type LearningGoal = (typeof LEARNING_GOAL_OPTIONS)[number];
 
-export const LEARNING_GOAL_META: Record<LearningGoal, { emoji: string; label: string }> = {
-  travel: { emoji: '✈️', label: 'Viajar' },
-  work: { emoji: '💼', label: 'Trabajo' },
-  study: { emoji: '🎓', label: 'Estudiar' },
-  entertainment: { emoji: '🎬', label: 'Series y música' },
-  general: { emoji: '🌍', label: 'Cultura general' },
+export const LEARNING_GOAL_META: Record<LearningGoal, { icon: string; label: string }> = {
+  travel: { icon: 'plane', label: 'Viajar' },
+  work: { icon: 'briefcase', label: 'Trabajo' },
+  study: { icon: 'cap', label: 'Estudiar' },
+  entertainment: { icon: 'film', label: 'Series y música' },
+  general: { icon: 'globe', label: 'Cultura general' },
 };
 
 export const SELF_LEVEL_OPTIONS = ['zero', 'basic', 'conversational', 'intermediate'] as const;
@@ -37,12 +37,20 @@ export type SelfLevel = (typeof SELF_LEVEL_OPTIONS)[number];
 
 export const SELF_LEVEL_META: Record<
   SelfLevel,
-  { emoji: string; label: string; description: string }
+  { icon: string; label: string; description: string }
 > = {
-  zero: { emoji: '🌱', label: 'Empiezo de cero', description: 'No sé nada o casi nada' },
-  basic: { emoji: '🔤', label: 'Sé lo básico', description: 'Saludos, colores, números' },
-  conversational: { emoji: '💬', label: 'Me defiendo', description: 'Puedo armar frases simples' },
-  intermediate: { emoji: '📖', label: 'Nivel intermedio', description: 'Leo y entiendo bastante' },
+  zero: { icon: 'sprout', label: 'Empiezo de cero', description: 'No sé nada o casi nada' },
+  basic: { icon: 'letters', label: 'Sé lo básico', description: 'Saludos, colores, números' },
+  conversational: {
+    icon: 'speech',
+    label: 'Me defiendo',
+    description: 'Puedo armar frases simples',
+  },
+  intermediate: {
+    icon: 'book',
+    label: 'Nivel intermedio',
+    description: 'Leo y entiendo bastante',
+  },
 };
 
 /** Estado de sesión que expone el store de auth. */

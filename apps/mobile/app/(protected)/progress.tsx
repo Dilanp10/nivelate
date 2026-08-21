@@ -8,6 +8,7 @@ import { useProgress } from '../../src/hooks/useProgress';
 import { useStartingUnit } from '../../src/hooks/useStartingUnit';
 import { useAuthStore } from '../../src/stores/auth';
 import { Button } from '../../src/ui/Button';
+import { Icon, type IconName } from '../../src/ui/Icon';
 import { ScreenLayout } from '../../src/ui/ScreenLayout';
 
 export default function ProgressScreen() {
@@ -39,8 +40,8 @@ export default function ProgressScreen() {
   return (
     <ScreenLayout title="Mi progreso" subtitle={`De ${CEFR_LABELS.A2} a ${CEFR_LABELS.B1}`}>
       {!hasProgress ? (
-        <View className="bg-surface border-2 border-border rounded-2xl p-6 gap-2 items-center">
-          <Text className="text-4xl">🌱</Text>
+        <View className="bg-surface border-2 border-border rounded-2xl p-6 gap-3 items-center">
+          <Icon name="sprout" size={40} color="#0E7C7B" />
           <Text className="text-text text-base font-bold text-center">Todavía no arrancaste</Text>
           <Text className="text-muted text-sm text-center">
             Completá tu primera lección y acá vas a ver tu nivel, tu racha y cuánto te falta para
@@ -86,12 +87,19 @@ export default function ProgressScreen() {
           {/* Racha */}
           <View className="flex-row gap-3">
             <Stat
-              emoji="🔥"
+              icon="flame"
+              iconColor="#C55A2A"
               value={`${currentStreak}`}
               label={currentStreak === 1 ? 'día' : 'días'}
               tone="text-streak"
             />
-            <Stat emoji="🏆" value={`${longestStreak}`} label="mejor racha" tone="text-gold" />
+            <Stat
+              icon="trophy"
+              iconColor="#B88A2E"
+              value={`${longestStreak}`}
+              label="mejor racha"
+              tone="text-gold"
+            />
           </View>
 
           {/* Avance por unidad */}
@@ -156,19 +164,21 @@ export default function ProgressScreen() {
 }
 
 function Stat({
-  emoji,
+  icon,
+  iconColor,
   value,
   label,
   tone,
 }: {
-  emoji: string;
+  icon: IconName;
+  iconColor: string;
   value: string;
   label: string;
   tone: string;
 }) {
   return (
-    <View className="flex-1 bg-surface border-2 border-border rounded-2xl p-4 items-center gap-0.5">
-      <Text className="text-3xl">{emoji}</Text>
+    <View className="flex-1 bg-surface border-2 border-border rounded-2xl p-4 items-center gap-1">
+      <Icon name={icon} size={30} color={iconColor} />
       <Text className={`text-2xl font-bold ${tone}`}>{value}</Text>
       <Text className="text-muted text-xs">{label}</Text>
     </View>

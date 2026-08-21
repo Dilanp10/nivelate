@@ -1,5 +1,6 @@
 import { Text, View } from 'react-native';
 import { Button } from '../ui/Button';
+import { Icon } from '../ui/Icon';
 
 type Props = {
   total: number;
@@ -12,8 +13,8 @@ export function ReviewSummary({ total, correct, onDone }: Props) {
 
   return (
     <View className="flex-1 items-center justify-center gap-7 px-6">
-      <View className="items-center gap-2">
-        <Text className="text-6xl">🔁</Text>
+      <View className="items-center gap-3">
+        <Icon name="repeat" size={64} color="#4F6D7A" strokeWidth={1.4} />
         <Text className="text-info text-3xl font-bold">¡Repaso listo!</Text>
       </View>
 

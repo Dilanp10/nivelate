@@ -17,6 +17,7 @@ import { useOnboarding } from '../../src/hooks/useOnboarding';
 import { useAuthStore } from '../../src/stores/auth';
 import { Button } from '../../src/ui/Button';
 import { FormError } from '../../src/ui/FormError';
+import { Icon, type IconName } from '../../src/ui/Icon';
 import { Input } from '../../src/ui/Input';
 
 const STEP_IDS = ['name', 'goal', 'level', 'time'] as const;
@@ -93,7 +94,7 @@ export default function Welcome() {
           {step === 0 && (
             <>
               <StepHeader
-                emoji="👋"
+                icon="wave"
                 title="¿Cómo te llamás?"
                 subtitle="Para saludarte por tu nombre."
               />
@@ -112,7 +113,7 @@ export default function Welcome() {
           {step === 1 && (
             <>
               <StepHeader
-                emoji="🎯"
+                icon="target"
                 title="¿Para qué querés el inglés?"
                 subtitle="Nos ayuda a priorizar el vocabulario."
               />
@@ -128,7 +129,11 @@ export default function Welcome() {
                       accessibilityState={{ selected }}
                       className={`flex-row items-center gap-4 rounded-2xl border-2 px-5 py-4 ${pickClasses(selected)}`}
                     >
-                      <Text className="text-2xl">{meta.emoji}</Text>
+                      <Icon
+                        name={meta.icon as IconName}
+                        size={26}
+                        color={selected ? '#4F6D7A' : '#131417'}
+                      />
                       <Text
                         className={`flex-1 text-lg font-bold ${selected ? 'text-info' : 'text-text'}`}
                       >
@@ -145,7 +150,7 @@ export default function Welcome() {
           {step === 2 && (
             <>
               <StepHeader
-                emoji="📊"
+                icon="chart"
                 title="¿Cuánto inglés sabés hoy?"
                 subtitle="Sé honesto — no hay respuesta incorrecta."
               />
@@ -161,7 +166,11 @@ export default function Welcome() {
                       accessibilityState={{ selected }}
                       className={`flex-row items-center gap-4 rounded-2xl border-2 px-5 py-4 ${pickClasses(selected)}`}
                     >
-                      <Text className="text-2xl">{meta.emoji}</Text>
+                      <Icon
+                        name={meta.icon as IconName}
+                        size={26}
+                        color={selected ? '#4F6D7A' : '#131417'}
+                      />
                       <View className="flex-1">
                         <Text
                           className={`text-lg font-bold ${selected ? 'text-info' : 'text-text'}`}
@@ -181,7 +190,7 @@ export default function Welcome() {
           {step === 3 && (
             <>
               <StepHeader
-                emoji="⏱️"
+                icon="clock"
                 title="¿Cuánto tiempo por día?"
                 subtitle="Podés cambiarlo cuando quieras."
               />
@@ -239,17 +248,17 @@ export default function Welcome() {
 }
 
 function StepHeader({
-  emoji,
+  icon,
   title,
   subtitle,
 }: {
-  emoji: string;
+  icon: IconName;
   title: string;
   subtitle: string;
 }) {
   return (
-    <View className="gap-2">
-      <Text className="text-5xl">{emoji}</Text>
+    <View className="gap-3">
+      <Icon name={icon} size={48} color="#0E7C7B" strokeWidth={1.4} />
       <Text className="text-text text-2xl font-bold leading-8">{title}</Text>
       <Text className="text-muted text-base">{subtitle}</Text>
     </View>

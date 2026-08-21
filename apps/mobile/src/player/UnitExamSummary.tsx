@@ -1,5 +1,6 @@
 import { ActivityIndicator, Text, View } from 'react-native';
 import { Button } from '../ui/Button';
+import { Icon } from '../ui/Icon';
 
 type Props = {
   correct: number;
@@ -41,7 +42,12 @@ export function UnitExamSummary({
   return (
     <View className="flex-1 justify-between px-6 py-8">
       <View className="items-center gap-4 mt-8">
-        <Text className="text-6xl">{passed ? '🎓' : '📝'}</Text>
+        <Icon
+          name={passed ? 'cap' : 'note'}
+          size={68}
+          color={passed ? '#0E7C7B' : '#4F6D7A'}
+          strokeWidth={1.4}
+        />
         <Text className="text-text text-3xl font-bold text-center">
           {passed ? '¡Aprobado!' : 'Todavía no'}
         </Text>
@@ -70,7 +76,7 @@ export function UnitExamSummary({
           </View>
         ) : xpAwarded && xpAwarded > 0 ? (
           <View className="bg-gold/10 border-2 border-gold rounded-2xl px-4 py-2">
-            <Text className="text-gold text-sm font-bold">+{xpAwarded} XP · primera vez que aprobás 🎉</Text>
+            <Text className="text-gold text-sm font-bold">+{xpAwarded} XP · primera vez que aprobás</Text>
           </View>
         ) : isImprovement ? (
           <Text className="text-muted text-sm italic">Mejor score que la vez anterior</Text>

@@ -1,5 +1,6 @@
 import type { AchievementWithStatus } from '@nivelate/shared';
 import { Text, View } from 'react-native';
+import { Icon, type IconName } from '../ui/Icon';
 
 type Props = {
   achievements: AchievementWithStatus[];
@@ -33,16 +34,18 @@ export function AchievementsGrid({ achievements }: Props) {
 }
 
 function AchievementCard({ a }: { a: AchievementWithStatus }) {
+  const iconName = (a.unlocked ? a.icon : 'lock') as IconName;
+  const iconColor = a.unlocked ? '#B88A2E' : '#6E6E76';
   return (
     <View
-      className={`w-[47%] rounded-2xl border-2 p-4 gap-1 ${
+      className={`w-[47%] rounded-2xl border-2 p-4 gap-2 ${
         a.unlocked ? 'border-gold bg-gold/10' : 'border-border bg-surface opacity-40'
       }`}
       accessibilityLabel={
         a.unlocked ? `Logro desbloqueado: ${a.title}` : `Logro bloqueado: ${a.title}`
       }
     >
-      <Text className="text-3xl">{a.unlocked ? a.emoji : '🔒'}</Text>
+      <Icon name={iconName} size={30} color={iconColor} strokeWidth={1.5} />
       <Text className={`text-sm font-bold ${a.unlocked ? 'text-gold' : 'text-text'}`}>
         {a.unlocked ? a.title : '???'}
       </Text>

@@ -1,6 +1,7 @@
 import { ACHIEVEMENT_BY_ID, type LessonSummary as Summary } from '@nivelate/shared';
 import { ActivityIndicator, Text, View } from 'react-native';
 import { Button } from '../ui/Button';
+import { Icon, type IconName } from '../ui/Icon';
 
 type Props = {
   summary: Summary;
@@ -26,12 +27,13 @@ export function LessonSummary({
   // El encabezado se adapta al resultado: felicitar un 40% suena falso.
   const headline =
     pct >= 80 ? '¡Excelente!' : pct >= 50 ? '¡Lección completa!' : 'Lección terminada';
-  const emoji = pct >= 80 ? '🎉' : pct >= 50 ? '👏' : '💪';
+  const iconName: IconName = pct >= 80 ? 'party' : pct >= 50 ? 'sparkle' : 'target';
+  const iconColor = pct >= 80 ? '#0E7C7B' : pct >= 50 ? '#B88A2E' : '#4F6D7A';
 
   return (
     <View className="flex-1 items-center justify-center gap-7 px-6">
-      <View className="items-center gap-2">
-        <Text className="text-6xl">{emoji}</Text>
+      <View className="items-center gap-3">
+        <Icon name={iconName} size={64} color={iconColor} strokeWidth={1.4} />
         <Text className="text-brand text-3xl font-bold">{headline}</Text>
       </View>
 
@@ -57,9 +59,12 @@ export function LessonSummary({
           className="w-full max-w-xs bg-gold/10 border-2 border-gold rounded-2xl px-4 py-3 gap-1"
           accessibilityRole="alert"
         >
-          <Text className="text-gold text-sm font-bold">
-            🏅 Desbloqueaste{newlyUnlocked.length === 1 ? '' :` ${newlyUnlocked.length} logros`}:
-          </Text>
+          <View className="flex-row items-center gap-2">
+            <Icon name="medal" size={18} color="#B88A2E" />
+            <Text className="text-gold text-sm font-bold">
+              Desbloqueaste{newlyUnlocked.length === 1 ? '' :` ${newlyUnlocked.length} logros`}:
+            </Text>
+          </View>
           <Text className="text-text text-sm">
             {newlyUnlocked.map((id) => ACHIEVEMENT_BY_ID[id]?.title ?? id).join(', ')}
           </Text>

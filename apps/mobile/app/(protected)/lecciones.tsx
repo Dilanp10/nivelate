@@ -4,6 +4,7 @@ import { Pressable, Text, View } from 'react-native';
 import { useProgress } from '../../src/hooks/useProgress';
 import { useUnitExamStatuses } from '../../src/hooks/useUnitExamStatuses';
 import { Button } from '../../src/ui/Button';
+import { Icon } from '../../src/ui/Icon';
 import { ScreenLayout } from '../../src/ui/ScreenLayout';
 
 /**
@@ -36,8 +37,8 @@ export default function LessonsMapScreen() {
       ) : progress.isError ? (
         <Text className="text-danger text-sm">No se pudieron cargar las lecciones.</Text>
       ) : (progress.data?.perUnit.length ?? 0) === 0 ? (
-        <View className="bg-surface border-2 border-border rounded-2xl p-6 gap-2 items-center">
-          <Text className="text-4xl">📚</Text>
+        <View className="bg-surface border-2 border-border rounded-2xl p-6 gap-3 items-center">
+          <Icon name="book" size={40} color="#6E6E76" />
           <Text className="text-text text-base font-bold text-center">
             Todavía no hay unidades publicadas
           </Text>
@@ -85,7 +86,7 @@ export default function LessonsMapScreen() {
                           className="flex-row items-center gap-3 rounded-xl px-4 py-3 border-2 border-brand bg-brand/10 active:opacity-80"
                         >
                           <View className="w-8 h-8 rounded-full bg-brand/20 items-center justify-center">
-                            <Text className="text-sm">🎓</Text>
+                            <Icon name="cap" size={18} color="#0E7C7B" />
                           </View>
                           <View className="flex-1">
                             <Text className="text-brand text-base font-bold">Examen final</Text>
@@ -131,17 +132,17 @@ export default function LessonsMapScreen() {
                                   : 'bg-surface-light'
                             }`}
                           >
-                            <Text
-                              className={`text-sm ${
-                                isNext
-                                  ? 'text-bg font-bold'
-                                  : l.completed
-                                    ? 'text-brand'
-                                    : 'text-muted'
-                              }`}
-                            >
-                              {l.completed ? '✓' : isNext ? '▶' : '🔒'}
-                            </Text>
+                            {isAhead ? (
+                              <Icon name="lock" size={16} color="#6E6E76" />
+                            ) : (
+                              <Text
+                                className={`text-sm ${
+                                  isNext ? 'text-bg font-bold' : 'text-brand'
+                                }`}
+                              >
+                                {l.completed ? '✓' : '▶'}
+                              </Text>
+                            )}
                           </View>
 
                           <Text
